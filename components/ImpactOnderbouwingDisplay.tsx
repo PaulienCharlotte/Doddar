@@ -1,9 +1,10 @@
 
-
 import React from 'react';
 import type { ImpactOnderbouwing, WetenschappelijkeReferentie } from '../types';
 import { BrainIcon } from './icons/BrainIcon';
 import { ChevronDownIcon } from './icons/ChevronDownIcon';
+import { ArticleIcon } from './icons/ArticleIcon';
+import { ExternalLinkIcon } from './icons/ExternalLinkIcon';
 
 interface ImpactOnderbouwingDisplayProps {
   onderbouwingen: ImpactOnderbouwing[];
@@ -38,35 +39,49 @@ const ImpactOnderbouwingDisplay: React.FC<ImpactOnderbouwingDisplayProps> = ({ o
         <BrainIcon className="w-5 h-5"/>
         Impact van Gedragspatronen
       </h3>
-      <div className="space-y-2">
+      <div className="space-y-3">
         {safeOnderbouwingen.map((item, index) => (
-          <details key={index} className="impact-accordion">
-            <summary className="impact-summary">
-              <span>{item.titel}</span>
-              <ChevronDownIcon className="w-5 h-5 text-brand-subtle accordion-icon" />
+          <details key={index} className="impact-accordion group">
+            <summary className="impact-summary list-none cursor-pointer p-4 bg-brand-surface rounded-xl flex justify-between items-center transition-colors hover:bg-brand-secondary/10">
+              <span className="font-medium text-taupe-dark">{item.titel}</span>
+              <ChevronDownIcon className="w-5 h-5 text-brand-subtle transform group-open:rotate-180 transition-transform duration-300" />
             </summary>
-            <div className="impact-accordion-content">
-              <p>{item.onderbouwing}</p>
+            <div className="impact-accordion-content p-4 pt-2 border-x border-b border-brand-accent/30 rounded-b-xl bg-white space-y-4">
+              <p className="text-brand-text leading-relaxed text-sm">{item.onderbouwing}</p>
               
               {item.referenties && item.referenties.length > 0 && (
-                <div>
-                    <h5>Wetenschappelijke Onderbouwing</h5>
-                    <ul>
+                <div className="mt-4 pt-4 border-t border-brand-accent/20">
+                    <h5 className="text-xs font-bold text-brand-secondary uppercase tracking-wider mb-3">Wetenschappelijke Onderbouwing</h5>
+                    <div className="grid grid-cols-1 gap-3">
                       {item.referenties.map((ref, refIndex) => (
-                         <li key={refIndex}>
-                           <strong>{ref.titel} ({ref.jaar})</strong>
-                           <br />
-                           <a 
-                              href={formatDoiUrl(ref.doi)} 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              className="doi-link"
-                            >
-                              {formatDoiUrl(ref.doi)}
-                            </a>
-                         </li>
+                         <div key={refIndex} className="citation-card group/card">
+                            <div className="flex items-start gap-3">
+                                <div className="flex-shrink-0 mt-0.5">
+                                    <ArticleIcon className="w-5 h-5 text-brand-secondary/70 group-hover/card:text-brand-primary transition-colors" />
+                                </div>
+                                <div className="flex-grow">
+                                    <h5 className="text-sm font-semibold text-taupe-dark leading-snug group-hover/card:text-brand-primary transition-colors">
+                                        {ref.titel}
+                                    </h5>
+                                    <div className="flex items-center gap-2 mt-2">
+                                        <span className="citation-badge">
+                                            {ref.jaar}
+                                        </span>
+                                        <a 
+                                            href={formatDoiUrl(ref.doi)} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="ml-auto flex items-center gap-1.5 text-xs font-bold text-brand-primary hover:text-brand-secondary transition-colors"
+                                        >
+                                            Bekijk bron
+                                            <ExternalLinkIcon className="w-3 h-3" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
                       ))}
-                    </ul>
+                    </div>
                 </div>
               )}
             </div>

@@ -11,26 +11,28 @@ const formatDoiUrl = (doi: string): string => {
   if (!doi) return '#';
 
   try {
-    // Step 1: Decode any URI-encoded characters (like %20).
-    const decodedDoi = decodeURIComponent(doi);
+    // 1. Decode URI components (e.g. %2F -> /)
+    let clean = decodeURIComponent(doi);
 
-    // Step 2: Aggressively remove all whitespace from the entire string.
-    let cleanDoi = decodedDoi.trim().replace(/\s/g, '');
+    // 2. Remove all whitespace (newlines, tabs, spaces)
+    clean = clean.replace(/\s/g, '');
 
-    // Step 3: If it's not a full URL, construct one.
-    if (!cleanDoi.startsWith('http://') && !cleanDoi.startsWith('https://')) {
-      // Also remove any "doi:" prefix that might be present.
-      cleanDoi = cleanDoi.replace(/^doi:/i, '');
-      return `https://doi.org/${cleanDoi}`;
+    // 3. Handle existing URLs (http or https)
+    if (/^https?:\/\//i.test(clean)) {
+      return clean;
     }
-    
-    // It was already a full URL, so return the cleaned version.
-    return cleanDoi;
+
+    // 4. Clean up "doi:" prefix (case insensitive) and any leading slashes
+    // This handles "doi:10.xxx", "DOI: 10.xxx", "/10.xxx"
+    clean = clean.replace(/^(doi:?|\/)+/i, '');
+
+    // 5. Construct secure DOI URL
+    return `https://doi.org/${clean}`;
   } catch (e) {
-    console.error("Failed to decode or format DOI string:", doi, e);
-    // Fallback to a simpler cleaning method if decoding fails.
-    const fallbackDoi = doi.replace(/\s/g, '');
-    return fallbackDoi.startsWith('http') ? fallbackDoi : `https://doi.org/${fallbackDoi}`;
+    console.error("Failed to format DOI:", doi);
+    // Safe fallback: strip whitespace and prepend domain if not a URL
+    const raw = doi.replace(/\s/g, '');
+    return /^https?:\/\//i.test(raw) ? raw : `https://doi.org/${raw}`;
   }
 };
 

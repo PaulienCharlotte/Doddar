@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import type { WettelijkeOvertreding, BevoegdheidscheckResult } from '../types';
 import { LegalIcon } from './icons/LegalIcon';
@@ -8,6 +6,7 @@ import { ChevronDownIcon } from './icons/ChevronDownIcon';
 import { CheckIcon } from './icons/CheckIcon';
 import { WarningIcon } from './icons/WarningIcon';
 import { InfoIcon } from './icons/InfoIcon';
+import Tooltip from './Tooltip';
 
 interface LegalAnalysisProps {
   overtredingen: WettelijkeOvertreding[];
@@ -21,12 +20,9 @@ const frameworkExplanations: Record<string, string> = {
 };
 
 const FrameworkTag: React.FC<{ kader: string }> = ({ kader }) => (
-  <span className="tooltip-container">
-    <span className="framework-tag">{kader}</span>
-    <span className="tooltip-text">
-      {frameworkExplanations[kader.toUpperCase()] || 'Specifiek juridisch kader relevant voor deze casus.'}
-    </span>
-  </span>
+  <Tooltip content={frameworkExplanations[kader.toUpperCase()] || 'Specifiek juridisch kader relevant voor deze casus.'}>
+    <span className="framework-tag cursor-pointer">{kader}</span>
+  </Tooltip>
 );
 
 
@@ -63,12 +59,9 @@ const LegalAnalysis: React.FC<LegalAnalysisProps> = ({ overtredingen, bevoegdhei
               
               <div className="flex items-center gap-1.5 mt-2">
                   <p className="text-sm font-semibold text-brand-text">Motivering</p>
-                  <div className="tooltip-container">
-                      <InfoIcon className="w-4 h-4 text-brand-secondary cursor-help" />
-                      <span className="tooltip-text">
-                         De 'juridische grondslag' bepaalt of een onderzoek wettelijk is toegestaan (bijv. o.b.v. 'gerechtvaardigd belang' in de AVG). Een formele intake is altijd nodig om dit definitief vast te stellen.
-                      </span>
-                  </div>
+                  <Tooltip content="De 'juridische grondslag' bepaalt of een onderzoek wettelijk is toegestaan (bijv. o.b.v. 'gerechtvaardigd belang' in de AVG). Een formele intake is altijd nodig om dit definitief vast te stellen.">
+                      <InfoIcon className="w-4 h-4 text-brand-secondary cursor-pointer" />
+                  </Tooltip>
               </div>
               <p className="text-sm text-brand-text mt-1">
                   {motivering}

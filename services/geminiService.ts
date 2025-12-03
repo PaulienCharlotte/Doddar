@@ -59,11 +59,22 @@ Casusbeschrijving: "${description}"
 Gedetecteerde persona: ${persona}
 
 Taak:
-1.  Analyseer de tekst op negatieve gedragspatronen (bijv. manipulatie, controle, agressie).
+1.  Analyseer de tekst op negatieve gedragspatronen.
 2.  Geef een indicatieve "veiligheidsscore" van 0 tot 100.
-3.  Identificeer de 3-5 meest prominente "gedragspatronen". Geef voor elk patroon een label, een score (0.0-1.0), en een "why_short" (max 1 zin) die de score toelicht.
-4.  Genereer 3 tot 5 "verduidelijkingsvragen" om de casus te verhelderen. De vragen moeten relevant, neutraal en empathisch zijn. Structureer elke vraag als een object met de volgende velden: "question_id" (unieke string), "vraag" (de vraagtekst), "waarom_relevant" (korte uitleg), "input_type" (kies uit 'YES_NO', 'MULTIPLE_CHOICE', 'SCALE_0_4', 'FREE_TEXT'), "priority" (getal 1-5). Voeg een "options" array toe als de input_type 'MULTIPLE_CHOICE' is. Voor 'FREE_TEXT', voeg een relevante "placeholder" toe.
-5.  Evalueer de **bevoegdheid** van de indiener. Bepaal op basis van de casus of de indiener een gerechtvaardigd belang lijkt te hebben (bv. ouder, werkgever, direct betrokkene). Geef 'is_bevoegd' als 'false' als de rol of het mandaat onduidelijk is. Geef een duidelijke reden en een advies, zoals "Verwijs naar juridisch kader Wpbr art. 14 en AVG-grondslag 'gerechtvaardigd belang'.".
+3.  Identificeer de 3-5 meest prominente "gedragspatronen".
+4.  Genereer 3 tot 5 "verduidelijkingsvragen".
+    FOCUS OP GESLOTEN VRAGEN om het invullen makkelijk te maken:
+    - Gebruik bij voorkeur 'YES_NO' (bv. "Is er sprake van fysiek geweld?").
+    - Gebruik 'MULTIPLE_CHOICE' voor context (bv. "Wie is er betrokken?", "Waar gebeurt dit?"). Geef 3-5 duidelijke opties.
+    - Gebruik 'SCALE_0_4' voor frequentie, intensiteit of gevoel (bv. "Hoe vaak komt dit voor?", "Hoe onveilig voelt u zich?").
+    - Gebruik 'FREE_TEXT' *alleen* als een open antwoord echt noodzakelijk is voor details die niet in opties te vatten zijn.
+    
+    Format per vraag:
+    - "input_type": 'YES_NO' | 'MULTIPLE_CHOICE' | 'SCALE_0_4' | 'FREE_TEXT'
+    - "options": Array van strings (VERPLICHT bij MULTIPLE_CHOICE, optioneel bij SCALE).
+    - "vraag": De vraagtekst.
+    - "waarom_relevant": Uitleg.
+5.  Evalueer de **bevoegdheid** van de indiener (gerechtvaardigd belang).
 `;
 }
 

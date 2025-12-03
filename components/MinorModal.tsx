@@ -1,6 +1,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import type { AgeProfile } from '../data/ageProfiles';
+import { CheckIcon } from './icons/CheckIcon';
 
 interface MinorModalProps {
     uiPayload: AgeProfile;
@@ -35,38 +36,56 @@ const MinorModal: React.FC<MinorModalProps> = ({ uiPayload, onClose, onWithAdult
     return (
         <dialog 
             ref={dialogRef} 
-            className="minor-modal-backdrop" 
+            className="minor-modal-backdrop bg-transparent p-0 m-0 w-full h-full max-w-none max-h-none flex items-center justify-center backdrop:bg-[#1E2925]/60 backdrop:backdrop-blur-sm transition-all"
             onClick={handleBackdropClick}
             onClose={onClose}
         >
-            <div className="minor-modal-content" role="dialog" aria-labelledby="m-title" aria-modal="true">
-                <header>
-                    <h2 id="m-title">{uiPayload.title}</h2>
+            <div className="bg-white rounded-3xl shadow-2xl w-[90%] max-w-xl p-8 md:p-12 border border-[#B8E2D1] relative animate-fade-in flex flex-col" role="dialog" aria-labelledby="m-title" aria-modal="true">
+                <header className="mb-6">
+                    <h2 id="m-title" className="text-2xl md:text-3xl font-bold text-[#225748] tracking-tight">{uiPayload.title}</h2>
                 </header>
-                <div className="body">
-                    <p id="m-msg">{uiPayload.message}</p>
-                    <div className="tips">
-                        <ul>
-                            {uiPayload.tips.map((tip, index) => <li key={index}>{tip}</li>)}
+                
+                <div className="space-y-6 flex-grow">
+                    <p id="m-msg" className="text-lg text-[#4B5563] leading-relaxed font-normal">
+                        {uiPayload.message}
+                    </p>
+                    
+                    <div className="bg-[#F2F9F6] p-6 rounded-2xl border border-[#E5E7EB] shadow-sm">
+                        <ul className="space-y-4">
+                            {uiPayload.tips.map((tip, index) => (
+                                <li key={index} className="flex items-start gap-4 text-[#374151] leading-snug">
+                                    <div className="mt-0.5 flex-shrink-0 text-[#58B895] bg-white rounded-full p-1 shadow-sm">
+                                        <CheckIcon className="w-4 h-4" />
+                                    </div>
+                                    <span className="text-base font-medium">{tip}</span>
+                                </li>
+                            ))}
                         </ul>
-                         {Object.keys(uiPayload.links).length > 0 && (
-                            <p>
-                                Je kunt ook anoniem contact opnemen met{" "}
-                                {Object.entries(uiPayload.links).map(([name, url], index, arr) => (
-                                    <React.Fragment key={name}>
-                                        <a className="link" href={url} target="_blank" rel="noopener noreferrer">
-                                            {name}
-                                        </a>
-                                        {index < arr.length - 2 ? ', ' : (index < arr.length - 1 ? ' of ' : '')}
-                                    </React.Fragment>
-                                ))}.
-                            </p>
-                        )}
                     </div>
+
+                     {Object.keys(uiPayload.links).length > 0 && (
+                        <p className="text-sm text-[#6B7280] text-center pt-2">
+                            Je kunt ook anoniem contact opnemen met{" "}
+                            {Object.entries(uiPayload.links).map(([name, url], index, arr) => (
+                                <React.Fragment key={name}>
+                                    <a className="font-bold text-[#58B895] hover:underline transition-colors" href={url} target="_blank" rel="noopener noreferrer">
+                                        {name}
+                                    </a>
+                                    {index < arr.length - 2 ? ', ' : (index < arr.length - 1 ? ' of ' : '')}
+                                </React.Fragment>
+                            ))}.
+                        </p>
+                    )}
                 </div>
-                <div className="footer">
-                    <button className="btn-outline" onClick={onClose}>{uiPayload.cta.acknowledge}</button>
-                    <button className="btn-primary" onClick={onWithAdult}>{uiPayload.cta.withAdult}</button>
+
+                {/* Grid layout zorgt voor exact gelijke breedte buttons */}
+                <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-[#E5E7EB]">
+                    <button className="btn-outline w-full justify-center py-4 text-base" onClick={onClose}>
+                        {uiPayload.cta.acknowledge}
+                    </button>
+                    <button className="btn-primary w-full justify-center py-4 shadow-lg shadow-[#58B895]/20 text-base" onClick={onWithAdult}>
+                        {uiPayload.cta.withAdult}
+                    </button>
                 </div>
             </div>
         </dialog>

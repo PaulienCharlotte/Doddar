@@ -1,5 +1,4 @@
 
-
 import React, { useState, useMemo, useCallback } from 'react';
 import type { Verduidelijkingsvraag } from '../types';
 import { InputType } from '../types';
@@ -19,16 +18,18 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ vragen, minAnswersRequired,
   const getEffectiveInputType = (vraag: Verduidelijkingsvraag): string => {
     const qLower = vraag.vraag.toLowerCase();
     
-    if (qLower.includes('hoe vaak') || qLower.includes('frequentie')) return 'SEGMENTED_CONTROL';
-    if (qLower.includes('op een schaal van') || qLower.includes('hoe voelt u zich')) return InputType.SCALE_0_4;
-    if (vraag.input_type === InputType.MULTIPLE_CHOICE) return 'MULTI_SELECT_CHIPS';
-    if (vraag.input_type !== InputType.FREE_TEXT) return vraag.input_type;
-    
-    if ((qLower.startsWith('heeft u') || qLower.startsWith('is er') || qLower.startsWith('zijn er')) &&
-        !qLower.includes('welke') && !qLower.includes('voorbeelden') && !qLower.includes('omschrijf') && !qLower.includes('aanwijzingen')) {
-        return InputType.YES_NO;
+    // Some heuristics to enforce nicer UI elements if the model returns FREE_TEXT but the question is clearly structural
+    if (vraag.input_type === InputType.FREE_TEXT) {
+        if (qLower.includes('hoe vaak') || qLower.includes('frequentie')) return 'SEGMENTED_CONTROL';
+        if (qLower.includes('op een schaal van') || qLower.includes('hoe voelt u zich')) return InputType.SCALE_0_4;
+        if ((qLower.startsWith('heeft u') || qLower.startsWith('is er') || qLower.startsWith('zijn er')) &&
+            !qLower.includes('welke') && !qLower.includes('voorbeelden') && !qLower.includes('omschrijf')) {
+            return InputType.YES_NO;
+        }
     }
-
+    
+    if (vraag.input_type === InputType.MULTIPLE_CHOICE) return 'MULTI_SELECT_CHIPS';
+    
     return vraag.input_type;
   };
   
@@ -151,13 +152,19 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ vragen, minAnswersRequired,
     const showToelichting = effectiveType !== InputType.FREE_TEXT;
 
     const toelichtingField = showToelichting ? (
-      <textarea
-        value={toelichtingValue}
-        onChange={(e) => handleAnswerChange(`${question_id}_toelichting`, e.target.value)}
-        placeholder="Toelichting (optioneel)..."
-        className="q-followup-input"
-        rows={2}
-      />
+      <div className="mt-5 pt-4 border-t border-gray-100">
+        <label htmlFor={`${question_id}_toelichting`} className="block text-xs font-semibold text-brand-subtle uppercase tracking-wide mb-2">
+            Aanvullende context (optioneel)
+        </label>
+        <textarea
+            id={`${question_id}_toelichting`}
+            value={toelichtingValue}
+            onChange={(e) => handleAnswerChange(`${question_id}_toelichting`, e.target.value)}
+            placeholder="Wilt u hier nog iets over kwijt? (Bijv. 'Vooral in het weekend...')"
+            className="q-followup-input"
+            rows={2}
+        />
+      </div>
     ) : null;
 
     switch (effectiveType) {
@@ -189,8 +196,8 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ vragen, minAnswersRequired,
               ))}
             </div>
             <div className="flex justify-between text-xs text-brand-subtle mt-1 px-1">
-                <span>Zeer slecht</span>
-                <span>Zeer goed</span>
+                <span>Min / Nooit / Laag</span>
+                <span>Max / Altijd / Hoog</span>
             </div>
             {toelichtingField}
           </div>
@@ -200,16 +207,9 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ vragen, minAnswersRequired,
       case 'SEGMENTED_CONTROL': {
         const segmentOptions = (options && options.length > 0) ? options : ['Zelden', 'Soms', 'Regelmatig', 'Vaak'];
         
-        let containerClass = "q-segmented-control"; // default for 2-3
-        if (segmentOptions.length === 4) {
-          containerClass = "q-segmented-grid-4";
-        } else if (segmentOptions.length >= 5) {
-          containerClass = "q-segmented-flex";
-        }
-        
         return (
           <div>
-            <div className={containerClass}>
+            <div className="q-segmented-control">
               {segmentOptions.map(opt => (
                 <div key={opt} className="q-radio-wrapper">
                   <input type="radio" id={`${question_id}_${opt}`} name={question_id} value={opt} checked={value === opt} onChange={(e) => handleAnswerChange(question_id, e.target.value)} className="q-radio-input"/>
@@ -235,7 +235,7 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ vragen, minAnswersRequired,
                   ))}
                   <span className="chip-other">
                       <label><input type="checkbox" value={andersOptionLabel} checked={isAndersSelected} onChange={() => handleAnswerChange(question_id, andersOptionLabel, 'toggle_array')}/><span>{andersOptionLabel}</span></label>
-                      <input id={`${question_id}_anders_input`} type="text" value={andersText} onChange={(e) => handleAnswerChange(`${question_id}_anders`, e.target.value)} placeholder="Toelichting..." className="other-input q-input" disabled={!isAndersSelected}/>
+                      <input id={`${question_id}_anders_input`} type="text" value={andersText} onChange={(e) => handleAnswerChange(`${question_id}_anders`, e.target.value)} placeholder="Specificeer uw antwoord..." className="other-input" disabled={!isAndersSelected}/>
                   </span>
               </div>
               {errors[question_id] && <p className="q-error">{errors[question_id]}</p>}
@@ -246,7 +246,7 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ vragen, minAnswersRequired,
       case InputType.FREE_TEXT:
       default:
         return (
-          <textarea value={value} onChange={(e) => handleAnswerChange(question_id, e.target.value)} placeholder={placeholder || 'Uw antwoord...'} className="q-input w-full min-h-[44px] resize-y"/>
+          <textarea value={value} onChange={(e) => handleAnswerChange(question_id, e.target.value)} placeholder={placeholder || 'Uw antwoord...'} className="q-input w-full min-h-[80px] resize-y"/>
         );
     }
   };
