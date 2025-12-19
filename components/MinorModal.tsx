@@ -33,6 +33,44 @@ const MinorModal: React.FC<MinorModalProps> = ({ uiPayload, onClose, onWithAdult
         }
     };
 
+    // Helper functie om specifieke teksten (URL's en telefoonnummers) klikbaar te maken
+    const renderTipContent = (text: string) => {
+        // Regex splitst op telefoonnummer of website URL en behoudt de separator in de array
+        const parts = text.split(/(0800-0432|kindertelefoon\.nl)/g);
+        
+        return (
+            <span>
+                {parts.map((part, index) => {
+                    if (part === 'kindertelefoon.nl') {
+                        return (
+                            <a 
+                                key={index}
+                                href="https://www.kindertelefoon.nl" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="text-[#58B895] hover:underline font-bold"
+                            >
+                                {part}
+                            </a>
+                        );
+                    }
+                    if (part === '0800-0432') {
+                         return (
+                            <a 
+                                key={index}
+                                href="tel:08000432" 
+                                className="text-[#58B895] hover:underline font-bold"
+                            >
+                                {part}
+                            </a>
+                        );
+                    }
+                    return part;
+                })}
+            </span>
+        );
+    };
+
     return (
         <dialog 
             ref={dialogRef} 
@@ -42,7 +80,7 @@ const MinorModal: React.FC<MinorModalProps> = ({ uiPayload, onClose, onWithAdult
         >
             <div className="bg-white rounded-3xl shadow-2xl w-[90%] max-w-xl p-8 md:p-12 border border-[#B8E2D1] relative animate-fade-in flex flex-col" role="dialog" aria-labelledby="m-title" aria-modal="true">
                 <header className="mb-6">
-                    <h2 id="m-title" className="text-2xl md:text-3xl font-bold text-[#225748] tracking-tight">{uiPayload.title}</h2>
+                    <h2 id="m-title" className="text-2xl md:text-3xl font-bold text-[#13261f] tracking-tight">{uiPayload.title}</h2>
                 </header>
                 
                 <div className="space-y-6 flex-grow">
@@ -57,7 +95,7 @@ const MinorModal: React.FC<MinorModalProps> = ({ uiPayload, onClose, onWithAdult
                                     <div className="mt-0.5 flex-shrink-0 text-[#58B895] bg-white rounded-full p-1 shadow-sm">
                                         <CheckIcon className="w-4 h-4" />
                                     </div>
-                                    <span className="text-base font-medium">{tip}</span>
+                                    <span className="text-base font-medium">{renderTipContent(tip)}</span>
                                 </li>
                             ))}
                         </ul>

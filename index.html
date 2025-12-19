@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="nl">
   <head>
@@ -9,7 +8,7 @@
     <!-- Inter Font import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -17,39 +16,39 @@
         theme: {
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
           },
           extend: {
             colors: {
-              'doddar-green': '#58B895',    // Primary main
-              'soft-green': '#B8E2D1',      // Primary light
-              'mint-bg': '#F2F9F6',         // Light background (Slightly warmer/lighter than E8F5EF)
-              'sage': '#6A9489',            // Deep green / Hover (Darkened for better text contrast)
-              'warm-grey': '#6B7280',       // Text & Icons (Darkened from 8C8C8C for readability)
-              'taupe-dark': '#2F3E37',      // Headings / Contrast (Darker for hierarchy)
-              'hazel': '#B18868',           // Accent
-              'page-bg': '#FFFFFF',         // Page background
+              'doddar-green': '#58B895',
+              'soft-green': '#B8E2D1',
+              'mint-bg': '#F2F9F6',
+              'sage': '#4A6B63',           // Darkened for better contrast
+              'warm-grey': '#4B5563',      // Darkened from #6B7280 for WCAG AA
+              'taupe-dark': '#13261f',
+              'hazel': '#8E6D53',          // Darkened for contrast
+              'page-bg': '#FFFFFF',
               
-              // Aliases for existing components to maintain compatibility while shifting style
               'brand-primary': '#58B895',
-              'brand-secondary': '#6A9489', // Darkened for text usage
+              'brand-secondary': '#3B5A51', // Much darker green for text elements
               'brand-light': '#F2F9F6',
-              'brand-surface': '#F9FCFB',   // Very subtle off-white
-              'brand-text': '#4B5563',      // Much better contrast (Gray-600) instead of #8C8C8C
-              'brand-subtle': '#9CA3AF',    // Gray-400 for secondary text
-              'brand-accent': '#E5E7EB',    // Borders
-              'status-safe': '#58B895',
-              'status-warning': '#D97706',  // More readable orange/brown
-              'status-danger': '#DC2626'    // Clear red
+              'brand-surface': '#F9FCFB',
+              'brand-text': '#374151',      // Gray-700 for optimal contrast
+              'brand-subtle': '#6B7280',    // Gray-500
+              'brand-accent': '#E5E7EB',
+              'status-safe': '#2F7A5E',     // Darkened for better readability
+              'status-warning': '#B45309',  // Darkened orange
+              'status-danger': '#B91C1C'    // Darkened red
             },
             fontWeight: {
               light: 300,
-              normal: 400, // Body text default per brand guide
-              medium: 500, // Headings default
-              semibold: 600,   // Strong emphasis
+              normal: 400,
+              medium: 500,
+              semibold: 600,
             },
             lineHeight: {
-              'loose-prose': '1.75',
-              'relaxed-prose': '1.625',
+              'loose-prose': '1.8',
+              'relaxed-prose': '1.65',
             }
           }
         }
@@ -58,416 +57,62 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      font-weight: 400; /* Verbeterde leesbaarheid: van 300 naar 400 */
-      color: #4B5563;   /* Donkerder grijs voor beter contrast */
+      font-weight: 400;
+      color: #374151;
       background-color: #FFFFFF;
-      line-height: 1.6; /* Meer lucht tussen de regels */
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
     
     h1, h2, h3, h4, h5, h6 {
-      color: #2F3E37; /* taupe-dark */
-      font-weight: 600; /* Duidelijkere hiërarchie */
-      line-height: 1.3;
+      color: #13261f;
+      font-weight: 600;
+      line-height: 1.25;
       letter-spacing: -0.01em;
     }
 
-    p {
-      margin-bottom: 0.75em;
+    /* Selection Color */
+    ::selection {
+      background: #58B895;
+      color: white;
     }
 
-    /* Button Styles - Optimized for touch and visuals */
+    /* Micro-interactions */
+    .hover-lift {
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -8px rgba(19, 38, 31, 0.15);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F9FCFA; }
+    ::-webkit-scrollbar-thumb { background: #CFE3DC; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #58B895; }
+
     .btn-primary {
       background-color: #58B895;
       color: #FFFFFF;
       font-weight: 600;
       padding: 14px 28px;
       border-radius: 12px;
-      border: none;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      line-height: 1.2;
-      letter-spacing: 0.01em;
-      display: inline-flex;
-      align-items: center;
+      transition: all 0.25s ease;
     }
     .btn-primary:hover {
-      background-color: #4AA984;
-      transform: translateY(-1px);
-      box-shadow: 0 8px 15px -3px rgba(88, 184, 149, 0.25);
-    }
-    .btn-primary:active {
-      transform: translateY(0);
-      box-shadow: none;
-    }
-    .btn-primary:disabled {
-      background-color: #B8E2D1;
-      cursor: not-allowed;
-      transform: none;
-      box-shadow: none;
+      background-color: #13261f;
+      transform: scale(1.02);
     }
 
-    .btn-outline {
-      background-color: transparent;
-      color: #2F3E37;
-      border: 1px solid #D1D5DB;
-      font-weight: 600;
-      padding: 14px 28px;
-      border-radius: 12px;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-    }
-    .btn-outline:hover {
-      background-color: #F9FCFB;
-      border-color: #58B895;
-      color: #225748;
-    }
-
-    /* Minimalist Card */
-    .card-minimal {
-      background: #FFFFFF;
-      border: 1px solid #E5E7EB;
-      border-radius: 12px;
-      padding: 24px;
-    }
-
-    /* Existing overrides adapted */
-    dialog#micHelp {
-      border: none;
-      border-radius: 16px;
-      padding: 32px;
-      background: #FFFFFF;
-      color: #4B5563;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      max-width: 500px;
-    }
-    dialog#micHelp::backdrop { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(2px); }
-    
-    /* Utility overrides */
-    .text-brand-text { color: #4B5563 !important; }
-    
-    .minor-modal-content {
-      border-color: #B8E2D1;
-      padding: 2rem;
-      border-radius: 1rem;
-    }
-    
-    /* Auth Modal adjustments */
-    .auth-modal {
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-      padding: 0;
-      overflow: visible; 
-      max-width: 600px;
-      width: 90%;
-    }
-    .auth-modal::backdrop { background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); }
-
-    .auth-modal-content {
-      background-color: #2F3E37;
-      color: #F2F9F6;
-      padding: 2.5rem;
-    }
-    .auth-modal-content h2 { color: #58B895; margin-bottom: 1rem; font-size: 1.5rem; }
-    .auth-modal-content p { color: #D1D5DB; margin-bottom: 1rem; line-height: 1.6; }
-    .auth-modal-info { background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; margin-top: 1rem; font-size: 0.95rem; }
-    .auth-modal-footer { background-color: #FFFFFF; padding: 1.5rem 2.5rem; display: flex; justify-content: flex-end; gap: 1rem; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; }
-
-    /* --- Question Form Styles (Optimized) --- */
-    .qa-scope {
-      margin-top: 2rem;
-    }
-    .qa-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #2F3E37;
-      margin-bottom: 0.75rem;
-    }
-    .qa-sub {
-      color: #6B7280;
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 2.5rem;
-      max-width: 65ch;
-    }
-    .qa-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem; /* Meer ruimte tussen vragen */
-    }
-    .q-card {
-      background: #FFFFFF;
-      border: 1px solid #E5E7EB;
-      border-radius: 16px;
-      padding: 2rem; /* Meer interne ruimte */
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-      transition: all 0.2s;
-    }
-    .q-card:hover {
-      border-color: #B8E2D1;
-      box-shadow: 0 10px 15px -3px rgba(88, 184, 149, 0.1);
-    }
-    .q-title {
-      font-weight: 600;
-      color: #111827;
-      margin-bottom: 0.75rem;
-      font-size: 1.1rem;
-      line-height: 1.4;
-    }
-    .q-note {
-      font-size: 0.8em;
-      color: #9CA3AF;
-      font-weight: 400;
-      margin-left: 0.5rem;
-    }
-    .q-help {
-      font-size: 0.9rem;
-      color: #2F3E37;
-      margin-bottom: 1.5rem;
-      background: #F2F9F6;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      border-left: 4px solid #58B895;
-      line-height: 1.5;
-      display: block;
-    }
-    .q-spacer {
-      height: 1.5rem;
-    }
-    .q-input, .q-followup-input {
-      width: 100%;
-      padding: 1rem;
-      border: 1px solid #D1D5DB;
-      border-radius: 10px;
-      font-size: 1rem;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      color: #111827;
-      font-family: inherit;
-      line-height: 1.5;
-    }
-    .q-input:focus, .q-followup-input:focus {
-      outline: none;
-      border-color: #58B895;
-      box-shadow: 0 0 0 3px rgba(88, 184, 149, 0.15);
-    }
-    .q-followup-input {
-      margin-top: 1rem;
-      font-size: 0.95rem;
-      background: #F9FAFB;
-    }
-
-    /* Styled Radios */
-    .q-radio-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-    .q-radio-wrapper {
-      position: relative;
-    }
-    .q-radio-input {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .q-radio-label {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #FFFFFF;
-      border: 1px solid #D1D5DB;
-      border-radius: 10px;
-      color: #4B5563;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-size: 1rem;
-      font-weight: 500;
-      user-select: none;
-    }
-    .q-radio-input:checked + .q-radio-label {
-      background: #F2F9F6;
-      border-color: #58B895;
-      color: #225748;
-      box-shadow: 0 0 0 1px #58B895;
-    }
-    .q-radio-label:hover {
-      background: #F9FAFB;
-      border-color: #9CA3AF;
-    }
-
-    /* Scale Specific */
-    .q-scale-group {
-      display: flex;
-      justify-content: space-between;
-      background: #F3F4F6;
-      padding: 0.35rem;
-      border-radius: 12px;
-      border: 1px solid #E5E7EB;
-    }
-    .q-scale-label {
-      width: 100%;
-      text-align: center;
-      border: none;
-      background: transparent;
-      border-radius: 8px;
-      margin: 0;
-      padding: 0.75rem 0;
-      font-weight: 600;
-    }
-    .q-radio-input:checked + .q-scale-label {
-      background: #FFFFFF;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    /* Stream blinking cursor */
+    .typing-cursor::after {
+      content: '|';
+      animation: blink 1s infinite;
       color: #58B895;
-      font-weight: 700;
+      margin-left: 2px;
     }
-
-    /* Segmented Control */
-    .q-segmented-control {
-      display: flex;
-      background: #F3F4F6;
-      padding: 6px;
-      border-radius: 12px;
-      gap: 6px;
-      width: 100%;
-    }
-    .q-segmented-control .q-radio-wrapper {
-      flex: 1;
-    }
-    .q-segmented-control .q-radio-label {
-      width: 100%;
-      text-align: center;
-      border: none;
-      background: transparent;
-      margin: 0;
-      border-radius: 8px;
-      padding: 10px 4px;
-      font-size: 0.95rem;
-    }
-    .q-segmented-control .q-radio-input:checked + .q-radio-label {
-      background: #FFFFFF;
-      color: #58B895;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-
-    /* Chips (Multiple Choice) */
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-    .chips label {
-      cursor: pointer;
-    }
-    .chips input[type="checkbox"] {
-      display: none;
-    }
-    .chips span {
-      display: inline-block;
-      padding: 0.6rem 1.25rem;
-      background: #FFFFFF;
-      border: 1px solid #D1D5DB;
-      border-radius: 99px;
-      color: #4B5563;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: all 0.2s;
-    }
-    .chips input[type="checkbox"]:checked + span {
-      background: #58B895;
-      border-color: #58B895;
-      color: #FFFFFF;
-    }
-    .chip-other {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .other-input {
-      padding: 0.5rem 1rem;
-      border: 1px solid #D1D5DB;
-      border-radius: 99px;
-      font-size: 0.95rem;
-      outline: none;
-      color: #374151;
-      min-width: 200px;
-    }
-    .other-input:focus {
-      border-color: #58B895;
-      box-shadow: 0 0 0 2px rgba(88, 184, 149, 0.1);
-    }
-    .other-input:disabled {
-      background: #F3F4F6;
-      cursor: not-allowed;
-    }
-
-    .qa-footer {
-      margin-top: 3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      align-items: center;
-      padding-top: 2rem;
-      border-top: 1px solid #E5E7EB;
-    }
-    @media (min-width: 640px) {
-      .qa-footer {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-    #qa-count {
-      font-size: 1rem;
-      color: #6B7280;
-      font-weight: 500;
-    }
-    .q-error {
-      color: #DC2626;
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      font-weight: 500;
-    }
-
-    /* Citation Cards for DOI references */
-    .citation-card {
-      background: #FFFFFF;
-      border: 1px solid #E5E7EB;
-      border-radius: 12px;
-      padding: 16px;
-      transition: all 0.2s ease;
-      margin-bottom: 12px;
-    }
-    .citation-card:hover {
-      border-color: #B8E2D1;
-      box-shadow: 0 8px 16px -4px rgba(88, 184, 149, 0.1);
-      transform: translateY(-2px);
-    }
-    .citation-badge {
-      font-size: 0.8rem;
-      padding: 4px 10px;
-      border-radius: 6px;
-      background-color: #F2F9F6;
-      color: #225748;
-      font-weight: 600;
-    }
-
-    /* Tooltip Helper */
-    .framework-tag {
-      background-color: #E8F5EF;
-      color: #2F3E37;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-weight: 500;
-      font-size: 0.85rem;
-      border: 1px solid #B8E2D1;
-    }
-    
-    /* Ensure tooltips are above everything */
-    .tooltip-content {
-      z-index: 9999;
-    }
-
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
   </style>
   <script type="importmap">
 {

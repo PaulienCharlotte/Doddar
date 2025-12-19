@@ -1,7 +1,5 @@
 {
-  "name": "Doddar Gedragsanalyse",
-  "description": "Een analytische tool die gedrag binnen afhankelijkheidsrelaties beoordeelt op basis van een casus tekst, met behulp van de Gemini API.",
-  "requestFramePermissions": [
-    "microphone"
-  ]
+  "name": "Doddar",
+  "description": "Enterprise-grade gedragsanalyse tool met Gemini 3 Deep Reasoning, volledige anonimiteit en strikte juridische afbakening (POB). (v6.22)",
+  "requestFramePermissions": []
 }

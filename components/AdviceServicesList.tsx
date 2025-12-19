@@ -5,7 +5,6 @@ import { OsintIcon } from './icons/OsintIcon';
 import { ObservationIcon } from './icons/ObservationIcon';
 import { InterviewIcon } from './icons/InterviewIcon';
 import { MessageCircleIcon } from './icons/MessageCircleIcon';
-import { BrainCircuitIcon } from './icons/BrainCircuitIcon';
 
 const services = [
   { id: "OSINT", name: "OSINT Achtergrondonderzoek", icon: <OsintIcon className="w-5 h-5" /> },
@@ -29,10 +28,6 @@ const AdviceServicesList: React.FC<AdviceServicesListProps> = ({ recommendations
                      <li className="flex items-center gap-3 text-sm text-brand-text">
                          <MessageCircleIcon className="w-5 h-5 text-brand-primary flex-shrink-0" />
                          <span>Plan een vrijblijvend intakegesprek om de mogelijkheden te bespreken.</span>
-                     </li>
-                      <li className="flex items-center gap-3 text-sm text-brand-text">
-                         <BrainCircuitIcon className="w-5 h-5 text-brand-primary flex-shrink-0" />
-                         <span>Start een zelfanalyse om meer inzicht te krijgen.</span>
                      </li>
                  </ul>
             </div>

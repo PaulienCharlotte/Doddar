@@ -16,13 +16,11 @@ export const PROFILE_DEFAULT_MINOR: AgeProfile = {
   tips: [
     "Vraag een ouder, verzorger of vertrouwenspersoon om mee te kijken.",
     "Praat met iemand die je vertrouwt (familie, docent, mentor).",
-    "Je kunt gratis en anoniem bellen of chatten met de Kindertelefoon (0800-0432)."
+    "Je kunt gratis en anoniem bellen of chatten met de Kindertelefoon (0800-0432 of via kindertelefoon.nl)."
   ],
   cta: {
     acknowledge: "Ik begrijp het",
     withAdult: "Samen met een volwassene invullen"
   },
-  links: {
-    "De Kindertelefoon": "https://www.kindertelefoon.nl"
-  }
+  links: {}
 };

@@ -1,5 +1,4 @@
 
-
 export interface UserInput {
   leeftijd: string;
   relatietype: string;
@@ -117,4 +116,10 @@ export interface InitialAnalysisResponse {
   gedragspatronen: Gedragspatroon[];
   verduidelijkingsvragen: Verduidelijkingsvraag[];
   bevoegdheid: Bevoegdheid;
+}
+
+export interface AnalysisContext {
+    summary: string;
+    advice: string;
+    patterns: string[];
 }
