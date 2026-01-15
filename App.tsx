@@ -63,7 +63,7 @@ const BevoegdheidscheckModal: React.FC<{
         </p>
         <div className="auth-modal-info flex items-center gap-3">
           <Tooltip content="Een formeel mandaat betekent dat u door uw organisatie bent aangewezen of gemachtigd bent om (juridische of interne) onderzoeken te initiëren. Binnen bedrijven zijn bevoegd: directieleden, HR-managers, juridisch adviseurs, of compliance officers.">
-            <InfoIcon className="w-6 h-6 text-brand-secondary flex-shrink-0" />
+             <InfoIcon className="w-6 h-6 text-brand-secondary flex-shrink-0" />
           </Tooltip>
           <span>Wat houdt een mandaat in?</span>
         </div>
@@ -79,10 +79,10 @@ const BevoegdheidscheckModal: React.FC<{
 const App: React.FC = () => {
   const [step, setStep] = useState<AppStep>('start');
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [streamedText, setStreamedText] = useState<string>('');
+  const [streamedText, setStreamedText] = useState<string>(''); 
   const [error, setError] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-
+  
   const [caseText, setCaseText] = useState<string>('');
   const [quickResult, setQuickResult] = useState<InitialAnalysisResponse | null>(null);
   const [finalResult, setFinalResult] = useState<AnalysisResponse | null>(null);
@@ -91,11 +91,11 @@ const App: React.FC = () => {
 
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
   const [caseForAnalysis, setCaseForAnalysis] = useState<CaseData | null>(null);
-
+  
   const [rewriteSuggestion, setRewriteSuggestion] = useState<string | null>(null);
   const [isRewriting, setIsRewriting] = useState<boolean>(false);
   const [personaOverride, setPersonaOverride] = useState<'private' | null>(null);
-
+  
   const [questionAnswers, setQuestionAnswers] = useState<Record<string, any>>({});
   const [kennisCategory, setKennisCategory] = useState<string | undefined>(undefined);
   const [analysisContext, setAnalysisContext] = useState<AnalysisContext | null>(null);
@@ -109,17 +109,17 @@ const App: React.FC = () => {
   const handleNavClick = (targetStep: AppStep, category?: string) => {
     setIsMobileMenuOpen(false);
     if (targetStep === 'knowledge' && category) {
-      setKennisCategory(category);
+        setKennisCategory(category);
     } else {
-      setKennisCategory(undefined);
+        setKennisCategory(undefined);
     }
     if (targetStep === 'services' && category) {
-      setServiceScrollId(category);
+        setServiceScrollId(category);
     } else {
-      setServiceScrollId(undefined);
+        setServiceScrollId(undefined);
     }
     if (targetStep !== 'contact') {
-      setAnalysisContext(null);
+        setAnalysisContext(null);
     }
     setStep(targetStep);
   };
@@ -127,13 +127,13 @@ const App: React.FC = () => {
   const startAnalysis = useCallback(async (description: string, persona: 'business' | 'private') => {
     setIsLoading(true);
     setStreamedText('');
-    setStep('questions');
+    setStep('questions'); 
     try {
       let fullJson = '';
       const stream = getInitialAnalysisStream(description, persona);
       for await (const chunk of stream) {
         fullJson += chunk;
-        setStreamedText(prev => prev + '.');
+        setStreamedText(prev => prev + '.'); 
       }
       const result = JSON.parse(fullJson) as InitialAnalysisResponse;
       setQuickResult(result);
@@ -169,7 +169,7 @@ const App: React.FC = () => {
     if (caseForAnalysis) startAnalysis(caseForAnalysis.description, 'business');
     setCaseForAnalysis(null);
   }, [caseForAnalysis, startAnalysis]);
-
+  
   const handleAuthRedirect = useCallback(async () => {
     if (!caseForAnalysis) return;
     setPersonaOverride('private');
@@ -178,13 +178,13 @@ const App: React.FC = () => {
     setCaseText(caseForAnalysis.description);
     setError(null);
     try {
-      const suggestion = await getRewriteSuggestion(caseForAnalysis.description);
-      setRewriteSuggestion(suggestion);
+        const suggestion = await getRewriteSuggestion(caseForAnalysis.description);
+        setRewriteSuggestion(suggestion);
     } catch (e) {
-      setError("Kon de tekst niet herschrijven.");
+        setError("Kon de tekst niet herschrijven.");
     } finally {
-      setIsRewriting(false);
-      setCaseForAnalysis(null);
+        setIsRewriting(false);
+        setCaseForAnalysis(null);
     }
   }, [caseForAnalysis]);
 
@@ -213,7 +213,7 @@ const App: React.FC = () => {
   }, [caseText]);
 
   const renderContent = () => {
-    if (isLoading && step !== 'start') {
+    if (isLoading && step !== 'start') { 
       return (
         <div className="flex flex-col items-center justify-center p-12 bg-white rounded-3xl shadow-xl border border-brand-accent min-h-[60vh] flex-grow mt-8 mx-4 animate-pulse">
           <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-brand-primary mb-8"></div>
@@ -223,40 +223,40 @@ const App: React.FC = () => {
       );
     }
 
-    switch (step) {
+    switch(step) {
       case 'start':
         return (
-          <Home
-            onAnalyze={handleInitialSubmit}
-            onMinorHelp={() => setShowMinorModal(PROFILE_DEFAULT_MINOR)}
-            isLoading={isLoading && !isRewriting}
-            text={caseText}
-            onTextChange={setCaseText}
-            isRewriting={isRewriting}
-            rewriteSuggestion={rewriteSuggestion}
-            onAcceptSuggestion={() => { setCaseText(rewriteSuggestion!); setRewriteSuggestion(null); }}
-            onDismissSuggestion={() => setRewriteSuggestion(null)}
-            onOpenComplaints={() => handleNavClick('complaints')}
-            onOpenPrivacy={() => handleNavClick('privacy')}
-            onOpenTerms={() => handleNavClick('terms')}
-            onOpenKnowledge={(cat) => handleNavClick('knowledge', cat)}
-            onOpenDisclaimer={() => handleNavClick('disclaimer')}
-            onOpenContact={() => handleNavClick('contact')}
-            onOpenService={(id) => handleNavClick('services', id)}
-            scrollToInput={autoScrollToInput}
-            onScrollComplete={() => setAutoScrollToInput(false)}
-          />
+            <Home 
+              onAnalyze={handleInitialSubmit} 
+              onMinorHelp={() => setShowMinorModal(PROFILE_DEFAULT_MINOR)}
+              isLoading={isLoading && !isRewriting}
+              text={caseText}
+              onTextChange={setCaseText}
+              isRewriting={isRewriting}
+              rewriteSuggestion={rewriteSuggestion}
+              onAcceptSuggestion={() => { setCaseText(rewriteSuggestion!); setRewriteSuggestion(null); }}
+              onDismissSuggestion={() => setRewriteSuggestion(null)}
+              onOpenComplaints={() => handleNavClick('complaints')}
+              onOpenPrivacy={() => handleNavClick('privacy')}
+              onOpenTerms={() => handleNavClick('terms')}
+              onOpenKnowledge={(cat) => handleNavClick('knowledge', cat)}
+              onOpenDisclaimer={() => handleNavClick('disclaimer')}
+              onOpenContact={() => handleNavClick('contact')}
+              onOpenService={(id) => handleNavClick('services', id)}
+              scrollToInput={autoScrollToInput}
+              onScrollComplete={() => setAutoScrollToInput(false)}
+            />
         );
       case 'services':
         return <Diensten onStartAnalysis={() => { setStep('start'); setAutoScrollToInput(true); }} onContact={() => handleNavClick('contact')} scrollToId={serviceScrollId} />;
       case 'questions':
         if (quickResult) {
-          return (
-            <div className="space-y-6 w-full max-w-4xl mx-auto px-4 py-10 flex-grow">
-              <QuickResult patterns={quickResult.gedragspatronen} />
-              <QuestionForm vragen={quickResult.verduidelijkingsvragen} minAnswersRequired={3} onSubmit={handleQuestionSubmit} answers={questionAnswers} onAnswersChange={setQuestionAnswers} />
-            </div>
-          );
+           return (
+             <div className="space-y-6 w-full max-w-4xl mx-auto px-4 py-10 flex-grow">
+               <QuickResult patterns={quickResult.gedragspatronen} />
+               <QuestionForm vragen={quickResult.verduidelijkingsvragen} minAnswersRequired={3} onSubmit={handleQuestionSubmit} answers={questionAnswers} onAnswersChange={setQuestionAnswers} />
+             </div>
+           );
         }
         return null;
       case 'result':
@@ -287,17 +287,17 @@ const App: React.FC = () => {
         <div className="px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <div className="flex-shrink-0 cursor-pointer" onClick={() => handleNavClick('start')}>
-              <img src="/images/logo_doddar.png" alt="Doddar" className="h-10 w-auto" />
+               <img src="https://shimmering-paletas-5d438a.netlify.app/images/logo%20klein%20donker.svg" alt="Doddar" className="h-8 md:h-10 w-auto" />
             </div>
             <div className="hidden md:flex space-x-8 items-center">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavClick(item.id as AppStep)}
-                  className={`text-sm font-medium transition-colors ${step === item.id ? 'text-brand-primary' : 'text-gray-300 hover:text-white'}`}
-                >
-                  {item.label}
-                </button>
+                  <button 
+                    key={item.id}
+                    onClick={() => handleNavClick(item.id as AppStep)} 
+                    className={`text-sm font-medium transition-colors ${step === item.id ? 'text-brand-primary' : 'text-gray-300 hover:text-white'}`}
+                  >
+                    {item.label}
+                  </button>
               ))}
               <button onClick={() => { setStep('start'); setAutoScrollToInput(true); }} className="ml-4 px-5 py-2.5 rounded-xl bg-white text-black font-bold hover:bg-[#58B895] hover:text-white transition-all text-sm">Nieuwe Analyse</button>
             </div>
@@ -310,12 +310,12 @@ const App: React.FC = () => {
           <div className="md:hidden absolute top-full left-0 w-full mt-2 bg-black border border-white/10 rounded-2xl shadow-xl animate-fade-in overflow-hidden">
             <div className="px-4 pt-2 pb-4 space-y-1">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavClick(item.id as AppStep)}
-                  className={`block w-full text-left px-4 py-3 rounded-xl text-base font-medium ${step === item.id ? 'text-brand-primary bg-white/5' : 'text-gray-300 hover:bg-white/5'}`}
+                <button 
+                    key={item.id} 
+                    onClick={() => handleNavClick(item.id as AppStep)} 
+                    className={`block w-full text-left px-4 py-3 rounded-xl text-base font-medium ${step === item.id ? 'text-brand-primary bg-white/5' : 'text-gray-300 hover:bg-white/5'}`}
                 >
-                  {item.label}
+                    {item.label}
                 </button>
               ))}
               <button onClick={() => { setStep('start'); setAutoScrollToInput(true); setIsMobileMenuOpen(false); }} className="block w-full text-left px-4 py-3 rounded-xl text-base font-bold text-black bg-white hover:bg-gray-200 mt-2">Nieuwe Analyse</button>
