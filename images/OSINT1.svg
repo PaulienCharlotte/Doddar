@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Laag_2" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 732 479.81">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .73;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #58b895;
+      }
+
+      .cls-2 {
+        opacity: .35;
+      }
+
+      .cls-3 {
+        opacity: .32;
+      }
+
+      .cls-4 {
+        fill: #f4f4f6;
+      }
+
+      .cls-5 {
+        opacity: .41;
+      }
+    </style>
+  </defs>
+  <g id="object">
+    <g class="cls-5">
+      <g>
+        <rect class="cls-3" x="48.21" width="635.59" height="436.68" rx="29.36" ry="29.36"/>
+        <circle class="cls-4" cx="366" cy="18.13" r="7.93"/>
+      </g>
+      <g>
+        <path class="cls-1" d="M0,436.68h732v16.45c0,14.72-11.95,26.67-26.67,26.67H26.67c-14.72,0-26.67-11.95-26.67-26.67v-16.45h0Z"/>
+        <path class="cls-4" d="M312.18,436.68h107.64v6.43c0,2.95-2.4,5.35-5.35,5.35h-96.95c-2.95,0-5.35-2.4-5.35-5.35v-6.43h0Z"/>
+      </g>
+      <rect class="cls-2" x="76.31" y="36.61" width="579.53" height="368.19"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doddar Gedragsanalyse</title>
+    
+    <!-- Inter Font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          },
+          extend: {
+            colors: {
+              'doddar-green': '#58B895',
+              'soft-green': '#B8E2D1',
+              'mint-bg': '#F2F9F6',
+              'sage': '#4A6B63',
+              'warm-grey': '#4B5563',
+              'taupe-dark': '#0F1D19',      // Verfijnd naar Charcoal Forest
+              'hazel': '#8E6D53',
+              'page-bg': '#FFFFFF',
+              
+              'brand-primary': '#58B895',
+              'brand-secondary': '#3B5A51',
+              'brand-light': '#F2F9F6',
+              'brand-surface': '#F9FCFB',
+              'brand-text': '#374151',
+              'brand-subtle': '#6B7280',
+              'brand-accent': '#E5E7EB',
+              'status-safe': '#2F7A5E',
+              'status-warning': '#B45309',
+              'status-danger': '#B91C1C'
+            },
+            fontWeight: {
+              light: 300,
+              normal: 400,
+              medium: 500,
+              semibold: 600,
+            },
+            lineHeight: {
+              'loose-prose': '1.8',
+              'relaxed-prose': '1.65',
+            }
+          }
+        }
+      }
+    </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #374151;
+      background-color: #FFFFFF;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: #0F1D19;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    ::selection {
+      background: #58B895;
+      color: white;
+    }
+
+    .hover-lift {
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -8px rgba(15, 29, 25, 0.15);
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F9FCFA; }
+    ::-webkit-scrollbar-thumb { background: #CFE3DC; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #58B895; }
+
+    .btn-primary {
+      background-color: #58B895;
+      color: #FFFFFF;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 12px;
+      transition: all 0.25s ease;
+    }
+    .btn-primary:hover {
+      background-color: #0F1D19;
+      transform: scale(1.02);
+    }
+
+    .typing-cursor::after {
+      content: '|';
+      animation: blink 1s infinite;
+      color: #58B895;
+      margin-left: 2px;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  </style>
+
+</head>
+  <body class="antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
