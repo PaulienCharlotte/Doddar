@@ -381,7 +381,7 @@ const App: React.FC = () => {
         <div className="px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <div className="flex-shrink-0 cursor-pointer" onClick={() => handleNavClick('start')}>
-              <img src="https://shimmering-paletas-5d438a.netlify.app/images/logokleinnight.svg" alt="Doddar" className="h-8 md:h-10 w-auto" />
+              <img src="/images/logokleinnight.svg" alt="Doddar" className="h-8 md:h-10 w-auto" />
             </div>
             <div className="hidden md:flex space-x-8 items-center">
               {navItems.map((item) => (

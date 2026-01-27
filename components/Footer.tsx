@@ -11,15 +11,15 @@ interface FooterProps {
   onOpenDisclaimer: () => void;
 }
 
-const Footer: React.FC<FooterProps> = ({ 
-  onNavigate, 
-  onOpenComplaints, 
-  onOpenPrivacy, 
-  onOpenTerms, 
-  onOpenKnowledge, 
-  onOpenDisclaimer 
+const Footer: React.FC<FooterProps> = ({
+  onNavigate,
+  onOpenComplaints,
+  onOpenPrivacy,
+  onOpenTerms,
+  onOpenKnowledge,
+  onOpenDisclaimer
 }) => {
-  const baseUrl = "https://shimmering-paletas-5d438a.netlify.app/images/";
+  const baseUrl = "/images/";
 
   return (
     <footer className="bg-white border-t border-[#E5E7EB] pt-16 pb-8 text-[#13261f] mt-auto">
@@ -28,7 +28,7 @@ const Footer: React.FC<FooterProps> = ({
           {/* Logo & Contact */}
           <div className="space-y-6 lg:col-span-1">
             <button onClick={() => onNavigate('start')} className="focus:outline-none opacity-90 hover:opacity-100 transition-opacity">
-                <img src={`${baseUrl}logododdar.svg`} alt="Doddar" className="h-8 w-auto" />
+              <img src={`${baseUrl}logododdar.svg`} alt="Doddar" className="h-8 w-auto" />
             </button>
             <div className="space-y-3 text-sm">
               <a href="mailto:info@doddar.nl" className="flex items-center gap-3 hover:text-[#58B895] transition-colors group">
@@ -88,20 +88,20 @@ const Footer: React.FC<FooterProps> = ({
 
         {/* Accreditation Section */}
         <div className="border-t border-[#E5E7EB] pt-10 pb-6">
-            <p className="text-xs text-[#6B7280] text-center max-w-4xl mx-auto mb-10 font-medium leading-relaxed">
-                Doddar is een door het <strong className="text-[#13261f]">Ministerie van Justitie en Veiligheid</strong> erkend particulier onderzoeksbureau (POB-nummer 8766). Wij werken conform de Privacygedragscode voor Particulier Onderzoekers.
-            </p>
-            <div className="flex flex-wrap gap-8 md:gap-16 items-center justify-center max-w-4xl mx-auto opacity-90">
-                <img src={`${baseUrl}justisPOB.svg`} alt="Ministerie van Justitie en Veiligheid" className="h-16 w-auto object-contain" />
-                <img src={`${baseUrl}logoBPOB.svg`} alt="BPOB" className="h-10 w-auto object-contain" />
-            </div>
+          <p className="text-xs text-[#6B7280] text-center max-w-4xl mx-auto mb-10 font-medium leading-relaxed">
+            Doddar is een door het <strong className="text-[#13261f]">Ministerie van Justitie en Veiligheid</strong> erkend particulier onderzoeksbureau (POB-nummer 8766). Wij werken conform de Privacygedragscode voor Particulier Onderzoekers.
+          </p>
+          <div className="flex flex-wrap gap-8 md:gap-16 items-center justify-center max-w-4xl mx-auto opacity-90">
+            <img src={`${baseUrl}justisPOB.svg`} alt="Ministerie van Justitie en Veiligheid" className="h-16 w-auto object-contain" />
+            <img src={`${baseUrl}logoBPOB.svg`} alt="BPOB" className="h-10 w-auto object-contain" />
+          </div>
         </div>
 
         {/* Copyright & Version */}
         <div className="text-center text-[10px] text-[#9CA3AF] mt-8 flex flex-col md:flex-row justify-center gap-2 md:gap-4 tracking-wider uppercase font-bold">
-            <span>&copy; {new Date().getFullYear()} Doddar. Alle rechten voorbehouden.</span>
-            <span className="hidden md:inline">•</span>
-            <span>Versie 6.33 (Enterprise Node)</span>
+          <span>&copy; {new Date().getFullYear()} Doddar. Alle rechten voorbehouden.</span>
+          <span className="hidden md:inline">•</span>
+          <span>Versie 6.33 (Enterprise Node)</span>
         </div>
       </div>
     </footer>
