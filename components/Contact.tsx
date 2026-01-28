@@ -48,15 +48,30 @@ const Contact: React.FC<ContactProps> = ({ initialContext, onOpenComplaints, onO
         });
     };
 
+    const encode = (data: any) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setStatus('submitting');
 
-        // Simuleer verzending
-        setTimeout(() => {
-            setStatus('success');
-            setFormData({ name: '', email: '', subject: '', message: '' });
-        }, 1500);
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...formData })
+        })
+            .then(() => {
+                setStatus('success');
+                setFormData({ name: '', email: '', subject: '', message: '' });
+            })
+            .catch(error => {
+                console.error(error);
+                alert("Er is iets misgegaan bij het versturen. Probeer het later opnieuw of mail ons direct.");
+                setStatus('idle');
+            });
     };
 
     if (status === 'success') {
@@ -176,7 +191,17 @@ const Contact: React.FC<ContactProps> = ({ initialContext, onOpenComplaints, onO
                             </div>
                         )}
 
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form
+                            name="contact"
+                            method="POST"
+                            data-netlify="true"
+                            netlify-honeypot="bot-field"
+                            onSubmit={handleSubmit}
+                            className="space-y-6"
+                        >
+                            <input type="hidden" name="form-name" value="contact" />
+                            <input type="hidden" name="bot-field" />
+
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label htmlFor="name" className="text-sm font-bold text-[#4B5563] ml-1">Naam</label>
