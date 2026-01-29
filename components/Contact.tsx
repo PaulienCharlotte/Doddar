@@ -61,7 +61,7 @@ const Contact: React.FC<ContactProps> = ({ initialContext, onOpenComplaints, onO
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...formData })
+            body: encode({ "form-name": "contact", "bot-field": "", ...formData })
         })
             .then(() => {
                 setStatus('success');
