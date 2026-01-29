@@ -133,9 +133,9 @@ const Home: React.FC<HomeProps> = ({
                         <div className="order-2 lg:order-1 flex flex-col items-start text-left space-y-10 animate-fade-in max-w-xl mx-0">
 
                             {/* Logo Area */}
-                            <div className="flex flex-col items-start w-full max-w-[220px] md:max-w-[320px] lg:max-w-[400px]">
-                                <img src={`${baseUrl}logododdar.svg`} alt="Doddar" className="w-full h-auto mb-2 drop-shadow-sm" />
-                                <div className="w-full flex justify-between text-[11px] md:text-[16px] lg:text-[20px] font-bold text-[#13261f] uppercase select-none leading-none tracking-normal">
+                            <div className="flex flex-col items-start w-full max-w-[280px] md:max-w-[340px]">
+                                <img src={`${baseUrl}logododdar.svg`} alt="Doddar" className="w-full h-auto mb-3 drop-shadow-sm" />
+                                <div className="w-full flex justify-between px-1 text-[13px] md:text-[15px] font-bold text-[#13261f] uppercase select-none leading-none tracking-widest opacity-90">
                                     {"RECHERCHEBUREAU".split("").map((char, i) => (
                                         <span key={i}>{char}</span>
                                     ))}
@@ -161,97 +161,68 @@ const Home: React.FC<HomeProps> = ({
                 </div>
             </section>
 
-            {/* Keuzepunt Sectie - Lightened & Softer */}
-            <section className="relative z-30 px-4 mb-24 md:mb-32">
+            {/* Main Action Section - Analysis & Intake */}
+            <section ref={inputSectionRef} className="relative z-30 px-4 -mt-10 md:-mt-16 pb-24 md:pb-32">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid md:grid-cols-2 gap-6 lg:gap-10">
+                    <div className="grid lg:grid-cols-[1.6fr_1fr] gap-8 items-start">
 
-                        {/* Optie A: Direct Intake */}
-                        <div className="bg-[#F2F9F6] rounded-[2.5rem] p-10 md:p-14 border border-[#58B895]/20 shadow-xl relative overflow-hidden group hover:-translate-y-1 transition-all duration-500 flex flex-col">
-                            <div className="absolute top-0 right-0 w-80 h-80 bg-[#58B895]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none group-hover:bg-[#58B895]/10 transition-colors"></div>
-
-                            <div className="relative z-10 flex-grow">
-                                <span className="inline-block bg-[#58B895] text-white text-[10px] font-bold uppercase tracking-[0.3em] px-3 py-1 rounded-full mb-8">Professioneel Advies</span>
-                                <h2 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight text-[#13261f]">Plan een Gratis Intakegesprek</h2>
-                                <p className="text-[#4B5563] text-lg mb-10 leading-relaxed font-light">
-                                    Bespreek uw situatie direct met een <span className="text-[#58B895] font-medium">erkend onderzoeker</span>. Wij bieden direct helderheid over haalbaarheid en juridische kaders.
-                                </p>
-
-                                <div className="space-y-4 mb-12">
-                                    <div className="flex items-center gap-5">
-                                        <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center text-[#58B895] shadow-sm"><ClockIcon className="w-6 h-6" /></div>
-                                        <span className="text-base font-medium text-[#13261f]">Binnen 24 uur persoonlijk contact</span>
-                                    </div>
-                                    <div className="flex items-center gap-5">
-                                        <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center text-[#58B895] shadow-sm"><ShieldIcon className="w-6 h-6" /></div>
-                                        <span className="text-base font-medium text-[#13261f]">100% Vertrouwelijkheid</span>
-                                    </div>
-                                    <div className="flex items-center gap-5">
-                                        <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center text-[#58B895] shadow-sm"><CheckIcon className="w-6 h-6" /></div>
-                                        <span className="text-base font-medium text-[#13261f]">Kosteloos strategisch advies</span>
-                                    </div>
-                                </div>
+                        {/* Left: Component - Analysis Tool */}
+                        <div className="bg-white rounded-[2rem] shadow-2xl border border-[#E5E7EB] overflow-hidden">
+                            <div className="p-8 pb-0">
+                                <h3 className="text-2xl font-bold text-[#13261f]">Casusanalyse</h3>
+                                <p className="text-[#6B7280] mt-2 font-light text-base italic">Voer uw situatie in voor een geautomatiseerde patroonherkenning.</p>
                             </div>
-
-                            <button
-                                onClick={onOpenContact}
-                                className="relative z-10 w-full py-6 bg-[#58B895] hover:bg-[#4AA984] text-white font-bold rounded-2xl shadow-xl shadow-[#58B895]/20 transition-all text-xl flex items-center justify-center gap-3 active:scale-[0.98]"
-                            >
-                                Afspraak Inplannen <span className="text-2xl">→</span>
-                            </button>
+                            <InputSection
+                                onAnalyze={onAnalyze}
+                                onMinorHelp={onMinorHelp}
+                                isLoading={isLoading}
+                                text={text}
+                                onTextChange={onTextChange}
+                                isRewriting={isRewriting}
+                                rewriteSuggestion={rewriteSuggestion}
+                                onAcceptSuggestion={onAcceptSuggestion}
+                                onDismissSuggestion={onDismissSuggestion}
+                                onOpenComplaints={onOpenComplaints}
+                                onOpenPrivacy={onOpenPrivacy}
+                                onOpenTerms={onOpenTerms}
+                                onOpenKnowledge={onOpenKnowledge}
+                                onOpenDisclaimer={onOpenDisclaimer}
+                            />
                         </div>
 
-                        {/* Optie B: Zelf-verkenning */}
-                        <div className="bg-white rounded-[2.5rem] p-10 md:p-14 border border-[#E5E7EB] shadow-xl relative overflow-hidden group hover:-translate-y-1 transition-all duration-500 flex flex-col">
-                            <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#F2F9F6] rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+                        {/* Right: Component - Free Intake CTA */}
+                        <div className="bg-[#F2F9F6] rounded-[2rem] p-8 md:p-10 border border-[#58B895]/20 shadow-xl relative overflow-hidden group sticky top-24">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-[#58B895]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
-                            <div className="relative z-10 flex-grow">
-                                <span className="inline-block bg-[#F2F9F6] text-[#6A9489] text-[10px] font-bold uppercase tracking-[0.3em] px-3 py-1 rounded-full mb-8 border border-[#58B895]/20">Anonieme Verkenning</span>
-                                <h2 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight text-[#13261f]">Zelfstandige Casus Toetsing</h2>
-                                <p className="text-[#6B7280] text-lg mb-10 leading-relaxed font-light">
-                                    Toets uw vermoedens eerst zelfstandig aan onze <span className="text-[#58B895] font-medium">gedragsmodellen</span>. Ontvang direct een eerste indicatie van patronen.
+                            <div className="relative z-10">
+                                <span className="inline-block bg-[#58B895] text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded-full mb-6">Gratis & Vrijblijvend</span>
+                                <h2 className="text-2xl md:text-3xl font-bold mb-4 leading-tight text-[#13261f]">Plan een Intake</h2>
+                                <p className="text-[#4B5563] text-base mb-8 leading-relaxed font-light">
+                                    Spreek direct met een <span className="text-[#58B895] font-medium">erkend onderzoeker</span>. Wij bieden direct helderheid over de haalbaarheid.
                                 </p>
 
-                                <div className="grid grid-cols-2 gap-4 mb-12">
-                                    <div className="p-6 bg-[#F9FCFA] rounded-2xl border border-[#E5E7EB]">
-                                        <span className="block text-[#13261f] font-bold text-base mb-1">Anoniem</span>
-                                        <span className="text-xs text-[#9CA3AF]">Direct starten zonder account</span>
+                                <div className="space-y-4 mb-8">
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#58B895] shadow-sm"><ClockIcon className="w-5 h-5" /></div>
+                                        <span className="text-sm font-medium text-[#13261f]">Binnen 24 uur contact</span>
                                     </div>
-                                    <div className="p-6 bg-[#F9FCFA] rounded-2xl border border-[#E5E7EB]">
-                                        <span className="block text-[#13261f] font-bold text-base mb-1">Inzicht</span>
-                                        <span className="text-xs text-[#9CA3AF]">Snel overzicht van factoren</span>
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#58B895] shadow-sm"><ShieldIcon className="w-5 h-5" /></div>
+                                        <span className="text-sm font-medium text-[#13261f]">100% Vertrouwelijk</span>
                                     </div>
                                 </div>
-                            </div>
 
-                            <button
-                                onClick={() => {
-                                    if (inputSectionRef.current) {
-                                        inputSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                    }
-                                }}
-                                className="relative z-10 w-full py-6 bg-transparent border-2 border-[#E5E7EB] text-[#13261f] hover:bg-[#13261f] hover:text-white font-bold rounded-2xl transition-all text-xl flex items-center justify-center gap-3 active:scale-[0.98]"
-                            >
-                                Start de Verkenning <span className="text-2xl">↓</span>
-                            </button>
+                                <button
+                                    onClick={onOpenContact}
+                                    className="w-full py-4 bg-[#58B895] hover:bg-[#4AA984] text-white font-bold rounded-xl shadow-lg shadow-[#58B895]/20 transition-all text-lg flex items-center justify-center gap-2 active:scale-[0.98]"
+                                >
+                                    Afspraak Inplannen <span>→</span>
+                                </button>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-            </section>
-
-            {/* Input Section - Consistent White Card */}
-            <section ref={inputSectionRef} className="relative z-20 px-4 pb-24 md:pb-32">
-                <FadeInSection>
-                    <div className="max-w-7xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h3 className="text-3xl md:text-4xl font-bold text-[#13261f]">Casusanalyse</h3>
-                            <p className="text-[#6B7280] mt-3 font-light text-lg italic">Voer uw beschrijving in voor een geautomatiseerde patroonherkenning.</p>
-                        </div>
-                        <div className="transition-all duration-500 hover:shadow-2xl rounded-[1.5rem] md:rounded-[2rem] bg-white border border-[#E5E7EB]">
-                            <InputSection onAnalyze={onAnalyze} onMinorHelp={onMinorHelp} isLoading={isLoading} text={text} onTextChange={onTextChange} isRewriting={isRewriting} rewriteSuggestion={rewriteSuggestion} onAcceptSuggestion={onAcceptSuggestion} onDismissSuggestion={onDismissSuggestion} onOpenComplaints={onOpenComplaints} onOpenPrivacy={onOpenPrivacy} onOpenTerms={onOpenTerms} onOpenKnowledge={onOpenKnowledge} onOpenDisclaimer={onOpenDisclaimer} />
-                        </div>
-                    </div>
-                </FadeInSection>
             </section>
 
             {/* Intake Step Visualization */}
