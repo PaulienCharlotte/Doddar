@@ -154,30 +154,29 @@ const InputSection: React.FC<InputSectionProps> = ({
             )}
 
             <div className="flex flex-col p-6 md:p-12 lg:pr-8 bg-[#E8F5EF] border-b lg:border-b-0 lg:border-r border-[#58B895]/10 rounded-t-[2rem] lg:rounded-l-[2rem] lg:rounded-tr-none">
-                    <div className="hidden lg:block mt-8">
-                        <ul className="space-y-4 text-[#13261f] text-sm font-medium mb-10">
-                            <li className="flex items-center gap-4">
-                                <div className="w-1.5 h-1.5 bg-[#58B895] rounded-full flex-shrink-0"></div>
-                                <span>Haalbaarheidscheck onderzoek</span>
-                            </li>
-                            <li className="flex items-center gap-4">
-                                <div className="w-1.5 h-1.5 bg-[#58B895] rounded-full flex-shrink-0"></div>
-                                <span>Juridische kaders & Privacy</span>
-                            </li>
-                            <li className="flex items-center gap-4">
-                                <div className="w-1.5 h-1.5 bg-[#58B895] rounded-full flex-shrink-0"></div>
-                                <span>Advies vervolgstappen</span>
-                            </li>
-                        </ul>
+                <div className="hidden lg:block mt-8">
+                    <ul className="space-y-4 text-[#13261f] text-sm font-medium mb-10">
+                        <li className="flex items-center gap-4">
+                            <div className="w-1.5 h-1.5 bg-[#58B895] rounded-full flex-shrink-0"></div>
+                            <span>Haalbaarheidscheck onderzoek</span>
+                        </li>
+                        <li className="flex items-center gap-4">
+                            <div className="w-1.5 h-1.5 bg-[#58B895] rounded-full flex-shrink-0"></div>
+                            <span>Juridische kaders & Privacy</span>
+                        </li>
+                        <li className="flex items-center gap-4">
+                            <div className="w-1.5 h-1.5 bg-[#58B895] rounded-full flex-shrink-0"></div>
+                            <span>Advies vervolgstappen</span>
+                        </li>
+                    </ul>
 
-                        <div className="flex items-center gap-3 bg-white p-3 pr-5 rounded-xl border border-[#58B895]/10 shadow-sm w-fit">
-                            <div className="bg-[#F2F9F6] p-2 rounded-full text-[#58B895]">
-                                <ShieldIcon className="w-5 h-5" />
-                            </div>
-                            <div>
-                                <span className="text-[#13261f] block text-xs font-bold uppercase tracking-wider">Veilig & anoniem</span>
-                                <span className="text-[#6B7280] text-xs">Geen opslag van gegevens</span>
-                            </div>
+                    <div className="flex items-center gap-3 bg-white p-3 pr-5 rounded-xl border border-[#58B895]/10 shadow-sm w-fit">
+                        <div className="bg-[#F2F9F6] p-2 rounded-full text-[#58B895]">
+                            <ShieldIcon className="w-5 h-5" />
+                        </div>
+                        <div>
+                            <span className="text-[#13261f] block text-xs font-bold uppercase tracking-wider">Veilig & anoniem</span>
+                            <span className="text-[#6B7280] text-xs">Geen opslag van gegevens</span>
                         </div>
                     </div>
                 </div>
@@ -276,7 +275,7 @@ const InputSection: React.FC<InputSectionProps> = ({
                     </button>
                 </div>
             </form>
-        </div >
+        </div>
     );
 };
 
