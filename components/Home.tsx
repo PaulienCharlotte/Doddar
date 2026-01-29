@@ -162,20 +162,20 @@ const Home: React.FC<HomeProps> = ({
             </section>
 
             {/* Main Action Section - Analysis & Intake */}
-            <section ref={inputSectionRef} className="relative z-30 px-4 -mt-12 md:-mt-24 pb-24 md:pb-32">
+            <section ref={inputSectionRef} className="relative z-30 px-4 mt-8 md:mt-12 pb-24 md:pb-32">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-[1.6fr_1fr] gap-10 items-stretch">
 
                         {/* Left: Component - Analysis Tool */}
                         <div className="bg-white rounded-[2.5rem] shadow-2xl border border-[#E5E7EB] overflow-hidden flex flex-col">
-                            <div className="p-10 md:p-12 pb-2">
+                            <div className="p-8 md:p-10 pb-2">
                                 <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-3xl md:text-4xl font-bold text-[#13261f]">Casusanalyse</h3>
+                                    <h3 className="text-3xl md:text-3xl font-bold text-[#13261f]">Casusanalyse</h3>
                                     <div className="px-4 py-1.5 bg-[#F2F9F6] rounded-full border border-[#58B895]/20 text-[#58B895] text-[10px] font-bold uppercase tracking-widest shadow-sm">
                                         AI Ondersteund
                                     </div>
                                 </div>
-                                <p className="text-[#6B7280] font-light text-xl italic max-w-2xl leading-relaxed">
+                                <p className="text-[#6B7280] font-light text-lg italic max-w-2xl leading-relaxed">
                                     Beschrijf uw situatie voor een direct geautomatiseerde patroonherkenning en haalbaarheidsindicatie.
                                 </p>
                             </div>
@@ -200,38 +200,38 @@ const Home: React.FC<HomeProps> = ({
                         </div>
 
                         {/* Right: Component - Free Intake CTA */}
-                        <div className="bg-[#13261f] rounded-[2.5rem] p-10 lg:p-14 shadow-2xl relative overflow-hidden group flex flex-col justify-between min-h-[600px] border border-white/5">
+                        <div className="bg-[#13261f] rounded-[2.5rem] p-8 lg:p-10 shadow-2xl relative overflow-hidden group flex flex-col justify-between min-h-[500px] border border-white/5">
                             <div className="absolute top-0 right-0 w-96 h-96 bg-[#58B895]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
                             <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
                             <div className="relative z-10">
-                                <span className="inline-flex items-center gap-2 bg-[#58B895] text-white text-[11px] font-bold uppercase tracking-[0.2em] px-5 py-2.5 rounded-full mb-10 shadow-lg">
-                                    <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                                <span className="inline-flex items-center gap-2 bg-[#58B895] text-white text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6 shadow-lg">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                                     Gratis & Vrijblijvend
                                 </span>
 
-                                <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-[1.1] text-white">
+                                <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-[1.1] text-white">
                                     Plan een <br />
                                     <span className="text-[#58B895]">Intakegesprek</span>
                                 </h2>
 
-                                <p className="text-gray-300 text-xl mb-12 leading-relaxed font-light">
+                                <p className="text-gray-300 text-lg mb-8 leading-relaxed font-light">
                                     Direct helderheid over de juridische kaders en haalbaarheid van uw casus.
                                 </p>
 
-                                <div className="space-y-8 mb-12">
-                                    <div className="flex items-center gap-6 group/item">
-                                        <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-[#58B895] border border-white/10 group-hover/item:border-[#58B895]/50 transition-all"><ClockIcon className="w-7 h-7" /></div>
+                                <div className="space-y-6 mb-8">
+                                    <div className="flex items-center gap-5 group/item">
+                                        <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-[#58B895] border border-white/10 group-hover/item:border-[#58B895]/50 transition-all"><ClockIcon className="w-6 h-6" /></div>
                                         <div className="flex flex-col">
-                                            <span className="text-lg font-bold text-white">Binnen 24 uur contact</span>
-                                            <span className="text-sm text-gray-400">Persoonlijk & deskundig</span>
+                                            <span className="text-base font-bold text-white">Binnen 24 uur contact</span>
+                                            <span className="text-xs text-gray-400">Persoonlijk & deskundig</span>
                                         </div>
                                     </div>
-                                    <div className="flex items-center gap-6 group/item">
-                                        <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-[#58B895] border border-white/10 group-hover/item:border-[#58B895]/50 transition-all"><ShieldIcon className="w-7 h-7" /></div>
+                                    <div className="flex items-center gap-5 group/item">
+                                        <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-[#58B895] border border-white/10 group-hover/item:border-[#58B895]/50 transition-all"><ShieldIcon className="w-6 h-6" /></div>
                                         <div className="flex flex-col">
-                                            <span className="text-lg font-bold text-white">100% Vertrouwelijk</span>
-                                            <span className="text-sm text-gray-400">Discreet vanaf het eerste moment</span>
+                                            <span className="text-base font-bold text-white">100% Vertrouwelijk</span>
+                                            <span className="text-xs text-gray-400">Discreet vanaf het eerste moment</span>
                                         </div>
                                     </div>
                                 </div>
@@ -239,7 +239,7 @@ const Home: React.FC<HomeProps> = ({
 
                             <button
                                 onClick={onOpenContact}
-                                className="w-full py-6 bg-white hover:bg-[#58B895] text-[#13261f] hover:text-white font-bold rounded-[1.5rem] shadow-2xl transition-all duration-500 text-xl flex items-center justify-center gap-3 transform hover:-translate-y-1"
+                                className="w-full py-5 bg-white hover:bg-[#58B895] text-[#13261f] hover:text-white font-bold rounded-xl shadow-2xl transition-all duration-500 text-lg flex items-center justify-center gap-3 transform hover:-translate-y-1"
                             >
                                 Afspraak Inplannen <span className="text-2xl leading-none">→</span>
                             </button>
@@ -249,78 +249,82 @@ const Home: React.FC<HomeProps> = ({
                 </div>
             </section>
 
-            {/* Intake Step Visualization */}
-            <section className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pb-24 md:pb-32">
-                <div className="bg-[#F2F9F6] rounded-[3rem] p-12 md:p-20 border border-[#58B895]/20 shadow-xl relative overflow-hidden text-center">
-                    <div className="absolute top-0 left-0 w-full h-2 bg-[#58B895]"></div>
+        </div>
+                </div >
+            </section >
 
-                    <div className="max-w-3xl mx-auto mb-16 md:mb-24">
-                        <h2 className="text-4xl md:text-5xl font-bold text-[#13261f] mb-6 leading-tight">Hoe werkt een intake?</h2>
-                        <p className="text-lg md:text-xl text-[#4B5563] font-light leading-relaxed">
-                            De fundering van elk gedegen feitenonderzoek begint bij een helder en veilig gesprek.
-                        </p>
+    {/* Intake Step Visualization */ }
+    < section className = "relative z-10 max-w-7xl mx-auto px-4 md:px-6 pb-24 md:pb-32" >
+        <div className="bg-[#F2F9F6] rounded-[3rem] p-12 md:p-20 border border-[#58B895]/20 shadow-xl relative overflow-hidden text-center">
+            <div className="absolute top-0 left-0 w-full h-2 bg-[#58B895]"></div>
+
+            <div className="max-w-3xl mx-auto mb-16 md:mb-24">
+                <h2 className="text-4xl md:text-5xl font-bold text-[#13261f] mb-6 leading-tight">Hoe werkt een intake?</h2>
+                <p className="text-lg md:text-xl text-[#4B5563] font-light leading-relaxed">
+                    De fundering van elk gedegen feitenonderzoek begint bij een helder en veilig gesprek.
+                </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-12 md:gap-8 lg:gap-16">
+                {[
+                    { step: "01", icon: <MessageCircleIcon className="w-12 h-12" />, title: "Uw Verhaal", desc: "In een beveiligde omgeving deelt u de feiten en uw zorgen. Wij luisteren zonder oordeel." },
+                    { step: "02", icon: <CalendarIcon className="w-12 h-12" />, title: "Toetsing", desc: "Wij toetsen direct aan de wet (Wpbr/AVG) en bepalen welke onderzoeksmethode het meest effectief is." },
+                    { step: "03", icon: <InvestigationIcon className="w-12 h-12" />, title: "Plan van Aanpak", desc: "U ontvangt een voorstel met doorlooptijd, budget en de verwachte waarde van het bewijs." }
+                ].map((item, idx) => (
+                    <div key={idx} className="relative flex flex-col items-center text-center group">
+                        <div className="text-[6rem] md:text-[8rem] font-bold text-[#58B895]/5 absolute -top-16 md:-top-20 leading-none select-none group-hover:text-[#58B895]/10 transition-colors">{item.step}</div>
+                        <div className="w-24 h-24 bg-white rounded-3xl flex items-center justify-center text-[#58B895] shadow-lg mb-8 relative z-10 border border-[#E8F5EF] group-hover:scale-105 transition-transform duration-500">
+                            {item.icon}
+                        </div>
+                        <h3 className="text-2xl md:text-3xl font-bold text-[#13261f] mb-4 relative z-10">{item.title}</h3>
+                        <p className="text-[#6B7280] leading-relaxed font-light">{item.desc}</p>
                     </div>
+                ))}
+            </div>
 
-                    <div className="grid md:grid-cols-3 gap-12 md:gap-8 lg:gap-16">
-                        {[
-                            { step: "01", icon: <MessageCircleIcon className="w-12 h-12" />, title: "Uw Verhaal", desc: "In een beveiligde omgeving deelt u de feiten en uw zorgen. Wij luisteren zonder oordeel." },
-                            { step: "02", icon: <CalendarIcon className="w-12 h-12" />, title: "Toetsing", desc: "Wij toetsen direct aan de wet (Wpbr/AVG) en bepalen welke onderzoeksmethode het meest effectief is." },
-                            { step: "03", icon: <InvestigationIcon className="w-12 h-12" />, title: "Plan van Aanpak", desc: "U ontvangt een voorstel met doorlooptijd, budget en de verwachte waarde van het bewijs." }
-                        ].map((item, idx) => (
-                            <div key={idx} className="relative flex flex-col items-center text-center group">
-                                <div className="text-[6rem] md:text-[8rem] font-bold text-[#58B895]/5 absolute -top-16 md:-top-20 leading-none select-none group-hover:text-[#58B895]/10 transition-colors">{item.step}</div>
-                                <div className="w-24 h-24 bg-white rounded-3xl flex items-center justify-center text-[#58B895] shadow-lg mb-8 relative z-10 border border-[#E8F5EF] group-hover:scale-105 transition-transform duration-500">
-                                    {item.icon}
-                                </div>
-                                <h3 className="text-2xl md:text-3xl font-bold text-[#13261f] mb-4 relative z-10">{item.title}</h3>
-                                <p className="text-[#6B7280] leading-relaxed font-light">{item.desc}</p>
-                            </div>
-                        ))}
+            <div className="mt-16">
+                <button
+                    onClick={onOpenContact}
+                    className="inline-flex items-center gap-5 px-12 py-5 bg-[#13261f] text-white font-bold rounded-2xl hover:bg-[#58B895] transition-all shadow-xl transform hover:-translate-y-1 active:scale-[0.98] text-lg"
+                >
+                    Start gratis intake <span className="text-2xl">→</span>
+                </button>
+            </div>
+        </div>
+            </section >
+
+    {/* Target Audiences */ }
+    < section className = "relative z-10 max-w-7xl mx-auto px-4 md:px-6 pb-24 md:pb-32" >
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            <FadeInSection delay={100} className="h-full">
+                <div className="group relative h-full bg-white rounded-[2.5rem] border border-[#E5E7EB] hover:border-[#58B895]/30 shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden p-10 md:p-14 flex flex-col justify-between">
+                    <div className="relative z-20 flex flex-col h-full">
+                        <div className="mb-8"><h3 className="text-4xl lg:text-5xl font-bold text-[#13261f] mb-4 leading-tight">Voor<br />particulieren</h3><div className="h-2 w-28 bg-[#58B895] rounded-full"></div></div>
+                        <p className="text-[#4B5563] font-light leading-relaxed text-lg md:text-xl mb-10 max-w-md bg-[#F2F9F6]/50 p-6 rounded-2xl border border-[#58B895]/10">Twijfels over de veiligheid of integriteit in uw relaties? Wij helpen u feiten boven tafel te krijgen.</p>
+                        <div className="mt-auto"><button onClick={onOpenContact} className="inline-flex items-center gap-4 px-8 py-4 bg-[#13261f] text-white font-bold rounded-2xl hover:bg-[#58B895] transition-all text-lg">Neem contact op →</button></div>
                     </div>
-
-                    <div className="mt-16">
-                        <button
-                            onClick={onOpenContact}
-                            className="inline-flex items-center gap-5 px-12 py-5 bg-[#13261f] text-white font-bold rounded-2xl hover:bg-[#58B895] transition-all shadow-xl transform hover:-translate-y-1 active:scale-[0.98] text-lg"
-                        >
-                            Start gratis intake <span className="text-2xl">→</span>
-                        </button>
+                    <div className="absolute bottom-0 right-0 w-64 h-56 md:w-80 md:h-72 z-10 pointer-events-none opacity-20 mix-blend-multiply transition-transform duration-700 group-hover:scale-105">
+                        <img src={`${baseUrl}particulier.svg`} alt="" className="w-full h-full object-contain object-bottom-right" />
                     </div>
                 </div>
-            </section>
-
-            {/* Target Audiences */}
-            <section className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pb-24 md:pb-32">
-                <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-                    <FadeInSection delay={100} className="h-full">
-                        <div className="group relative h-full bg-white rounded-[2.5rem] border border-[#E5E7EB] hover:border-[#58B895]/30 shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden p-10 md:p-14 flex flex-col justify-between">
-                            <div className="relative z-20 flex flex-col h-full">
-                                <div className="mb-8"><h3 className="text-4xl lg:text-5xl font-bold text-[#13261f] mb-4 leading-tight">Voor<br />particulieren</h3><div className="h-2 w-28 bg-[#58B895] rounded-full"></div></div>
-                                <p className="text-[#4B5563] font-light leading-relaxed text-lg md:text-xl mb-10 max-w-md bg-[#F2F9F6]/50 p-6 rounded-2xl border border-[#58B895]/10">Twijfels over de veiligheid of integriteit in uw relaties? Wij helpen u feiten boven tafel te krijgen.</p>
-                                <div className="mt-auto"><button onClick={onOpenContact} className="inline-flex items-center gap-4 px-8 py-4 bg-[#13261f] text-white font-bold rounded-2xl hover:bg-[#58B895] transition-all text-lg">Neem contact op →</button></div>
-                            </div>
-                            <div className="absolute bottom-0 right-0 w-64 h-56 md:w-80 md:h-72 z-10 pointer-events-none opacity-20 mix-blend-multiply transition-transform duration-700 group-hover:scale-105">
-                                <img src={`${baseUrl}particulier.svg`} alt="" className="w-full h-full object-contain object-bottom-right" />
-                            </div>
-                        </div>
-                    </FadeInSection>
-                    <FadeInSection delay={200} className="h-full">
-                        <div className="group relative h-full bg-white rounded-[2.5rem] border border-[#E5E7EB] hover:border-[#6A9489]/30 shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden p-10 md:p-14 flex flex-col justify-between">
-                            <div className="relative z-20 flex flex-col h-full">
-                                <div className="mb-8"><h3 className="text-4xl lg:text-5xl font-bold text-[#13261f] mb-4 leading-tight">Voor<br />organisaties</h3><div className="h-2 w-28 bg-[#6A9489] rounded-full"></div></div>
-                                <p className="text-[#4B5563] font-light leading-relaxed text-lg md:text-xl mb-10 max-w-md bg-[#F2F9F6]/50 p-6 rounded-2xl border border-[#6A9489]/10">Ondersteuning bij integriteitskwesties, verzuimfraude of screening van personeel.</p>
-                                <div className="mt-auto"><button onClick={onOpenContact} className="inline-flex items-center gap-4 px-8 py-4 bg-[#13261f] text-white font-bold rounded-2xl hover:bg-[#6A9489] transition-all text-lg">Neem contact op →</button></div>
-                            </div>
-                            <div className="absolute bottom-0 right-0 w-64 h-56 md:w-80 md:h-72 z-10 pointer-events-none opacity-20 mix-blend-multiply transition-transform duration-700 group-hover:scale-105">
-                                <img src="/images/bedrijf.svg" alt="" className="w-full h-full object-cover scale-110 object-bottom-right" />
-                            </div>
-                        </div>
-                    </FadeInSection>
+            </FadeInSection>
+            <FadeInSection delay={200} className="h-full">
+                <div className="group relative h-full bg-white rounded-[2.5rem] border border-[#E5E7EB] hover:border-[#6A9489]/30 shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden p-10 md:p-14 flex flex-col justify-between">
+                    <div className="relative z-20 flex flex-col h-full">
+                        <div className="mb-8"><h3 className="text-4xl lg:text-5xl font-bold text-[#13261f] mb-4 leading-tight">Voor<br />organisaties</h3><div className="h-2 w-28 bg-[#6A9489] rounded-full"></div></div>
+                        <p className="text-[#4B5563] font-light leading-relaxed text-lg md:text-xl mb-10 max-w-md bg-[#F2F9F6]/50 p-6 rounded-2xl border border-[#6A9489]/10">Ondersteuning bij integriteitskwesties, verzuimfraude of screening van personeel.</p>
+                        <div className="mt-auto"><button onClick={onOpenContact} className="inline-flex items-center gap-4 px-8 py-4 bg-[#13261f] text-white font-bold rounded-2xl hover:bg-[#6A9489] transition-all text-lg">Neem contact op →</button></div>
+                    </div>
+                    <div className="absolute bottom-0 right-0 w-64 h-56 md:w-80 md:h-72 z-10 pointer-events-none opacity-20 mix-blend-multiply transition-transform duration-700 group-hover:scale-105">
+                        <img src="/images/bedrijf.svg" alt="" className="w-full h-full object-cover scale-110 object-bottom-right" />
+                    </div>
                 </div>
-            </section>
+            </FadeInSection>
+        </div>
+            </section >
 
-            {/* Expertise Section */}
-            <section ref={expertiseSectionRef} className="relative z-10 max-w-7xl mx-auto px-4 py-16 md:py-24">
+    {/* Expertise Section */ }
+    < section ref = { expertiseSectionRef } className = "relative z-10 max-w-7xl mx-auto px-4 py-16 md:py-24" >
                 <FadeInSection><div className="text-center mb-16 md:mb-20"><h2 className="text-4xl md:text-5xl font-bold text-[#13261f]">Onze Expertise</h2></div></FadeInSection>
                 <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
                     {expertiseItems.map((item, index) => (
@@ -334,36 +338,36 @@ const Home: React.FC<HomeProps> = ({
                         </FadeInSection>
                     ))}
                 </div>
-            </section>
+            </section >
 
-            {/* Why Doddar Section */}
-            <section className="relative z-10 px-4 py-16 md:py-24">
-                <div className="max-w-7xl mx-auto bg-white text-[#13261f] py-20 md:py-32 px-10 md:px-16 relative overflow-hidden rounded-[3rem] border border-[#E5E7EB] shadow-xl">
-                    <div className="absolute top-0 right-0 w-80 h-80 bg-[#F2F9F6] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none opacity-50"></div>
+    {/* Why Doddar Section */ }
+    < section className = "relative z-10 px-4 py-16 md:py-24" >
+        <div className="max-w-7xl mx-auto bg-white text-[#13261f] py-20 md:py-32 px-10 md:px-16 relative overflow-hidden rounded-[3rem] border border-[#E5E7EB] shadow-xl">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#F2F9F6] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none opacity-50"></div>
 
-                    <div className="relative z-10">
-                        <FadeInSection><div className="text-center mb-16 md:mb-20"><h2 className="text-4xl md:text-6xl font-bold mb-8 text-[#13261f]">Waarom Doddar?</h2></div></FadeInSection>
-                        <div className="grid md:grid-cols-3 gap-12 md:gap-16">
-                            <div className="bg-[#F9FCFA] p-10 rounded-[2rem] border border-[#E5E7EB] text-center space-y-6 group hover:bg-white hover:shadow-lg transition-all duration-500">
-                                <div className="w-20 h-20 mx-auto bg-white rounded-[1.5rem] flex items-center justify-center mb-6 text-[#58B895] shadow-sm group-hover:scale-105 transition-transform border border-[#E5E7EB]"><ShieldIcon className="w-10 h-10" /></div>
-                                <h3 className="text-2xl font-bold text-[#13261f]">Erkend & Gecertificeerd</h3>
-                                <p className="text-[#6B7280] leading-relaxed text-lg font-light">POB 8766. Wij werken volgens de wettelijke kaders van Justitie.</p>
-                            </div>
-                            <div className="bg-[#F9FCFA] p-10 rounded-[2rem] border border-[#E5E7EB] text-center space-y-6 group hover:bg-white hover:shadow-lg transition-all duration-500">
-                                <div className="w-20 h-20 mx-auto bg-white rounded-[1.5rem] flex items-center justify-center mb-6 text-[#58B895] shadow-sm group-hover:scale-105 transition-transform border border-[#E5E7EB]"><CheckIcon className="w-10 h-10" /></div>
-                                <h3 className="text-2xl font-bold text-[#13261f]">Discreet & Integer</h3>
-                                <p className="text-[#6B7280] leading-relaxed text-lg font-light">Uw privacy en reputatie staan voorop in elk traject.</p>
-                            </div>
-                            <div className="bg-[#F9FCFA] p-10 rounded-[2rem] border border-[#E5E7EB] text-center space-y-6 group hover:bg-white hover:shadow-lg transition-all duration-500">
-                                <div className="w-20 h-20 mx-auto bg-white rounded-[1.5rem] flex items-center justify-center text-[#58B895] mb-6 shadow-sm group-hover:scale-105 transition-transform border border-[#E5E7EB]"><LawIcon className="w-10 h-10" /></div>
-                                <h3 className="text-2xl font-bold text-[#13261f]">Juridisch Onderbouwd</h3>
-                                <p className="text-[#6B7280] leading-relaxed text-lg font-light">Objectieve rapportage die standhoudt bij conflicten.</p>
-                            </div>
-                        </div>
+            <div className="relative z-10">
+                <FadeInSection><div className="text-center mb-16 md:mb-20"><h2 className="text-4xl md:text-6xl font-bold mb-8 text-[#13261f]">Waarom Doddar?</h2></div></FadeInSection>
+                <div className="grid md:grid-cols-3 gap-12 md:gap-16">
+                    <div className="bg-[#F9FCFA] p-10 rounded-[2rem] border border-[#E5E7EB] text-center space-y-6 group hover:bg-white hover:shadow-lg transition-all duration-500">
+                        <div className="w-20 h-20 mx-auto bg-white rounded-[1.5rem] flex items-center justify-center mb-6 text-[#58B895] shadow-sm group-hover:scale-105 transition-transform border border-[#E5E7EB]"><ShieldIcon className="w-10 h-10" /></div>
+                        <h3 className="text-2xl font-bold text-[#13261f]">Erkend & Gecertificeerd</h3>
+                        <p className="text-[#6B7280] leading-relaxed text-lg font-light">POB 8766. Wij werken volgens de wettelijke kaders van Justitie.</p>
+                    </div>
+                    <div className="bg-[#F9FCFA] p-10 rounded-[2rem] border border-[#E5E7EB] text-center space-y-6 group hover:bg-white hover:shadow-lg transition-all duration-500">
+                        <div className="w-20 h-20 mx-auto bg-white rounded-[1.5rem] flex items-center justify-center mb-6 text-[#58B895] shadow-sm group-hover:scale-105 transition-transform border border-[#E5E7EB]"><CheckIcon className="w-10 h-10" /></div>
+                        <h3 className="text-2xl font-bold text-[#13261f]">Discreet & Integer</h3>
+                        <p className="text-[#6B7280] leading-relaxed text-lg font-light">Uw privacy en reputatie staan voorop in elk traject.</p>
+                    </div>
+                    <div className="bg-[#F9FCFA] p-10 rounded-[2rem] border border-[#E5E7EB] text-center space-y-6 group hover:bg-white hover:shadow-lg transition-all duration-500">
+                        <div className="w-20 h-20 mx-auto bg-white rounded-[1.5rem] flex items-center justify-center text-[#58B895] mb-6 shadow-sm group-hover:scale-105 transition-transform border border-[#E5E7EB]"><LawIcon className="w-10 h-10" /></div>
+                        <h3 className="text-2xl font-bold text-[#13261f]">Juridisch Onderbouwd</h3>
+                        <p className="text-[#6B7280] leading-relaxed text-lg font-light">Objectieve rapportage die standhoudt bij conflicten.</p>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
+            </section >
+        </div >
     );
 };
 
