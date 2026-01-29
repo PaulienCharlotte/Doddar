@@ -162,72 +162,72 @@ const Home: React.FC<HomeProps> = ({
             </section>
 
             {/* Main Action Section - Analysis & Intake */}
-            <section ref={inputSectionRef} className="relative z-30 px-4 mt-4 md:mt-8 pb-24 md:pb-32">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid lg:grid-cols-[1.6fr_1fr] gap-10 items-stretch">
+            <section ref={inputSectionRef} className="relative z-30 px-4 mt-8 md:mt-12 pb-24 md:pb-32">
+                <div className="max-w-5xl mx-auto space-y-12">
 
-                        {/* Left: Component - Analysis Tool */}
-                        <div className="bg-white rounded-[2.5rem] shadow-2xl border border-[#E5E7EB] overflow-hidden flex flex-col">
-                            <div className="p-8 md:p-10 pb-2">
-                                <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-3xl md:text-3xl font-bold text-[#13261f]">Casusanalyse</h3>
-                                    <div className="px-4 py-1.5 bg-[#F2F9F6] rounded-full border border-[#58B895]/20 text-[#58B895] text-[10px] font-bold uppercase tracking-widest shadow-sm">
-                                        AI Ondersteund
-                                    </div>
+                    {/* Top: Component - Analysis Tool */}
+                    <div className="bg-white rounded-[2.5rem] shadow-2xl border border-[#E5E7EB] overflow-hidden flex flex-col">
+                        <div className="p-8 md:p-12 pb-2">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                <h3 className="text-3xl md:text-3xl font-bold text-[#13261f]">Casusanalyse</h3>
+                                <div className="w-fit px-4 py-1.5 bg-[#F2F9F6] rounded-full border border-[#58B895]/20 text-[#58B895] text-[10px] font-bold uppercase tracking-widest shadow-sm">
+                                    AI Ondersteund
                                 </div>
-                                <p className="text-[#6B7280] font-light text-lg italic max-w-2xl leading-relaxed">
-                                    Beschrijf uw situatie voor een direct geautomatiseerde patroonherkenning en haalbaarheidsindicatie.
-                                </p>
                             </div>
-                            <div className="flex-grow">
-                                <InputSection
-                                    onAnalyze={onAnalyze}
-                                    onMinorHelp={onMinorHelp}
-                                    isLoading={isLoading}
-                                    text={text}
-                                    onTextChange={onTextChange}
-                                    isRewriting={isRewriting}
-                                    rewriteSuggestion={rewriteSuggestion}
-                                    onAcceptSuggestion={onAcceptSuggestion}
-                                    onDismissSuggestion={onDismissSuggestion}
-                                    onOpenComplaints={onOpenComplaints}
-                                    onOpenPrivacy={onOpenPrivacy}
-                                    onOpenTerms={onOpenTerms}
-                                    onOpenKnowledge={onOpenKnowledge}
-                                    onOpenDisclaimer={onOpenDisclaimer}
-                                />
-                            </div>
+                            <p className="text-[#6B7280] font-light text-lg md:text-xl italic max-w-3xl leading-relaxed">
+                                Beschrijf uw situatie voor een direct geautomatiseerde patroonherkenning en haalbaarheidsindicatie.
+                            </p>
                         </div>
+                        <div className="flex-grow">
+                            <InputSection
+                                onAnalyze={onAnalyze}
+                                onMinorHelp={onMinorHelp}
+                                isLoading={isLoading}
+                                text={text}
+                                onTextChange={onTextChange}
+                                isRewriting={isRewriting}
+                                rewriteSuggestion={rewriteSuggestion}
+                                onAcceptSuggestion={onAcceptSuggestion}
+                                onDismissSuggestion={onDismissSuggestion}
+                                onOpenComplaints={onOpenComplaints}
+                                onOpenPrivacy={onOpenPrivacy}
+                                onOpenTerms={onOpenTerms}
+                                onOpenKnowledge={onOpenKnowledge}
+                                onOpenDisclaimer={onOpenDisclaimer}
+                            />
+                        </div>
+                    </div>
 
-                        {/* Right: Component - Free Intake CTA */}
-                        <div className="bg-[#13261f] rounded-[2.5rem] p-8 lg:p-12 shadow-2xl relative overflow-hidden group flex flex-col justify-between min-h-[500px] border border-white/5">
-                            <div className="absolute top-0 right-0 w-96 h-96 bg-[#58B895]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-                            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+                    {/* Bottom: Component - Free Intake CTA */}
+                    <div className="bg-[#13261f] rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group border border-white/5">
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-[#58B895]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
-                            <div className="relative z-10">
+                        <div className="relative z-10 grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
+                            <div>
                                 <span className="inline-flex items-center gap-2 bg-[#58B895] text-white text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-8 shadow-lg">
                                     <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                                     Gratis & Vrijblijvend
                                 </span>
 
-                                <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-[1.1] text-white">
+                                <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-[1.1] text-white">
                                     Plan een <br />
                                     <span className="text-[#58B895]">Intakegesprek</span>
                                 </h2>
 
-                                <p className="text-gray-300 text-lg mb-10 leading-relaxed font-light">
+                                <p className="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed font-light max-w-xl">
                                     Direct helderheid over de juridische kaders en haalbaarheid van uw casus.
                                 </p>
 
-                                <div className="space-y-6 mb-10">
-                                    <div className="flex items-center gap-6 group/item">
+                                <div className="grid sm:grid-cols-2 gap-6 mb-10 lg:mb-0">
+                                    <div className="flex items-center gap-5 group/item">
                                         <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-[#58B895] border border-white/10 group-hover/item:border-[#58B895]/50 transition-all"><ClockIcon className="w-6 h-6" /></div>
                                         <div className="flex flex-col">
                                             <span className="text-base font-bold text-white">Binnen 24 uur contact</span>
                                             <span className="text-xs text-gray-400">Persoonlijk & deskundig</span>
                                         </div>
                                     </div>
-                                    <div className="flex items-center gap-6 group/item">
+                                    <div className="flex items-center gap-5 group/item">
                                         <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-[#58B895] border border-white/10 group-hover/item:border-[#58B895]/50 transition-all"><ShieldIcon className="w-6 h-6" /></div>
                                         <div className="flex flex-col">
                                             <span className="text-base font-bold text-white">100% Vertrouwelijk</span>
@@ -237,12 +237,17 @@ const Home: React.FC<HomeProps> = ({
                                 </div>
                             </div>
 
-                            <button
-                                onClick={onOpenContact}
-                                className="w-full py-5 bg-white hover:bg-[#58B895] text-[#13261f] hover:text-white font-bold rounded-xl shadow-2xl transition-all duration-500 text-lg flex items-center justify-center gap-3 transform hover:-translate-y-1"
-                            >
-                                Afspraak Inplannen <span className="text-2xl leading-none">→</span>
-                            </button>
+                            <div className="flex flex-col items-center lg:items-end">
+                                <button
+                                    onClick={onOpenContact}
+                                    className="w-full sm:w-auto px-12 py-6 bg-white hover:bg-[#58B895] text-[#13261f] hover:text-white font-bold rounded-2xl shadow-2xl transition-all duration-500 text-xl flex items-center justify-center gap-4 transform hover:-translate-y-1"
+                                >
+                                    Afspraak Inplannen <span className="text-2xl leading-none">→</span>
+                                </button>
+                                <p className="mt-6 text-gray-400 text-sm italic font-light">
+                                    Geen kosten, geen verplichtingen.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
