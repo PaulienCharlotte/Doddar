@@ -163,7 +163,7 @@ const Home: React.FC<HomeProps> = ({
 
             {/* Main Action Section - Analysis & Intake */}
             <section ref={inputSectionRef} className="relative z-30 px-4 mt-8 md:mt-12 pb-24 md:pb-32">
-                <div className="max-w-5xl mx-auto space-y-12">
+                <div className="max-w-7xl mx-auto space-y-12">
 
                     {/* Top: Component - Analysis Tool */}
                     <div className="bg-white rounded-[2.5rem] shadow-2xl border border-[#E5E7EB] overflow-hidden flex flex-col">
