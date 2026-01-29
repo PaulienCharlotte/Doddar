@@ -168,9 +168,16 @@ const Home: React.FC<HomeProps> = ({
 
                         {/* Left: Component - Analysis Tool */}
                         <div className="bg-white rounded-[2rem] shadow-2xl border border-[#E5E7EB] overflow-hidden">
-                            <div className="p-8 pb-0">
-                                <h3 className="text-2xl font-bold text-[#13261f]">Casusanalyse</h3>
-                                <p className="text-[#6B7280] mt-2 font-light text-base italic">Voer uw situatie in voor een geautomatiseerde patroonherkenning.</p>
+                            <div className="p-8 md:p-10 pb-0">
+                                <div className="flex items-center justify-between mb-2">
+                                    <h3 className="text-3xl font-bold text-[#13261f]">Casusanalyse</h3>
+                                    <div className="px-3 py-1 bg-[#F2F9F6] rounded-full border border-[#58B895]/20 text-[#58B895] text-xs font-bold uppercase tracking-wider">
+                                        AI Ondersteund
+                                    </div>
+                                </div>
+                                <p className="text-[#6B7280] font-light text-lg italic max-w-xl">
+                                    Beschrijf uw situatie hieronder. Onze AI analyseert direct de patronen en geeft een eerste indicatie.
+                                </p>
                             </div>
                             <InputSection
                                 onAnalyze={onAnalyze}
