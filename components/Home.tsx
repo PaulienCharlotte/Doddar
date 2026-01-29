@@ -198,34 +198,48 @@ const Home: React.FC<HomeProps> = ({
                         </div>
 
                         {/* Right: Component - Free Intake CTA */}
-                        <div className="bg-[#F2F9F6] rounded-[2rem] p-8 md:p-10 border border-[#58B895]/20 shadow-xl relative overflow-hidden group sticky top-24">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-[#58B895]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+                        <div className="bg-[#F2F9F6] rounded-[2.5rem] p-10 lg:p-12 border border-[#58B895]/20 shadow-xl relative overflow-hidden group sticky top-24 flex flex-col justify-between min-h-[500px]">
+                            <div className="absolute top-0 right-0 w-80 h-80 bg-[#58B895]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none transition-opacity duration-700 group-hover:opacity-100 opacity-40"></div>
 
                             <div className="relative z-10">
-                                <span className="inline-block bg-[#58B895] text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 rounded-full mb-6">Gratis & Vrijblijvend</span>
-                                <h2 className="text-2xl md:text-3xl font-bold mb-4 leading-tight text-[#13261f]">Plan een Intake</h2>
-                                <p className="text-[#4B5563] text-base mb-8 leading-relaxed font-light">
-                                    Spreek direct met een <span className="text-[#58B895] font-medium">erkend onderzoeker</span>. Wij bieden direct helderheid over de haalbaarheid.
+                                <span className="inline-flex items-center gap-2 bg-white text-[#58B895] text-[11px] font-bold uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-8 shadow-sm border border-[#58B895]/10">
+                                    <span className="w-2 h-2 rounded-full bg-[#58B895] animate-pulse"></span>
+                                    Gratis & Vrijblijvend
+                                </span>
+
+                                <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-[1.1] text-[#13261f]">
+                                    Plan direct een <br />
+                                    <span className="text-[#58B895]">Intakegesprek</span>
+                                </h2>
+
+                                <p className="text-[#4B5563] text-lg mb-10 leading-relaxed font-light">
+                                    Twijfels over de haalbaarheid? Spreek direct met een <span className="font-medium text-[#13261f]">erkend onderzoeker</span> voor helderheid en advies.
                                 </p>
 
-                                <div className="space-y-4 mb-8">
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#58B895] shadow-sm"><ClockIcon className="w-5 h-5" /></div>
-                                        <span className="text-sm font-medium text-[#13261f]">Binnen 24 uur contact</span>
+                                <div className="space-y-6 mb-12">
+                                    <div className="flex items-center gap-5 group/item">
+                                        <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-[#58B895] shadow-sm border border-[#58B895]/5 group-hover/item:scale-105 transition-transform"><ClockIcon className="w-6 h-6" /></div>
+                                        <div className="flex flex-col">
+                                            <span className="text-base font-bold text-[#13261f]">Binnen 24 uur contact</span>
+                                            <span className="text-xs text-[#6B7280]">Zowel telefonisch als videocall</span>
+                                        </div>
                                     </div>
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#58B895] shadow-sm"><ShieldIcon className="w-5 h-5" /></div>
-                                        <span className="text-sm font-medium text-[#13261f]">100% Vertrouwelijk</span>
+                                    <div className="flex items-center gap-5 group/item">
+                                        <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-[#58B895] shadow-sm border border-[#58B895]/5 group-hover/item:scale-105 transition-transform"><ShieldIcon className="w-6 h-6" /></div>
+                                        <div className="flex flex-col">
+                                            <span className="text-base font-bold text-[#13261f]">100% Vertrouwelijk</span>
+                                            <span className="text-xs text-[#6B7280]">Discreet & beveiligd traject</span>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <button
-                                    onClick={onOpenContact}
-                                    className="w-full py-4 bg-[#58B895] hover:bg-[#4AA984] text-white font-bold rounded-xl shadow-lg shadow-[#58B895]/20 transition-all text-lg flex items-center justify-center gap-2 active:scale-[0.98]"
-                                >
-                                    Afspraak Inplannen <span>→</span>
-                                </button>
                             </div>
+
+                            <button
+                                onClick={onOpenContact}
+                                className="w-full py-5 bg-[#13261f] hover:bg-[#58B895] text-white font-bold rounded-2xl shadow-xl shadow-[#13261f]/10 hover:shadow-[#58B895]/20 transition-all duration-300 text-lg flex items-center justify-center gap-3 transform hover:-translate-y-1"
+                            >
+                                Afspraak Inplannen <span className="text-2xl leading-none">→</span>
+                            </button>
                         </div>
 
                     </div>
