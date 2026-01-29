@@ -154,27 +154,18 @@ const InputSection: React.FC<InputSectionProps> = ({
             )}
 
             <div className="flex flex-col p-6 md:p-12 lg:pr-8 bg-[#E8F5EF] border-b lg:border-b-0 lg:border-r border-[#58B895]/10 rounded-t-[2rem] lg:rounded-l-[2rem] lg:rounded-tr-none">
-                <div className="mb-0 md:mb-8 text-left">
-                    <h2 className="text-[#13261f] text-xl md:text-3xl font-bold leading-tight mb-2 md:mb-3">
-                        Casusanalyse
-                    </h2>
-
-                    <p className="text-[#4B5563] text-sm md:text-base leading-relaxed font-normal mb-0 md:mb-8">
-                        Toets vrijblijvend de haalbaarheid en juridische mogelijkheden van een particulier onderzoek.
-                    </p>
-
-                    <div className="hidden lg:block">
-                        <ul className="space-y-3 md:space-y-4 text-[#13261f] text-sm font-medium mb-6 md:mb-8">
-                            <li className="flex items-center gap-3">
-                                <div className="w-2 h-2 bg-[#58B895] rounded-full flex-shrink-0"></div>
+                    <div className="hidden lg:block mt-8">
+                        <ul className="space-y-4 text-[#13261f] text-sm font-medium mb-10">
+                            <li className="flex items-center gap-4">
+                                <div className="w-1.5 h-1.5 bg-[#58B895] rounded-full flex-shrink-0"></div>
                                 <span>Haalbaarheidscheck onderzoek</span>
                             </li>
-                            <li className="flex items-center gap-3">
-                                <div className="w-2 h-2 bg-[#58B895] rounded-full flex-shrink-0"></div>
+                            <li className="flex items-center gap-4">
+                                <div className="w-1.5 h-1.5 bg-[#58B895] rounded-full flex-shrink-0"></div>
                                 <span>Juridische kaders & Privacy</span>
                             </li>
-                            <li className="flex items-center gap-3">
-                                <div className="w-2 h-2 bg-[#58B895] rounded-full flex-shrink-0"></div>
+                            <li className="flex items-center gap-4">
+                                <div className="w-1.5 h-1.5 bg-[#58B895] rounded-full flex-shrink-0"></div>
                                 <span>Advies vervolgstappen</span>
                             </li>
                         </ul>
@@ -285,7 +276,7 @@ const InputSection: React.FC<InputSectionProps> = ({
                     </button>
                 </div>
             </form>
-        </div>
+        </div >
     );
 };
 
