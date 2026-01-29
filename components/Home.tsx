@@ -130,7 +130,7 @@ const Home: React.FC<HomeProps> = ({
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white via-[#F2F9F6] to-[#F9FCFA] -z-10"></div>
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-center">
-                        <div className="order-2 lg:order-1 flex flex-col items-start text-left space-y-10 animate-fade-in max-w-xl mx-0">
+                        <div className="order-1 lg:order-1 flex flex-col items-start text-left space-y-10 animate-fade-in max-w-xl mx-0">
 
                             {/* Logo Area */}
                             <div className="flex flex-col items-start w-full max-w-[280px] md:max-w-[340px]">
@@ -152,7 +152,7 @@ const Home: React.FC<HomeProps> = ({
                                 </p>
                             </div>
                         </div>
-                        <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fade-in relative">
+                        <div className="order-2 lg:order-2 flex justify-center lg:justify-end animate-fade-in relative">
                             <div className="relative w-full max-w-[280px] md:max-w-lg lg:max-w-full">
                                 <img src={`${baseUrl}homehumondot.svg`} alt="Doddar Recherche" className="w-full h-auto object-contain relative z-10 drop-shadow-xl opacity-90" />
                             </div>

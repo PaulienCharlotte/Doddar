@@ -171,7 +171,7 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                             <div className="flex items-center gap-4">
                                 <h2 className="text-3xl font-bold text-[#13261f]">Wetenschap & Praktijk</h2>
                                 <Tooltip
-                                    placement="bottom"
+                                    placement="bottom-end"
                                     content={
                                         <div className="space-y-2 p-1">
                                             <p className="font-bold border-b border-white/20 pb-1 mb-2 text-sm">Wetenschappelijk Fundament</p>
