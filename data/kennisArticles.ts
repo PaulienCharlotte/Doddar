@@ -23,6 +23,94 @@ export interface KennisArticle {
 }
 
 export const kennisArticles: KennisArticle[] = [
+  {
+    id: "emotionele-veiligheid",
+    title: "Emotionele Veiligheid: De Psychologie van Vertrouwen",
+    category: "Afhankelijkheidsrelaties",
+    summary: "Waarom emotionele veiligheid de basis is van elke gezonde relatie en hoe het systematisch ondermijnd kan worden.",
+    content: {
+      intro: "Emotionele veiligheid is het fundament waarop vertrouwen en intimiteit worden gebouwd. Zonder dit fundament verandert een relatie in een bron van constante stress en waakzaamheid.",
+      analysis: `Wetenschappelijk onderzoek (bijv. Johnson, 2019) toont aan dat emotionele veiligheid bestaat uit de zekerheid dat je partner emotioneel toegankelijk, responsief en betrokken is. 
+
+Wanneer deze veiligheid ontbreekt, treedt het overlevingsmechanisme van het brein in werking. Dit uit zich vaak in:
+*   **Hyper-waakzaamheid:** Constant op je hoede zijn voor de stemming van de ander ('eieren lopen').
+*   **Emotionele afsluiting:** Jezelf niet meer durven uiten uit angst voor kritiek of afwijzing.
+*   **Onvoorspelbaarheid:** De veiligheid wordt ondermijnd door grillig gedrag, waarbij warme momenten plotseling omslaan in koude distantie of woede.
+
+In destructieve dynamieken wordt het ontbreken van emotionele veiligheid vaak gebruikt als machtsmiddel: door de ander constant in onzekerheid te laten, blijft deze gefocust op het pleasen van de partner.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Identificeren van patronen van chronische onveiligheid en hyper-waakzaamheid.",
+    keyPoints: ["Emotionele toegankelijkheid", "Hyper-waakzaamheid", "Psychologisch fundament"],
+    source: { author: "Sue Johnson", year: 2019, journal: "Attachment Theory in Practice", url: "https://www.iceeft.com/" }
+  },
+  {
+    id: "invisible-web-control",
+    title: "Dwingende Controle: Het 'Invisible Web' van Macht",
+    category: "Afhankelijkheidsrelaties",
+    summary: "Dwingende controle is een patroon van dominant gedrag dat de autonomie van een partner systematisch vernietigt.",
+    content: {
+      intro: "Geweld is niet altijd fysiek. Dwingende controle (coercive control) is een strategisch web van isolatie, intimidatie en micro-regulering dat het slachtoffer gijzelt in de eigen relatie.",
+      analysis: `Lundy Bancroft (2002) en Evan Stark (2007) hebben dit proces diepgaand geanalyseerd. Het gaat niet om één incident, maar om het totaaleffect van vele kleine handelingen:
+
+1.  **Micro-regulering:** Controle over wat de ander eet, draagt, wie ze spreekt en hoe ze haar tijd besteedt.
+2.  **Financiële gijzeling:** Het ontnemen van financiële middelen of autonomie, waardoor ontsnappen onmogelijk lijkt.
+3.  **Seksuele dwang:** Het eisen van seks als 'bewijs' van liefde of als manier om conflicten te sussen.
+4.  **Lastercampagnes:** Het preventief ondermijnen van de geloofwaardigheid van het slachtoffer bij vrienden en familie.
+
+Het doel van de dader is niet schade, maar **totale gehoorzaamheid**. Het slachtoffer verliest langzaam het contact met de eigen realiteit en wensen.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Documenteren van patronen van micro-regulering en isolatie voor juridische dossiers.",
+    keyPoints: ["Micro-regulering", "Autonomie-verlies", "Strategisch web"],
+    source: { author: "Lundy Bancroft", year: 2002, journal: "Why Does He Do That?", url: "https://lundybancroft.com/" }
+  },
+  {
+    id: "digitale-belaging-surveillance",
+    title: "Digitale Belaging: AirTags en Surveillance-software",
+    category: "Cybercrime & Digital",
+    summary: "Hoe moderne technologie wordt misbruikt voor stalking en hoe je digitale sporen van surveillance kunt identificeren.",
+    content: {
+      intro: "De smartphone is het ultieme wapen voor de moderne stalker geworden. 'Stalkerware' en tracking-devices zoals AirTags maken 24/7 surveillance mogelijk zonder dat de dader fysiek aanwezig hoeft te zijn.",
+      analysis: `Onderzoek naar 'Technology-Facilitated Abuse' wijst op een explosieve stijging van digitale belaging. 
+
+**Vormen van surveillance:**
+*   **Stalkerware:** Apps die onzichtbaar op een telefoon worden geïnstalleerd en alle chats, locaties en camera-activiteit doorsturen.
+*   **Tracking devices:** Het verbergen van AirTags of GPS-trackers in tassen, jassen of auto's.
+*   **Account-hijacking:** Toegang via gedeelde wachtwoorden of 'Find My' functies om locaties live te volgen.
+
+Deze vorm van stalking creëert een gevoel van 'omnipresentie': de dader lijkt alles te weten, wat leidt tot extreme angst en paranoia bij het slachtoffer. Detectie vereist vaak een forensische scan van apparaten en accounts.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Forensisch onderzoek naar onbekende apparaten en digitale machtigingen.",
+    keyPoints: ["Stalkerware", "Omnipresentie dader", "Digitale veiligheid"],
+    source: { author: "Harris & Woodlock", year: 2022, journal: "Digital Domestic Violence", doi: "10.1332/239868021X16285243258834" }
+  },
+  {
+    id: "patroon-van-isolatie",
+    title: "Het Patroon van Isolatie: Hoe Vrijheid Subtiel Verdwijnt",
+    category: "Afhankelijkheidsrelaties",
+    summary: "Isolatie begint zelden met een verbod. Het is een proces van subtiele beïnvloeding waardoor steun wegvalt.",
+    content: {
+      intro: "Daders van dwingende controle weten dat ze hun macht verliezen als het slachtoffer een sterk vangnet heeft. Daarom wordt dat vangnet systematisch en vaak onopvallend afgebroken.",
+      analysis: `Isolatie is een kerncomponent van emotionele mishandeling. Het verloopt vaak volgens een voorspelbaar script:
+
+1.  **De 'Wij tegen de Wereld' fase:** In het begin wordt de isolatie gepresenteerd als extreme liefde. *"We hebben niemand anders nodig, toch?"*
+2.  **Subtiele kritiek:** Vrienden en familie worden weggezet als 'jaloers', 'ongezond' of 'niet goed voor je'.
+3.  **Conflict-creatie:** De dader provoceert ruzies vlak voordat het slachtoffer een sociale afspraak heeft, waardoor zij te emotioneel uitgeput is om te gaan.
+4.  **Schuldgevoel:** *"Als je echt van me hield, zou je vanavond bij mij blijven in plaats van met die vrienden uit te gaan."*
+
+Het resultaat is dat het slachtoffer zich langzaam terugtrekt om de vrede te bewaren, tot zij uiteindelijk alleen nog de realiteit van de dader hoort.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Reconstructie van sociale netwerken en tijdlijnen van afzwakkende contacten.",
+    keyPoints: ["Sociale isolatie", "Vangnet-afbraak", "Emotionele gijzeling"],
+    source: { author: "Bancroft & Stark", year: 2007, journal: "Coercive Control", doi: "10.1093/acprof:oso/9780195176368.001.0001" }
+  },
   // --- NIEUW: GEAVANCEERDE MANIPULATIE (2019-2021) ---
   {
     id: "dark-empath",
