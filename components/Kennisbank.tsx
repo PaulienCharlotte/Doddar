@@ -82,26 +82,48 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void }> = 
                 </div>
                 <div className="overflow-y-auto p-8 md:p-12 space-y-8 bg-white">
                     <div className="max-w-3xl mx-auto">
-                        <div className="text-lg md:text-xl leading-relaxed text-[#4B5563] border-l-4 border-[#58B895] pl-6 italic mb-8">
+                        <div className="text-lg md:text-xl leading-relaxed text-[#4B5563] border-l-4 border-[#58B895] pl-6 italic mb-10">
                             {renderFormattedText(article.content.intro)}
                         </div>
-                        <div className="prose prose-lg prose-stone max-w-none text-[#374151]">
+                        <div className="prose prose-lg prose-stone max-w-none text-[#374151] mb-12">
                             {renderFormattedText(article.content.analysis)}
                         </div>
-                    </div>
-                    <div className="max-w-3xl mx-auto pt-8 border-t border-[#E5E7EB] mt-8">
-                        <h4 className="text-xs font-bold text-[#9CA3AF] uppercase tracking-wider mb-4">Kerninzichten</h4>
-                        <div className="flex flex-wrap gap-3">
-                            {article.keyPoints.map((point, idx) => (
-                                <span key={idx} className="inline-flex items-center px-3 py-1.5 rounded-full bg-[#F9FAFB] border border-[#E5E7EB] text-[#4B5563] text-sm font-medium">
-                                    <span className="text-[#58B895] mr-2">•</span>{point}
-                                </span>
-                            ))}
-                        </div>
+
+                        {article.keyPoints.length > 0 && (
+                            <div className="bg-[#F9FCFA] rounded-2xl p-6 md:p-8 border border-[#E5E7EB]">
+                                <h4 className="text-xs font-bold text-[#9CA3AF] uppercase tracking-wider mb-4">Kerninzichten</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {article.keyPoints.map((point, idx) => (
+                                        <span key={idx} className="inline-flex items-center px-3 py-1.5 rounded-xl bg-white border border-[#E5E7EB] text-[#4B5563] text-sm font-medium">
+                                            <span className="text-[#58B895] mr-2">•</span>{point}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
-                <div className="p-6 border-t border-[#E5E7EB] bg-[#F9FCFA] text-sm text-[#6B7280]">
-                    <span className="font-bold text-[#13261f] uppercase tracking-wide text-xs">Bron:</span> {article.source.author} {article.source.journal && ` — ${article.source.journal}`}
+                <div className="p-6 md:p-8 border-t border-[#E5E7EB] bg-[#F9FCFA] text-sm text-[#6B7280]">
+                    <div className="max-w-3xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                            <span className="font-bold text-[#13261f] uppercase tracking-wide text-xs block mb-1">Bronvermelding</span>
+                            <span className="text-[#374151] font-medium">{article.source.author} ({article.source.year}) {article.source.journal && <span className="text-[#6B7280]"> — {article.source.journal}</span>}</span>
+                        </div>
+                        <div className="flex flex-wrap gap-4">
+                            {article.source.doi && (
+                                <a href={`https://doi.org/${article.source.doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#58B895] hover:text-[#13261f] transition-colors font-semibold group">
+                                    <span className="mr-1.5 opacity-60">DOI:</span>
+                                    <span className="underline underline-offset-4 decoration-[#58B895]/30 group-hover:decoration-[#13261f]">{article.source.doi}</span>
+                                </a>
+                            )}
+                            {article.source.url && (
+                                <a href={article.source.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#58B895] hover:text-[#13261f] transition-colors font-semibold group">
+                                    <span className="mr-1.5 opacity-60">URL:</span>
+                                    <span className="underline underline-offset-4 decoration-[#58B895]/30 group-hover:decoration-[#13261f]">Bezoek website</span>
+                                </a>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -76,8 +76,7 @@ Dit creëert een gevoel van alomtegenwoordigheid van de dader en verbreekt het v
     content: {
       intro: "Slachtoffers vragen zich vaak af waarom ze niet kunnen loslaten. De wetenschap wijst op 'intermittent reinforcement': een conditioneringstechniek die de dader (vaak onbewust) gebruikt om een verslavende binding te creëren.",
       analysis: `Dutton (2011) vertaalt de conditioneringsprincipes van Skinner naar menselijke relaties. Wanneer een dader afwisselend wreed en overdreven liefdevol ('love bombing') is, reageren de dopamine-receptoren in het brein van het slachtoffer op dezelfde manier als bij gokken.
-**Het mechanisme:
-* **Onvoorspelbaarheid:** Omdat de liefdevolle momenten schaars en onvoorspelbaar zijn, worden ze extreem waardevol.
+**Het mechanisme:** * **Onvoorspelbaarheid:** Omdat de liefdevolle momenten schaars en onvoorspelbaar zijn, worden ze extreem waardevol.
 * **Hoop:** Het slachtoffer blijft investeren in de relatie in de hoop op die ene 'piek' van affectie.
 * **Biochemische binding:** Oxytocine (hechting) en Cortisol (stress) wisselen elkaar af, wat leidt tot een traumatische band die fysiek pijnlijk is om te verbreken.
 
@@ -117,8 +116,7 @@ Sinds 2024 is dit gedrag in Nederland strafbaar onder de nieuwe Wet Seksuele Mis
     content: {
       intro: "De rechtszaal zou een plek van waarheid moeten zijn, maar voor manipulatoren is het een podium. 'Legal Gaslighting' is het gebruik van gerechtelijke processen om de tegenpartij mentaal te slopen.",
       analysis: `Stanciu (2023) definieert legal gaslighting als de tactiek waarbij een dader binnen een juridische context bewezen feiten systematisch ontkent en de geloofwaardigheid van het slachtoffer aanvalt via haar advocaten en documenten.
-**Kenmerken:
-1. **Valse procesvoering:** Constant nieuwe procedures starten over triviale zaken om het slachtoffer financieel en emotioneel uit te putten.
+**Kenmerken:** 1. **Valse procesvoering:** Constant nieuwe procedures starten over triviale zaken om het slachtoffer financieel en emotioneel uit te putten.
 2. **Pathologisering:** Het slachtoffer in officiële stukken neerzetten als 'gek', 'labiel' of 'onbekwaam' zonder medische basis.
 3. **Projectie:** De dader beschuldigt het slachtoffer exact van het gedrag dat hijzelf vertoont (bijv. vervreemding van kinderen).
 
@@ -178,8 +176,7 @@ Dit creëert een situatie waarin het slachtoffer bij een vertrek direct dakloos 
     content: {
       intro: "Gaslighting bereikt zijn ultieme doel wanneer de dader fysiek niet meer aanwezig hoeft te zijn om het slachtoffer te controleren. De twijfel is een deel van de identiteit geworden.",
       analysis: `Sweet (2019) beschrijft dit als de 'internalisering' van de aanval op de realiteit. Het slachtoffer stelt zichzelf constant vragen:
-* "Reageer ik niet inderdaad te emotioneel?" * of * "Heb ik het wel goed onthouden?" * **De gevolgen:** *   **Cognitieve Dissonantie:
-Een constante strijd tussen wat je *ziet* en wat je wordt *verteld*.
+* "Reageer ik niet inderdaad te emotioneel?" * of * "Heb ik het wel goed onthouden?" * **De gevolgen:** *   **Cognitieve Dissonantie:** Een constante strijd tussen wat je *ziet* en wat je wordt *verteld*.
 * **Decision Fatigue:** Een totaal onvermogen om zelf beslissingen te nemen zonder goedkeuring van de ander.
 * **Geheugenverlies:** Door de chronische stress en verwarring kan de hippocampus (geheugencentrum) schade oplopen, wat de gaten in de herinnering verergert.
 
@@ -199,8 +196,7 @@ De weg naar herstel begint niet bij de dader, maar bij het herladen van de eigen
     content: {
       intro: "Stalking wordt vaak onderschat omdat de handelingen op zichzelf (een appje, een keer langsrijden) onschuldig lijken. Maar de optelsom creëert een staat van chronische terreur.",
       analysis: `Storey (2020) toont aan dat slachtoffers van stalking vaker symptomen vertonen van complexe PTSS dan slachtoffers van eenmalig fysiek geweld. 
-**De impactfactoren:
-1. **Onvoorspelbaarheid:** Niet weten wanneer de dader weer opduikt, zorgt voor een constante adrenaline-overload.
+**De impactfactoren:** 1. **Onvoorspelbaarheid:** Niet weten wanneer de dader weer opduikt, zorgt voor een constante adrenaline-overload.
 2. **Verlies van privacy:** Het gevoel dat je nergens onbespied bent, leidt tot sociaal isolement.
 3. **Slaapgebrek:** Veel daders bellen of appen 's nachts, wat de mentale weerbaarheid afbreekt.
 
@@ -360,8 +356,7 @@ Het kernverschil met normale romantiek is het negeren van de grenzen van de ande
     content: {
       intro: "Op de moderne werkvloer wordt de strijd niet meer persoonlijk gestreden, maar via e-mail en chat. 'Cyber-incivility' is het nieuwe wapen voor de kantoormachiavellist.",
       analysis: `Lim & Teo (2019) definieerden cyber-incivility als 'onbeleefd gedrag via digitale kanalen dat de sociale normen van de werkvloer schendt'.
-**Tactieken:
-* **Passive-aggressive CCing:** Bewust managers toevoegen in kopie bij kleine foutjes om iemand in diskrediet te brengen.
+**Tactieken:** * **Passive-aggressive CCing:** Bewust managers toevoegen in kopie bij kleine foutjes om iemand in diskrediet te brengen.
 * **Emoji-gaslighting:** Het gebruik van cynische emoji's om de impact van een belediging te minimaliseren (*"Het was maar een grapje 😉"*).
 * **Digitale stilte:** Iemand negeren in groepschats terwijl anderen wel reactie krijgen, wat leidt tot een gevoel van uitsluiting.
 
@@ -381,8 +376,7 @@ Dit zorgt voor een onveilig werkklimaat waarin medewerkers constant op hun hoede
     content: {
       intro: "Nederland volgt internationale trends (zoals de Istanbul-conventie) door dwingende controle meer centraal te stellen in de opsporing. De focus verschuift van slaan naar beheersen.",
       analysis: `Douglas (2018) en recente Nederlandse wetsvoorstellen benadrukken dat 'Coercive Control' strafbaar moet zijn als een voordurend delict. 
-**Juridische ankers:
-* **Stelselmatigheid:** Het bewijzen dat gedragingen elkaar in een logische, destructieve reeks opvolgen.
+**Juridische ankers:** * **Stelselmatigheid:** Het bewijzen dat gedragingen elkaar in een logische, destructieve reeks opvolgen.
 * **Impact op autonomie:** Aantonen dat het slachtoffer feitelijk haar vrijheid is verloren in alledaagse keuzes.
 * **Belaging(art. 285b Sr):** Wordt steeds vaker gebruikt om niet alleen het volgen van personen, maar ook de constante psychische controle te vervolgen.
 
@@ -487,8 +481,7 @@ Het doel van de dader is niet schade, maar **totale gehoorzaamheid **.Het slacht
     content: {
       intro: "De smartphone is het ultieme wapen voor de moderne stalker geworden. 'Stalkerware' en tracking-devices zoals AirTags maken 24/7 surveillance mogelijk zonder dat de dader fysiek aanwezig hoeft te zijn.",
       analysis: `Onderzoek naar 'Technology-Facilitated Abuse' wijst op een explosieve stijging van digitale belaging. 
-**Vormen van surveillance:
-* **Stalkerware:** Apps die onzichtbaar op een telefoon worden geïnstalleerd en alle chats, locaties en camera-activiteit doorsturen.
+**Vormen van surveillance:** * **Stalkerware:** Apps die onzichtbaar op een telefoon worden geïnstalleerd en alle chats, locaties en camera-activiteit doorsturen.
 * **Tracking devices:** Het verbergen van AirTags of GPS-trackers in tassen, jassen of auto's.
 * **Account-hijacking:** Toegang via gedeelde wachtwoorden of 'Find My' functies om locaties live te volgen.
 
@@ -533,8 +526,7 @@ Deze vorm van stalking creëert een gevoel van 'omnipresentie': de dader lijkt a
       analysis: `Heym et al. (2021) identificeerden in een grootschalige studie de **Dark Empath **.Dit type scoort hoog op de 'Dark Triad'(narcisme, machiavellisme, psychopathie) maar óók hoog op cognitieve empathie.
 
 In tegenstelling tot de klassieke psychopaat(die niet * voelt * wat jij voelt), * snapt * de Dark Empath precies wat jouw pijnpunten zijn.Ze gebruiken dit inzicht niet om te troosten, maar om strategisch te manipuleren.
-**Kenmerken:
-* Minder fysiek agressief, maar meesters in 'indirecte agressie'(sociale uitsluiting, schuldgevoel aanpraten).
+**Kenmerken:** * Minder fysiek agressief, maar meesters in 'indirecte agressie'(sociale uitsluiting, schuldgevoel aanpraten).
 * Komen charmant en begripvol over, waardoor slachtoffers hen lang in vertrouwen nemen.
 * Gebruiken persoonlijke informatie, gedeeld in vertrouwen, later als wapen.`,
       methodology: "",
@@ -551,9 +543,7 @@ In tegenstelling tot de klassieke psychopaat(die niet * voelt * wat jij voelt), 
     summary: "Deny, Attack, Reverse Victim and Offender. Een wetenschappelijk model voor de reactie van daders op confrontatie.",
     content: {
       intro: "Wanneer een slachtoffer een dader confronteert met wangedrag, volgt zelden een excuus. Vaak ontstaat een verwarrende dynamiek waarin het slachtoffer uiteindelijk zijn excuses aanbiedt.",
-      analysis: `Jennifer Freyd publiceerde in 2020(Harsey & Freyd) nieuw empirisch bewijs voor het **DARVO **-mechanisme.Het is een voorspelbaar patroon bij confrontatie:
-
-1. **Deny(Ontkennen):** "Dat is nooit gebeurd" of "Je herinnert het je verkeerd."
+      analysis: `Jennifer Freyd publiceerde in 2020(Harsey & Freyd) nieuw empirisch bewijs voor het **DARVO **-mechanisme.Het is een voorspelbaar patroon bij confrontatie:** 1. **Deny(Ontkennen):** "Dat is nooit gebeurd" of "Je herinnert het je verkeerd."
 2. **Attack(Aanvallen):** De geloofwaardigheid of geestelijke gesteldheid van de melder wordt aangevallen. "Je bent hysterisch/dronken/wraakzuchtig."
 3. **Reverse Victim & Offender(Omdraaien):** De dader presenteert zich als het échte slachtoffer van de 'valse beschuldigingen' van de ander.
 
@@ -573,8 +563,7 @@ Het onderzoek toont aan dat toeschouwers die niet bekend zijn met DARVO, vaak ga
     content: {
       intro: "Gaslighting vindt niet alleen plaats in relaties, maar ook op de werkvloer. Klokkenluiders worden vaak niet bedankt, maar pathologisch verklaard.",
       analysis: `Kenny (2019) onderzocht de ervaringen van klokkenluiders in de bancaire sector en gezondheidszorg.Ze beschrijft 'Institutional Gaslighting' als een proces waarbij de organisatie de realiteit van de melder systematisch ondermijnt.
-**Strategieën:
-* **Normalisatie van afwijking:** De gemelde fraude wordt afgedaan als 'standaard procedure'.
+**Strategieën:** * **Normalisatie van afwijking:** De gemelde fraude wordt afgedaan als 'standaard procedure'.
 * **Isolatie:** Collega's wordt opgedragen de melder te negeren.
 * **Karaktermoord:** De focus verschuift van de * inhoud * van de melding naar de * persoonlijkheid * van de melder("Hij ligt moeilijk in de groep", "Ze is labiel").
 
@@ -600,8 +589,7 @@ Het gevolg is dat de klokkenluider gaat twijfelen aan zijn eigen waarneming en m
 1. **Omgevingscontrole:** Het op afstand wijzigen van de thermostaat(extreem koud of heet), verlichting laten knipperen of slimme sloten blokkeren.
 2. **Surveillance:** Het gebruik van babyfoons, robotstofzuigers met camera's en 'Find My'-functies om elke beweging te volgen.
 3. **Gaslighting:** Doordat de dader acties ontkent(* "Je bent gek, de verwarming staat gewoon op 20 graden" *), twijfelt het slachtoffer aan haar waarneming en de techniek.
-**De impact:
-Deze vorm van controle is 'spaceless'; het slachtoffer is nergens veilig, zelfs niet als de dader fysiek afwezig is.Het creëert een gevoel van alomtegenwoordigheid(omnipresentie) van de dader.`,
+**De impact:** Deze vorm van controle is 'spaceless'; het slachtoffer is nergens veilig, zelfs niet als de dader fysiek afwezig is.Het creëert een gevoel van alomtegenwoordigheid(omnipresentie) van de dader.`,
       methodology: "",
       conclusion: ""
     },
@@ -618,12 +606,10 @@ Deze vorm van controle is 'spaceless'; het slachtoffer is nergens veilig, zelfs 
       intro: "Overweldigende affectie aan het begin van een relatie wordt vaak geromantiseerd. Wetenschappelijk onderzoek toont echter aan dat 'love bombing' een berekende manipulatiestrategie is.",
       analysis: `Strutzenberg et al. (2023) voerden een studie uit onder 484 jongvolwassenen.De resultaten tonen een sterke correlatie tussen **love bombing **en **narcistische trekken **(lage zelfwaardering, behoefte aan bewondering).
 
-De onderzoekers onderscheiden drie fasen in deze manipulatiecyclus:
-1. **Idealisatie(Love Bombing):** Exessief contact, cadeaus en toekomstplannen om het slachtoffer afhankelijk te maken.
+De onderzoekers onderscheiden drie fasen in deze manipulatiecyclus:** 1. **Idealisatie(Love Bombing):** Exessief contact, cadeaus en toekomstplannen om het slachtoffer afhankelijk te maken.
 2. **Devaluatie:** Zodra de emotionele investering binnen is, stopt de aandacht en begint de kritiek.
 3. **Verwerping:** Het slachtoffer wordt aan de kant gezet of in een knipperlichtrelatie gehouden.
-**Conclusie:
-Love bombing is geen teken van 'ware liefde', maar een teken van een * onveilige hechtingsstijl * van de dader, bedoeld om controle te verkrijgen.`,
+**Conclusie:** Love bombing is geen teken van 'ware liefde', maar een teken van een * onveilige hechtingsstijl * van de dader, bedoeld om controle te verkrijgen.`,
       methodology: "",
       conclusion: ""
     },
@@ -639,8 +625,7 @@ Love bombing is geen teken van 'ware liefde', maar een teken van een * onveilige
     content: {
       intro: "Met de verschuiving naar thuiswerken is intimidatie niet verdwenen, maar van vorm veranderd. 'Cyber-incivility' is subtieler en lastiger te bewijzen.",
       analysis: `Onderzoek van Vranjes et al. (2021) toont aan dat digitale communicatie de drempel voor manipulatie verlaagt.
-**Nieuwe vormen van manipulatie:
-* **De 'Silence Treatment':** Iemand negeren in groepschats of bewust 'vergeten' uit te nodigen voor Teams-vergaderingen(sociale isolatie).
+**Nieuwe vormen van manipulatie:** * **De 'Silence Treatment':** Iemand negeren in groepschats of bewust 'vergeten' uit te nodigen voor Teams-vergaderingen(sociale isolatie).
 * **Micro-management via status:** Het monitoren van 'groene bolletjes'(online status) en direct bellen als iemand 5 minuten 'afwezig' is.
 * **Publieke vernedering:** Kritische feedback geven in een kanaal waar alle collega's meelezen (CC-cultuur), in plaats van 1-op-1.
 
@@ -662,8 +647,7 @@ Omdat non-verbale signalen ontbreken, kunnen daders zich makkelijker verschuilen
     content: {
       intro: "Op 1 juli 2024 is de Wet seksuele misdrijven in werking getreden. Dit is een fundamentele verschuiving in het Nederlandse strafrecht. Waar voorheen 'dwang' (geweld of bedreiging) bewezen moest worden, draait het nu om 'instemming'.",
       analysis: `Onder de oude wet was seksueel contact strafbaar als er sprake was van dwang.Dit leidde tot schrijnende situaties waarin slachtoffers die bevroren('freezing') of gemanipuleerd waren, juridisch geen poot om op hadden te staan.
-**Schuldverkrachting en Opzet:
-De nieuwe wet introduceert een lagere drempel. 
+**Schuldverkrachting en Opzet:** De nieuwe wet introduceert een lagere drempel. 
 1. **Opzetverkrachting:** De dader * wist * dat de ander niet wilde.
 2. **Schuldverkrachting:** De dader * had moeten vermoeden * dat de ander niet wilde, maar ging toch door(aanmerkelijke onvoorzichtigheid).
 
@@ -683,8 +667,7 @@ Ook seksuele intimidatie(zowel fysiek als online) is nu expliciet strafbaar gest
     content: {
       intro: "Lange tijd was 'mishandeling' (art. 300 Sr) synoniem aan fysiek letsel. Psychische terreur bleef straffeloos. Jurisprudentie toont echter een kentering.",
       analysis: `Hoewel een specifiek wetsartikel voor 'dwingende controle' in Nederland nog in ontwikkeling is, biedt de huidige rechtspraak al mogelijkheden.De Hoge Raad heeft bepaald dat het toebrengen van 'pijn' of 'letsel' niet beperkt is tot het fysieke lichaam.
-**Criteria voor vervolging:
-Om psychisch geweld(zoals systematische vernedering, isolatie of gaslighting) als mishandeling te vervolgen, moet er sprake zijn van:
+**Criteria voor vervolging:** Om psychisch geweld(zoals systematische vernedering, isolatie of gaslighting) als mishandeling te vervolgen, moet er sprake zijn van:
 1. **Medisch objectiveerbaar letsel:** Een diagnose(bijv.PTSS, depressie) vastgesteld door een erkend deskundige.
 2. **Causaliteit:** Bewijs dat dit letsel direct veroorzaakt is door het gedrag van de dader.
 
@@ -704,10 +687,8 @@ Daarnaast wordt art. 285b Sr(Belaging) steeds vaker ingezet voor dwingende contr
     content: {
       intro: "Het ongevraagd delen van intieme beelden ('wraakporno' of exposing) of het dreigen daarmee (sextortion) is een destructieve vorm van manipulatie.",
       analysis: `De Wet seksuele misdrijven (2024) stelt het maken, bezitten én verspreiden van seksueel beeldmateriaal zonder instemming expliciet strafbaar.Ook het maken van 'deepfakes' valt hieronder.
-**De manipulatie:
-Daders gebruiken beelden vaak als dwangmiddel om slachtoffers in een relatie te houden of geld af te persen.De dreiging * "Als je bij me weggaat, stuur ik dit naar je baas" * is nu strafbaar als dwang, zelfs als de beelden nooit verstuurd worden.
-**Onderzoek:
-Het veiligstellen van digitale sporen(chatlogs van de dreigementen, metadata van de bestanden) is cruciaal.Vaak verwijdert de dader berichten('unsend'), maar laten deze sporen achter op servers of in back-ups.`,
+**De manipulatie:** Daders gebruiken beelden vaak als dwangmiddel om slachtoffers in een relatie te houden of geld af te persen.De dreiging * "Als je bij me weggaat, stuur ik dit naar je baas" * is nu strafbaar als dwang, zelfs als de beelden nooit verstuurd worden.
+**Onderzoek:** Het veiligstellen van digitale sporen(chatlogs van de dreigementen, metadata van de bestanden) is cruciaal.Vaak verwijdert de dader berichten('unsend'), maar laten deze sporen achter op servers of in back-ups.`,
       methodology: "",
       conclusion: ""
     },
@@ -727,8 +708,7 @@ Het veiligstellen van digitale sporen(chatlogs van de dreigementen, metadata van
 2. **Friendship forming:** Het creëren van een 'veilige' bubbel en het isoleren van het slachtoffer van kritische geluiden.
 3. **Testing:** Kleine grensoverschrijdingen om de meegaandheid te testen.
 4. **Abuse:** Het daadwerkelijke misbruik(financieel of emotioneel).
-**Normalisatie:
-Het doel van grooming is 'normalisatie'.De dader zorgt ervoor dat abnormaal gedrag(zoals het overmaken van geld naar een privérekening of het accepteren van extreme controle) logisch en noodzakelijk lijkt binnen de realiteit die de dader schept.`,
+**Normalisatie:** Het doel van grooming is 'normalisatie'.De dader zorgt ervoor dat abnormaal gedrag(zoals het overmaken van geld naar een privérekening of het accepteren van extreme controle) logisch en noodzakelijk lijkt binnen de realiteit die de dader schept.`,
       methodology: "",
       conclusion: ""
     },
@@ -752,8 +732,7 @@ Niet iedereen * kan * frauderen.Een succesvolle fraudeur heeft specifieke eigens
 2. **Intelligentie:** Het vermogen om de zwakke plekken in de controle te zien én te begrijpen hoe deze uitgebuit kunnen worden.
 3. **Ego / Overtuigingskracht:** Het vermogen om anderen te manipuleren of te liegen zonder te blozen(dwangmatig liegen).
 4. **Stressbestendigheid:** Het vermogen om de druk van het 'dubbelleven' aan te kunnen.
-**Relevantie voor werkgevers:
-Bij het zoeken naar een dader wordt vaak gekeken naar wie er toegang had(Gelegenheid).De Diamant leert ons dat we ook moeten kijken naar wie er * slim en brutaal genoeg * was om het te doen.Vaak zijn dit de 'sterren' van de afdeling: medewerkers die processen beter snappen dan hun managers.`,
+**Relevantie voor werkgevers:** Bij het zoeken naar een dader wordt vaak gekeken naar wie er toegang had(Gelegenheid).De Diamant leert ons dat we ook moeten kijken naar wie er * slim en brutaal genoeg * was om het te doen.Vaak zijn dit de 'sterren' van de afdeling: medewerkers die processen beter snappen dan hun managers.`,
       methodology: "",
       conclusion: ""
     },
@@ -774,8 +753,7 @@ Bij het zoeken naar een dader wordt vaak gekeken naar wie er toegang had(Gelegen
 * **Inconsistentie:** De patiënt kan bepaalde bewegingen 'niet' maken tijdens het spreekuur, maar wel op de parkeerplaats.
 * **Overdrijving:** Symptomen worden theatraler gepresenteerd dan medisch logisch is.
 * **Selectief geheugen:** Wel details weten over de 'oorzaak'(het arbeidconflict), maar vaag zijn over dagelijkse activiteiten.
-**Het juridische probleem:
-Een bedrijfsarts gaat uit van de vertrouwensrelatie en mag niet 'rechercheren'.Een arts * moet * de klacht serieus nemen.Hierdoor kan een frauderende werknemer zich lang verschuilen achter medisch geheim.Alleen feitelijk bewijs van gedrag * buiten * de spreekkamer kan dit doorbreken.`,
+**Het juridische probleem:** Een bedrijfsarts gaat uit van de vertrouwensrelatie en mag niet 'rechercheren'.Een arts * moet * de klacht serieus nemen.Hierdoor kan een frauderende werknemer zich lang verschuilen achter medisch geheim.Alleen feitelijk bewijs van gedrag * buiten * de spreekkamer kan dit doorbreken.`,
       methodology: "",
       conclusion: ""
     },
@@ -793,8 +771,7 @@ Een bedrijfsarts gaat uit van de vertrouwensrelatie en mag niet 'rechercheren'.E
       analysis: `Juridisch gezien draait dit om art. 7: 611 BW(Goed werknemerschap) en de re-integratieverplichting.
       
 Als een werknemer stelt arbeidsongeschikt te zijn voor zijn eigen werk, maar wel in staat is om vergelijkbare(of zwaardere) activiteiten elders te verrichten, is er sprake van bedrog.Hij belemmert zijn eigen herstel en benadeelt de werkgever.
-**De rol van onderzoek:
-Het enkele * vermoeden * is niet genoeg.Een ontslag op staande voet vereist onomstotelijk bewijs.
+**De rol van onderzoek:** Het enkele * vermoeden * is niet genoeg.Een ontslag op staande voet vereist onomstotelijk bewijs.
 Onderzoek richt zich op:
 1. **Aard van de activiteiten:** Is het 'therapeutisch'(een rondje wandelen) of arbeid(stratenmaken) ?
 2. **Frequentie :** Is het incidenteel of structureel ?
@@ -820,8 +797,7 @@ Onderzoek richt zich op:
       analysis: `Timothy Levine (2014) introduceerde de **Truth-Default Theory(TDT) **.Deze theorie stelt dat mensen evolutionair zijn ontwikkeld om standaard aan te nemen dat communicatie eerlijk is.Dit is geen naïviteit, maar efficiëntie: als we elke uitspraak zouden wantrouwen, zou sociale samenwerking onmogelijk zijn.
 
 De meeste mensen blijven in deze 'Truth-Default state' tot er een **trigger **is die onmogelijk genegeerd kan worden.Dit verklaart waarom partners of werkgevers vaak jarenlang signalen van bedrog missen: hun brein rationaliseert het verdachte gedrag weg om de status quo te behouden.
-**Implicaties voor onderzoek:
-Het vertrouwen op 'buikgevoel' of het observeren van nervositeit is zinloos.Echte leugenaars zijn vaak niet nerveus, en onschuldige mensen zijn dat onder druk juist wel.Professioneel onderzoek richt zich daarom nooit op de * persoon *, maar op de * inhoud *. 
+**Implicaties voor onderzoek:** Het vertrouwen op 'buikgevoel' of het observeren van nervositeit is zinloos.Echte leugenaars zijn vaak niet nerveus, en onschuldige mensen zijn dat onder druk juist wel.Professioneel onderzoek richt zich daarom nooit op de * persoon *, maar op de * inhoud *. 
 
 In de praktijk betekent dit dat verklaringen niet worden beoordeeld op geloofwaardigheid, maar systematisch worden getoetst aan verifieerbare data, tijdlijnen en logistieke feiten.Alleen harde feiten kunnen de 'Truth-Default' doorbreken en zekerheid bieden.`,
       methodology: "",
@@ -843,8 +819,7 @@ In de praktijk betekent dit dat verklaringen niet worden beoordeeld op geloofwaa
 2. Zorgen dat het consistent is met wat de luisteraar al weet;
 3. Zijn eigen gedrag monitoren om 'normaal' te lijken;
 4. De reactie van de interviewer in de gaten houden.
-**De strategie:
-Door de **cognitieve belasting **kunstmatig te verhogen tijdens een interview, stort het kaartenhuis in.Eerlijke mensen putten uit hun geheugen en hebben hier weinig moeite mee.Leugenaars moeten hun verhaal * live * construeren. 
+**De strategie:** Door de **cognitieve belasting **kunstmatig te verhogen tijdens een interview, stort het kaartenhuis in.Eerlijke mensen putten uit hun geheugen en hebben hier weinig moeite mee.Leugenaars moeten hun verhaal * live * construeren. 
 
 Effectieve methoden zijn bijvoorbeeld het vragen om het verhaal in **omgekeerde chronologische volgorde **te vertellen, of het vragen naar specifieke zintuiglijke details(geur, geluid) die in een verzonnen script vaak ontbreken.Wanneer het brein overbelast raakt, ontstaan er stiltes, inconsistenties en wordt de lichaamstaal statisch omdat alle energie naar het denken gaat.`,
       methodology: "",
@@ -865,8 +840,7 @@ Effectieve methoden zijn bijvoorbeeld het vragen om het verhaal in **omgekeerde 
 1. **Narcisme:** Een opgeblazen ego, behoefte aan bewondering en woede bij kritiek.
 2. **Machiavellisme:** Strategische manipulatie, kille berekening en het idee dat het doel de middelen heiligt.
 3. **Psychopathie:** Gebrek aan empathie, impulsiviteit en angstloosheid.
-**De Corporate Psychopaat:
-Paulhus & Williams (2002) toonden aan dat deze types vaak snel carrière maken.Ze zijn charmant, durven risico's te nemen en kunnen goed verkopen. Echter, op de lange termijn laten ze een spoor van vernieling achter: pesterijen, fraude en een angstcultuur.
+**De Corporate Psychopaat:** Paulhus & Williams (2002) toonden aan dat deze types vaak snel carrière maken.Ze zijn charmant, durven risico's te nemen en kunnen goed verkopen. Echter, op de lange termijn laten ze een spoor van vernieling achter: pesterijen, fraude en een angstcultuur.
 
 Ze zijn meesters in **impression management **: ze managen naar boven(slijmen bij de baas) en trappen naar beneden(intimidatie van personeel).Hierdoor worden ze vaak pas ontdekt als de schade al enorm is.`,
       methodology: "",
@@ -886,8 +860,7 @@ Ze zijn meesters in **impression management **: ze managen naar boven(slijmen bi
       analysis: `Het **Halo-effect **is een cognitieve bias waarbij één positieve eigenschap(uiterlijk, vlotte babbel, succes) onze perceptie van iemands * hele * karakter kleurt. "Hij ziet er zo netjes uit, hij zou nooit stelen."
 
 Thorndike (1920) beschreef dit effect al.In fraudeonderzoeken zien we dit vaak terug: de 'topverkoper' of de 'charmante manager' wordt niet gecontroleerd, terwijl de stille, onopvallende medewerker met argusogen wordt bekeken.Fraudeurs misbruiken dit bewust door veel aandacht te besteden aan hun imago en sociale status.
-**Onderzoek:
-Een objectief onderzoek moet blind zijn voor status.Data(cijfers, logfiles) zijn niet gevoelig voor het Halo-effect.`,
+**Onderzoek:** Een objectief onderzoek moet blind zijn voor status.Data(cijfers, logfiles) zijn niet gevoelig voor het Halo-effect.`,
       methodology: "",
       conclusion: ""
     },
@@ -908,8 +881,7 @@ Dit kan zich uiten in:
 * Fysieke agressie.
 * Een lastercampagne tegen de onderzoeker of melder.
 * Het vernietigen van bewijsmateriaal uit pure wraakzucht.
-**Strategie:
-Bij onderzoek naar personen met dit profiel is de timing van de confrontatie cruciaal.Eerst moet het bewijs 100 % veiliggesteld zijn("lockdown") voordat de betrokkene op de hoogte wordt gesteld.`,
+**Strategie:** Bij onderzoek naar personen met dit profiel is de timing van de confrontatie cruciaal.Eerst moet het bewijs 100 % veiliggesteld zijn("lockdown") voordat de betrokkene op de hoogte wordt gesteld.`,
       methodology: "",
       conclusion: ""
     },
@@ -946,15 +918,12 @@ SCAN is een krachtig hulpmiddel om te bepalen * waar * in een verklaring de leug
     summary: "Hét model om risico's binnen organisaties te voorspellen en begrijpen.",
     content: {
       intro: "Donald Cressey interviewde in de jaren '50 honderden veroordeelde verduisteraars. Hij ontdekte dat er altijd drie elementen aanwezig moeten zijn voordat iemand overgaat tot fraude.",
-      analysis: `De **Fraud Triangle **bestaat uit:
-
-1. **Druk(Pressure):** Een niet-deelbaar financieel probleem.Dit kan een gokschuld zijn, een echtscheiding, of simpelweg de wens om een bepaalde levensstandaard hoog te houden(status).De dader ziet geen legitieme uitweg.
+      analysis: `De **Fraud Triangle **bestaat uit:** 1. **Druk(Pressure):** Een niet-deelbaar financieel probleem.Dit kan een gokschuld zijn, een echtscheiding, of simpelweg de wens om een bepaalde levensstandaard hoog te houden(status).De dader ziet geen legitieme uitweg.
 
 2. **Gelegenheid(Opportunity):** Het gat in de controle.De medewerker weet dat hij geld kan wegnemen zonder dat iemand het merkt.Bijvoorbeeld omdat hij zowel de facturen inboekt als de betalingen goedkeurt.Dit is het enige element waar een organisatie directe invloed op heeft.
 
 3. **Rationalisatie:** Het mentale mechanisme om de daad goed te praten. * "Ik leen het alleen maar" *, * "Ze betalen me te weinig" *, of * "Iedereen doet het" *.Hierdoor behoudt de fraudeur zijn zelfbeeld als 'eerlijk mens'.
-**Toepassing in onderzoek:
-Bij het onderzoeken van fraude zoeken we niet alleen naar de dader, maar reconstrueren we deze driehoek.Waar zat het lek in de organisatie(gelegenheid) ? Wat was de trigger(druk) ? Dit helpt niet alleen bij het bewijzen van de opzet, maar ook bij het voorkomen van herhaling.`,
+**Toepassing in onderzoek:** Bij het onderzoeken van fraude zoeken we niet alleen naar de dader, maar reconstrueren we deze driehoek.Waar zat het lek in de organisatie(gelegenheid) ? Wat was de trigger(druk) ? Dit helpt niet alleen bij het bewijzen van de opzet, maar ook bij het voorkomen van herhaling.`,
       methodology: "",
       conclusion: ""
     },
@@ -1014,8 +983,7 @@ Onderzoek naar inkoopfraude vereist **datamining **: het analyseren van de relat
       analysis: `De Association of Certified Fraud Examiners(ACFE) identificeert dit als een veelvoorkomend schema.
 * **De fictieve medewerker:** Een HR-medewerker of manager creëert een vals profiel en laat het salaris op zijn eigen rekening(of die van een partner) storten.
 * **De ex-medewerker:** Iemand is uit dienst, maar wordt niet uit het systeem gehaald.Het salaris loopt door en wordt afgeroomd.
-**Detectie:
-Een audit van de loonlijst is nodig.Zoek naar dubbele bankrekeningnummers, dubbele adressen, of medewerkers die nooit inloggen op het netwerk of geen vakantie opnemen.`,
+**Detectie:** Een audit van de loonlijst is nodig.Zoek naar dubbele bankrekeningnummers, dubbele adressen, of medewerkers die nooit inloggen op het netwerk of geen vakantie opnemen.`,
       methodology: "",
       conclusion: ""
     },
@@ -1031,8 +999,7 @@ Een audit van de loonlijst is nodig.Zoek naar dubbele bankrekeningnummers, dubbe
     content: {
       intro: "Faillissementsfraude benadeelt schuldeisers en de maatschappij. Een veelvoorkomende methode is het leeghalen van de vennootschap vlak voor het faillissement (paulianeus handelen).",
       analysis: `Onderzoekers zoals Levi (2008) beschrijven hoe 'georganiseerde' fraudeurs bedrijven gebruiken als wegwerpartikelen.Ze bouwen schulden op, sluizen voorraden en machines weg naar een nieuwe BV(de 'sterfhuisconstructie') en laten de oude BV ploffen.
-**Indicatoren:
-- Ongebruikelijke transacties vlak voor datum faillissement.
+**Indicatoren:** - Ongebruikelijke transacties vlak voor datum faillissement.
 - Verkoop van activa tegen onzakelijke(te lage) prijzen aan gelieerde partijen.
 - Ontbrekende administratie.
 
@@ -1091,8 +1058,7 @@ Bij letselschade wordt vaak geclaimd dat men niet meer kan werken, terwijl obser
       intro: "In de strijd om een baan 'pimpen' kandidaten hun CV. Maar de grens tussen verfraaien en frauderen is dun.",
       analysis: `Onderzoek toont aan dat meer dan 50 % van de CV's onwaarheden bevat. Dit varieert van het rekken van data (om gaten te dichten) tot het verzinnen van complete diploma's of werkgevers.
 Het risico voor de werkgever is groot: een incompetente medewerker op een sleutelpositie kan enorme schade aanrichten.
-**Validatie:
-Pre-employment screening is de enige remedie.Het verifiëren van de bron(het instituut bellen, niet het nummer op het CV) is essentieel.`,
+**Validatie:** Pre-employment screening is de enige remedie.Het verifiëren van de bron(het instituut bellen, niet het nummer op het CV) is essentieel.`,
       methodology: "",
       conclusion: ""
     },
@@ -1109,14 +1075,11 @@ Pre-employment screening is de enige remedie.Het verifiëren van de bron(het ins
     summary: "Geweld is niet alleen slaan. Stark's model verklaart hoe vrijheidsberoving werkt in relaties.",
     content: {
       intro: "Jarenlang werd huiselijk geweld enkel gezien als fysieke mishandeling. Evan Stark (2007) veranderde dit paradigma met zijn concept van **Coercive Control**(Dwingende Controle).",
-      analysis: `Stark betoogt dat het primaire doel van de dader niet fysiek letsel is, maar **vrijheidsberoving **.Fysiek geweld is slechts één van de middelen om dominantie af te dwingen.De kern van het misbruik zit in een patroon van:
-* **Isolatie:** Het contact met vrienden en familie afsnijden.
+      analysis: `Stark betoogt dat het primaire doel van de dader niet fysiek letsel is, maar **vrijheidsberoving **.Fysiek geweld is slechts één van de middelen om dominantie af te dwingen.De kern van het misbruik zit in een patroon van:** * **Isolatie:** Het contact met vrienden en familie afsnijden.
 * **Intimidatie:** Dreigen met geweld, zelfmoord of het afpakken van kinderen.
 * **Controle:** Beheer over financiën, kledingkeuze, en zelfs slaap-en eetpatronen.
-**Het effect:
-Het slachtoffer verliest haar autonomie en wordt een 'gijzelaar' in eigen huis.Omdat er vaak geen blauwe plekken zijn, wordt de ernst door politie en hulpverlening vaak onderschat.Stark toonde aan dat deze vorm van controle een sterkere voorspeller is voor fataal geweld dan incidentele fysieke agressie.
-**Bewijsvoering:
-In onderzoekssituaties is het cruciaal om niet te zoeken naar incidenten, maar naar het **patroon **.Het documenteren van isolatie, financiële controle en micro-regulering bouwt een dossier op dat de ernst van de situatie juridisch aannemelijk maakt.`,
+**Het effect:** Het slachtoffer verliest haar autonomie en wordt een 'gijzelaar' in eigen huis.Omdat er vaak geen blauwe plekken zijn, wordt de ernst door politie en hulpverlening vaak onderschat.Stark toonde aan dat deze vorm van controle een sterkere voorspeller is voor fataal geweld dan incidentele fysieke agressie.
+**Bewijsvoering:** In onderzoekssituaties is het cruciaal om niet te zoeken naar incidenten, maar naar het **patroon **.Het documenteren van isolatie, financiële controle en micro-regulering bouwt een dossier op dat de ernst van de situatie juridisch aannemelijk maakt.`,
       methodology: "",
       conclusion: ""
     },
@@ -1154,8 +1117,7 @@ Slachtoffers verdedigen hun dader vaak tegenover de buitenwereld en politie.Dit 
 Een dader labelt het slachtoffer bijvoorbeeld als 'hysterisch', 'overgevoelig' of 'in de war'.Door dit consequent te herhalen, en door feiten te ontkennen(* "Dat is nooit gebeurd, je verbeeldt het je" *), begint het slachtoffer haar eigen waarneming te wantrouwen.
 
 Dit is verwoestend in juridische procedures.Slachtoffers komen vaak warrig en emotioneel over(door de langdurige stress en twijfel), terwijl de dader zich kalm en rationeel presenteert.
-**De rol van onderzoek:
-Het doel van onderzoek bij gaslighting is het **externaliseren van de waarheid **.Door een feitenrelaas op te bouwen met data(berichten, tijdlijnen), krijgt het slachtoffer een 'anker' in de realiteit. * "Zie je wel, het is wel gebeurd. Hier staat het zwart op wit." * `,
+**De rol van onderzoek:** Het doel van onderzoek bij gaslighting is het **externaliseren van de waarheid **.Door een feitenrelaas op te bouwen met data(berichten, tijdlijnen), krijgt het slachtoffer een 'anker' in de realiteit. * "Zie je wel, het is wel gebeurd. Hier staat het zwart op wit." * `,
       methodology: "",
       conclusion: ""
     },
@@ -1175,8 +1137,7 @@ Het doel van onderzoek bij gaslighting is het **externaliseren van de waarheid *
 3. **De Incompetente Minnaar:** Sociaal onhandig, zoekt contact maar snapt sociale regels niet.
 4. **De Wrokkoesteraar:** Voelt zich onrecht aangedaan(bv.ex-werknemer) en wil het slachtoffer angst aanjagen.
 5. **De Roofstalker:** Bereidt een seksueel delict voor(zeldzaam, zeer gevaarlijk).
-**Onderzoeksaanpak:
-De aanpak verschilt per type.Een incompetente minnaar stopt vaak na een juridische waarschuwing.Een afgewezen stalker kan juist escaleren bij confrontatie.`,
+**Onderzoeksaanpak:** De aanpak verschilt per type.Een incompetente minnaar stopt vaak na een juridische waarschuwing.Een afgewezen stalker kan juist escaleren bij confrontatie.`,
       methodology: "",
       conclusion: ""
     },
@@ -1193,8 +1154,7 @@ De aanpak verschilt per type.Een incompetente minnaar stopt vaak na een juridisc
       intro: "Bij echtscheidingen komt vaak aan het licht dat een partner jarenlang geld heeft weggesluisd of schulden heeft gemaakt.",
       analysis: `Vogler (1998) onderzocht machtsdynamiek rond geld.Financiële ontrouw varieert van het hebben van een geheime creditcard tot het verbergen van grote erfenissen of bonussen.
 In scheidingsprocedures(verdeling, alimentatie) is het cruciaal om het **werkelijke **financiële plaatje te reconstrueren.
-**Onderzoek:
-Het analyseren van bankafschriften op patronen: regelmatige contante opnames, overboekingen naar onbekende rekeningen, of een levensstijl die niet past bij het opgegeven inkomen.`,
+**Onderzoek:** Het analyseren van bankafschriften op patronen: regelmatige contante opnames, overboekingen naar onbekende rekeningen, of een levensstijl die niet past bij het opgegeven inkomen.`,
       methodology: "",
       conclusion: ""
     },
@@ -1215,8 +1175,7 @@ Het analyseren van bankafschriften op patronen: regelmatige contante opnames, ov
 - Het kind het gevoel geven dat het moet kiezen('Loyaliteitsconflict').
 
 Het kind gaat de denkwijze van de verzorgende ouder overnemen om de eigen veiligheid of rust te waarborgen.
-**Fact-finding:
-In dergelijke complexe gezinssituaties is het essentieel om feiten van emoties te scheiden.Wat is er daadwerkelijk gebeurd tijdens overdrachtsmomenten ? Worden afspraken nagekomen ? Een objectief feitenrelaas kan de rechtbank helpen door de dynamiek bloot te leggen.`,
+**Fact-finding:** In dergelijke complexe gezinssituaties is het essentieel om feiten van emoties te scheiden.Wat is er daadwerkelijk gebeurd tijdens overdrachtsmomenten ? Worden afspraken nagekomen ? Een objectief feitenrelaas kan de rechtbank helpen door de dynamiek bloot te leggen.`,
       methodology: "",
       conclusion: ""
     },
@@ -1277,8 +1236,7 @@ Kenmerken zijn:
 -   Symptomen die alleen optreden in aanwezigheid van de verzorger.
 - Symptomen die niet verklaren zijn door medisch onderzoek.
 - Een verzorger die niet opgelucht is als er niets wordt gevonden, maar juist aandringt op meer(invasieve) testen.
-**Video-observatie:
-In extreme gevallen is verborgen cameratoezicht(in een ziekenhuis of thuis) de enige manier om te bewijzen dat de ouder het kind verstikt, vergiftigt of anderszins mishandelt om symptomen op te wekken.`,
+**Video-observatie:** In extreme gevallen is verborgen cameratoezicht(in een ziekenhuis of thuis) de enige manier om te bewijzen dat de ouder het kind verstikt, vergiftigt of anderszins mishandelt om symptomen op te wekken.`,
       methodology: "",
       conclusion: ""
     },
@@ -1296,8 +1254,7 @@ In extreme gevallen is verborgen cameratoezicht(in een ziekenhuis of thuis) de e
       analysis: `Het risico neemt toe naarmate de oudere afhankelijker wordt(dementie, fysieke beperkingen).De dader is vaak een bekende: een kind met schulden of een 'nieuwe vriend'.
 
 Acierno et al. (2010) vonden dat financiële uitbuiting een van de meest voorkomende vormen van ouderenmisbruik is.Het is lastig te bewijzen omdat de dader vaak een volmacht heeft gekregen.
-**Onderzoek:
-Het in kaart brengen van transacties, het verifiëren van handtekeningen en het interviewen van de omgeving kan aantonen dat er sprake is van misbruik van omstandigheden en wilsontbreken.`,
+**Onderzoek:** Het in kaart brengen van transacties, het verifiëren van handtekeningen en het interviewen van de omgeving kan aantonen dat er sprake is van misbruik van omstandigheden en wilsontbreken.`,
       methodology: "",
       conclusion: ""
     },
@@ -1313,12 +1270,9 @@ Het in kaart brengen van transacties, het verifiëren van handtekeningen en het 
     content: {
       intro: "Criminelen hebben de bovenwereld nodig. Ze hebben huizen nodig om in te wonen, vergunningen voor bedrijven, en zorgstructuren om geld wit te wassen.",
       analysis: `Tops & Tromp (2019) beschrijven ondermijning als een sluipend proces.Criminelen nestelen zich in wijken en branches.
-**Zorgfraude:
-Een specifiek zorgwekkende trend is de infiltratie in de zorgsector(PGB-fraude).Criminelen richten zorgbureaus op, ronselen kwetsbare cliënten en declareren zorg die nooit of slecht wordt geleverd.De cliënt wordt verwaarloosd, de maatschappij betaalt, en de crimineel strijkt de winst op.
-**Vastgoed:
-Ook in de verhuurmarkt wordt vaak contant geld witgewassen of worden panden gebruikt voor illegale activiteiten(drugslabs, prostitutie).Voor een verhuurder of woningcorporatie levert dit enorme risico's op, waaronder sluiting van het pand door de burgemeester (Wet Damocles).
-**Preventie:
-Integriteitsscreening van zakelijke relaties en huurders is de enige verdedigingslinie.Weten met wie je zakendoet voorkomt dat je onbewust faciliteert aan georganiseerde misdaad.`,
+**Zorgfraude:** Een specifiek zorgwekkende trend is de infiltratie in de zorgsector(PGB-fraude).Criminelen richten zorgbureaus op, ronselen kwetsbare cliënten en declareren zorg die nooit of slecht wordt geleverd.De cliënt wordt verwaarloosd, de maatschappij betaalt, en de crimineel strijkt de winst op.
+**Vastgoed:** Ook in de verhuurmarkt wordt vaak contant geld witgewassen of worden panden gebruikt voor illegale activiteiten(drugslabs, prostitutie).Voor een verhuurder of woningcorporatie levert dit enorme risico's op, waaronder sluiting van het pand door de burgemeester (Wet Damocles).
+**Preventie:** Integriteitsscreening van zakelijke relaties en huurders is de enige verdedigingslinie.Weten met wie je zakendoet voorkomt dat je onbewust faciliteert aan georganiseerde misdaad.`,
       methodology: "",
       conclusion: ""
     },
@@ -1338,8 +1292,7 @@ Integriteitsscreening van zakelijke relaties en huurders is de enige verdediging
       analysis: `Dressing et al. (2014) toonden aan dat de psychologische impact van cyberstalking(angst, trauma, slaapgebrek) gelijk is aan die van fysieke stalking.De dader is via de smartphone 24 / 7 aanwezig in het leven van het slachtoffer.Er is geen 'veilige plek' meer.
 
 Bovendien is de drempel voor de dader lager(anonimiteit, afstand), waardoor de frequentie van intimidatie vaak hoger ligt.
-**Digitaal Onderzoek:
-Het verzamelen van bewijs bij cyberstalking vereist technische expertise.IP-adressen, metadata van afbeeldingen en header-informatie van e-mails zijn nodig om de dader achter het anonieme profiel te identificeren.Screenshots alleen zijn vaak juridisch onvoldoende.`,
+**Digitaal Onderzoek:** Het verzamelen van bewijs bij cyberstalking vereist technische expertise.IP-adressen, metadata van afbeeldingen en header-informatie van e-mails zijn nodig om de dader achter het anonieme profiel te identificeren.Screenshots alleen zijn vaak juridisch onvoldoende.`,
       methodology: "",
       conclusion: ""
     },
@@ -1380,8 +1333,7 @@ Het detecteren van deepfakes is een wapenwedloop.Forensische software kijkt naar
 3. **De Crisis:** Er gebeurt iets ergs(ongeluk, vast in buitenland) waardoor er * nu * geld nodig is.
 
 Omdat het slachtoffer al emotioneel geïnvesteerd is, is de drempel om te betalen lager.Schaamte voorkomt vaak dat slachtoffers naar de politie stappen.
-**Onderzoek:
-Reverse image search en taalanalyse van de berichten kunnen vaak snel aantonen dat de 'persoon' niet bestaat of foto's gebruikt van modellen/militairen.`,
+**Onderzoek:** Reverse image search en taalanalyse van de berichten kunnen vaak snel aantonen dat de 'persoon' niet bestaat of foto's gebruikt van modellen/militairen.`,
       methodology: "",
       conclusion: ""
     },
@@ -1398,8 +1350,7 @@ Reverse image search en taalanalyse van de berichten kunnen vaak snel aantonen d
       intro: "Doxing is het verzamelen en publiceren van privégegevens (adres, telefoonnummer, werkgever) van een individu met kwaadaardige bedoelingen.",
       analysis: `Het doel is vaak intimidatie: de dader roept anderen op om het slachtoffer lastig te vallen. In Nederland is doxing sinds 2024 strafbaar gesteld.
 Doxers gebruiken OSINT-technieken om informatie te vinden die mensen onbewust zelf online hebben gezet (via Kadaster, oude tweets, foto's).
-**Preventie:
-Een 'Digital Footprint Analysis' kan in kaart brengen welke informatie over u of uw medewerkers online te vinden is, zodat u dit kunt verwijderen voordat het misbruikt wordt.`,
+**Preventie:** Een 'Digital Footprint Analysis' kan in kaart brengen welke informatie over u of uw medewerkers online te vinden is, zodat u dit kunt verwijderen voordat het misbruikt wordt.`,
       methodology: "",
       conclusion: ""
     },
@@ -1416,8 +1367,7 @@ Een 'Digital Footprint Analysis' kan in kaart brengen welke informatie over u of
       intro: "Jongeren worden vaak via social media (Snapchat, Instagram) benaderd om 'snel geld te verdienen'. Ze hoeven alleen hun bankpas en pincode uit te lenen.",
       analysis: `Europol waarschuwt voor dit fenomeen. Criminelen storten gestolen geld (bijv. uit phishing) op de rekening van de 'geldezel' (Money Mule) en pinnen het direct contant op.
 De crimineel blijft buiten beeld, maar de geldezel wordt gepakt.
-**Gevolgen:
-De jongere is strafbaar voor witwassen, moet het gestolen bedrag terugbetalen en komt op de zwarte lijst van banken (EVR), waardoor ze jarenlang geen rekening, lening of hypotheek kunnen krijgen.`,
+**Gevolgen:** De jongere is strafbaar voor witwassen, moet het gestolen bedrag terugbetalen en komt op de zwarte lijst van banken (EVR), waardoor ze jarenlang geen rekening, lening of hypotheek kunnen krijgen.`,
       methodology: "",
       conclusion: ""
     },
@@ -1437,8 +1387,7 @@ De jongere is strafbaar voor witwassen, moet het gestolen bedrag terugbetalen en
       analysis: `De Autoriteit Persoonsgegevens en de rechtspraak hebben strikte kaders gesteld aan online onderzoek. Het structureel monitoren van iemands sociale media gedurende een langere periode wordt gezien als een **stelselmatige inbreuk op de privacy**. Hiervoor is een gerechtvaardigd belang en een vergunning (POB) vereist.
 
 Een werkgever die zelf even de Facebook van een zieke werknemer in de gaten houdt, overtreedt vaak de wet. Het bewijs dat hiermee wordt verkregen, kan door de rechter als **onrechtmatig**worden terzijde geschoven.
-**Professionele aanpak:
-Erkend rechercheurs werken volgens de **Privacygedragscode**. Dit betekent dat elk onderzoek getoetst moet worden aan proportionaliteit (staat het middel in verhouding tot het doel?) en subsidiariteit (kan het niet op een minder ingrijpende manier?). Alleen dan is het verkregen bewijs bruikbaar in een rechtszaak.`,
+**Professionele aanpak:** Erkend rechercheurs werken volgens de **Privacygedragscode**. Dit betekent dat elk onderzoek getoetst moet worden aan proportionaliteit (staat het middel in verhouding tot het doel?) en subsidiariteit (kan het niet op een minder ingrijpende manier?). Alleen dan is het verkregen bewijs bruikbaar in een rechtszaak.`,
       methodology: "",
       conclusion: ""
     },
@@ -1501,8 +1450,7 @@ Het lukraak volgen van een partner bij verdenking van overspel is voor een parti
 -   **E**valuation
 
 Deze methode, ontwikkeld in het VK, richt zich op het opbouwen van verstandhouding (rapport) en het laten vertellen van het verhaal door de betrokkene. De interviewer stelt open vragen en confronteert pas later met bewijs.
-**Waarom dit werkt:
-Door de betrokkene eerst vrijuit te laten praten, kan deze zichzelf vastpraten in controleerbare leugens. Als je direct al je bewijs op tafel gooit, past de leugenaar zijn verhaal daarop aan.`,
+**Waarom dit werkt:** Door de betrokkene eerst vrijuit te laten praten, kan deze zichzelf vastpraten in controleerbare leugens. Als je direct al je bewijs op tafel gooit, past de leugenaar zijn verhaal daarop aan.`,
       methodology: "",
       conclusion: ""
     },
@@ -1520,8 +1468,7 @@ Door de betrokkene eerst vrijuit te laten praten, kan deze zichzelf vastpraten i
       analysis: `Metadata is 'data over data'. Een foto bevat bijvoorbeeld vaak GPS-coördinaten, het type camera, en de exacte tijd van opname (EXIF-data). Een Word-document bevat informatie over de auteur en bewerkingstijd.
 
 Criminelen of fraudeurs proberen vaak de inhoud te manipuleren (bijvoorbeeld een datum op een factuur aanpassen), maar vergeten de metadata.
-**Voorbeeld:
-Een werknemer stuurt een foto van een positieve coronatest als bewijs voor verzuim. Analyse van de metadata toont aan dat de foto een jaar eerder is genomen, of gedownload is van internet. Hiermee is de fraude onomstotelijk bewezen.`,
+**Voorbeeld:** Een werknemer stuurt een foto van een positieve coronatest als bewijs voor verzuim. Analyse van de metadata toont aan dat de foto een jaar eerder is genomen, of gedownload is van internet. Hiermee is de fraude onomstotelijk bewezen.`,
       methodology: "",
       conclusion: ""
     },
@@ -1539,8 +1486,7 @@ Een werknemer stuurt een foto van een positieve coronatest als bewijs voor verzu
       analysis: `Het antwoord is genuanceerd. Een werknemer moet zich als 'goed werknemer' gedragen (art 7:611 BW). Dit houdt in dat hij openheid van zaken moet geven en verantwoording moet afleggen aan zijn werkgever.
 
 Volledig zwijgen kan worden uitgelegd als werkweigering of het niet meewerken aan redelijke voorschriften, wat arbeidsrechtelijke consequenties kan hebben. Echter, de werkgever mag geen ongepaste druk uitoefenen.
-**Onderzoek:
-Een professioneel interviewer wijst de betrokkene op zijn rechten en plichten, maar legt ook uit dat zwijgen kan betekenen dat de werkgever een beslissing neemt op basis van de *wel* beschikbare feiten (die vaak nadelig zijn).`,
+**Onderzoek:** Een professioneel interviewer wijst de betrokkene op zijn rechten en plichten, maar legt ook uit dat zwijgen kan betekenen dat de werkgever een beslissing neemt op basis van de *wel* beschikbare feiten (die vaak nadelig zijn).`,
       methodology: "",
       conclusion: ""
     },
