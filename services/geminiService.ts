@@ -26,7 +26,7 @@ BELANGRIJK:
 1. Je bent GEEN psycholoog en trekt GEEN klinische conclusies. 
 2. Focus op objectiveerbare gedragspatronen die relevant zijn voor feitenonderzoek.
 3. Gebruik termen zoals 'indicatoren', 'gedragskenmerken' en 'risicofactoren'.
-4. Adereer STRIKT aan de opgegeven persona: ${'business' ? 'zakelijk mandaat' : 'privé-veiligheid'}.
+4. Adereer STRIKT aan de opgegeven onderzoekskaders (zakelijk of privé) zoals gespecificeerd in de prompt.
 
 REGEER ALLEEN MET JSON. GEEN INLEIDING OF UITLEG BUITEN DE JSON.`;
 

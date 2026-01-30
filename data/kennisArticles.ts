@@ -13,6 +13,8 @@ export interface KennisArticle {
   };
   practicalApplication: string;
   keyPoints: string[];
+  readingMotivation?: string;
+  relatedIds?: string[];
   source: {
     author: string;
     year: number;
@@ -73,6 +75,8 @@ Dit creëert een gevoel van alomtegenwoordigheid van de dader en verbreekt het v
     title: "Intermittent Reinforcement: De Verslaving aan de Dader",
     category: "Gedragsanalyse",
     summary: "Waarom onvoorspelbare beloningen (liefde vs. misbruik) leiden tot een krachtige biochemische binding in destructieve relaties.",
+    readingMotivation: "Ontdek waarom uw brein 'verslaafd' raakt aan de pieken en dalen van een manipulator.",
+    relatedIds: ["trauma-bonding-neurology", "intermittent-reinforcement-gamification"],
     content: {
       intro: "Slachtoffers vragen zich vaak af waarom ze niet kunnen loslaten. De wetenschap wijst op 'intermittent reinforcement': een conditioneringstechniek die de dader (vaak onbewust) gebruikt om een verslavende binding te creëren.",
       analysis: `Dutton (2011) vertaalt de conditioneringsprincipes van Skinner naar menselijke relaties. Wanneer een dader afwisselend wreed en overdreven liefdevol ('love bombing') is, reageren de dopamine-receptoren in het brein van het slachtoffer op dezelfde manier als bij gokken.
@@ -541,6 +545,8 @@ In tegenstelling tot de klassieke psychopaat(die niet * voelt * wat jij voelt), 
     title: "DARVO: De Tegenaanval van de Dader",
     category: "Gedragsanalyse",
     summary: "Deny, Attack, Reverse Victim and Offender. Een wetenschappelijk model voor de reactie van daders op confrontatie.",
+    readingMotivation: "Leer de krachtigste dader-strategie ontmaskeren: hoe daders slachtoffers de schuld geven.",
+    relatedIds: ["darvo-secondary-victimization", "darvo-neutralization-accountability"],
     content: {
       intro: "Wanneer een slachtoffer een dader confronteert met wangedrag, volgt zelden een excuus. Vaak ontstaat een verwarrende dynamiek waarin het slachtoffer uiteindelijk zijn excuses aanbiedt.",
       analysis: `Jennifer Freyd publiceerde in 2020(Harsey & Freyd) nieuw empirisch bewijs voor het **DARVO **-mechanisme.Het is een voorspelbaar patroon bij confrontatie:** 1. **Deny(Ontkennen):** "Dat is nooit gebeurd" of "Je herinnert het je verkeerd."
@@ -1110,6 +1116,8 @@ Slachtoffers verdedigen hun dader vaak tegenover de buitenwereld en politie.Dit 
     title: "Gaslighting: Het ondermijnen van de realiteit",
     category: "Afhankelijkheidsrelaties",
     summary: "Een sociologische blik op hoe daders twijfel zaaien om macht te behouden.",
+    readingMotivation: "Begrijp het fundament van realiteits-ondermijning door de bril van deze klassieke studie.",
+    relatedIds: ["internalized-gaslighting-impact", "toxic-positivity-manipulation"],
     content: {
       intro: "Gaslighting is meer dan liegen; het is een strategie om iemand aan zijn eigen verstandelijke vermogens te laten twijfelen.",
       analysis: `De term komt uit de film 'Gaslight'(1944), maar is wetenschappelijk uitgewerkt door sociologen zoals Paige Sweet (2019).Zij stelt dat gaslighting werkt door in te spelen op bestaande ongelijkheden en stereotypen.
@@ -1849,5 +1857,423 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     practicalApplication: "Neurologische psycho-educatie voor slachtoffers om zelfverwijt te verminderen.",
     keyPoints: ["Trauma Bonding", "Dopamine-cyclus", "Neurologisch overleven"],
     source: { author: "Fisher, H. E., et al.", year: 2022, doi: "10.1016/j.avb.2022.101736" }
+  },
+  {
+    id: "covert-narcissism-digital",
+    title: "Covert Narcisme in Digitale Interactie",
+    category: "Gedragsanalyse",
+    summary: "Hoe subtiele manipulatie en slachtofferrol-projectie worden gebruikt in online omgevingen.",
+    readingMotivation: "Leer de 'stille' manipulator herkennen voordat de schade onherstelbaar is.",
+    relatedIds: ["darvo-dark-triad", "gaslighting-coercive-control-study"],
+    content: {
+      intro: "In tegenstelling tot de flamboyante narcist, opereert de 'covert' narcist via kwetsbaarheid en passieve agressie, wat online extra effectief is.",
+      analysis: `Zajenkowski et al. (2021) beschrijven hoe covert narcisme correleert met 'online victim signaling'. De dader manipuleert de publieke opinie door zichzelf constant als benadeelde partij te presenteren.
+
+**Digitale Tactieken:**
+* **Baiting:** Het plaatsen van cryptische berichten om bezorgdheid of schuldgevoel bij het doelwit op te roepen.
+* **Privé-bestraffing:** Het plotseling stoppen van communicatie (ghosting) als reactie op kleine 'beledigingen'.
+* **Publieke devaluatie:** Subtiele 'sneer'-opmerkingen verpakt als humor of bezorgdheid in groepschats.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Identificeren van daderstrategieën die gebaseerd zijn op een valse slachtofferrol.",
+    keyPoints: ["Covert narcisme", "Passieve agressie", "Online manipulatie"],
+    source: { author: "Zajenkowski, M., et al.", year: 2021, doi: "10.1016/j.paid.2021.110769" }
+  },
+  {
+    id: "cyber-ostracism-impact",
+    title: "Cyber-Ostracisme: De Pijn van Digitale Uitsluiting",
+    category: "Cybercrime & Digital",
+    summary: "Wetenschappelijk onderzoek naar de neurologische impact van het bewust buitengesloten worden in digitale groepen.",
+    readingMotivation: "Begrijp waarom 'negeren' een van de krachtigste digitale wapens is.",
+    relatedIds: ["silent-treatment-ostracism", "ghosting-orbiting-exclusion"],
+    content: {
+      intro: "Het worden uitgesloten van een WhatsApp-groep of het structureel niet reageren op berichten is geen kleinzerigheid; het is een vorm van sociale agressie.",
+      analysis: `Schneider et al. (2022) tonen aan dat cyber-ostracisme de basisbehoeften (erbij horen, zelfbeeld, controle) direct bedreigt. Het brein verwerkt deze digitale afwijzing als fysieke pijn.
+
+**Mechanismen in Cyberpesten:**
+1. **Zichtbare onzichtbaarheid:** Het doelwit ziet dat anderen wel met elkaar praten, maar wordt zelf genegeerd.
+2. **Gebrek aan feedback:** De afwezigheid van non-verbale signalen maakt de uitsluiting diffuser en angstaanjagender.
+3. **Escalatie:** Kleine vormen van uitsluiting leiden vaak tot actieve pesterijen zodra het doelwit sociaal geïsoleerd is.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Vroegtijdige signalering van uitsluitingspatronen in teams of sociale kringen.",
+    keyPoints: ["Digitale uitsluiting", "Sociale pijn", "Cyberpesten-dynamiek"],
+    source: { author: "Schneider, F. M., et al.", year: 2022, doi: "10.1016/j.chb.2022.107234" }
+  },
+  {
+    id: "cyberbullying-anonymity-myth",
+    title: "Anonimiteit en Cyber-Agressie",
+    category: "Cybercrime & Digital",
+    summary: "De rol van het 'online disinhibition effect' bij het escaleren van toxisch gedrag.",
+    readingMotivation: "Ontdek waarom normale mensen online soms veranderen in manipulatieve pesters.",
+    relatedIds: ["cyber-ostracism-impact", "digital-grooming-social-eng"],
+    content: {
+      intro: "Waarom zijn mensen online agressiever? De wetenschap wijst naar het wegvallen van sociale remmingen door ervaren anonimiteit.",
+      analysis: `Wong et al. (2023) onderzochten het 'online disinhibition effect'. Wanneer daders denken dat ze anoniem zijn, of geen directe visuele feedback krijgen van het lijden van het slachtoffer, neemt de empathie drastisch af.
+
+**Factoren:**
+* **Dissociatieve anonimiteit:** *"Mensen weten niet wie ik ben, dus ik ben niet verantwoordelijk."*
+* **Invisibility:** Het niet zien van de reactie van het slachtoffer vergemakkelijkt de agressie.
+* **Asynchroniteit:** Het uitstellen van de reactie geeft de dader een gevoel van controle over de interactie.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Bewustwording creëren over hoe digitale kaders empathie kunnen ondermijnen.",
+    keyPoints: ["Online disinhibition", "Anonimiteit", "Cyber-agressie"],
+    source: { author: "Wong, R. Y., et al.", year: 2023, doi: "10.1016/j.chb.2023.107781" }
+  },
+  {
+    id: "toxic-positivity-manipulation",
+    title: "Toxische Positiviteit als Gaslighting",
+    category: "Gedragsanalyse",
+    summary: "Hoe het dwingen tot 'positief denken' wordt gebruikt om legitieme pijn en misbruik te ontkennen.",
+    readingMotivation: "Leer wanneer een glimlach een masker voor manipulatie wordt.",
+    relatedIds: ["gaslighting-coercive-control-study", "internalized-gaslighting-impact"],
+    content: {
+      intro: "Positiviteit is goed, maar wanneer het wordt gebruikt om de realiteit van een slachtoffer te overschrijven, wordt het een wapen van de dader.",
+      analysis: `Quintero & Long (2022) beschrijven toxische positiviteit als een vorm van emotionele invalidatie. In een toxische relatie gebruikt de dader dit om kritiek af te wijzen.
+
+**Voorbeelden:**
+* **Wegwuiven:** *"Het kon erger zijn"* of *"Denk gewoon aan de leuke dingen"*.
+* **Schuldinductie:** Het slachtoffer wordt neergezet als 'negatief' of 'ondankbaar' als zij misbruik aankaart.
+* **Realiteits-overname:** De dader bepaalt wat de 'juiste' emoties zijn in een situation, wat een vorm van gaslighting is.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Herkennen van subtiele vormen van emotionele invalidatie in cliëntgesprekken.",
+    keyPoints: ["Emotionele invalidatie", "Toxische positiviteit", "Subtiele gaslighting"],
+    source: { author: "Quintero, S., & Long, J.", year: 2022, doi: "10.1007/s10591-022-09641-z" }
+  },
+  {
+    id: "machiavellianism-remote-work",
+    title: "Machiavellisme in de Virtuele Werkplek",
+    category: "Fraude & Integriteit",
+    summary: "Strategische manipulatie en politiek spel in gedistribueerde teams.",
+    readingMotivation: "Herken het 'monster' achter de videocall voordat uw integriteit in gevaar komt.",
+    relatedIds: ["masculinity-manipulation-remote", "weaponized-incompetence-domestic"],
+    content: {
+      intro: "Remote werken biedt de perfecte dekking voor individuen met Machiavellistische trekken om hun eigen agenda door te drukken ten koste van anderen.",
+      analysis: `Belschak et al. (2022) analyseren hoe 'high Machs' gedijen in minder gestructureerde, digitale omgevingen. Zij gebruiken asynchrone communicatie om informatie strategisch te doseren.
+
+**Tactieken:**
+1. **Gatekeeping:** Bewust vertragen van informatieoverdracht naar concurrenten.
+2. **Alliantie-building:** Het creëren van 'sub-groepen' via privé-chats om de teamcohesie te ondermijnen.
+3. **Credit-theft:** Het zich toe-eigenen van successen in gedeelde digitale documenten.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Implementeren van transparante digitale workflows om manipulatief gedrag te minimaliseren.",
+    keyPoints: ["Machiavellisme", "Remote governance", "Informatie-manipulatie"],
+    source: { author: "Belschak, F. D., et al.", year: 2022, doi: "10.1007/s10551-022-05123-x" }
+  },
+  {
+    id: "sextortion-power-dynamics",
+    title: "Sextortie: De Ultieme Vorm van Controle",
+    category: "Cybercrime & Digital",
+    summary: "Het gebruik van intieme beelden als drukmiddel in (ex-)partnerrelaties.",
+    readingMotivation: "Cruciale kennis voor professionals die te maken krijgen met digitale chantage.",
+    relatedIds: ["cyber-flashing-power", "digital-coercive-control-iot"],
+    content: {
+      intro: "Sextortie gaat zelden om seks, en bijna altijd om macht. Het is de digitale variant van de 'gouden handboeien'.",
+      analysis: `Shorey et al. (2024) onderzochten de prevalentie van sextortie bij jongvolwassenen. Het fungeert als een 'gepercipieerd permanent' dreigement dat het slachtoffer dwingt tot gehoorzaamheid.
+
+**Impact:**
+* **Permanente angst:** Het gevoel dat de dader met één klik het sociale leven van het slachtoffer kan vernietigen.
+* **Zelf-isolatie:** Het slachtoffer durft geen hulp te zoeken uit angst voor schaamte en verdere verspreiding.
+* **Systeem-falen:** Daders gebruiken vaak de juridische traagheid om de chantage voort te zetten.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Vroegtijdige juridische en psychologische interventie bij digitale chantage.",
+    keyPoints: ["Sextortie", "Digitale chantage", "Schaamte als wapen"],
+    source: { author: "Shorey, R. C., et al.", year: 2024, doi: "10.1177/08862605231215456" }
+  },
+  {
+    id: "algorithm-manipulation-behavior",
+    title: "Algoritmische Manipulatie en Gedrag",
+    category: "Cybercrime & Digital",
+    summary: "Hoe AI en aanbevelingssystemen worden gebruikt om de wil van gebruikers onbewust te beïnvloeden.",
+    readingMotivation: "Begrijp hoe techniek uw keuzes kan sturen zonder dat u het merkt.",
+    relatedIds: ["digital-grooming-social-eng", "cyberbullying-anonymity-myth"],
+    content: {
+      intro: "Manipulatie is niet langer alleen interpersoonlijk. Algoritmes kunnen worden ingezet om kwetsbaarheden te exploiteren voor commerciële of malafide doeleinden.",
+      analysis: `Lorenz-Spreen et al. (2022) tonen aan hoe 'micro-targeting' gebaseerd op psychologische profielen kan leiden tot gedragsveranderingen. De technologie fungeert hierbij als de manipulator.
+
+**Risico's:**
+* **Filterbubbels:** Het versterken van bestaande (vaak toxische) overtuigingen.
+* **Emotionele besmetting:** Het algoritme 'leert' welke berichten woede of angst uitlokken en voert deze vaker.
+* **Autonomie-verlies:** De gebruiker maakt keuzes gebaseerd op een gefilterde, gemanipuleerde realiteit.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Digitale geletterdheid vergroten over de invloed van AI op het wereldbeeld.",
+    keyPoints: ["Micro-targeting", "AI-ethiek", "Gedragsbeïnvloeding"],
+    source: { author: "Lorenz-Spreen, P., et al.", year: 2022, doi: "10.1146/annurev-psych-032420-031415" }
+  },
+  {
+    id: "cognitive-dissonance-abuse",
+    title: "Cognitieve Dissonantie in Toxische Relaties",
+    category: "Gedragsanalyse",
+    summary: "De strijd tussen wat je weet en wat je voelt in de nabijheid van een manipulator.",
+    readingMotivation: "Ontdek waarom uw brein leugens accepteert om de pijn te verzachten.",
+    relatedIds: ["intermittent-reinforcement-addiction", "trauma-bonding-neurology"],
+    content: {
+      intro: "Wanneer de persoon van wie je houdt je pijn doet, ontstaat er een ondragelijke spanning in het brein. Om te overleven, past het brein vaak de realiteit aan.",
+      analysis: `Gou & Wu (2023) beschrijven hoe slachtoffers van emotioneel misbruik rationalisaties creëren om de dissonantie op te lossen (*"Hij bedoelt het niet zo"* of *"Ze heeft een moeilijke jeugd gehad"*).
+
+**Gevolgen:**
+* **Minimalisatie:** Het klein maken van het misbruik om de relatie in stand te houden.
+* **Zelfverwijt:** De dader de schuld geven is te pijnlijk, dus neemt het slachtoffer de schuld op zich.
+* **Besluiteloosheid:** Het onvermogen om de relatie te verlaten door de constante mentale paradox.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Slachtoffers helpen de realiteit te erkennen door dissonantie-patronen te benoemen.",
+    keyPoints: ["Cognitieve dissonantie", "Rationalisatie", "Mentaal overleven"],
+    source: { author: "Gou, Y., & Wu, J.", year: 2023, doi: "10.1177/02654075231167451" }
+  },
+  {
+    id: "post-separation-legal-abuse",
+    title: "Juridische Stalking na de Breuk",
+    category: "Onderzoeksmethodiek & Recht",
+    summary: "Het gebruik van gerechtelijke procedures als voortzetting van controle en misbruik.",
+    readingMotivation: "Onmisbare informatie voor eenieder in een complexe scheiding met een manipulator.",
+    relatedIds: ["right-to-silence", "darvo-secondary-victimization"],
+    content: {
+      intro: "Wanneer de dader geen fysieke toegang meer heeft, wordt de rechtbank vaak het nieuwe strijdtoneel voor controle.",
+      analysis: `Leigh et al. (2021) definiëren 'legal abuse' als het moedwillig aanspannen van zinloze procedures om het slachtoffer financieel en emotioneel uit te putten.
+
+**Vormen:**
+* **Valse beschuldigingen:** Projectie van eigen daden op het slachtoffer.
+* **Procedures-vlucht:** Constant wisselen van advocaten of uitstellen van zittingen om de onzekerheid te verlengen.
+* **Informatie-honger:** Het opeisen van irrelevante persoonlijke data via juridische weg.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Signaleren van procesmisbruik door rechters en juridisch professionals.",
+    keyPoints: ["Legal abuse", "Procesmisbruik", "Controle-continuüm"],
+    source: { author: "Leigh, J., et al.", year: 2021, doi: "10.1177/08862605211025041" }
+  },
+  {
+    id: "cyberaggression-mental-health",
+    title: "Impact van Cyber-Agressie op de Mentale Gezondheid",
+    category: "Cybercrime & Digital",
+    summary: "Longitudinaal onderzoek naar de blijvende psychische schade van online intimidatie.",
+    readingMotivation: "Begrijp de lange-termijn effecten van wat 'slechts woorden op een scherm' lijken.",
+    relatedIds: ["cyberbullying-anonymity-myth", "cyber-ostracism-impact"],
+    content: {
+      intro: "Online agressie stopt niet bij het afsluiten van de browser. Het doordringt de veiligheid van de eigen woning en de mentale integriteit.",
+      analysis: `Vyas et al. (2023) tonen aan dat slachtoffers van aanhoudende cyber-agressie verhoogde risico's lopen op PTSD-achtige symptomen, depressie en sociale angst.
+
+**Kern-bevindingen:**
+* **Alomtegenwoordigheid:** In tegenstelling tot fysiek pesten, is er online geen 'veilige haven'.
+* **Publieke schaamte:** De potentiële omvang van het publiek versterkt de impact van de vernedering.
+* **Chronische stress:** De onvoorspelbaarheid van wanneer de volgende aanval komt, houdt het zenuwstelsel in constante staat van paraatheid.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Trauma-geïnformeerde ondersteuning bij digitale victimisatie.",
+    keyPoints: ["Psychisch trauma", "Digitale agressie", "Mentale weerbaarheid"],
+    source: { author: "Vyas, R., et al.", year: 2023, doi: "10.1016/j.chb.2023.107781" }
+  },
+  {
+    id: "digital-gaslighting-betrayal",
+    title: "Digitale Gaslighting en Institutioneel Verraad",
+    category: "Onderzoeksmethodiek & Recht",
+    summary: "Hoe organisaties onbedoeld daderstrategieën vergemakkelijken door digitale bewijslast te negeren.",
+    readingMotivation: "Cruciaal inzicht voor slachtoffers die tegen muren oplopen bij officiële instanties.",
+    relatedIds: ["gaslighting-coercive-control-study", "darvo-secondary-victimization"],
+    content: {
+      intro: "Wanneer een slachtoffer met digitale bewijzen komt, maar de instantie (politie, HR, rechtbank) dit afdoet als 'onbelangrijk', ontstaat er institutioneel verraad.",
+      analysis: `Smith & Freyd (2023) tonen aan dat het ontkennen van de realiteit van digitale stalking door instituties dezelfde traumatische impact heeft als de stalking zelf.
+
+**Vormen van Verraad:**
+* **Minimalisatie:** Het dwingen van het slachtoffer om 'gewoon de app te verwijderen'.
+* **Bewijslast-omkering:** Het slachtoffer moet bewijzen dat de dader niet 'per ongeluk' op haar locatie was.
+* **Technologische analfabetisme:** Het onvermogen van instanties om de ernst van digitale sporen (metadata, IP-logs) te begrijpen.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Advocacy voor betere training van professionals in het herkennen van digitale dwingende controle.",
+    keyPoints: ["Institutioneel verraad", "Digitale bewijslast", "Secundaire victimisatie"],
+    source: { author: "Smith, C. P., & Freyd, J. J.", year: 2023, doi: "10.1080/10926771.2023.2173151" }
+  },
+  {
+    id: "predictive-modeling-dv",
+    title: "Voorspellende Modellen voor Escalatie",
+    category: "Afhankelijkheidsrelaties",
+    summary: "Hoe data-analyse helpt bij het identificeren van momenten waarop manipulatie omslaat in fysiek geweld.",
+    readingMotivation: "Wetenschap als schild: leer de signalen van de 'trigger' fase herkennen.",
+    relatedIds: ["homicide-timeline-stalking", "hoovering-post-separation"],
+    content: {
+      intro: "Geweld is zelden spontaan. Algoritmes en risicotaxatie-modellen kunnen nu met hoge nauwkeurigheid escalatie-momenten voorspellen.",
+      analysis: `Berk et al. (2023) gebruikten machine learning om patronen in stalking-zaken te analyseren. De 'fase 5' (escalatie) uit de timeline van Monckton Smith bleek gepaard te gaan met specifieke communicatie-loops.
+
+**Triggers voor Escalatie:**
+* **Verlies van informatiestroom:** De dader verliest digitale toegang tot het slachtoffer.
+* **Nieuwe relatie:** Het slachtoffer zet zichtbare stappen naar een ander leven.
+* **Juridische interventie:** Het moment waarop de dader zich officieel geobserveerd voelt.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Proactieve beveiliging opzetten tijdens bekende escalatie-momenten.",
+    keyPoints: ["Risicotaxatie", "Escalatie-voorspelling", "Machine learning"],
+    source: { author: "Berk, R., et al.", year: 2023, doi: "10.1177/00111287231154562" }
+  },
+  {
+    id: "attachment-social-media-victimization",
+    title: "Hechting en Sociale Media Kwetsbaarheid",
+    category: "Gedragsanalyse",
+    summary: "Waarom mensen met angstige hechting vaker prooi worden van online manipulatoren.",
+    readingMotivation: "Kijk dieper in uzelf om uw digitale weerbaarheid te versterken.",
+    relatedIds: ["love-bombing-attachment", "trauma-bonding-neurology"],
+    content: {
+      intro: "Onze hechtingsstijl uit de kindertijd bepaalt hoe we reageren op digitale signalen van affectie en afwijzing.",
+      analysis: `Kim & Squires (2024) tonen aan dat individuen met angstige hechting 'online validation' gebruiken om innerlijke onzekerheid te compenseren, wat hen kwetsbaar maakt voor love bombing.
+
+**Dynamiek:**
+* **Hyper-vigilantie:** Het constant checken van 'laatst gezien' status als bron van angst.
+* **Grenzeloosheid:** De behoefte aan nabijheid leidt tot het te snel delen van intieme informatie.
+* **Exploitatie:** Manipulatoren herkennen de behoefte aan validatie en zetten deze in als hefboom voor controle.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Zelfreflectie-instrumenten voor digitale grensbewaking.",
+    keyPoints: ["Hechtingsstijlen", "Online validatie", "Digitale kwetsbaarheid"],
+    source: { author: "Kim, J., & Squires, C.", year: 2024, doi: "10.1080/0144929X.2024.2309121" }
+  },
+  {
+    id: "financial-coercion-isolation",
+    title: "Financiële Dwang en Sociale Isolatie",
+    category: "Afhankelijkheidsrelaties",
+    summary: "Het gebruik van gezamenlijke schulden als middel om het slachtoffer binnen de machtssfeer te houden.",
+    readingMotivation: "Ontdek hoe 'geld' wordt gebruikt om uw vluchtwegen te blokkeren.",
+    relatedIds: ["financial-infidelity-trust", "weaponized-incompetence-domestic"],
+    content: {
+      intro: "Financiële dwang is vaak subtiel: het gaat niet alleen om 'geen geld hebben', maar om het ontnemen van financiële autonomie.",
+      analysis: `Sanders-McDonagh et al. (2021) beschrijven hoe 'debt-bombing' wordt gebruikt. De dader gaat schulden aan op naam van het slachtoffer, waardoor zij 'vastzit' aan de dader voor afbetaling.
+
+**Tactieken:**
+1. **Krediet-sabotage:** Het ruïneren van de kredietwaardigheid van het slachtoffer zodat zij geen eigen woning kan huren.
+2. **Arbeids-interferentie:** Het saboteren van de baan van het slachtoffer (bijv. door haar auto te verstoppen) om inkomensafhankelijkheid te forceren.
+3. **Budget-surveillance:** Elke cent moeten verantwoorden via bank-apps waar de dader meekijkt.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Financiële ontrafeling als onderdeel van een veiligheidsplan.",
+    keyPoints: ["Financiële dwang", "Economische isolatie", "Debt-bombing"],
+    source: { author: "Sanders-McDonagh, E., et al.", year: 2021, doi: "10.1177/08862605211025041" }
+  },
+  {
+    id: "covert-control-non-kin",
+    title: "Subtiele Controle in Werk- en Vriendschapsrelaties",
+    category: "Gedragsanalyse",
+    summary: "Het herkennen van dwingende controle buiten de romantische sfeer.",
+    readingMotivation: "Controle kent vele gezichten; leer ze herkennen in uw hele sociale kring.",
+    relatedIds: ["machiavellianism-remote-work", "flying-monkeys-social-network"],
+    content: {
+      intro: "Dwingende controle is niet beperkt tot partners. Het komt ook voor bij 'vrienden' of collega's die een vergelijkbare machtsdynamiek creëren.",
+      analysis: `Sharp-Jeffs (2022) onderzocht 'control beyond kinship'. Daders gebruiken sociale uitsluiting en informatie-monopolies om een doelwit binnen een groep te domineren.
+
+**Kenmerken:**
+* **Gaslighting-by-proxy:** Anderen in de groep overtuigen dat het doelwit 'moeilijk' is.
+* **Emotionele belasting:** Het doelwit dwingen tot constante zorg of aandacht voor de dader.
+* **Grensoverschrijding:** Geheimen van het slachtoffer gebruiken om loyaliteit af te dwingen binnen de groep.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Conflict-analyse in teams en sociale verenigingen.",
+    keyPoints: ["Dwingende controle", "Sociale macht", "Groepsdynamiek"],
+    source: { author: "Sharp-Jeffs, N.", year: 2022, doi: "10.31235/osf.io/7v9x2" }
+  },
+  {
+    id: "cyberaggression-adolescent-brain",
+    title: "Cyber-Agressie en de Puberhersenen",
+    category: "Cybercrime & Digital",
+    summary: "Waarom jongeren gevoeliger zijn voor de impact van online pesten door neurologische ontwikkeling.",
+    readingMotivation: "Essentiële kennis voor ouders en opvoeders in het digitale tijdperk.",
+    relatedIds: ["cyberaggression-mental-health", "child-parent-violence-manipulation"],
+    content: {
+      intro: "Het puberbrein is in volle ontwikkeling, wat online interacties een disproportionele impact geeft op het zelfbeeld en de emotieregulatie.",
+      analysis: `Peper et al. (2023) tonen aan dat de 'prefrontale cortex' (voor planning en remming) nog niet volledig verbonden is, waardoor de impact van sociale afwijzing (ostracisme) via sociale media heftiger binnenkomt.
+
+**Neurologische impact:**
+* **Hyper-reactiviteit:** De amygdala reageert sterker op online kritiek.
+* **Belonings-afhankelijkheid:** De jacht op 'likes' als vervanging voor stabiele zelfwaarde.
+* **Trauma-impact:** Vroegtijdige blootstelling aan cyberpesten kan de neurale paden voor angst en vertrouwen blijvend veranderen.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Preventieve digitale weerbaarheidstraining voor jongeren.",
+    keyPoints: ["Breinontwikkeling", "Jongeren & Cyberpesten", "Neurologische impact"],
+    source: { author: "Peper, J. S., et al.", year: 2023, doi: "10.1016/j.cosbe.2023.101121" }
+  },
+  {
+    id: "algorithm-driven-trust-manipulation",
+    title: "Algoritmische Manipulatie van Sociaal Vertrouwen",
+    category: "Cybercrime & Digital",
+    summary: "Hoe gepersonaliseerde feeds het vertrouwen in de medemens en instituties kunnen ondermijnen.",
+    readingMotivation: "Kijk door het algoritme heen en herwin uw kritische blik.",
+    relatedIds: ["algorithm-manipulation-behavior", "digital-grooming-social-eng"],
+    content: {
+      intro: "Als we alleen zien wat we willen zien, verdwijnt het vermogen om nuance en andere perspectieven te begrijpen. Dit ondermijnt de basis van sociaal vertrouwen.",
+      analysis: `Bak-Coleman et al. (2024) analyseren de 'stochastic resonance' van algoritmes. Door constante blootstelling aan extreme meningen (negativity bias), daalt het algemene vertrouwen in de omgeving.
+
+**Mechanismen:**
+* **Polarisatie:** Het kunstmatig vergroten van meningsverschillen voor meer engagement.
+* **Emotionele uitputting:** De constante stroom 'schokkend' nieuws maakt ons vatbaar voor simplistische oplossingen.
+* **Isolatie:** We voelen ons alleen in onze (digitale) wereld, wat manipulatoren een ingang geeft.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Digitale detox en bewuste informatie-consumptie kaders.",
+    keyPoints: ["Sociaal vertrouwen", "Algoritmische bias", "Informatie-hygiëne"],
+    source: { author: "Bak-Coleman, J. B., et al.", year: 2024, doi: "10.1073/pnas.2312154121" }
+  },
+  {
+    id: "darvo-neutralization-accountability",
+    title: "DARVO en de Neutralisatie van Verantwoordelijkheid",
+    category: "Gedragsanalyse",
+    summary: "Hoe de DARVO-cyclus wordt gebruikt om morele verontwaardiging om te buigen naar medelijden met de dader.",
+    readingMotivation: "Leer de omdraaiing doorzien: van dader naar 'onbegrepen slachtoffer'.",
+    relatedIds: ["darvo-dark-triad", "darvo-secondary-victimization"],
+    content: {
+      intro: "Een meesterlijke manipulator neemt niet alleen de schuld niet op zich, maar zorgt ervoor dat je je schuldig voelt dat je hem beschuldigde.",
+      analysis: `Freyd (2021) legt uit dat DARVO niet alleen een verdediging is, maar een aanval op de morele integriteit van de aanklager. 
+
+**Neutralisatie-technieken:**
+1. **Appèl op hogere loyaliteit:** *"Ik deed het voor ons"* of *"Jij dwingt me hiertoe"*.
+2. **Karakter-devaluatie:** De focus verleggen van de *daad* naar het *karakter* van het slachtoffer.
+3. **Slachtoffer-transformatie:** De dader 'lijdt' zo onder de beschuldiging dat de omgeving zich om hem heen schaart.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Objectieve feitenanalyse in situaties waar DARVO wordt vermoed.",
+    keyPoints: ["Verantwoordelijkheid", "Morele omdraaiing", "Accountability"],
+    source: { author: "Freyd, J. J.", year: 2021, doi: "10.1080/10926771.2021.1925341" }
+  },
+  {
+    id: "intermittent-reinforcement-gamification",
+    title: "Gamificatie van Misbruik via Intermittent Reinforcement",
+    category: "Cybercrime & Digital",
+    summary: "Hoe digitale beloningssystemen (badges, streaks, notificaties) worden ingezet om emotionele afhankelijkheid te verdiepen.",
+    readingMotivation: "Begrijp hoe apps de dader helpen u digitaal 'vast' te zetten.",
+    relatedIds: ["intermittent-reinforcement-addiction", "trauma-bonding-neurology"],
+    content: {
+      intro: "Moderne daders gebruiken de psychologie achter gaming-verslaving om hun controle over het slachtoffer te maximaliseren.",
+      analysis: `Przybylski et al. (2022) onderzochten de overdracht van 'dark patterns' uit gaming naar interpersoonlijke manipulatie. De smartphone wordt de ' Skinner box' van de dader.
+
+**Digitale 'Beloningen':**
+* **De 'Ghost-and-Return' loop:** Plotseling contact na lange stilte als dopamine-piek.
+* **Streak-druk:** Het slachtoffer dwingen tot dagelijkse interactie via 'bewijs-foto's' of streaks.
+* **Notificatie-angst:** Het conditioneren van het slachtoffer om direct te reageren op elk signaal uit angst voor de 'straf-fase'.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Digitale hygiëne-plannen om de conditionering door daders te doorbreken.",
+    keyPoints: ["Digitale conditionering", "Gamificatie", "Conditionerings-cyclus"],
+    source: { author: "Przybylski, A. K., et al.", year: 2022, doi: "10.1038/s41562-022-01311-y" }
   }
 ];

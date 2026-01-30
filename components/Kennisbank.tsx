@@ -80,9 +80,17 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void }> = 
                         <XIcon className="w-6 h-6 text-[#9CA3AF] group-hover:text-[#58B895]" />
                     </button>
                 </div>
-                <div className="overflow-y-auto p-8 md:p-12 space-y-8 bg-white">
-                    <div className="max-w-3xl mx-auto">
-                        <div className="text-lg md:text-xl leading-relaxed text-[#4B5563] border-l-4 border-[#58B895] pl-6 italic mb-10">
+                <div className="overflow-y-auto p-8 md:p-12 space-y-12 bg-white">
+                    <div className="max-w-3xl mx-auto space-y-12">
+                        {article.readingMotivation && (
+                            <div className="bg-gradient-to-r from-[#58B895]/5 to-transparent border-l-4 border-[#58B895] p-6 rounded-r-2xl">
+                                <p className="text-[#13261f] font-semibold text-lg leading-relaxed">
+                                    "{article.readingMotivation}"
+                                </p>
+                            </div>
+                        )}
+
+                        <div className="text-lg md:text-xl leading-relaxed text-[#4B5563] border-l-4 border-[#58B895] pl-6 italic">
                             {renderFormattedText(article.content.intro)}
                         </div>
                         <div className="prose prose-lg prose-stone max-w-none text-[#374151] mb-12">
@@ -97,6 +105,23 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void }> = 
                                         <span key={idx} className="inline-flex items-center px-3 py-1.5 rounded-xl bg-white border border-[#E5E7EB] text-[#4B5563] text-sm font-medium">
                                             <span className="text-[#58B895] mr-2">•</span>{point}
                                         </span>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {article.relatedIds && article.relatedIds.length > 0 && (
+                            <div className="pt-8 border-t border-[#E5E7EB]">
+                                <h4 className="text-xs font-bold text-[#9CA3AF] uppercase tracking-wider mb-6">Lees ook over dit onderwerp</h4>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {kennisArticles.filter(a => article.relatedIds?.includes(a.id)).map((rel) => (
+                                        <div
+                                            key={rel.id}
+                                            className="text-left p-4 rounded-xl border border-[#E5E7EB] bg-[#F9FCFA] transition-all"
+                                        >
+                                            <span className="text-[10px] font-bold text-[#58B895] uppercase tracking-wider mb-1 block">{rel.category}</span>
+                                            <p className="text-sm font-bold text-[#13261f] line-clamp-2">{rel.title}</p>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
