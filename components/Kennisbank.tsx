@@ -103,26 +103,14 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void }> = 
                         )}
                     </div>
                 </div>
-                <div className="p-6 md:p-8 border-t border-[#E5E7EB] bg-[#F9FCFA] text-sm text-[#6B7280]">
-                    <div className="max-w-3xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
-                        <div>
-                            <span className="font-bold text-[#13261f] uppercase tracking-wide text-xs block mb-1">Bronvermelding</span>
-                            <span className="text-[#374151] font-medium">{article.source.author} ({article.source.year}) {article.source.journal && <span className="text-[#6B7280]"> — {article.source.journal}</span>}</span>
-                        </div>
-                        <div className="flex flex-wrap gap-4">
-                            {article.source.doi && (
-                                <a href={`https://doi.org/${article.source.doi}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#58B895] hover:text-[#13261f] transition-colors font-semibold group">
-                                    <span className="mr-1.5 opacity-60">DOI:</span>
-                                    <span className="underline underline-offset-4 decoration-[#58B895]/30 group-hover:decoration-[#13261f]">{article.source.doi}</span>
-                                </a>
-                            )}
-                            {article.source.url && (
-                                <a href={article.source.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#58B895] hover:text-[#13261f] transition-colors font-semibold group">
-                                    <span className="mr-1.5 opacity-60">URL:</span>
-                                    <span className="underline underline-offset-4 decoration-[#58B895]/30 group-hover:decoration-[#13261f]">Bezoek website</span>
-                                </a>
-                            )}
-                        </div>
+                <div className="p-6 md:p-8 border-t border-[#E5E7EB] bg-[#F9FCFA] text-xs text-[#6B7280]">
+                    <div className="max-w-3xl mx-auto flex flex-col gap-2">
+                        <span className="font-bold text-[#13261f] uppercase tracking-widest text-[10px] block mb-1">Wetenschappelijke Bron</span>
+                        <p className="leading-relaxed">
+                            <span className="text-[#374151] font-bold">{article.source.author}</span>,
+                            <span className="italic mx-1">{article.title}</span>,
+                            {article.source.doi && <span className="font-mono bg-white/50 px-1.5 py-0.5 rounded border border-[#E5E7EB]/50 ml-1">DOI: {article.source.doi}</span>}
+                        </p>
                     </div>
                 </div>
             </div>

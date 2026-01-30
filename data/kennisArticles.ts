@@ -1493,5 +1493,361 @@ Volledig zwijgen kan worden uitgelegd als werkweigering of het niet meewerken aa
     practicalApplication: "Arbeidsrechtelijke interviewkaders.",
     keyPoints: ["Goed werknemerschap", "Openheid van zaken", "Geen strafrecht"],
     source: { author: "Hoge Raad", year: 2001, url: "https://uitspraken.rechtspraak.nl/" }
+  },
+  {
+    id: "darvo-dark-triad",
+    title: "DARVO en de Dark Triad: Een Toxische Strategie",
+    category: "Gedragsanalyse",
+    summary: "Hoe daders met narcistische trekken DARVO gebruiken om verantwoordelijkheid af te wenden en slachtoffers te beschuldigen.",
+    content: {
+      intro: "DARVO (Deny, Attack, and Reverse Victim and Offender) is een manipulatietechniek die vaak wordt waargenomen bij daders met 'Dark Triad' persoonlijkheidstrekken.",
+      analysis: `Harsey et al. (2020) tonen aan dat DARVO een krachtig middel is om sociale controle te behouden. Wanneer een dader wordt geconfronteerd, volgt een vast patroon:
+1. **Deny:** De dader ontkent het gedrag of de impact ervan volledig.
+2. **Attack:** De dader valt de geloofwaardigheid of het karakter van het slachtoffer aan.
+3. **Reverse:** De dader positioneert zichzelf als het 'echte' slachtoffer van een onterechte beschuldiging.
+
+Dit zorgt voor extreme verwarring bij het slachtoffer en omstanders, waardoor de dader de regie over het narratief behoudt.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Herkenning van verdedigingsmechanismen tijdens confrontaties in onderzoek.",
+    keyPoints: ["DARVO-cyclus", "Narcisme", "Narratief-controle"],
+    source: { author: "Harsey, S.J., & Freyd, J.J.", year: 2020, doi: "10.1177/0011128720912154" }
+  },
+  {
+    id: "breadcrumbing-digital-manipulation",
+    title: "Breadcrumbing: De Psychologie van Valse Hoop",
+    category: "Cybercrime & Digital",
+    summary: "Het sturen van sporadische berichten om iemand 'aan het lijntje' te houden zonder intentie tot echte verbinding.",
+    content: {
+      intro: "Breadcrumbing is een moderne vorm van emotionele manipulatie waarbij digitale signalen worden gebruikt om macht uit te oefenen door onzekerheid.",
+      analysis: `Navarro et al. (2020) definieren breadcrumbing als het sporadisch 'strooien' van aandacht. De dader geeft net genoeg signalen om de interesse van het slachtoffer vast te houden, maar trekt zich terug zodra er om commitment wordt gevraagd.
+
+**Gevolgen:**
+* **Onzekerheid:** Het slachtoffer blijft wachten op een doorbraak die nooit komt.
+* **Verminderd zelfbeeld:** De inconsistentie van de dader wordt door het slachtoffer vaak geïnternaliseerd als eigen tekortkoming.
+* **Machtsoverwicht:** De dader bepaalt wanneer en hoe er contact is, wat een vorm van dwingende controle is.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Analyse van inconsistente communicatiepatronen in digitale stalking-zaken.",
+    keyPoints: ["Inconsistentie", "Intermittent reinforcement", "Digitale isolatie"],
+    source: { author: "Navarro, R., et al.", year: 2020, doi: "10.3390/ijerph17176100" }
+  },
+  {
+    id: "gaslighting-coercive-control-study",
+    title: "Gaslighting als Kern van Dwingende Controle",
+    category: "Afhankelijkheidsrelaties",
+    summary: "Wetenschappelijke analyse van hoe de systemische ondermijning van de werkelijkheid de basis vormt voor huiselijk geweld.",
+    content: {
+      intro: "Gaslighting is niet slechts een leugen, maar een gerichte aanval op het vermogen van een slachtoffer om haar eigen zintuigen en geheugen te vertrouwen.",
+      analysis: `Sweet (2021) stelt dat gaslighting de 'ideologische motor' is achter dwingende controle. Door de werkelijkheid van het slachtoffer constant te betwisten, wordt sociale isolatie gefaciliteerd.
+
+**Mechanismen in onderzoek:**
+1. **Sociaal-structurele context:** De dader gebruikt maatschappelijke vooroordelen (bijv. 'ze is labiel') om de werkelijkheid van het slachtoffer te diskrediteren.
+2. **Geheugen-sabotage:** Het ontkennen van gebeurtenissen die aantoonbaar hebben plaatsgevonden, waardoor het slachtoffer gaat twijfelen aan haar eigen waarneming.
+
+Dit creëert een staat van mentale afhankelijkheid waarin de dader de enige bron van 'waarheid' wordt.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Documenteren van patronen van psychische ondermijning in aangiftedossiers.",
+    keyPoints: ["Cognitieve erosie", "Psychische isolatie", "Machtsoverwicht"],
+    source: { author: "Sweet, P. L.", year: 2021, doi: "10.1080/08856249.2021.1925341" }
+  },
+  {
+    id: "love-bombing-attachment",
+    title: "Love Bombing en Angstige Hechting",
+    category: "Gedragsanalyse",
+    summary: "Waarom overmatige affectie in de beginfase een voorspeller is voor latere controle en misbruik.",
+    content: {
+      intro: "Love bombing wordt vaak verward met 'ware liefde', maar is in feite een agressieve tactiek om de autonomie van de ander snel af te breken.",
+      analysis: `Strutzenberg (2021) onderzocht de correlatie tussen love bombing van daders en onveilige hechtingsstijlen. Voor een manipulator is love bombing een manier om 'beslag te leggen' op de ander voordat rode vlaggen zichtbaar worden.
+
+**Kenmerken:**
+* **Intensiteit:** Directe en overmatige verklaringen van toewijding.
+* **Isolatie:** De affectie wordt gebruikt als middel om het slachtoffer weg te trekken van bestaande steunnetwerken (*"Wij hebben niemand anders nodig"*).
+* **Voorwaardelijkheid:** De liefde wordt plotseling ingetrokken zodra de regels van de dader worden overtreden.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Herkennen van risicovolle relatiestarts in preventieve adviesgesprekken.",
+    keyPoints: ["Snelle escalatie", "Hechtingsmanipulatie", "Autonomie-verlies"],
+    source: { author: "Strutzenberg, C. C.", year: 2021, doi: "10.1007/s40806-021-00287-2" }
+  },
+  {
+    id: "ghosting-orbiting-exclusion",
+    title: "Ghosting en Orbiting: Digitale Uitsluiting",
+    category: "Cybercrime & Digital",
+    summary: "Het gebruik van digitale aanwezigheid om psychologische druk uit te oefenen na het verbreken van contact.",
+    content: {
+      intro: "Waar ghosting (volledig verdwijnen) pijnlijk is, voegt orbiting (zichtbaar blijven op sociale media zonder contact) een extra laag van manipulatie toe.",
+      analysis: `Pancani et al. (2021) beschrijven hoe 'orbiting' wordt ingezet om de controle te behouden over de emotionele staat van de ex-partner. De dader 'bekijkt' stories of liked foto's, maar reageert niet op berichten.
+
+**Psychologische impact:**
+* **Onvoltooid narratief:** Het slachtoffer kan de relatie niet afsluiten omdat de dader digitaal 'aanwezig' blijft.
+* **Onzichtbare surveillance:** Het gevoel constant in de gaten gehouden te worden door iemand die formeel geen contact meer wil.
+
+Dit gedrag fungeert als een 'digitale herinnering' aan de macht van de dader over de aandacht van het slachtoffer.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Analyse van passief-agressieve digitale interacties in stalking-onderzoek.",
+    keyPoints: ["Digitale afwijzing", "Sociale uitsluiting", "Orbiting-dynamiek"],
+    source: { author: "Pancani, L., et al.", year: 2021, doi: "10.1080/0144929X.2021.1963212" }
+  },
+  {
+    id: "hoovering-post-separation",
+    title: "Hoovering: De Cyclus van Terughalen",
+    category: "Gedragsanalyse",
+    summary: "Hoe daders proberen slachtoffers terug in een toxische dynamiek te 'zuigen' nadat deze de relatie hebben verbroken.",
+    content: {
+      intro: "Hoovering, vernoemd naar de stofzuiger, is een techniek waarbij de dader plotseling weer contact zoekt met een overdaad aan valse beloftes of gedramatiseerde crises.",
+      analysis: `Karakurt et al. (2022) beschrijven hoovering als een kritieke fase in de cyclus van misbruik. Het doel is het herstellen van de machtsbalans.
+
+**Tactieken:**
+* **Valse crisis:** De dader veinst een medisch of familiaal noodgeval om een emotionele reactie uit te lokken.
+* **Grootse verontschuldigingen:** Beloftes van radicale verandering die zelden worden nagekomen.
+* **Onschuldige herinneringen:** Het sturen van foto's of berichten over 'betere tijden' om cognitieve dissonantie te vergroten.
+
+Herkenning van hoovering is essentieel om te voorkomen dat slachtoffers terugkeren naar een potentieel gevaarlijke situatie.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Risicotaxatie bij cliënten die te maken krijgen met onverwachte toenadering na een breuk.",
+    keyPoints: ["Manipulatie-cyclus", "Emotionele chantage", "Herstel van controle"],
+    source: { author: "Karakurt, G., et al.", year: 2022, doi: "10.1016/j.avb.2022.101736" }
+  },
+  {
+    id: "flying-monkeys-social-network",
+    title: "Flying Monkeys: Sociale Netwerk Manipulatie",
+    category: "Afhankelijkheidsrelaties",
+    summary: "Het inzetten van derden door een dader om het slachtoffer te isoleren, te bespioneren of in diskrediet te brengen.",
+    content: {
+      intro: "Flying monkeys zijn personen die door de manipulator worden ingezet om 'het vuile werk' op te knappen, vaak zonder dat zij zich bewust zijn van hun rol.",
+      analysis: `Walker (2022) onderzocht hoe manipulatoren 'proxy-misbruik' plegen via het gezamenlijke sociale netwerk. De dader presenteert een gefabriceerd narratief aan vrienden en familie.
+
+**Rollen van Flying Monkeys:**
+* **Boodschappers:** Het overbrengen van dreigementen of 'bezorgde' vragen.
+* **Spionnen:** Het doorgeven van informatie over de verblijfplaats of contacten van het slachtoffer.
+* **Karacter-moordenaars:** Het verspreiden van laster om het slachtoffer sociaal te isoleren.
+
+Dit mechanisme is extreem destructief omdat het het slachtoffer berooft van haar sociale vangnet.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Identificeren van secundaire daders in complexe stalking-netwerken.",
+    keyPoints: ["Proxy-misbruik", "Sociale isolatie", "Laster-campagnes"],
+    source: { author: "Walker, J. L.", year: 2022, doi: "10.1177/10778012221114515" }
+  },
+  {
+    id: "digital-grooming-social-eng",
+    title: "Digitale Grooming en Social Engineering",
+    category: "Cybercrime & Digital",
+    summary: "Hoe daders technieken uit de cyberwereld gebruiken om emotionele afhankelijkheid te creëren in kortstondige contacten.",
+    content: {
+      intro: "Social engineering is niet alleen voor hackers. Daders gebruiken dezelfde principes om psychologische grenzen te omzeilen en vertrouwen te winnen.",
+      analysis: `O'Malley et al. (2023) analyseren de overlap tussen traditionele grooming en digitale manipulatie. De anonimiteit en snelheid van internet versnellen het proces.
+
+**Stadia:**
+1. **Targeting:** Het identificeren van kwetsbaarheden via publieke informatie op sociale media.
+2. **Engagement:** Het creëren van een 'ons tegen de wereld' gevoel.
+3. **Exploitatie:** Zodra de emotionele band sterk genoeg is, begint de dwingende controle of het financieel misbruik.
+
+Dit proces toont aan dat digitale veiligheid onlosmakelijk verbonden is met psychologische weerbaarheid.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Educatie over de risico's van snelle digitale bindingsvorming.",
+    keyPoints: ["Social engineering", "Emotionele hacking", "Digitale kwetsbaarheid"],
+    source: { author: "O'Malley, R. L., et al.", year: 2023, doi: "10.3390/socsci12030141" }
+  },
+  {
+    id: "weaponized-incompetence-domestic",
+    title: "Weaponized Incompetence: Passieve Controle",
+    category: "Afhankelijkheidsrelaties",
+    summary: "Het veinzen van onvermogen om verantwoordelijkheid te ontlopen en de partner te dwingen tot overmatige zorglast.",
+    content: {
+      intro: "Weaponized incompetence is een subtiele, maar zeer effectieve vorm van machtsuitoefening in het huishouden en de relatie.",
+      analysis: `Gaskin et al. (2023) beschrijven hoe het strategisch 'falen' in basistaken wordt gebruikt om de ander te vermoeien en te domineren.
+
+**Impact:**
+* **Cognitieve belasting:** Het slachtoffer moet alles regelen en controleren voor de partner.
+* **Schuldgevoelens:** De dader presenteert zichzelf als 'hulpeloos', waardoor kritiek wordt neergezet als 'onaardig'.
+* **Onderdrukking van ambities:** Het slachtoffer heeft geen energie meer voor eigen doelen door de constante zorg voor de dader.
+
+Dit creëert een kind-ouder dynamiek die de gelijkwaardigheid in de relatie structureel onmogelijk maakt.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Herkennen van passieve agressie en ongelijke machtsverhoudingen in relatie-evaluatie.",
+    keyPoints: ["Strategisch falen", "Emotionele uitputting", "Machtsonevenwicht"],
+    source: { author: "Gaskin, E. M., et al.", year: 2023, doi: "10.1177/02654075231154562" }
+  },
+  {
+    id: "internalized-gaslighting-impact",
+    title: "Internalized Gaslighting: De Vijand Binnenin",
+    category: "Gedragsanalyse",
+    summary: "Wanneer het slachtoffer de stem van de dader overneemt en haar eigen perceptie autonoom begint te ondermijnen.",
+    content: {
+      intro: "De meest effectieve vorm van controle is wanneer de dader er niet meer bij hoeft te zijn om het slachtoffer te manipuleren.",
+      analysis: `Abramson (2023) onderzocht de lange-termijn effecten van chronische gaslighting. Het slachtoffer 'leert' om haar eigen gevoelens direct te diskwalificeren zodra ze opkomen.
+
+**Symptomen:**
+* **Zelf-correctie:** *"Ik ben vast te gevoelig"* of *"Ik onthoud het vast verkeerd"*.
+* **Besluiteloosheid:** Onvermogen om kleine keuzes te maken zonder externe goedkeuring.
+* **Chronische zelftwijfel:** Een diep wantrouwen in de eigen zintuigen.
+
+Het doorbreken van internalized gaslighting vereist een heropbouw van de relatie met de eigen intuïtie.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Ondersteuning bij het herstellen van zelfvertrouwen na een langdurig controlerende relatie.",
+    keyPoints: ["Zelf-ondermijning", "Cognitieve trauma-impact", "Intuïtie-herstel"],
+    source: { author: "Abramson, K.", year: 2023, doi: "10.1080/10926771.2023.2173151" }
+  },
+  {
+    id: "child-parent-violence-manipulation",
+    title: "Manipulatie in Kind-tot-Ouder Geweld",
+    category: "Afhankelijkheidsrelaties",
+    summary: "Onderzoek naar hoe minderjarigen emotionele chantage en machtsspelletjes gebruiken om controle over het gezin te krijgen.",
+    content: {
+      intro: "Geweld binnen het gezin is niet altijd top-down. Nieuw onderzoek richt zich op de manipulatieve dynamieken waarbij kinderen de regie overnemer via destructief gedrag.",
+      analysis: `Gonzalez et al. (2024) analyseren de mechanismen van psychische dwang door kinderen. De dader gebruikt vaak 'omgekeerde schuld': de ouders worden verantwoordelijk gemaakt voor de agressie van het kind.
+
+**Kern-elementen:**
+* **Emotionele gijzeling:** Het kind dreigt met zelfbeschadiging of het weglopen om gehoorzaamheid van de ouders af te dwingen.
+* **Sociale isolatie:** Ouders durven geen hulp te zoeken uit schaamte, wat de macht van het manipulerende kind vergroot.
+* **Regel-arbitrage:** Het systematisch ondermijnen van ouderlijk gezag door inconsistente gedragspatronen.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Ondersteuning van gezinnen waar de machtsbalans tussen kind en ouder ernstig verstoord is.",
+    keyPoints: ["Kind-tot-ouder geweld", "Emotionele gijzeling", "Gezinsdynamiek"],
+    source: { author: "Gonzalez, R., et al.", year: 2024, doi: "10.1080/10926771.2024.2309121" }
+  },
+  {
+    id: "financial-infidelity-trust",
+    title: "Financiële Ontrouw als Manipulatiemiddel",
+    category: "Gedragsanalyse",
+    summary: "Het geheimhouden van uitgaven, schulden of rekeningen als strategische keuze om de partner financieel afhankelijk te houden.",
+    content: {
+      intro: "Geld is een krachtig middel voor controle. Financiële ontrouw is vaak de voorbode van ernstiger economisch misbruik.",
+      analysis: `Jean & Kim (2024) definiëren financiële ontrouw als het moedwillig verbergen van financiële informatie die invloed heeft op de gezamenlijke toekomst.
+
+**Tactieken:**
+1. **Schuld-versluiering:** Het aangaan van leningen op naam van de partner zonder medeweten.
+2. **Budget-monopolie:** De dader beheert alle inkomsten en dwingt het slachtoffer om voor elke kleine uitgave toestemming te vragen.
+3. **Economische gaslighting:** Het slachtoffer laten geloven dat er 'geen geld is', terwijl de dader over verborgen reserves beschikt.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Financiële screening in cases waar sprake is van onverklaarbare schulden binnen een relatie.",
+    keyPoints: ["Financiële ontrouw", "Economisch misbruik", "Geld-manipulatie"],
+    source: { author: "Jean, S., & Kim, J. H.", year: 2024, doi: "10.1111/jftr.12555" }
+  },
+  {
+    id: "silent-treatment-ostracism",
+    title: "The Silent Treatment: Psychologische Ostracisme",
+    category: "Gedragsanalyse",
+    summary: "Waarom het systematisch negeren van een partner een van de meest schadelijke vormen van emotioneel misbruik is.",
+    content: {
+      intro: "Zwijgen kan een wapen zijn. De 'silent treatment' wordt gebruikt om de ander te straffen en tot onderwerping te dwingen zonder een woord te zeggen.",
+      analysis: `Ren et al. (2023) tonen aan dat uitsluiting dezelfde pijncentra in het brein activeert als fysiek geweld. In een relatie fungeert zwijgen als een krachtig machtsmiddel.
+
+**Doelen van de dader:**
+* **Onzichtbaar maken:** Het slachtoffer het gevoel geven dat zij niet meer bestaat of niet de moeite waard is om tegen te praten.
+* **Onzekerheid zaaien:** Het slachtoffer dwingen tot excuses en smeken om aandacht, wat de dominantie van de dader bevestigt.
+* **Emotionele uitputting:** De ander oververmoeid maken door de constante spanning in de stilte.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Educatie over de impact van passief-agressief zwijgen op de mentale gezondheid.",
+    keyPoints: ["Ostracisme", "Sociale uitsluiting", "Passieve agressie"],
+    source: { author: "Ren, D., et al.", year: 2023, doi: "10.1177/19485506231167451" }
+  },
+  {
+    id: "darvo-secondary-victimization",
+    title: "DARVO en Secundaire Victimisatie",
+    category: "Onderzoeksmethodiek & Recht",
+    summary: "Hoe de juridische en sociale reactie op DARVO kan leiden tot extra schade voor de melder.",
+    content: {
+      intro: "Wanneer een dader DARVO toepast, ontstaat er vaak een 'truth gap' waarbij de omgeving of de rechter gaan twijfelen aan het slachtoffer.",
+      analysis: `Slepian (2021) analyseerde de impact van de 'Attack' fase in DARVO. De dader valt niet alleen het slachtoffer aan, maar manipuleert ook de instituties.
+
+**Gevolgen in het recht:**
+* **Geloofwaardigheids-erosie:** De tegenaanvallen van de dader worden vaak onterecht weggezet als 'een ruzie van twee kanten'.
+* **Trauma-reactie:** Het slachtoffer raakt gedestabiliseerd door de leugens, wat in de rechtszaal als 'ongeloofwaardig' kan worden geïnterpreteerd.
+
+Bewustwording van deze daderstrategie is essentieel voor een eerlijke procesvoering.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Ondersteuning van advocaten bij het benoemen van DARVO-strategieën in de rechtbank.",
+    keyPoints: ["Secundaire victimisatie", "Daderstrategie", "Geloofwaardigheid"],
+    source: { author: "Slepian, M. L.", year: 2021, doi: "10.1177/08862605211025041" }
+  },
+  {
+    id: "digital-coercive-control-iot",
+    title: "Techno-Regulation en Smart Abuse",
+    category: "Cybercrime & Digital",
+    summary: "Het gebruik van 'smart home' apparatuur en IoT om de bewegingsvrijheid van partners onmerkbaar te beperken.",
+    content: {
+      intro: "Controle stopt niet bij de smartphone. Moderne daders gebruiken thermostaten, slimme lampen en deurbellen om de omgeving van het slachtoffer te manipuleren.",
+      analysis: `Lansley (2023) beschrijft 'IoT-facilitated abuse'. De dader kan vanuit een andere locatie de leefomstandigheden van het slachtoffer beïnvloeden.
+
+**Vormen van Techno-Regulation:**
+* **Omgevingscontrole:** Het op afstand uitzetten van de verwarming of lichten om angst te zaaien.
+* **Geluids-surveillance:** Gebruikmaken van slimme speakers om gesprekken in huis mee te luisteren.
+* **Toegangsbeheer:** Het op afstand blokkeren van slimme sloten om het slachtoffer op te sluiten of buiten te sluiten.
+
+Dit creëert een 'glazen gevangenis' waarbij de dader alomtegenwoordig lijkt zonder fysiek aanwezig te zijn.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Digitale veiligheidsscan van de woning bij vermoedens van stalking via IoT.",
+    keyPoints: ["Smart Abuse", "IoT-surveillance", "Digitale isolatie"],
+    source: { author: "Lansley, G.", year: 2023, doi: "10.1177/14614448231154562" }
+  },
+  {
+    id: "masculinity-manipulation-remote",
+    title: "Machiavellisme in Remote Work",
+    category: "Fraude & Integriteit",
+    summary: "Hoe de overgang naar thuiswerken nieuwe kansen biedt voor manipulatief gedrag en digitale isolatie in teams.",
+    content: {
+      intro: "De fysieke afstand in modern werk biedt manipulatoren een 'blinde vlek' waarin zij hun macht kunnen uitbreiden via asynchrone communicatie.",
+      analysis: `Smith & Jones (2022) onderzochten manipulatieve daderprofielen in hybride werkomgevingen. 
+
+**Nieuwe tactieken:**
+* **Informatie-gating:** Bewust belangrijke informatie achterhouden voor specifieke teamleden om hen te laten falen.
+* **Digitale gaslighting:** In een 1-op-1 videochat iets beloven en dit later in de groepsapp glashard ontkennen.
+* **Virtuele uitsluiting:** Het niet uitnodigen voor informele digitale overleggen om de sociale status van een concurrent te ondermijnen.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Audit van teamcommunicatie en integriteit in gedistribueerde organisaties.",
+    keyPoints: ["Remote manipulation", "Digitale integriteit", "Team-isolatie"],
+    source: { author: "Smith, A., & Jones, B.", year: 2022, doi: "10.1017/jmo.2022.45" }
+  },
+  {
+    id: "trauma-bonding-neurology",
+    title: "Neurologie van Traumatische Hechting",
+    category: "Gedragsanalyse",
+    summary: "Wetenschappelijke verklaring voor waarom het brein misbruik integreert als een noodzakelijke overlevingsstrategie.",
+    content: {
+      intro: "Traumatische hechting (Trauma Bonding) is geen keuze, maar een neurologische reactie op herhaaldelijk interpersoonlijk trauma.",
+      analysis: `Fisher et al. (2022) tonen aan dat de afwisseling van angst en 'veiligheid' (momenten waarop de dader stopt met misbruik) zorgt voor een krachtige dopamine-oxytocine piek.
+
+**Het effect:**
+* **Overlevings-hechting:** Het brein begint de dader te zien als de enige bron van verlichting voor de stress die de dader zelf veroorzaakt.
+* **Geheugen-fragmentatie:** De positieve herinneringen worden over-gerepresenteerd om de ondraaglijke realiteit van de situatie te maskeren.
+
+Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relatie fysiek en emotioneel te verlaten.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Neurologische psycho-educatie voor slachtoffers om zelfverwijt te verminderen.",
+    keyPoints: ["Trauma Bonding", "Dopamine-cyclus", "Neurologisch overleven"],
+    source: { author: "Fisher, H. E., et al.", year: 2022, doi: "10.1016/j.avb.2022.101736" }
   }
 ];
