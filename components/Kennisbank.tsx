@@ -77,13 +77,13 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void; onAr
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4 bg-[#13261f]/80 backdrop-blur-sm animate-fade-in" onClick={onClose}>
             <div className="bg-white w-full h-full md:h-auto md:max-h-[90vh] md:max-w-4xl rounded-none md:rounded-[2rem] shadow-2xl overflow-hidden flex flex-col relative" onClick={e => e.stopPropagation()}>
-                <div className="p-6 md:p-10 border-b border-[#E5E7EB] bg-[#F9FCFA] flex justify-between items-start gap-6 flex-shrink-0 relative z-20">
+                <div className="p-8 md:p-12 border-b border-[#E5E7EB] bg-[#F9FCFA] flex justify-between items-start gap-6 flex-shrink-0 relative z-20">
                     <div className="pr-12">
                         <div className="flex flex-wrap items-center gap-3 mb-4">
                             <span className="inline-block px-3 py-1 rounded-full bg-[#E8F5EF] text-[#13261f] text-xs font-bold tracking-wider border border-[#58B895]/20">{article.category}</span>
                             <span className="text-xs font-medium italic text-[#6B7280]">{article.source.year}</span>
                         </div>
-                        <h2 className="text-xl md:text-4xl font-bold text-[#13261f] leading-tight">{article.title}</h2>
+                        <h2 className="text-xl md:text-4xl font-bold text-[#13261f] leading-tight pt-2">{article.title}</h2>
                     </div>
                     <button onClick={onClose} className="absolute right-4 top-4 md:right-6 md:top-6 p-2 bg-white hover:bg-[#F2F9F6] rounded-full transition-colors border border-[#E5E7EB] shadow-sm group z-30">
                         <XIcon className="w-6 h-6 text-[#9CA3AF] group-hover:text-[#58B895]" />
@@ -137,25 +137,27 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void; onAr
                             </div>
                         )}
                     </div>
-                </div>
-                <div className="p-6 md:p-8 border-t border-[#E5E7EB] bg-[#F9FCFA] text-xs text-[#6B7280] flex-shrink-0">
-                    <div className="max-w-3xl mx-auto flex flex-col gap-3">
-                        <span className="font-bold text-[#13261f] tracking-widest text-[10px] block">WETENSCHAPPELIJKE BRON</span>
-                        <div className="text-sm leading-relaxed text-[#4B5563]">
-                            <span className="text-[#13261f] font-bold">{article.source.author}</span>
-                            <span className="mx-1">({article.source.year}).</span>
-                            <span className="italic">{article.title}.</span>
-                            {article.source.journal && <span className="ml-1">{article.source.journal}.</span>}
-                            {article.source.doi && (
-                                <a
-                                    href={`https://doi-org.proxy.bu.edu/${article.source.doi}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="ml-2 inline-flex items-center text-[#58B895] hover:text-[#13261f] transition-colors font-mono text-[11px] bg-[#E8F5EF] px-2 py-0.5 rounded-md border border-[#58B895]/20"
-                                >
-                                    DOI:{article.source.doi}
-                                </a>
-                            )}
+
+                    {/* Source Citation - Now inside scrollable area */}
+                    <div className="p-6 md:p-8 border-t border-[#E5E7EB] bg-[#F9FCFA] text-xs text-[#6B7280] mt-12 rounded-xl">
+                        <div className="max-w-3xl mx-auto flex flex-col gap-3">
+                            <span className="font-bold text-[#13261f] tracking-widest text-[10px] block">WETENSCHAPPELIJKE BRON</span>
+                            <div className="text-sm leading-relaxed text-[#4B5563]">
+                                <span className="text-[#13261f] font-bold">{article.source.author}</span>
+                                <span className="mx-1">({article.source.year}).</span>
+                                <span className="italic">{article.title}.</span>
+                                {article.source.journal && <span className="ml-1">{article.source.journal}.</span>}
+                                {article.source.doi && (
+                                    <a
+                                        href={`https://doi-org.proxy.bu.edu/${article.source.doi}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="ml-2 inline-flex items-center text-[#58B895] hover:text-[#13261f] transition-colors font-mono text-[11px] bg-[#E8F5EF] px-2 py-0.5 rounded-md border border-[#58B895]/20"
+                                    >
+                                        DOI:{article.source.doi}
+                                    </a>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -260,7 +262,7 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                             </div>
 
                             <div className="overflow-x-auto pb-4 pt-1 -mx-2 px-2 scrollbar-hide">
-                                <div className="flex gap-2 min-w-min">
+                                <div className="flex gap-2 whitespace-nowrap">
                                     {categories.map(cat => (
                                         <button
                                             key={cat}
