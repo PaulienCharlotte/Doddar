@@ -31,7 +31,28 @@ const Contact: React.FC<ContactProps> = ({ initialContext, onOpenComplaints, onO
     // Pre-fill form if analysis context is provided
     useEffect(() => {
         if (initialContext) {
-            const generatedMessage = `Beste Doddar,\n\nIk want graag een intakegesprek aanvragen op basis van mijn recente online analyse.\n\n--- SAMENVATTING ANALYSE ---\n${initialContext.summary}\n\n--- GEDRAGSKENMERKEN ---\n${initialContext.patterns.join(', ')}\n\n--- MIJN VRAAG ---\n(Typ hier uw aanvullende vragen of opmerkingen...)`;
+            const sections = [
+                `Beste Doddar,\n\nIk want graag een intakegesprek aanvragen op basis van mijn recente online analyse.`,
+                `--- SAMENVATTING ANALYSE ---\n${initialContext.summary}`,
+                `--- GEDRAGSKENMERKEN ---\n${initialContext.patterns.join(', ')}`
+            ];
+
+            if (initialContext.legal_factors && initialContext.legal_factors.length > 0) {
+                sections.push(`--- JURIDISCHE INDICATOREN ---\n${initialContext.legal_factors.join('\n')}`);
+            }
+
+            if (initialContext.scientific_context && initialContext.scientific_context.length > 0) {
+                sections.push(`--- WETENSCHAPPELIJKE ONDERBOUWING ---\n${initialContext.scientific_context.join('\n')}`);
+            }
+
+            if (initialContext.methods && initialContext.methods.length > 0) {
+                sections.push(`--- AANBEVOLEN METHODEN ---\n${initialContext.methods.join(', ')}`);
+            }
+
+            sections.push(`--- STRATEGISCH ADVIES ---\n${initialContext.advice}`);
+            sections.push(`--- MIJN VRAAG ---\n(Typ hier uw aanvullende vragen of opmerkingen...)`);
+
+            const generatedMessage = sections.join('\n\n');
 
             setFormData(prev => ({
                 ...prev,

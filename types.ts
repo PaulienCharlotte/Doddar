@@ -119,7 +119,10 @@ export interface InitialAnalysisResponse {
 }
 
 export interface AnalysisContext {
-    summary: string;
-    advice: string;
-    patterns: string[];
+  summary: string;
+  advice: string;
+  patterns: string[];
+  legal_factors?: string[];
+  scientific_context?: string[];
+  methods?: string[];
 }
