@@ -210,10 +210,10 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
             <div className="max-w-7xl mx-auto px-4 md:px-6 space-y-12 mb-24 z-10 relative w-full">
 
                 {/* Search & Filter Controls */}
-                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative overflow-visible md:overflow-hidden mx-auto w-full max-w-full">
-                    <div className="grid lg:grid-cols-[1.5fr_1fr] items-center w-full max-w-full">
-                        <div className="p-5 md:p-16 space-y-6 md:space-y-8 w-full max-w-full overflow-hidden">
-                            <div className="flex justify-between items-start gap-4 w-full">
+                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative overflow-hidden mx-auto w-full" style={{ maxWidth: 'calc(100vw - 2rem)' }}>
+                    <div className="lg:grid lg:grid-cols-[1.5fr_1fr] items-center">
+                        <div className="p-5 md:p-16 space-y-6 md:space-y-8">
+                            <div className="flex justify-between items-start gap-3">
                                 <h2 className="text-xl md:text-3xl font-bold text-[#13261f] leading-tight max-w-[85%]">
                                     Wetenschap & Praktijk
                                 </h2>
