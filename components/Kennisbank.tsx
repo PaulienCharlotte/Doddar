@@ -59,7 +59,7 @@ const renderFormattedText = (text: string) => {
     );
 };
 
-const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void }> = ({ article, onClose }) => {
+const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void; onArticleSelect: (article: KennisArticle) => void }> = ({ article, onClose, onArticleSelect }) => {
     useEffect(() => {
         document.body.style.overflow = 'hidden';
         return () => { document.body.style.overflow = ''; };
@@ -117,10 +117,11 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void }> = 
                                     {kennisArticles.filter(a => article.relatedIds?.includes(a.id)).map((rel) => (
                                         <div
                                             key={rel.id}
-                                            className="text-left p-4 rounded-xl border border-[#E5E7EB] bg-[#F9FCFA] transition-all"
+                                            onClick={() => onArticleSelect(rel)}
+                                            className="text-left p-4 rounded-xl border border-[#E5E7EB] bg-[#F9FCFA] transition-all cursor-pointer hover:border-[#58B895] hover:shadow-md group/related"
                                         >
-                                            <span className="text-[#58B895] font-bold text-[10px] tracking-wider mb-2 block">{rel.category}</span>
-                                            <p className="text-sm font-bold text-[#13261f] line-clamp-2">{rel.title}</p>
+                                            <span className="text-[#58B895] font-bold text-[10px] tracking-wider mb-2 block group-hover/related:text-[#13261f] transition-colors">{rel.category}</span>
+                                            <p className="text-sm font-bold text-[#13261f] line-clamp-2 underline decoration-transparent group-hover/related:decoration-[#58B895] transition-all">{rel.title}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -299,7 +300,7 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                 </div>
             )}
 
-            {selectedArticle && <ArticleModal article={selectedArticle} onClose={() => setSelectedArticle(null)} />}
+            {selectedArticle && <ArticleModal article={selectedArticle} onClose={() => setSelectedArticle(null)} onArticleSelect={setSelectedArticle} />}
         </div>
     );
 };
