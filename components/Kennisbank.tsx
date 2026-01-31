@@ -255,7 +255,7 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                                         <button
                                             key={cat}
                                             onClick={() => setSelectedCategory(cat)}
-                                            className={`flex-shrink-0 px-5 py-2.5 rounded-full text-[11px] font-bold uppercase transition-all border whitespace-nowrap ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-md' : 'bg-white text-gray-400 border-gray-200 hover:border-[#58B895] hover:text-[#58B895]'}`}
+                                            className={`flex-shrink-0 px-5 py-2.5 rounded-full text-[11px] font-bold transition-all border whitespace-nowrap ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-md' : 'bg-white text-gray-400 border-gray-200 hover:border-[#58B895] hover:text-[#58B895]'}`}
                                         >
                                             {cat}
                                         </button>
