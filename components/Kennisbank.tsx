@@ -172,8 +172,9 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
     const filteredArticles = useMemo(() => {
         return kennisArticles.filter(article => {
             const s = searchTerm.toLowerCase();
-            const c = selectedCategory.toLowerCase();
-            return (article.title.toLowerCase().includes(s) || article.summary.toLowerCase().includes(s)) && (selectedCategory === 'Alle' || article.category.toLowerCase() === c);
+            const matchesSearch = article.title.toLowerCase().includes(s) || article.summary.toLowerCase().includes(s);
+            const matchesCategory = selectedCategory === 'Alle' || article.category.toLowerCase() === selectedCategory.toLowerCase();
+            return matchesSearch && matchesCategory;
         });
     }, [searchTerm, selectedCategory]);
 
