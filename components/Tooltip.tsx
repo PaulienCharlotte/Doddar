@@ -64,23 +64,23 @@ const Tooltip: React.FC<TooltipProps> = ({ content, children, className = '', pl
   };
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className={`relative inline-flex items-center justify-center ${className}`}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
-      onClick={(e) => { 
-        e.stopPropagation(); 
-        setIsOpen(!isOpen); 
+      onClick={(e) => {
+        e.stopPropagation();
+        setIsOpen(!isOpen);
       }}
     >
       <div className="cursor-pointer">
         {children}
       </div>
-      
+
       {isOpen && (
-        <div 
-          className={`absolute w-64 md:w-72 p-4 bg-[#13261f] text-white text-xs md:text-sm rounded-xl shadow-2xl z-[100] animate-fade-in cursor-auto ${getPositionClasses()}`}
+        <div
+          className={`absolute max-w-[calc(100vw-4rem)] w-72 p-4 bg-[#13261f] text-white text-xs md:text-sm rounded-xl shadow-2xl z-[100] animate-fade-in cursor-auto ${getPositionClasses()}`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="relative z-10 font-normal leading-relaxed">
