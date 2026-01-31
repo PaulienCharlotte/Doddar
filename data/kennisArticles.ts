@@ -28,7 +28,7 @@ export const kennisArticles: KennisArticle[] = [
   {
     id: "homicide-timeline-stalking",
     title: "De Stalking-Homicide Timeline: Acht Fasen van Gevaar",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Monckton Smith (2020) identificeert acht specifieke fasen die voorafgaan aan fataal geweld in stalkingzaken.",
     content: {
       intro: "Stalking is geen incident, maar een proces. Jane Monckton Smith ontwikkelde een baanbrekend model dat aantoont hoe stalking kan escaleren tot fataal geweld door een voorspelbaar patroon te volgen.",
@@ -48,12 +48,12 @@ Het herkennen van fase 4 en 5 is cruciaal voor interventie. De timeline toont aa
     },
     practicalApplication: "Risicotaxatie bij cliënten die te maken hebben met escalerende stalking na een breuk.",
     keyPoints: ["8-fasen model", "Triggerpunt-identificatie", "Voorspelbaarheid van geweld"],
-    source: { author: "Jane Monckton Smith", year: 2020, journal: "In Control: Dangerous Relationships and How They End in Murder", doi: "10.1007/978-3-030-43574-5" }
+    source: { author: "Jane Monckton Smith", year: 2020, journal: "In Control: Dangerous Relationships and How They End in Murder", doi: "10. 1007/978-3-030-43574-5" }
   },
   {
     id: "proxy-stalking-networks",
     title: "Proxy Stalking: Belaging via Sociale Netwerken",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Onderzoek naar hoe daders derden (vrienden, familie, onbekenden) gebruiken om slachtoffers te monitoren en intimideren.",
     content: {
       intro: "Wanneer een contactverbod van kracht is, stoppen daders vaak niet. Ze verplaatsen hun activiteiten naar 'proxy stalking', waarbij ze onbewuste of bewuste derden instrueren om de belaging voort te zetten.",
@@ -68,19 +68,19 @@ Dit creëert een gevoel van alomtegenwoordigheid van de dader en verbreekt het v
     },
     practicalApplication: "Netwerkanalyse om 'lekken' in de sociale omgeving van een slachtoffer te identificeren.",
     keyPoints: ["Proxy stalking", "Sociale manipulatie", "Systeem-belaging"],
-    source: { author: "Logan & Walker", year: 2017, journal: "Trauma, Violence, & Abuse", doi: "10.1177/1524838015611674" }
+    source: { author: "Logan & Walker", year: 2017, journal: "Trauma, Violence, & Abuse", doi: "10. 1177/1524838015611674" }
   },
   {
     id: "intermittent-reinforcement-addiction",
     title: "Intermittent Reinforcement: De Verslaving aan de Dader",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Waarom onvoorspelbare beloningen (liefde vs. misbruik) leiden tot een krachtige biochemische binding in destructieve relaties.",
     readingMotivation: "Ontdek waarom uw brein 'verslaafd' raakt aan de pieken en dalen van een manipulator.",
     relatedIds: ["trauma-bonding-neurology", "intermittent-reinforcement-gamification"],
     content: {
       intro: "Slachtoffers vragen zich vaak af waarom ze niet kunnen loslaten. De wetenschap wijst op 'intermittent reinforcement': een conditioneringstechniek die de dader (vaak onbewust) gebruikt om een verslavende binding te creëren.",
       analysis: `Dutton (2011) vertaalt de conditioneringsprincipes van Skinner naar menselijke relaties. Wanneer een dader afwisselend wreed en overdreven liefdevol ('love bombing') is, reageren de dopamine-receptoren in het brein van het slachtoffer op dezelfde manier als bij gokken.
-**Het mechanisme:** * **Onvoorspelbaarheid:** Omdat de liefdevolle momenten schaars en onvoorspelbaar zijn, worden ze extreem waardevol.
+**Het mechanisme:*****Onvoorspelbaarheid:** Omdat de liefdevolle momenten schaars en onvoorspelbaar zijn, worden ze extreem waardevol.
 * **Hoop:** Het slachtoffer blijft investeren in de relatie in de hoop op die ene 'piek' van affectie.
 * **Biochemische binding:** Oxytocine (hechting) en Cortisol (stress) wisselen elkaar af, wat leidt tot een traumatische band die fysiek pijnlijk is om te verbreken.
 
@@ -90,12 +90,12 @@ Dit mechanisme verklaart waarom logische argumenten van anderen vaak niet doordr
     },
     practicalApplication: "Psycho-educatie voor slachtoffers om de biochemie van hun binding te begrijpen en te doorbreken.",
     keyPoints: ["Skinner's box effect", "Biochemische binding", "Gok-verslaving dynamiek"],
-    source: { author: "Donald G. Dutton", year: 2011, journal: "The Abusive Personality", doi: "10.1521/9781609181154" }
+    source: { author: "Donald G. Dutton", year: 2011, journal: "The Abusive Personality", doi: "10. 1521/9781609181154" }
   },
   {
     id: "cyber-flashing-power",
     title: "Cyber-flashing: Digitale Machtsexpositie",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Het ongevraagd sturen van beelden als bewuste strategie om fysieke grenzen te doorbreken en angst te zaaien.",
     content: {
       intro: "Het sturen van ongewenste expliciete beelden (cyber-flashing) wordt vaak afgedaan als een 'goor grapje'. Onderzoek toont echter aan dat het een bewuste tactiek is voor macht en dominantie.",
@@ -110,17 +110,17 @@ Sinds 2024 is dit gedrag in Nederland strafbaar onder de nieuwe Wet Seksuele Mis
     },
     practicalApplication: "Bewijsverzameling en contextanalyse bij meldingen van ongewenste digitale content.",
     keyPoints: ["Grensoverschrijding", "Machtserotiek", "Strafbaarheid 2024"],
-    source: { author: "S. Mainhardt et al.", year: 2023, journal: "Computers in Human Behavior", doi: "10.1016/j.chb.2023.107755" }
+    source: { author: "S. Mainhardt et al.", year: 2023, journal: "Computers in Human Behavior", doi: "10. 1016/j. chb. 2023. 107755" }
   },
   {
     id: "legal-gaslighting-divorce",
     title: "Legal Gaslighting: Manipulatie in de Rechtszaal",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "Hoe daders juridische procedures gebruiken om het slachtoffer opnieuw te traumatiseren en de waarheid te verdraaien.",
     content: {
       intro: "De rechtszaal zou een plek van waarheid moeten zijn, maar voor manipulatoren is het een podium. 'Legal Gaslighting' is het gebruik van gerechtelijke processen om de tegenpartij mentaal te slopen.",
       analysis: `Stanciu (2023) definieert legal gaslighting als de tactiek waarbij een dader binnen een juridische context bewezen feiten systematisch ontkent en de geloofwaardigheid van het slachtoffer aanvalt via haar advocaten en documenten.
-**Kenmerken:** 1. **Valse procesvoering:** Constant nieuwe procedures starten over triviale zaken om het slachtoffer financieel en emotioneel uit te putten.
+**Kenmerken:**1.**Valse procesvoering:** Constant nieuwe procedures starten over triviale zaken om het slachtoffer financieel en emotioneel uit te putten.
 2. **Pathologisering:** Het slachtoffer in officiële stukken neerzetten als 'gek', 'labiel' of 'onbekwaam' zonder medische basis.
 3. **Projectie:** De dader beschuldigt het slachtoffer exact van het gedrag dat hijzelf vertoont (bijv. vervreemding van kinderen).
 
@@ -130,12 +130,12 @@ De impact is dat de instanties (rechters, advocaten) onderdeel worden van de man
     },
     practicalApplication: "Analyseren van processtukken op patronen van projectie en onnodige escalatie.",
     keyPoints: ["Gerechtelijk misbruik", "Pathologisering", "Uitputtingsslag"],
-    source: { author: "A. Stanciu", year: 2023, journal: "Family Court Review", doi: "10.1111/fcre.12712" }
+    source: { author: "A. Stanciu", year: 2023, journal: "Family Court Review", doi: "10. 1111/fcre. 12712" }
   },
   {
     id: "dark-triad-online-aggression",
     title: "Dark Triad en Online Agressie: Het Anonieme Kwaad",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "De link tussen narcisme, machiavellisme, psychopathie en de neiging tot cyberpesten en stalking.",
     content: {
       intro: "Waarom gaan sommige mensen online over tot extreme pesterijen en stalking? De 'Dark Triad' persoonlijkheidskenmerken bieden een verklaring voor dit destructieve gedrag.",
@@ -150,12 +150,12 @@ De anonimiteit van het internet verlaagt de drempel voor deze types. Zij ervaren
     },
     practicalApplication: "Daderprofilering bij anonieme online laster en belaging.",
     keyPoints: ["Dark Triad", "Everyday Sadism", "Anonieme agressie"],
-    source: { author: "L. Moor & J.R. Anderson", year: 2019, journal: "Personality and Individual Differences", doi: "10.1016/j.paid.2019.03.002" }
+    source: { author: "L. Moor & J. R. Anderson", year: 2019, journal: "Personality and Individual Differences", doi: "10. 1016/j. paid. 2019. 03. 002" }
   },
   {
     id: "financial-entrapment-control",
     title: "Financiële Gijzeling: De Onzichtbare Keten",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Hoe economisch misbruik wordt ingezet om ontsnapping uit een gewelddadige relatie feitelijk onmogelijk te maken.",
     content: {
       intro: "Vaak wordt gevraagd: 'Waarom gaat ze niet weg?' Het antwoord is vaak simpel en vlijmscherp: ze kan het niet betalen. Financiële gijzeling is een kernonderdeel van dwingende controle.",
@@ -170,17 +170,17 @@ Dit creëert een situatie waarin het slachtoffer bij een vertrek direct dakloos 
     },
     practicalApplication: "Forensisch onderzoek naar banktransacties en schuldenlast om dwang aan te tonen.",
     keyPoints: ["Economisch misbruik", "Beroeps-sabotage", "Gedwongen schulden"],
-    source: { author: "J.L. Postmus et al.", year: 2020, journal: "Journal of Family Violence", doi: "10.1007/s10896-019-00057-x" }
+    source: { author: "J. L. Postmus et al.", year: 2020, journal: "Journal of Family Violence", doi: "10. 1007/s10896-019-00057-x" }
   },
   {
     id: "internalized-gaslighting-effects",
     title: "Ge geïnternaliseerde Gaslighting: De Dader in je Hoofd",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "De fase waarin het slachtoffer de stem van de dader overneemt en zichzelf begint te wantrouwen en beschuldigen.",
     content: {
       intro: "Gaslighting bereikt zijn ultieme doel wanneer de dader fysiek niet meer aanwezig hoeft te zijn om het slachtoffer te controleren. De twijfel is een deel van de identiteit geworden.",
       analysis: `Sweet (2019) beschrijft dit als de 'internalisering' van de aanval op de realiteit. Het slachtoffer stelt zichzelf constant vragen:
-* "Reageer ik niet inderdaad te emotioneel?" * of * "Heb ik het wel goed onthouden?" * **De gevolgen:** *   **Cognitieve Dissonantie:** Een constante strijd tussen wat je *ziet* en wat je wordt *verteld*.
+* "Reageer ik niet inderdaad te emotioneel?" * of * "Heb ik het wel goed onthouden?" * **De gevolgen:***  **Cognitieve Dissonantie:** Een constante strijd tussen wat je *ziet* en wat je wordt *verteld*.
 * **Decision Fatigue:** Een totaal onvermogen om zelf beslissingen te nemen zonder goedkeuring van de ander.
 * **Geheugenverlies:** Door de chronische stress en verwarring kan de hippocampus (geheugencentrum) schade oplopen, wat de gaten in de herinnering verergert.
 
@@ -190,17 +190,17 @@ De weg naar herstel begint niet bij de dader, maar bij het herladen van de eigen
     },
     practicalApplication: "Het opbouwen van een objectieve tijdlijn om de eigen realiteitszin van de cliënt te herstellen.",
     keyPoints: ["Cognitieve dissonantie", "Decision fatigue", "Hippocampus-stress"],
-    source: { author: "Paige L. Sweet", year: 2019, journal: "American Sociological Review", doi: "10.1177/0003122419874855" }
+    source: { author: "Paige L. Sweet", year: 2019, journal: "American Sociological Review", doi: "10. 1177/0003122419874855" }
   },
   {
     id: "stalking-impact-trauma",
     title: "De Psychologie van de Prooi: Lange-termijn Impact van Stalking",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Onderzoek naar de verwoestende effecten van langdurige belaging op de fysieke en mentale gezondheid.",
     content: {
       intro: "Stalking wordt vaak onderschat omdat de handelingen op zichzelf (een appje, een keer langsrijden) onschuldig lijken. Maar de optelsom creëert een staat van chronische terreur.",
       analysis: `Storey (2020) toont aan dat slachtoffers van stalking vaker symptomen vertonen van complexe PTSS dan slachtoffers van eenmalig fysiek geweld. 
-**De impactfactoren:** 1. **Onvoorspelbaarheid:** Niet weten wanneer de dader weer opduikt, zorgt voor een constante adrenaline-overload.
+**De impactfactoren:**1.**Onvoorspelbaarheid:** Niet weten wanneer de dader weer opduikt, zorgt voor een constante adrenaline-overload.
 2. **Verlies van privacy:** Het gevoel dat je nergens onbespied bent, leidt tot sociaal isolement.
 3. **Slaapgebrek:** Veel daders bellen of appen 's nachts, wat de mentale weerbaarheid afbreekt.
 
@@ -210,12 +210,12 @@ Het lichaam van het slachtoffer staat permanent in de 'fight or flight' stand, w
     },
     practicalApplication: "Ondersteuning bij het creëren van veiligheidsprotocollen voor cliënten.",
     keyPoints: ["Chronische terreur", "Fight or flight overload", "Complexe PTSS"],
-    source: { author: "J.E. Storey", year: 2020, journal: "Journal of Threat Assessment and Management", doi: "10.1037/tam0000143" }
+    source: { author: "J. E. Storey", year: 2020, journal: "Journal of Threat Assessment and Management", doi: "10. 1037/tam0000143" }
   },
   {
     id: "grooming-digital-vulnerability",
     title: "Digitale Grooming bij Volwassenen: De 'Infiltratie'",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Hoe daders via LinkedIn en professionele kanalen kwetsbaarheden identificeren en exploiteren.",
     content: {
       intro: "Grooming begint niet altijd in de slaapkamer. In de professionele sfeer worden LinkedIn en Slack steeds vaker gebruikt als jachtterrein voor manipulatoren.",
@@ -230,12 +230,12 @@ Zodra het vertrouwen is gewonnen, verschuift de dynamiek naar exploitatie (finan
     },
     practicalApplication: "Screening van ongebruikelijke professionele benaderingen en verzoeken.",
     keyPoints: ["Professionele grooming", "LinkedIn-manipulatie", "Medeplichtigheidsgevoel"],
-    source: { author: "Monica Whitty", year: 2018, journal: "The Psychology of Cybercrime", doi: "10.4324/9781315610818" }
+    source: { author: "Monica Whitty", year: 2018, journal: "The Psychology of Cybercrime", doi: "10. 4324/9781315610818" }
   },
   {
     id: "weaponized-empathy-manipulation",
     title: "Gemanipuleerde Empathie: De Valstrik van Medelijden",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Hoe daders hun eigen (geveinsde) kwetsbaarheid gebruiken om grenzen bij anderen te doorbreken.",
     content: {
       intro: "We denken vaak dat manipulatoren dominant en agressief zijn. Maar de meest effectieve daders gebruiken 'medelijden' als hun krachtigste wapen.",
@@ -250,12 +250,12 @@ Dit creëert een situatie waarin het slachtoffer de dader gaat 'beschermen' tege
     },
     practicalApplication: "Het onderscheiden van oprechte kwetsbaarheid en manipulatieve kwetsbaarheid.",
     keyPoints: ["Medelijden als wapen", "Emotionele chantage", "Dader-slachtoffer omkering"],
-    source: { author: "Martha Stout", year: 2005, journal: "The Sociopath Next Door", url: "https://www.marthastout.com/" }
+    source: { author: "Martha Stout", year: 2005, journal: "The Sociopath Next Door", url: "https://www. marthastout. com/" }
   },
   {
     id: "post-separation-stalking-escalation",
     title: "Post-Separatie Stalking: De Gevaarlijkste Fase",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Waarom het verbreken van een relatie vaak de katalysator is voor extreme belaging en geweld.",
     content: {
       intro: "Het advies 'ga gewoon weg' is levensgevaarlijk zonder adequaat plan. De meeste zware stalking en femicide vindt plaats *nadat* de knoop is doorgehakt.",
@@ -270,12 +270,12 @@ De periode tot 18 maanden na de scheiding wordt gezien als de 'high risk zone'.`
     },
     practicalApplication: "Veiligheidsplanning bij cliënten in de vroege fase van een scheiding.",
     keyPoints: ["High risk zone", "Breuk als trigger", "Femicide-preventie"],
-    source: { author: "L. Sheridan", year: 2021, journal: "Stalking: A Multidisciplinary Approach", doi: "10.4324/9781003117540" }
+    source: { author: "L. Sheridan", year: 2021, journal: "Stalking: A Multidisciplinary Approach", doi: "10. 4324/9781003117540" }
   },
   {
     id: "digital-domestic-violence-tech",
     title: "Digitale Huiselijke Mishandeling: IoT als Koord",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Hoe slimme thermostaten, deurbellen en speakers worden ingezet voor psychologische terreur.",
     content: {
       intro: "Je eigen huis zou je veilige plek moeten zijn. Maar in een technologische wereld kan de dader de controle over je omgeving overnemen via het Internet of Things (IoT).",
@@ -290,12 +290,12 @@ Deze handelingen laten geen fysieke sporen na, maar vernietigen het gevoel van v
     },
     practicalApplication: "Technische checks op smart-home accounts en toegangsrechten.",
     keyPoints: ["Virtual Leash", "IoT-terreur", "Omgevingscontrole"],
-    source: { author: "Delanie Woodlock", year: 2017, journal: "Violence Against Women", doi: "10.1177/1077801216646277" }
+    source: { author: "Delanie Woodlock", year: 2017, journal: "Violence Against Women", doi: "10. 1177/1077801216646277" }
   },
   {
     id: "attachment-trauma-manipulation",
     title: "Hechtingstrauma als Ingang voor Manipulatie",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Hoe een onveilige hechtingsstijl uit de kindertijd iemand vatbaarder maakt voor controle en manipulatie in volwassenheid.",
     content: {
       intro: "Onze vroegste relaties vormen de 'blauwdruk' voor wat we als normaal beschouwen. Manipulatoren herkennen en gebruiken deze blauwdruk feilloos.",
@@ -310,12 +310,12 @@ Inzicht in de eigen hechtingsstijl is de eerste stap naar immuniteit tegen derge
     },
     practicalApplication: "Analyse van relatiegeschiedenissen om kwetsbaarheidspatronen te herkennen.",
     keyPoints: ["Hechtingsstijlen", "Angst voor verwerping", "Symbiotische controle"],
-    source: { author: "Sue Johnson", year: 2019, journal: "Attachment Theory in Practice", url: "https://www.iceeft.com/" }
+    source: { author: "Sue Johnson", year: 2019, journal: "Attachment Theory in Practice", url: "https://www. iceeft. com/" }
   },
   {
     id: "financial-abuse-legal-protection",
     title: "Economisch Misbruik: Juridische Kaders",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "Het belang van forensische accountancy bij het aantonen van dwingende controle en financieel misbruik.",
     content: {
       intro: "Financieel misbruik wordt vaak gezien als een 'privé-kwestie' binnen een huwelijk. Maar volgens de modernste juridische inzichten is het een vorm van geweld.",
@@ -330,12 +330,12 @@ Professioneel onderzoek moet gericht zijn op het traceren van geldstromen en het
     },
     practicalApplication: "Het uitvoeren van financiële audits in complexe scheidingszaken.",
     keyPoints: ["Financieel geweld", "Vermogenstracering", "Dwangbewijs"],
-    source: { author: "M. Bond & R. Bond", year: 2022, journal: "Journal of Financial Crime", doi: "10.1108/JFC-11-2021-0260" }
+    source: { author: "M. Bond & R. Bond", year: 2022, journal: "Journal of Financial Crime", doi: "10. 1108/JFC-11-2021-0260" }
   },
   {
     id: "dark-side-relationship-pursuit",
     title: "The Dark Side of Persuit: Obsessieve Relatievorming",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Wanneer hoffelijkheid doorslaat in belaging: het onderscheid tussen 'het hof maken' en stalking.",
     content: {
       intro: "Onze cultuur romantiseert 'niet opgeven' in de liefde. Maar de grens tussen doorzettingsvermogen en belaging wordt vaak overschreden met desastreuze gevolgen.",
@@ -350,7 +350,7 @@ Het kernverschil met normale romantiek is het negeren van de grenzen van de ande
     },
     practicalApplication: "Het objectiveren van ongewenste benaderingen in een vroeg stadium.",
     keyPoints: ["Obsessive pursuit", "Grensoverschrijding", "Escalatiemodel"],
-    source: { author: "Cupach & Spitzberg", year: 2004, journal: "The Dark Side of Relationship Pursuit", doi: "10.4324/9781410610249" }
+    source: { author: "Cupach & Spitzberg", year: 2004, journal: "The Dark Side of Relationship Pursuit", doi: "10. 4324/9781410610249" }
   },
   {
     id: "workplace-cyber-bullying-manipulation",
@@ -360,7 +360,7 @@ Het kernverschil met normale romantiek is het negeren van de grenzen van de ande
     content: {
       intro: "Op de moderne werkvloer wordt de strijd niet meer persoonlijk gestreden, maar via e-mail en chat. 'Cyber-incivility' is het nieuwe wapen voor de kantoormachiavellist.",
       analysis: `Lim & Teo (2019) definieerden cyber-incivility als 'onbeleefd gedrag via digitale kanalen dat de sociale normen van de werkvloer schendt'.
-**Tactieken:** * **Passive-aggressive CCing:** Bewust managers toevoegen in kopie bij kleine foutjes om iemand in diskrediet te brengen.
+**Tactieken:*****Passive-aggressive CCing:** Bewust managers toevoegen in kopie bij kleine foutjes om iemand in diskrediet te brengen.
 * **Emoji-gaslighting:** Het gebruik van cynische emoji's om de impact van een belediging te minimaliseren (*"Het was maar een grapje 😉"*).
 * **Digitale stilte:** Iemand negeren in groepschats terwijl anderen wel reactie krijgen, wat leidt tot een gevoel van uitsluiting.
 
@@ -370,17 +370,17 @@ Dit zorgt voor een onveilig werkklimaat waarin medewerkers constant op hun hoede
     },
     practicalApplication: "Onderzoek naar digitale communicatiepatronen in teams bij meldingen van pestgedrag.",
     keyPoints: ["Cyber-incivility", "Sociale uitsluiting", "Emoji-manipulatie"],
-    source: { author: "V.K.G. Lim & T.S.H. Teo", year: 2019, journal: "Journal of Management Information Systems", doi: "10.1080/07421222.2019.1628902" }
+    source: { author: "V. K. G. Lim & T. S. H. Teo", year: 2019, journal: "Journal of Management Information Systems", doi: "10. 1080/07421222. 2019. 1628902" }
   },
   {
     id: "legal-definitions-coercive-control",
     title: "Dwingende Controle: Juridische Definities 2024",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "De verschuiving in wetgeving waarbij 'patronen van gedrag' belangrijker worden dan 'incidenten van geweld'.",
     content: {
       intro: "Nederland volgt internationale trends (zoals de Istanbul-conventie) door dwingende controle meer centraal te stellen in de opsporing. De focus verschuift van slaan naar beheersen.",
       analysis: `Douglas (2018) en recente Nederlandse wetsvoorstellen benadrukken dat 'Coercive Control' strafbaar moet zijn als een voordurend delict. 
-**Juridische ankers:** * **Stelselmatigheid:** Het bewijzen dat gedragingen elkaar in een logische, destructieve reeks opvolgen.
+**Juridische ankers:*****Stelselmatigheid:** Het bewijzen dat gedragingen elkaar in een logische, destructieve reeks opvolgen.
 * **Impact op autonomie:** Aantonen dat het slachtoffer feitelijk haar vrijheid is verloren in alledaagse keuzes.
 * **Belaging(art. 285b Sr):** Wordt steeds vaker gebruikt om niet alleen het volgen van personen, maar ook de constante psychische controle te vervolgen.
 
@@ -390,19 +390,19 @@ Voor onderzoekers betekent dit dat één dag observatie minder waard is dan een 
     },
     practicalApplication: "Het samenstellen van strafrechtelijke dossiers gebaseerd op stelselmatige belaging.",
     keyPoints: ["Stelselmatigheid", "Istanbul-conventie", "Autonomie-verlies"],
-    source: { author: "H. Douglas", year: 2018, journal: "Tjs Journal of Criminal Law", doi: "10.1177/0022018317753951" }
+    source: { author: "H. Douglas", year: 2018, journal: "Tjs Journal of Criminal Law", doi: "10. 1177/0022018317753951" }
   },
   {
     id: "stalking-risk-assessment-protocols",
     title: "Risicotaxatie bij Stalking: De S-SAM Methode",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "Het gebruik van gestandaardiseerde methoden om de kans op geweld in stalkingzaken objectief te meten.",
     content: {
       intro: "Niet elke stalker is even gevaarlijk. Om middelen effectief in te zetten, gebruiken professionals risicotaxatie-instrumenten zoals de S-SAM.",
       analysis: `De Stalking Risk Profile(Belfrage et al., 2012) onderscheidt verschillende risicofactoren:
 * **Aard van de dader:** Is er sprake van een persoonlijkheidsstoornis of een verslaving ?
 * **Historie :** Zijn er eerdere geweldsdelicten bekend ?
-* **Trigger-events :** Is er een recente gebeurtenis(bijv.ontslag, nieuwe partner slachtoffer) die kan leiden tot escalatie ?
+* **Trigger-events :** Is er een recente gebeurtenis(bijv. ontslag, nieuwe partner slachtoffer) die kan leiden tot escalatie ?
 * **Logistieke toegang:** Hoe makkelijk kan de dader bij het slachtoffer komen ?
 
     Objectieve taxatie voorkomt dat we ons laten leiden door de 'charme' van de dader of de(soms verdoofde) reactie van het slachtoffer.`,
@@ -411,16 +411,16 @@ Voor onderzoekers betekent dit dat één dag observatie minder waard is dan een 
     },
     practicalApplication: "Het adviseren van cliënten en advocaten over de noodzaak van beveiliging op basis van objectieve data.",
     keyPoints: ["S-SAM Methode", "Risicofactoren", "Objectieve taxatie"],
-    source: { author: "H. Belfrage et al.", year: 2012, journal: "International Journal of Forensic Mental Health", doi: "10.1080/14999013.2012.667510" }
+    source: { author: "H. Belfrage et al.", year: 2012, journal: "International Journal of Forensic Mental Health", doi: "10. 1080/14999013. 2012. 667510" }
   },
   {
     id: "femicide-indicators-research",
     title: "Femicide Indicatoren: Rode Vlaggen in Relaties",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Wetenschappelijke analyse van de variabelen die de grootste voorspellers zijn voor fataal geweld tegen vrouwen.",
     content: {
       intro: "Femicide is zelden een 'crime passionnel' uit het niets. Het is de fatale uitkomst van een proces van machtsmisbruik. Onderzoek identificeert de belangrijkste rode vlaggen.",
-      analysis: `Kelly (2023) vonden dat in meer dan 90 % van de gevallen van femicide er een voorgeschiedenis was van dwingende controle.De top 3 voorspellers zijn:
+      analysis: `Kelly (2023) vonden dat in meer dan 90 % van de gevallen van femicide er een voorgeschiedenis was van dwingende controle. De top 3 voorspellers zijn:
 1. **Extreme jaloezie en bezitsdrang:** De dader beschouwt het slachtoffer als eigendom.
 2. **Dreiging met zelfmoord of geweld:** Een manipulator die zichzelf opoffert om de ander te dwingen.
 3. **Wapens of geweld in de omgeving:** De beschikbaarheid van middelen en een normalisatie van agressie.
@@ -431,18 +431,18 @@ Het serieus nemen van deze 'sub-fysieke' signalen is de enige manier om dodelijk
     },
     practicalApplication: "Vroege detectie van levensbedreigende situaties in ogenschijnlijk 'normale' conflicten.",
     keyPoints: ["Rode vlaggen", "Eigendomsgevoel", "Escalatiestadia"],
-    source: { author: "L. Kelly", year: 2023, journal: "Femicide: A Global Problem", url: "https://www.unwomen.org/" }
+    source: { author: "L. Kelly", year: 2023, journal: "Femicide: A Global Problem", url: "https://www. unwomen. org/" }
   },
   {
     id: "emotionele-veiligheid",
     title: "Emotionele Veiligheid: De Psychologie van Vertrouwen",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Waarom emotionele veiligheid de basis is van elke gezonde relatie en hoe het systematisch ondermijnd kan worden.",
     content: {
       intro: "Emotionele veiligheid is het fundament waarop vertrouwen en intimiteit worden gebouwd. Zonder dit fundament verandert een relatie in een bron van constante stress en waakzaamheid.",
-      analysis: `Wetenschappelijk onderzoek(bijv.Johnson, 2019) toont aan dat emotionele veiligheid bestaat uit de zekerheid dat je partner emotioneel toegankelijk, responsief en betrokken is. 
+      analysis: `Wetenschappelijk onderzoek(bijv. Johnson, 2019) toont aan dat emotionele veiligheid bestaat uit de zekerheid dat je partner emotioneel toegankelijk, responsief en betrokken is. 
 
-Wanneer deze veiligheid ontbreekt, treedt het overlevingsmechanisme van het brein in werking.Dit uit zich vaak in:
+Wanneer deze veiligheid ontbreekt, treedt het overlevingsmechanisme van het brein in werking. Dit uit zich vaak in:
 * **Hyper-waakzaamheid:** Constant op je hoede zijn voor de stemming van de ander('eieren lopen').
 * **Emotionele afsluiting:** Jezelf niet meer durven uiten uit angst voor kritiek of afwijzing.
 * **Onvoorspelbaarheid:** De veiligheid wordt ondermijnd door grillig gedrag, waarbij warme momenten plotseling omslaan in koude distantie of woede.
@@ -453,58 +453,58 @@ In destructieve dynamieken wordt het ontbreken van emotionele veiligheid vaak ge
     },
     practicalApplication: "Identificeren van patronen van chronische onveiligheid en hyper-waakzaamheid.",
     keyPoints: ["Emotionele toegankelijkheid", "Hyper-waakzaamheid", "Psychologisch fundament"],
-    source: { author: "Sue Johnson", year: 2019, journal: "Attachment Theory in Practice", url: "https://www.iceeft.com/" }
+    source: { author: "Sue Johnson", year: 2019, journal: "Attachment Theory in Practice", url: "https://www. iceeft. com/" }
   },
   {
     id: "invisible-web-control",
     title: "Dwingende Controle: Het 'Invisible Web' van Macht",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Dwingende controle is een patroon van dominant gedrag dat de autonomie van een partner systematisch vernietigt.",
     content: {
       intro: "Geweld is niet altijd fysiek. Dwingende controle (coercive control) is een strategisch web van isolatie, intimidatie en micro-regulering dat het slachtoffer gijzelt in de eigen relatie.",
-      analysis: `Lundy Bancroft (2002) en Evan Stark (2007) hebben dit proces diepgaand geanalyseerd.Het gaat niet om één incident, maar om het totaaleffect van vele kleine handelingen:
+      analysis: `Lundy Bancroft (2002) en Evan Stark (2007) hebben dit proces diepgaand geanalyseerd. Het gaat niet om één incident, maar om het totaaleffect van vele kleine handelingen:
 
 1. **Micro-regulering:** Controle over wat de ander eet, draagt, wie ze spreekt en hoe ze haar tijd besteedt.
 2. **Financiële gijzeling:** Het ontnemen van financiële middelen of autonomie, waardoor ontsnappen onmogelijk lijkt.
 3. **Seksuele dwang:** Het eisen van seks als 'bewijs' van liefde of als manier om conflicten te sussen.
 4. **Lastercampagnes:** Het preventief ondermijnen van de geloofwaardigheid van het slachtoffer bij vrienden en familie.
 
-Het doel van de dader is niet schade, maar **totale gehoorzaamheid **.Het slachtoffer verliest langzaam het contact met de eigen realiteit en wensen.`,
+Het doel van de dader is niet schade, maar **totale gehoorzaamheid**. Het slachtoffer verliest langzaam het contact met de eigen realiteit en wensen.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Documenteren van patronen van micro-regulering en isolatie voor juridische dossiers.",
     keyPoints: ["Micro-regulering", "Autonomie-verlies", "Strategisch web"],
-    source: { author: "Lundy Bancroft", year: 2002, journal: "Why Does He Do That?", url: "https://lundybancroft.com/" }
+    source: { author: "Lundy Bancroft", year: 2002, journal: "Why Does He Do That?", url: "https://lundybancroft. com/" }
   },
   {
     id: "digitale-belaging-surveillance",
     title: "Digitale Belaging: AirTags en Surveillance-software",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Hoe moderne technologie wordt misbruikt voor stalking en hoe je digitale sporen van surveillance kunt identificeren.",
     content: {
       intro: "De smartphone is het ultieme wapen voor de moderne stalker geworden. 'Stalkerware' en tracking-devices zoals AirTags maken 24/7 surveillance mogelijk zonder dat de dader fysiek aanwezig hoeft te zijn.",
       analysis: `Onderzoek naar 'Technology-Facilitated Abuse' wijst op een explosieve stijging van digitale belaging. 
-**Vormen van surveillance:** * **Stalkerware:** Apps die onzichtbaar op een telefoon worden geïnstalleerd en alle chats, locaties en camera-activiteit doorsturen.
+**Vormen van surveillance:*****Stalkerware:** Apps die onzichtbaar op een telefoon worden geïnstalleerd en alle chats, locaties en camera-activiteit doorsturen.
 * **Tracking devices:** Het verbergen van AirTags of GPS-trackers in tassen, jassen of auto's.
 * **Account-hijacking:** Toegang via gedeelde wachtwoorden of 'Find My' functies om locaties live te volgen.
 
-Deze vorm van stalking creëert een gevoel van 'omnipresentie': de dader lijkt alles te weten, wat leidt tot extreme angst en paranoia bij het slachtoffer.Detectie vereist vaak een forensische scan van apparaten en accounts.`,
+Deze vorm van stalking creëert een gevoel van 'omnipresentie': de dader lijkt alles te weten, wat leidt tot extreme angst en paranoia bij het slachtoffer. Detectie vereist vaak een forensische scan van apparaten en accounts.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Forensisch onderzoek naar onbekende apparaten en digitale machtigingen.",
     keyPoints: ["Stalkerware", "Omnipresentie dader", "Digitale veiligheid"],
-    source: { author: "Harris & Woodlock", year: 2022, journal: "Digital Domestic Violence", doi: "10.1332/239868021X16285243258834" }
+    source: { author: "Harris & Woodlock", year: 2022, journal: "Digital Domestic Violence", doi: "10. 1332/239868021X16285243258834" }
   },
   {
     id: "patroon-van-isolatie",
     title: "Het Patroon van Isolatie: Hoe Vrijheid Subtiel Verdwijnt",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Isolatie begint zelden met een verbod. Het is een proces van subtiele beïnvloeding waardoor steun wegvalt.",
     content: {
       intro: "Daders van dwingende controle weten dat ze hun macht verliezen als het slachtoffer een sterk vangnet heeft. Daarom wordt dat vangnet systematisch en vaak onopvallend afgebroken.",
-      analysis: `Isolatie is een kerncomponent van emotionele mishandeling.Het verloopt vaak volgens een voorspelbaar script:
+      analysis: `Isolatie is een kerncomponent van emotionele mishandeling. Het verloopt vaak volgens een voorspelbaar script:
 
 1. **De 'Wij tegen de Wereld' fase:** In het begin wordt de isolatie gepresenteerd als extreme liefde. * "We hebben niemand anders nodig, toch?" *
 2. **Subtiele kritiek:** Vrienden en familie worden weggezet als 'jaloers', 'ongezond' of 'niet goed voor je'.
@@ -517,19 +517,19 @@ Deze vorm van stalking creëert een gevoel van 'omnipresentie': de dader lijkt a
     },
     practicalApplication: "Reconstructie van sociale netwerken en tijdlijnen van afzwakkende contacten.",
     keyPoints: ["Sociale isolatie", "Vangnet-afbraak", "Emotionele gijzeling"],
-    source: { author: "Bancroft & Stark", year: 2007, journal: "Coercive Control", doi: "10.1093/acprof:oso/9780195176368.001.0001" }
+    source: { author: "Bancroft & Stark", year: 2007, journal: "Coercive Control", doi: "10. 1093/acprof:oso/9780195176368. 001. 0001" }
   },
   // --- NIEUW: GEAVANCEERDE MANIPULATIE (2019-2021) ---
   {
     id: "dark-empath",
     title: "De 'Donkere Empath': Gevaarlijker dan de Psychopaat?",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Nieuw onderzoek (2021) identificeert een persoonlijkheidstype dat duistere trekken combineert met hoge empathie, wat leidt tot effectievere manipulatie.",
     content: {
       intro: "Lange tijd werd aangenomen dat daders van psychische mishandeling een gebrek aan empathie hebben. Recent onderzoek draait dit om: de gevaarlijkste manipulators begrijpen emoties juist uitstekend.",
-      analysis: `Heym et al. (2021) identificeerden in een grootschalige studie de **Dark Empath **.Dit type scoort hoog op de 'Dark Triad'(narcisme, machiavellisme, psychopathie) maar óók hoog op cognitieve empathie.
+      analysis: `Heym et al. (2021) identificeerden in een grootschalige studie de **Dark Empath**. Dit type scoort hoog op de 'Dark Triad'(narcisme, machiavellisme, psychopathie) maar óók hoog op cognitieve empathie.
 
-In tegenstelling tot de klassieke psychopaat(die niet * voelt * wat jij voelt), * snapt * de Dark Empath precies wat jouw pijnpunten zijn.Ze gebruiken dit inzicht niet om te troosten, maar om strategisch te manipuleren.
+In tegenstelling tot de klassieke psychopaat(die niet * voelt * wat jij voelt), * snapt * de Dark Empath precies wat jouw pijnpunten zijn. Ze gebruiken dit inzicht niet om te troosten, maar om strategisch te manipuleren.
 **Kenmerken:** * Minder fysiek agressief, maar meesters in 'indirecte agressie'(sociale uitsluiting, schuldgevoel aanpraten).
 * Komen charmant en begripvol over, waardoor slachtoffers hen lang in vertrouwen nemen.
 * Gebruiken persoonlijke informatie, gedeeld in vertrouwen, later als wapen.`,
@@ -538,28 +538,28 @@ In tegenstelling tot de klassieke psychopaat(die niet * voelt * wat jij voelt), 
     },
     practicalApplication: "Analyseren van de discrepantie tussen 'begripvolle woorden' en destructief gedrag.",
     keyPoints: ["Cognitieve empathie als wapen", "Indirecte agressie", "Wolf in schaapskleren"],
-    source: { author: "Heym, Sumich et al.", year: 2021, journal: "Personality and Individual Differences", doi: "10.1016/j.paid.2020.110339" }
+    source: { author: "Heym, Sumich et al.", year: 2021, journal: "Personality and Individual Differences", doi: "10. 1016/j. paid. 2020. 110339" }
   },
   {
     id: "darvo-tactic",
     title: "DARVO: De Tegenaanval van de Dader",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Deny, Attack, Reverse Victim and Offender. Een wetenschappelijk model voor de reactie van daders op confrontatie.",
     readingMotivation: "Leer de krachtigste dader-strategie ontmaskeren: hoe daders slachtoffers de schuld geven.",
     relatedIds: ["darvo-secondary-victimization", "darvo-neutralization-accountability"],
     content: {
       intro: "Wanneer een slachtoffer een dader confronteert met wangedrag, volgt zelden een excuus. Vaak ontstaat een verwarrende dynamiek waarin het slachtoffer uiteindelijk zijn excuses aanbiedt.",
-      analysis: `Jennifer Freyd publiceerde in 2020(Harsey & Freyd) nieuw empirisch bewijs voor het **DARVO **-mechanisme.Het is een voorspelbaar patroon bij confrontatie:** 1. **Deny(Ontkennen):** "Dat is nooit gebeurd" of "Je herinnert het je verkeerd."
+      analysis: `Jennifer Freyd publiceerde in 2020 (Harsey & Freyd) nieuw empirisch bewijs voor het **DARVO**-mechanisme. Het is een voorspelbaar patroon bij confrontatie:**1.**Deny(Ontkennen):** "Dat is nooit gebeurd" of "Je herinnert het je verkeerd."
 2. **Attack(Aanvallen):** De geloofwaardigheid of geestelijke gesteldheid van de melder wordt aangevallen. "Je bent hysterisch/dronken/wraakzuchtig."
 3. **Reverse Victim & Offender(Omdraaien):** De dader presenteert zich als het échte slachtoffer van de 'valse beschuldigingen' van de ander.
 
-Het onderzoek toont aan dat toeschouwers die niet bekend zijn met DARVO, vaak gaan twijfelen aan het echte slachtoffer.Kennis van dit patroon is essentieel voor waarheidsvinding.`,
+Het onderzoek toont aan dat toeschouwers die niet bekend zijn met DARVO, vaak gaan twijfelen aan het echte slachtoffer. Kennis van dit patroon is essentieel voor waarheidsvinding.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Analyseren van transcripties van confrontatiegesprekken.",
     keyPoints: ["Dader-slachtoffer omkering", "Aanval op geloofwaardigheid", "Verwarring zaaien"],
-    source: { author: "Harsey & Freyd", year: 2020, journal: "Journal of Aggression, Maltreatment & Trauma", doi: "10.1080/10926771.2020.1774695" }
+    source: { author: "Harsey & Freyd", year: 2020, journal: "Journal of Aggression, Maltreatment & Trauma", doi: "10. 1080/10926771. 2020. 1774695" }
   },
   {
     id: "institutional-gaslighting",
@@ -568,8 +568,8 @@ Het onderzoek toont aan dat toeschouwers die niet bekend zijn met DARVO, vaak ga
     summary: "Hoe organisaties klokkenluiders psychologisch destabiliseren door collectieve ontkenning van misstanden.",
     content: {
       intro: "Gaslighting vindt niet alleen plaats in relaties, maar ook op de werkvloer. Klokkenluiders worden vaak niet bedankt, maar pathologisch verklaard.",
-      analysis: `Kenny (2019) onderzocht de ervaringen van klokkenluiders in de bancaire sector en gezondheidszorg.Ze beschrijft 'Institutional Gaslighting' als een proces waarbij de organisatie de realiteit van de melder systematisch ondermijnt.
-**Strategieën:** * **Normalisatie van afwijking:** De gemelde fraude wordt afgedaan als 'standaard procedure'.
+      analysis: `Kenny (2019) onderzocht de ervaringen van klokkenluiders in de bancaire sector en gezondheidszorg. Ze beschrijft 'Institutional Gaslighting' als een proces waarbij de organisatie de realiteit van de melder systematisch ondermijnt.
+**Strategieën:*****Normalisatie van afwijking:** De gemelde fraude wordt afgedaan als 'standaard procedure'.
 * **Isolatie:** Collega's wordt opgedragen de melder te negeren.
 * **Karaktermoord:** De focus verschuift van de * inhoud * van de melding naar de * persoonlijkheid * van de melder("Hij ligt moeilijk in de groep", "Ze is labiel").
 
@@ -579,40 +579,40 @@ Het gevolg is dat de klokkenluider gaat twijfelen aan zijn eigen waarneming en m
     },
     practicalApplication: "Reconstructie van tijdlijnen: melding vs. HR-maatregelen.",
     keyPoints: ["Klokkenluiders", "Karaktermoord", "Verschuiving focus naar persoon"],
-    source: { author: "Kate Kenny", year: 2019, journal: "Whistleblowing: Toward a New Theory", doi: "10.4159/9780674242135" }
+    source: { author: "Kate Kenny", year: 2019, journal: "Whistleblowing: Toward a New Theory", doi: "10. 4159/9780674242135" }
   },
 
   // --- NIEUW: MANIPULATIE & WETENSCHAP (2021-2023) ---
   {
     id: "smart-abuse-iot",
     title: "Smart Abuse: Dwingende Controle via IoT",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Hoe slimme apparaten (IoT) in huis nieuwe wapens worden voor dwingende controle en surveillance binnen relaties.",
     content: {
       intro: "De opkomst van 'Smart Homes' creëert nieuwe mogelijkheden voor misbruik. Recent onderzoek definieert dit als 'Technology-Facilitated Coercive Control'.",
-      analysis: `Harris & Woodlock (2022) analyseerden hoe daders IoT-apparaten gebruiken om slachtoffers op afstand te terroriseren.Het gaat niet alleen om camera's, maar om subtiele sabotage:
+      analysis: `Harris & Woodlock (2022) analyseerden hoe daders IoT-apparaten gebruiken om slachtoffers op afstand te terroriseren. Het gaat niet alleen om camera's, maar om subtiele sabotage:
       
 1. **Omgevingscontrole:** Het op afstand wijzigen van de thermostaat(extreem koud of heet), verlichting laten knipperen of slimme sloten blokkeren.
 2. **Surveillance:** Het gebruik van babyfoons, robotstofzuigers met camera's en 'Find My'-functies om elke beweging te volgen.
 3. **Gaslighting:** Doordat de dader acties ontkent(* "Je bent gek, de verwarming staat gewoon op 20 graden" *), twijfelt het slachtoffer aan haar waarneming en de techniek.
-**De impact:** Deze vorm van controle is 'spaceless'; het slachtoffer is nergens veilig, zelfs niet als de dader fysiek afwezig is.Het creëert een gevoel van alomtegenwoordigheid(omnipresentie) van de dader.`,
+**De impact:** Deze vorm van controle is 'spaceless'; het slachtoffer is nergens veilig, zelfs niet als de dader fysiek afwezig is. Het creëert een gevoel van alomtegenwoordigheid(omnipresentie) van de dader.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Onderzoek naar logs van slimme apparaten.",
     keyPoints: ["Spaceless violence", "IoT sabotage", "Omnipresentie dader"],
-    source: { author: "Harris & Woodlock", year: 2022, journal: "Journal of Gender-Based Violence", doi: "10.1332/239868021X16285243258834" }
+    source: { author: "Harris & Woodlock", year: 2022, journal: "Journal of Gender-Based Violence", doi: "10. 1332/239868021X16285243258834" }
   },
   {
     id: "love-bombing-narcissism",
     title: "Love Bombing: Narcistische Strategie",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Empirisch bewijs uit 2023 koppelt love bombing direct aan narcisme en onveilige hechting, niet aan verliefdheid.",
     content: {
       intro: "Overweldigende affectie aan het begin van een relatie wordt vaak geromantiseerd. Wetenschappelijk onderzoek toont echter aan dat 'love bombing' een berekende manipulatiestrategie is.",
-      analysis: `Strutzenberg et al. (2023) voerden een studie uit onder 484 jongvolwassenen.De resultaten tonen een sterke correlatie tussen **love bombing **en **narcistische trekken **(lage zelfwaardering, behoefte aan bewondering).
+      analysis: `Strutzenberg et al. (2023) voerden een studie uit onder 484 jongvolwassenen. De resultaten tonen een sterke correlatie tussen **love bombing**en **narcistische trekken**(lage zelfwaardering, behoefte aan bewondering).
 
-De onderzoekers onderscheiden drie fasen in deze manipulatiecyclus:** 1. **Idealisatie(Love Bombing):** Exessief contact, cadeaus en toekomstplannen om het slachtoffer afhankelijk te maken.
+De onderzoekers onderscheiden drie fasen in deze manipulatiecyclus:**1.**Idealisatie(Love Bombing):** Exessief contact, cadeaus en toekomstplannen om het slachtoffer afhankelijk te maken.
 2. **Devaluatie:** Zodra de emotionele investering binnen is, stopt de aandacht en begint de kritiek.
 3. **Verwerping:** Het slachtoffer wordt aan de kant gezet of in een knipperlichtrelatie gehouden.
 **Conclusie:** Love bombing is geen teken van 'ware liefde', maar een teken van een * onveilige hechtingsstijl * van de dader, bedoeld om controle te verkrijgen.`,
@@ -621,7 +621,7 @@ De onderzoekers onderscheiden drie fasen in deze manipulatiecyclus:** 1. **Ideal
     },
     practicalApplication: "Herkennen van disproportionele affectie in tijdlijnen.",
     keyPoints: ["Correlatie narcisme", "Idealisatie-Devaluatie", "Controlemechanisme"],
-    source: { author: "Strutzenberg et al.", year: 2023, journal: "Journal of Social and Personal Relationships", doi: "10.1177/02654075231153213" }
+    source: { author: "Strutzenberg et al.", year: 2023, journal: "Journal of Social and Personal Relationships", doi: "10. 1177/02654075231153213" }
   },
   {
     id: "virtual-harassment",
@@ -631,7 +631,7 @@ De onderzoekers onderscheiden drie fasen in deze manipulatiecyclus:** 1. **Ideal
     content: {
       intro: "Met de verschuiving naar thuiswerken is intimidatie niet verdwenen, maar van vorm veranderd. 'Cyber-incivility' is subtieler en lastiger te bewijzen.",
       analysis: `Onderzoek van Vranjes et al. (2021) toont aan dat digitale communicatie de drempel voor manipulatie verlaagt.
-**Nieuwe vormen van manipulatie:** * **De 'Silence Treatment':** Iemand negeren in groepschats of bewust 'vergeten' uit te nodigen voor Teams-vergaderingen(sociale isolatie).
+**Nieuwe vormen van manipulatie:*****De 'Silence Treatment':** Iemand negeren in groepschats of bewust 'vergeten' uit te nodigen voor Teams-vergaderingen(sociale isolatie).
 * **Micro-management via status:** Het monitoren van 'groene bolletjes'(online status) en direct bellen als iemand 5 minuten 'afwezig' is.
 * **Publieke vernedering:** Kritische feedback geven in een kanaal waar alle collega's meelezen (CC-cultuur), in plaats van 1-op-1.
 
@@ -641,40 +641,40 @@ Omdat non-verbale signalen ontbreken, kunnen daders zich makkelijker verschuilen
     },
     practicalApplication: "Analyse van chatlogs en vergaderstructuren.",
     keyPoints: ["Cyber-incivility", "Digitale isolatie", "Gebrek aan non-verbaal"],
-    source: { author: "Vranjes et al.", year: 2021, journal: "Journal of Occupational Health Psychology", doi: "10.1037/ocp0000284" }
+    source: { author: "Vranjes et al.", year: 2021, journal: "Journal of Occupational Health Psychology", doi: "10. 1037/ocp0000284" }
   },
 
   // --- NIEUW: MANIPULATIE & STRAFBAAR GEDRAG (2024 UPDATE) ---
   {
     id: "wet-seksuele-misdrijven",
     title: "Wet Seksuele Misdrijven 2024: Instemming Centraal",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "De nieuwe wetgeving (1 juli 2024) verandert de bewijslast: dwang is niet langer vereist, het ontbreken van instemming is leidend.",
     content: {
       intro: "Op 1 juli 2024 is de Wet seksuele misdrijven in werking getreden. Dit is een fundamentele verschuiving in het Nederlandse strafrecht. Waar voorheen 'dwang' (geweld of bedreiging) bewezen moest worden, draait het nu om 'instemming'.",
-      analysis: `Onder de oude wet was seksueel contact strafbaar als er sprake was van dwang.Dit leidde tot schrijnende situaties waarin slachtoffers die bevroren('freezing') of gemanipuleerd waren, juridisch geen poot om op hadden te staan.
+      analysis: `Onder de oude wet was seksueel contact strafbaar als er sprake was van dwang. Dit leidde tot schrijnende situaties waarin slachtoffers die bevroren('freezing') of gemanipuleerd waren, juridisch geen poot om op hadden te staan.
 **Schuldverkrachting en Opzet:** De nieuwe wet introduceert een lagere drempel. 
 1. **Opzetverkrachting:** De dader * wist * dat de ander niet wilde.
 2. **Schuldverkrachting:** De dader * had moeten vermoeden * dat de ander niet wilde, maar ging toch door(aanmerkelijke onvoorzichtigheid).
 
-Ook seksuele intimidatie(zowel fysiek als online) is nu expliciet strafbaar gesteld.Voor onderzoekers betekent dit dat de focus verschuift van het zoeken naar sporen van fysiek geweld naar het analyseren van communicatie en context waaruit blijkt dat instemming ontbrak.`,
+Ook seksuele intimidatie(zowel fysiek als online) is nu expliciet strafbaar gesteld. Voor onderzoekers betekent dit dat de focus verschuift van het zoeken naar sporen van fysiek geweld naar het analyseren van communicatie en context waaruit blijkt dat instemming ontbrak.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Reconstructie van wilsverklaringen en context.",
     keyPoints: ["Van dwang naar instemming", "Schuldverkrachting strafbaar", "Freezing is geen toestemming"],
-    source: { author: "Rijksoverheid / Ministerie van JenV", year: 2024, url: "https://www.rijksoverheid.nl/onderwerpen/seksuele-misdrijven/nieuwe-wet-seksuele-misdrijven" }
+    source: { author: "Rijksoverheid / Ministerie van JenV", year: 2024, url: "https://www. rijksoverheid. nl/onderwerpen/seksuele-misdrijven/nieuwe-wet-seksuele-misdrijven" }
   },
   {
     id: "psychological-violence-law",
     title: "Psychisch Geweld: Strafbaar als Mishandeling?",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "Hoe de Hoge Raad de definitie van 'mishandeling' verruimt naar ernstige geestelijke schade.",
     content: {
       intro: "Lange tijd was 'mishandeling' (art. 300 Sr) synoniem aan fysiek letsel. Psychische terreur bleef straffeloos. Jurisprudentie toont echter een kentering.",
-      analysis: `Hoewel een specifiek wetsartikel voor 'dwingende controle' in Nederland nog in ontwikkeling is, biedt de huidige rechtspraak al mogelijkheden.De Hoge Raad heeft bepaald dat het toebrengen van 'pijn' of 'letsel' niet beperkt is tot het fysieke lichaam.
+      analysis: `Hoewel een specifiek wetsartikel voor 'dwingende controle' in Nederland nog in ontwikkeling is, biedt de huidige rechtspraak al mogelijkheden. De Hoge Raad heeft bepaald dat het toebrengen van 'pijn' of 'letsel' niet beperkt is tot het fysieke lichaam.
 **Criteria voor vervolging:** Om psychisch geweld(zoals systematische vernedering, isolatie of gaslighting) als mishandeling te vervolgen, moet er sprake zijn van:
-1. **Medisch objectiveerbaar letsel:** Een diagnose(bijv.PTSS, depressie) vastgesteld door een erkend deskundige.
+1. **Medisch objectiveerbaar letsel:** Een diagnose(bijv. PTSS, depressie) vastgesteld door een erkend deskundige.
 2. **Causaliteit:** Bewijs dat dit letsel direct veroorzaakt is door het gedrag van de dader.
 
 Daarnaast wordt art. 285b Sr(Belaging) steeds vaker ingezet voor dwingende controle binnen relaties, waarbij de 'inbreuk op de persoonlijke levenssfeer' de kern vormt.`,
@@ -688,24 +688,24 @@ Daarnaast wordt art. 285b Sr(Belaging) steeds vaker ingezet voor dwingende contr
   {
     id: "sextortion-exposing",
     title: "Sextortion & Exposing: Manipulatie met Beeld",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Het dreigen met of verspreiden van intiem beeldmateriaal is zwaarder strafbaar onder de nieuwe wetgeving.",
     content: {
       intro: "Het ongevraagd delen van intieme beelden ('wraakporno' of exposing) of het dreigen daarmee (sextortion) is een destructieve vorm van manipulatie.",
-      analysis: `De Wet seksuele misdrijven (2024) stelt het maken, bezitten én verspreiden van seksueel beeldmateriaal zonder instemming expliciet strafbaar.Ook het maken van 'deepfakes' valt hieronder.
-**De manipulatie:** Daders gebruiken beelden vaak als dwangmiddel om slachtoffers in een relatie te houden of geld af te persen.De dreiging * "Als je bij me weggaat, stuur ik dit naar je baas" * is nu strafbaar als dwang, zelfs als de beelden nooit verstuurd worden.
-**Onderzoek:** Het veiligstellen van digitale sporen(chatlogs van de dreigementen, metadata van de bestanden) is cruciaal.Vaak verwijdert de dader berichten('unsend'), maar laten deze sporen achter op servers of in back-ups.`,
+      analysis: `De Wet seksuele misdrijven (2024) stelt het maken, bezitten én verspreiden van seksueel beeldmateriaal zonder instemming expliciet strafbaar. Ook het maken van 'deepfakes' valt hieronder.
+**De manipulatie:** Daders gebruiken beelden vaak als dwangmiddel om slachtoffers in een relatie te houden of geld af te persen. De dreiging * "Als je bij me weggaat, stuur ik dit naar je baas" * is nu strafbaar als dwang, zelfs als de beelden nooit verstuurd worden.
+**Onderzoek:** Het veiligstellen van digitale sporen(chatlogs van de dreigementen, metadata van de bestanden) is cruciaal. Vaak verwijdert de dader berichten('unsend'), maar laten deze sporen achter op servers of in back-ups.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Digitaal forensisch onderzoek naar afpersing.",
     keyPoints: ["Strafbaarstelling deepfakes", "Dwangmiddel", "Digitale bewijslast"],
-    source: { author: "Slachtofferhulp Nederland", year: 2024, url: "https://www.slachtofferhulp.nl/gebeurtenissen/seksueel-misbruik/nieuwe-zedenwet/" }
+    source: { author: "Slachtofferhulp Nederland", year: 2024, url: "https://www. slachtofferhulp. nl/gebeurtenissen/seksueel-misbruik/nieuwe-zedenwet/" }
   },
   {
     id: "grooming-adults",
     title: "Grooming van Volwassenen: De 'Slow Game'",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Grooming is niet voorbehouden aan minderjarigen. Hoe fraudeurs en daders volwassenen conditioneren.",
     content: {
       intro: "Bij grooming denken we aan kinderen. Echter, in fraudezaken (CEO-fraude, beleggingsfraude) en toxische relaties zien we exact hetzelfde psychologische proces bij volwassenen.",
@@ -714,13 +714,13 @@ Daarnaast wordt art. 285b Sr(Belaging) steeds vaker ingezet voor dwingende contr
 2. **Friendship forming:** Het creëren van een 'veilige' bubbel en het isoleren van het slachtoffer van kritische geluiden.
 3. **Testing:** Kleine grensoverschrijdingen om de meegaandheid te testen.
 4. **Abuse:** Het daadwerkelijke misbruik(financieel of emotioneel).
-**Normalisatie:** Het doel van grooming is 'normalisatie'.De dader zorgt ervoor dat abnormaal gedrag(zoals het overmaken van geld naar een privérekening of het accepteren van extreme controle) logisch en noodzakelijk lijkt binnen de realiteit die de dader schept.`,
+**Normalisatie:** Het doel van grooming is 'normalisatie'. De dader zorgt ervoor dat abnormaal gedrag(zoals het overmaken van geld naar een privérekening of het accepteren van extreme controle) logisch en noodzakelijk lijkt binnen de realiteit die de dader schept.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Tijdlijn-analyse van beïnvloeding.",
     keyPoints: ["Normalisatie van afwijking", "Isolatie", "Stapsgewijze conditionering"],
-    source: { author: "Whitty & Buchanan", year: 2012, journal: "British Journal of Criminology", doi: "10.1093/bjc/azr076" }
+    source: { author: "Whitty & Buchanan", year: 2012, journal: "British Journal of Criminology", doi: "10. 1093/bjc/azr076" }
   },
 
   // --- BESTAANDE ARTIKELEN (ZIEKTEVERZUIM & FRAUDE) ---
@@ -731,20 +731,20 @@ Daarnaast wordt art. 285b Sr(Belaging) steeds vaker ingezet voor dwingende contr
     summary: "Waarom sommige medewerkers wel frauderen en anderen in dezelfde positie niet: de factor 'Capaciteit'.",
     content: {
       intro: "De klassieke Fraude Driehoek (Druk, Gelegenheid, Rationalisatie) verklaart veel, maar mist één cruciaal element. Waarom grijpt de ene boekhouder met schulden wel in de kas en de andere niet?",
-      analysis: `Wolfe & Hermanson (2004) breidden het model uit naar de **Fraude Diamant **.Zij voegden de factor **Capaciteit(Capability) **toe.
+      analysis: `Wolfe & Hermanson (2004) breidden het model uit naar de **Fraude Diamant**. Zij voegden de factor **Capaciteit(Capability)**toe.
       
-Niet iedereen * kan * frauderen.Een succesvolle fraudeur heeft specifieke eigenschappen nodig:
+Niet iedereen * kan * frauderen. Een succesvolle fraudeur heeft specifieke eigenschappen nodig:
 1. **Positie:** De juiste autoriteit of toegang binnen de organisatie.
 2. **Intelligentie:** Het vermogen om de zwakke plekken in de controle te zien én te begrijpen hoe deze uitgebuit kunnen worden.
 3. **Ego / Overtuigingskracht:** Het vermogen om anderen te manipuleren of te liegen zonder te blozen(dwangmatig liegen).
 4. **Stressbestendigheid:** Het vermogen om de druk van het 'dubbelleven' aan te kunnen.
-**Relevantie voor werkgevers:** Bij het zoeken naar een dader wordt vaak gekeken naar wie er toegang had(Gelegenheid).De Diamant leert ons dat we ook moeten kijken naar wie er * slim en brutaal genoeg * was om het te doen.Vaak zijn dit de 'sterren' van de afdeling: medewerkers die processen beter snappen dan hun managers.`,
+**Relevantie voor werkgevers:** Bij het zoeken naar een dader wordt vaak gekeken naar wie er toegang had(Gelegenheid). De Diamant leert ons dat we ook moeten kijken naar wie er * slim en brutaal genoeg * was om het te doen. Vaak zijn dit de 'sterren' van de afdeling: medewerkers die processen beter snappen dan hun managers.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Daderprofilering en risico-analyse.",
     keyPoints: ["Capaciteit (Capability)", "Intelligentie misbruik", "Stressbestendigheid"],
-    source: { author: "Wolfe & Hermanson", year: 2004, journal: "The CPA Journal", url: "https://www.nysscpa.org/news/publications/the-cpa-journal/2004/december/the-fraud-diamond-considering-the-four-elements-of-fraud" }
+    source: { author: "Wolfe & Hermanson", year: 2004, journal: "The CPA Journal", url: "https://www. nysscpa. org/news/publications/the-cpa-journal/2004/december/the-fraud-diamond-considering-the-four-elements-of-fraud" }
   },
   {
     id: "malingering",
@@ -755,17 +755,17 @@ Niet iedereen * kan * frauderen.Een succesvolle fraudeur heeft specifieke eigens
       intro: "In verzuimcasussen is 'malingering' (het opzettelijk produceren van valse of overdreven symptomen) een kostbaar probleem. Het gaat niet om psychosomatische klachten, maar om bewust bedrog.",
       analysis: `De DSM-5 definieert malingering als gedrag gemotiveerd door externe prikkels(zoals doorbetaling van salaris, vermijden van werk of verkrijgen van schadevergoeding).
 
-  Rogers (1997) ontwikkelde modellen om dit te detecteren.Signalen zijn onder andere:
+  Rogers (1997) ontwikkelde modellen om dit te detecteren. Signalen zijn onder andere:
 * **Inconsistentie:** De patiënt kan bepaalde bewegingen 'niet' maken tijdens het spreekuur, maar wel op de parkeerplaats.
 * **Overdrijving:** Symptomen worden theatraler gepresenteerd dan medisch logisch is.
 * **Selectief geheugen:** Wel details weten over de 'oorzaak'(het arbeidconflict), maar vaag zijn over dagelijkse activiteiten.
-**Het juridische probleem:** Een bedrijfsarts gaat uit van de vertrouwensrelatie en mag niet 'rechercheren'.Een arts * moet * de klacht serieus nemen.Hierdoor kan een frauderende werknemer zich lang verschuilen achter medisch geheim.Alleen feitelijk bewijs van gedrag * buiten * de spreekkamer kan dit doorbreken.`,
+**Het juridische probleem:** Een bedrijfsarts gaat uit van de vertrouwensrelatie en mag niet 'rechercheren'. Een arts * moet * de klacht serieus nemen. Hierdoor kan een frauderende werknemer zich lang verschuilen achter medisch geheim. Alleen feitelijk bewijs van gedrag * buiten * de spreekkamer kan dit doorbreken.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Observatie van dagelijkse activiteiten (ADL).",
     keyPoints: ["Inconsistent gedrag", "Externe motivatie", "Medisch geheim vs. Feiten"],
-    source: { author: "Richard Rogers", year: 1997, journal: "Clinical Assessment of Malingering and Deception", url: "https://psycnet.apa.org/record/1997-08737-000" }
+    source: { author: "Richard Rogers", year: 1997, journal: "Clinical Assessment of Malingering and Deception", url: "https://psycnet. apa. org/record/1997-08737-000" }
   },
   {
     id: "moonlighting-sick",
@@ -776,8 +776,8 @@ Niet iedereen * kan * frauderen.Een succesvolle fraudeur heeft specifieke eigens
       intro: "Een veelvoorkomende casus: de werknemer meldt zich ziek met een burn-out of rugklachten, maar wordt gezien terwijl hij klust, in de horeca werkt of zijn eigen bedrijf runt.",
       analysis: `Juridisch gezien draait dit om art. 7: 611 BW(Goed werknemerschap) en de re-integratieverplichting.
       
-Als een werknemer stelt arbeidsongeschikt te zijn voor zijn eigen werk, maar wel in staat is om vergelijkbare(of zwaardere) activiteiten elders te verrichten, is er sprake van bedrog.Hij belemmert zijn eigen herstel en benadeelt de werkgever.
-**De rol van onderzoek:** Het enkele * vermoeden * is niet genoeg.Een ontslag op staande voet vereist onomstotelijk bewijs.
+Als een werknemer stelt arbeidsongeschikt te zijn voor zijn eigen werk, maar wel in staat is om vergelijkbare(of zwaardere) activiteiten elders te verrichten, is er sprake van bedrog. Hij belemmert zijn eigen herstel en benadeelt de werkgever.
+**De rol van onderzoek:** Het enkele * vermoeden * is niet genoeg. Een ontslag op staande voet vereist onomstotelijk bewijs.
 Onderzoek richt zich op:
 1. **Aard van de activiteiten:** Is het 'therapeutisch'(een rondje wandelen) of arbeid(stratenmaken) ?
 2. **Frequentie :** Is het incidenteel of structureel ?
@@ -796,49 +796,49 @@ Onderzoek richt zich op:
   {
     id: "truth-default-theory",
     title: "Truth-Default Theory: Waarom we liegen niet herkennen",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Waarom mensen evolutionair 'geprogrammeerd' zijn om leugens te geloven en waarom intuïtie faalt.",
     content: {
       intro: "De wetenschap weerlegt het idee dat we intuïtief weten wanneer iemand liegt. Uit meta-analyses blijkt dat mensen in slechts 54% van de gevallen een leugen herkennen – nauwelijks beter dan gokken.",
-      analysis: `Timothy Levine (2014) introduceerde de **Truth-Default Theory(TDT) **.Deze theorie stelt dat mensen evolutionair zijn ontwikkeld om standaard aan te nemen dat communicatie eerlijk is.Dit is geen naïviteit, maar efficiëntie: als we elke uitspraak zouden wantrouwen, zou sociale samenwerking onmogelijk zijn.
+      analysis: `Timothy Levine (2014) introduceerde de **Truth-Default Theory(TDT)**. Deze theorie stelt dat mensen evolutionair zijn ontwikkeld om standaard aan te nemen dat communicatie eerlijk is. Dit is geen naïviteit, maar efficiëntie: als we elke uitspraak zouden wantrouwen, zou sociale samenwerking onmogelijk zijn.
 
-De meeste mensen blijven in deze 'Truth-Default state' tot er een **trigger **is die onmogelijk genegeerd kan worden.Dit verklaart waarom partners of werkgevers vaak jarenlang signalen van bedrog missen: hun brein rationaliseert het verdachte gedrag weg om de status quo te behouden.
-**Implicaties voor onderzoek:** Het vertrouwen op 'buikgevoel' of het observeren van nervositeit is zinloos.Echte leugenaars zijn vaak niet nerveus, en onschuldige mensen zijn dat onder druk juist wel.Professioneel onderzoek richt zich daarom nooit op de * persoon *, maar op de * inhoud *. 
+De meeste mensen blijven in deze 'Truth-Default state' tot er een **trigger**is die onmogelijk genegeerd kan worden. Dit verklaart waarom partners of werkgevers vaak jarenlang signalen van bedrog missen: hun brein rationaliseert het verdachte gedrag weg om de status quo te behouden.
+**Implicaties voor onderzoek:** Het vertrouwen op 'buikgevoel' of het observeren van nervositeit is zinloos. Echte leugenaars zijn vaak niet nerveus, en onschuldige mensen zijn dat onder druk juist wel. Professioneel onderzoek richt zich daarom nooit op de * persoon *, maar op de * inhoud *. 
 
-In de praktijk betekent dit dat verklaringen niet worden beoordeeld op geloofwaardigheid, maar systematisch worden getoetst aan verifieerbare data, tijdlijnen en logistieke feiten.Alleen harde feiten kunnen de 'Truth-Default' doorbreken en zekerheid bieden.`,
+In de praktijk betekent dit dat verklaringen niet worden beoordeeld op geloofwaardigheid, maar systematisch worden getoetst aan verifieerbare data, tijdlijnen en logistieke feiten. Alleen harde feiten kunnen de 'Truth-Default' doorbreken en zekerheid bieden.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Validatie door feitenonderzoek.",
     keyPoints: ["54% detectiekans (gokken)", "Evolutionaire bias", "Feiten als enige trigger"],
-    source: { author: "Timothy R. Levine", year: 2014, journal: "Journal of Communication", doi: "10.1111/jcom.12064" }
+    source: { author: "Timothy R. Levine", year: 2014, journal: "Journal of Communication", doi: "10. 1111/jcom. 12064" }
   },
   {
     id: "cognitive-load",
     title: "Cognitieve Belasting: Het brein van de leugenaar",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Liegen is mentaal zwaar. Hoe interviewtechnieken deze zwakte benutten.",
     content: {
       intro: "Liegen vergt aanzienlijk meer hersencapaciteit dan de waarheid spreken. Dit fundamentele principe uit de rechtspsychologie vormt de basis voor moderne waarheidsvinding.",
-      analysis: `Onderzoek van Vrij et al. (2006) toont aan dat liegen een complexe 'multitasking' taak is.Een leugenaar moet:
+      analysis: `Onderzoek van Vrij et al. (2006) toont aan dat liegen een complexe 'multitasking' taak is. Een leugenaar moet:
 1. Een plausibel verhaal construeren;
 2. Zorgen dat het consistent is met wat de luisteraar al weet;
 3. Zijn eigen gedrag monitoren om 'normaal' te lijken;
 4. De reactie van de interviewer in de gaten houden.
-**De strategie:** Door de **cognitieve belasting **kunstmatig te verhogen tijdens een interview, stort het kaartenhuis in.Eerlijke mensen putten uit hun geheugen en hebben hier weinig moeite mee.Leugenaars moeten hun verhaal * live * construeren. 
+**De strategie:**Door de**cognitieve belasting **kunstmatig te verhogen tijdens een interview, stort het kaartenhuis in. Eerlijke mensen putten uit hun geheugen en hebben hier weinig moeite mee. Leugenaars moeten hun verhaal * live * construeren. 
 
-Effectieve methoden zijn bijvoorbeeld het vragen om het verhaal in **omgekeerde chronologische volgorde **te vertellen, of het vragen naar specifieke zintuiglijke details(geur, geluid) die in een verzonnen script vaak ontbreken.Wanneer het brein overbelast raakt, ontstaan er stiltes, inconsistenties en wordt de lichaamstaal statisch omdat alle energie naar het denken gaat.`,
+Effectieve methoden zijn bijvoorbeeld het vragen om het verhaal in **omgekeerde chronologische volgorde**te vertellen, of het vragen naar specifieke zintuiglijke details(geur, geluid) die in een verzonnen script vaak ontbreken. Wanneer het brein overbelast raakt, ontstaan er stiltes, inconsistenties en wordt de lichaamstaal statisch omdat alle energie naar het denken gaat.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Strategische interviewtechnieken.",
     keyPoints: ["Liegen is topsport", "Multitasking faalt onder druk", "Omgekeerde volgorde"],
-    source: { author: "Aldert Vrij et al.", year: 2006, journal: "Law and Human Behavior", doi: "10.1007/s10979-006-9007-y" }
+    source: { author: "Aldert Vrij et al.", year: 2006, journal: "Law and Human Behavior", doi: "10. 1007/s10979-006-9007-y" }
   },
   {
     id: "dark-triad",
     title: "De 'Dark Triad' op de werkvloer",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Hoe narcisme, machiavellisme en psychopathie leiden tot toxisch leiderschap en fraude.",
     content: {
       intro: "Niet alle psychopaten zijn criminelen; velen zijn succesvolle managers. De psychologie spreekt van de **Dark Triad**: drie persoonlijkheidskenmerken die vaak samengaan en grote schade aanrichten in organisaties.",
@@ -846,66 +846,66 @@ Effectieve methoden zijn bijvoorbeeld het vragen om het verhaal in **omgekeerde 
 1. **Narcisme:** Een opgeblazen ego, behoefte aan bewondering en woede bij kritiek.
 2. **Machiavellisme:** Strategische manipulatie, kille berekening en het idee dat het doel de middelen heiligt.
 3. **Psychopathie:** Gebrek aan empathie, impulsiviteit en angstloosheid.
-**De Corporate Psychopaat:** Paulhus & Williams (2002) toonden aan dat deze types vaak snel carrière maken.Ze zijn charmant, durven risico's te nemen en kunnen goed verkopen. Echter, op de lange termijn laten ze een spoor van vernieling achter: pesterijen, fraude en een angstcultuur.
+**De Corporate Psychopaat:** Paulhus & Williams (2002) toonden aan dat deze types vaak snel carrière maken. Ze zijn charmant, durven risico's te nemen en kunnen goed verkopen. Echter, op de lange termijn laten ze een spoor van vernieling achter: pesterijen, fraude en een angstcultuur.
 
-Ze zijn meesters in **impression management **: ze managen naar boven(slijmen bij de baas) en trappen naar beneden(intimidatie van personeel).Hierdoor worden ze vaak pas ontdekt als de schade al enorm is.`,
+Ze zijn meesters in **impression management**: ze managen naar boven(slijmen bij de baas) en trappen naar beneden(intimidatie van personeel). Hierdoor worden ze vaak pas ontdekt als de schade al enorm is.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Screening en cultuuronderzoek.",
     keyPoints: ["Charme als wapen", "Managen naar boven", "Destructief leiderschap"],
-    source: { author: "Paulhus & Williams", year: 2002, journal: "Journal of Research in Personality", doi: "10.1016/S0092-6566(02)00505-6" }
+    source: { author: "Paulhus & Williams", year: 2002, journal: "Journal of Research in Personality", doi: "10. 1016/S0092-6566 (02)00505-6" }
   },
   {
     id: "halo-effect",
     title: "Het Halo-effect: Waarom we fraudeurs niet verdenken",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "De cognitieve bias waardoor aantrekkelijke of succesvolle mensen als 'betrouwbaar' worden gezien.",
     content: {
       intro: "Waarom komen sommige 'succesvolle' mensen zo lang weg met fraude? Het antwoord ligt vaak in het Halo-effect.",
-      analysis: `Het **Halo-effect **is een cognitieve bias waarbij één positieve eigenschap(uiterlijk, vlotte babbel, succes) onze perceptie van iemands * hele * karakter kleurt. "Hij ziet er zo netjes uit, hij zou nooit stelen."
+      analysis: `Het **Halo-effect**is een cognitieve bias waarbij één positieve eigenschap(uiterlijk, vlotte babbel, succes) onze perceptie van iemands * hele * karakter kleurt. "Hij ziet er zo netjes uit, hij zou nooit stelen."
 
-Thorndike (1920) beschreef dit effect al.In fraudeonderzoeken zien we dit vaak terug: de 'topverkoper' of de 'charmante manager' wordt niet gecontroleerd, terwijl de stille, onopvallende medewerker met argusogen wordt bekeken.Fraudeurs misbruiken dit bewust door veel aandacht te besteden aan hun imago en sociale status.
-**Onderzoek:** Een objectief onderzoek moet blind zijn voor status.Data(cijfers, logfiles) zijn niet gevoelig voor het Halo-effect.`,
+Thorndike (1920) beschreef dit effect al. In fraudeonderzoeken zien we dit vaak terug: de 'topverkoper' of de 'charmante manager' wordt niet gecontroleerd, terwijl de stille, onopvallende medewerker met argusogen wordt bekeken. Fraudeurs misbruiken dit bewust door veel aandacht te besteden aan hun imago en sociale status.
+**Onderzoek:** Een objectief onderzoek moet blind zijn voor status. Data(cijfers, logfiles) zijn niet gevoelig voor het Halo-effect.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Objectieve data-analyse.",
     keyPoints: ["Schone schijn", "Bias bij controle", "Status misbruik"],
-    source: { author: "Edward Thorndike", year: 1920, journal: "Journal of Applied Psychology", doi: "10.1037/h0071663" }
+    source: { author: "Edward Thorndike", year: 1920, journal: "Journal of Applied Psychology", doi: "10. 1037/h0071663" }
   },
   {
     id: "narcissistic-rage",
     title: "Narcistische Woede: Het gevaar van ontmaskering",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Waarom confrontatie met een narcist kan leiden tot explosieve agressie of wraak.",
     content: {
       intro: "Het confronteren van iemand met narcistische trekken met zijn leugens is niet zonder risico. Het kan leiden tot 'Narcissistic Rage'.",
-      analysis: `Kohut (1972) beschreef dat narcisten een uiterst kwetsbaar ego hebben.Kritiek of ontmaskering wordt niet ervaren als een fout, maar als een totale vernietiging van hun zelfbeeld.De reactie is vaak niet schaamte, maar intense woede.
+      analysis: `Kohut (1972) beschreef dat narcisten een uiterst kwetsbaar ego hebben. Kritiek of ontmaskering wordt niet ervaren als een fout, maar als een totale vernietiging van hun zelfbeeld. De reactie is vaak niet schaamte, maar intense woede.
 
 Dit kan zich uiten in:
 * Fysieke agressie.
 * Een lastercampagne tegen de onderzoeker of melder.
 * Het vernietigen van bewijsmateriaal uit pure wraakzucht.
-**Strategie:** Bij onderzoek naar personen met dit profiel is de timing van de confrontatie cruciaal.Eerst moet het bewijs 100 % veiliggesteld zijn("lockdown") voordat de betrokkene op de hoogte wordt gesteld.`,
+**Strategie:** Bij onderzoek naar personen met dit profiel is de timing van de confrontatie cruciaal. Eerst moet het bewijs 100 % veiliggesteld zijn("lockdown") voordat de betrokkene op de hoogte wordt gesteld.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Veiligheidsstrategie bij confrontatie.",
     keyPoints: ["Kwetsbaar ego", "Explosieve reactie", "Veiligstellen bewijs"],
-    source: { author: "Heinz Kohut", year: 1972, journal: "The Psychoanalytic Study of the Child", url: "https://www.tandfonline.com/doi/abs/10.1080/00797308.1972.11822721" }
+    source: { author: "Heinz Kohut", year: 1972, journal: "The Psychoanalytic Study of the Child", url: "https://www. tandfonline. com/doi/abs/10. 1080/00797308. 1972. 11822721" }
   },
   {
     id: "scan-technique",
     title: "Statement Analysis (SCAN): Woorden liegen niet",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Hoe taalgebruik verraadt wat iemand probeert te verbergen.",
     content: {
       intro: "Scientific Content Analysis (SCAN) gaat ervan uit dat mensen hun woorden onbewust kiezen op basis van hun herinnering.",
-      analysis: `Avinoam Sapir ontwikkelde deze techniek.Enkele indicatoren:
+      analysis: `Avinoam Sapir ontwikkelde deze techniek. Enkele indicatoren:
 * **Verandering in voornaamwoorden:** Iemand begint met "ik deed dit" en schakelt over naar "wij deden dat" of passief taalgebruik("het werd gedaan") op het moment dat het delict plaatsvond.
 * **Tijdsprongen:** Zinnen als "later die middag" of "vervolgens" worden vaak gebruikt om tijdvakken waarin iets strafbaars gebeurde over te slaan.
-* **Ontbrekende connecties:** Eerlijke verhalen hebben een logische structuur.Verzonnen verhalen missen vaak de 'brug' tussen emotie en actie.
+* **Ontbrekende connecties:** Eerlijke verhalen hebben een logische structuur. Verzonnen verhalen missen vaak de 'brug' tussen emotie en actie.
 
 SCAN is een krachtig hulpmiddel om te bepalen * waar * in een verklaring de leugen waarschijnlijk zit, zodat daarop doorgevraagd kan worden.`,
       methodology: "",
@@ -913,7 +913,7 @@ SCAN is een krachtig hulpmiddel om te bepalen * waar * in een verklaring de leug
     },
     practicalApplication: "Taalanalyse van verklaringen.",
     keyPoints: ["Taalgebruik", "Passieve vorm", "Tijdsprongen"],
-    source: { author: "Driscoll", year: 1994, journal: "FBI Law Enforcement Bulletin", url: "https://leb.fbi.gov/file-repository/archives/august-1994.pdf" }
+    source: { author: "Driscoll", year: 1994, journal: "FBI Law Enforcement Bulletin", url: "https://leb. fbi. gov/file-repository/archives/august-1994. pdf" }
   },
 
   // --- FRAUDE & INTEGRITEIT ---
@@ -924,18 +924,18 @@ SCAN is een krachtig hulpmiddel om te bepalen * waar * in een verklaring de leug
     summary: "Hét model om risico's binnen organisaties te voorspellen en begrijpen.",
     content: {
       intro: "Donald Cressey interviewde in de jaren '50 honderden veroordeelde verduisteraars. Hij ontdekte dat er altijd drie elementen aanwezig moeten zijn voordat iemand overgaat tot fraude.",
-      analysis: `De **Fraud Triangle **bestaat uit:** 1. **Druk(Pressure):** Een niet-deelbaar financieel probleem.Dit kan een gokschuld zijn, een echtscheiding, of simpelweg de wens om een bepaalde levensstandaard hoog te houden(status).De dader ziet geen legitieme uitweg.
+      analysis: `De **Fraud Triangle**bestaat uit:**1.**Druk(Pressure):** Een niet-deelbaar financieel probleem. Dit kan een gokschuld zijn, een echtscheiding, of simpelweg de wens om een bepaalde levensstandaard hoog te houden(status). De dader ziet geen legitieme uitweg.
 
-2. **Gelegenheid(Opportunity):** Het gat in de controle.De medewerker weet dat hij geld kan wegnemen zonder dat iemand het merkt.Bijvoorbeeld omdat hij zowel de facturen inboekt als de betalingen goedkeurt.Dit is het enige element waar een organisatie directe invloed op heeft.
+2. **Gelegenheid(Opportunity):** Het gat in de controle. De medewerker weet dat hij geld kan wegnemen zonder dat iemand het merkt. Bijvoorbeeld omdat hij zowel de facturen inboekt als de betalingen goedkeurt. Dit is het enige element waar een organisatie directe invloed op heeft.
 
-3. **Rationalisatie:** Het mentale mechanisme om de daad goed te praten. * "Ik leen het alleen maar" *, * "Ze betalen me te weinig" *, of * "Iedereen doet het" *.Hierdoor behoudt de fraudeur zijn zelfbeeld als 'eerlijk mens'.
-**Toepassing in onderzoek:** Bij het onderzoeken van fraude zoeken we niet alleen naar de dader, maar reconstrueren we deze driehoek.Waar zat het lek in de organisatie(gelegenheid) ? Wat was de trigger(druk) ? Dit helpt niet alleen bij het bewijzen van de opzet, maar ook bij het voorkomen van herhaling.`,
+3. **Rationalisatie:** Het mentale mechanisme om de daad goed te praten. * "Ik leen het alleen maar" *, * "Ze betalen me te weinig" *, of * "Iedereen doet het" *. Hierdoor behoudt de fraudeur zijn zelfbeeld als 'eerlijk mens'.
+**Toepassing in onderzoek:** Bij het onderzoeken van fraude zoeken we niet alleen naar de dader, maar reconstrueren we deze driehoek. Waar zat het lek in de organisatie(gelegenheid) ? Wat was de trigger(druk) ? Dit helpt niet alleen bij het bewijzen van de opzet, maar ook bij het voorkomen van herhaling.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Risico-analyse en preventie.",
     keyPoints: ["Druk (Motief)", "Gelegenheid (Het lek)", "Rationalisatie (Geweten)"],
-    source: { author: "Donald R. Cressey", year: 1953, url: "https://www.ojp.gov/ncjrs/virtual-library/abstracts/other-peoples-money-study-social-psychology-embezzlement" }
+    source: { author: "Donald R. Cressey", year: 1953, url: "https://www. ojp. gov/ncjrs/virtual-library/abstracts/other-peoples-money-study-social-psychology-embezzlement" }
   },
   {
     id: "inventory-shrinkage",
@@ -944,20 +944,20 @@ SCAN is een krachtig hulpmiddel om te bepalen * waar * in een verklaring de leug
     summary: "Waarom werknemers vaker stelen dan winkeldieven.",
     content: {
       intro: "Veel bedrijven focussen hun beveiliging op externe bedreigingen, terwijl de grootste schade vaak wordt aangericht door het eigen personeel.",
-      analysis: `Onderzoek toont aan dat 'internal shrinkage'(diefstal door personeel) verantwoordelijk is voor een groot deel van de voorraadverschillen.Medewerkers kennen de blinde vlekken van de camera's en de procedures.
+      analysis: `Onderzoek toont aan dat 'internal shrinkage'(diefstal door personeel) verantwoordelijk is voor een groot deel van de voorraadverschillen. Medewerkers kennen de blinde vlekken van de camera's en de procedures.
 
 Methoden zijn divers:
 * **Sweethearting:** Een caissière slaat artikelen niet aan voor vrienden of familie.
 * **Trash runs:** Goederen worden in de vuilnisbak naar buiten gesmokkeld en later opgehaald.
 * **Retourfraude:** Het fingeren van retouren en het geld in eigen zak steken.
 
-Omdat er een vertrouwensrelatie is, duurt het vaak lang voordat een werkgever ingrijpt.Objectief data-onderzoek(kassalogfiles koppelen aan camerabeelden) is essentieel.`,
+Omdat er een vertrouwensrelatie is, duurt het vaak lang voordat een werkgever ingrijpt. Objectief data-onderzoek(kassalogfiles koppelen aan camerabeelden) is essentieel.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Koppeling data en observatie.",
     keyPoints: ["Sweethearting", "Kennis van procedures", "Vertrouwensbreuk"],
-    source: { author: "Hollinger & Davis", year: 2003, journal: "Security Journal", url: "https://link.springer.com/journal/41284" }
+    source: { author: "Hollinger & Davis", year: 2003, journal: "Security Journal", url: "https://link. springer. com/journal/41284" }
   },
   {
     id: "procurement-fraud",
@@ -966,18 +966,18 @@ Omdat er een vertrouwensrelatie is, duurt het vaak lang voordat een werkgever in
     summary: "Hoe inkoopafdelingen kwetsbaar zijn voor corruptie en vriendjespolitiek.",
     content: {
       intro: "Inkoopfraude is een van de meest voorkomende en kostbare vormen van fraude binnen bedrijven. Het vindt plaats wanneer medewerkers hun positie misbruiken om bepaalde leveranciers te bevoordelen in ruil voor 'kickbacks'.",
-      analysis: `De OESO en andere instanties waarschuwen voor 'Bid Rigging' en 'Kickbacks'.Signalen zijn vaak subtiel:
+      analysis: `De OESO en andere instanties waarschuwen voor 'Bid Rigging' en 'Kickbacks'. Signalen zijn vaak subtiel:
 - Een inkoper die altijd dezelfde leverancier kiest, ook als deze duurder is.
 - Offertes die net onder de aanbestedingsgrens blijven('Salami Slicing').
 - Een onverklaarbare stijging in de levensstandaard van de inkoper.
 
-Onderzoek naar inkoopfraude vereist **datamining **: het analyseren van de relaties tussen medewerkers en leveranciers(bijv.gedeelde adressen, connecties op social media) en het vergelijken van marktprijzen.Vaak wordt zichtbaar dat de 'objectieve' keuze voor een leverancier helemaal niet objectief was.`,
+Onderzoek naar inkoopfraude vereist **datamining**: het analyseren van de relaties tussen medewerkers en leveranciers(bijv. gedeelde adressen, connecties op social media) en het vergelijken van marktprijzen. Vaak wordt zichtbaar dat de 'objectieve' keuze voor een leverancier helemaal niet objectief was.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Relatie-analyse en data-analyse.",
     keyPoints: ["Kickbacks", "Belangenverstrengeling", "Data-analyse"],
-    source: { author: "OECD", year: 2016, url: "https://www.oecd.org/gov/ethics/preventing-corruption-in-public-procurement.htm" }
+    source: { author: "OECD", year: 2016, url: "https://www. oecd. org/gov/ethics/preventing-corruption-in-public-procurement. htm" }
   },
   {
     id: "ghost-employees",
@@ -988,14 +988,14 @@ Onderzoek naar inkoopfraude vereist **datamining **: het analyseren van de relat
       intro: "Een klassieke vorm van fraude in grotere organisaties: de 'Ghost Employee'. Iemand staat op de loonlijst, maar voert geen werk uit.",
       analysis: `De Association of Certified Fraud Examiners(ACFE) identificeert dit als een veelvoorkomend schema.
 * **De fictieve medewerker:** Een HR-medewerker of manager creëert een vals profiel en laat het salaris op zijn eigen rekening(of die van een partner) storten.
-* **De ex-medewerker:** Iemand is uit dienst, maar wordt niet uit het systeem gehaald.Het salaris loopt door en wordt afgeroomd.
-**Detectie:** Een audit van de loonlijst is nodig.Zoek naar dubbele bankrekeningnummers, dubbele adressen, of medewerkers die nooit inloggen op het netwerk of geen vakantie opnemen.`,
+* **De ex-medewerker:** Iemand is uit dienst, maar wordt niet uit het systeem gehaald. Het salaris loopt door en wordt afgeroomd.
+**Detectie:** Een audit van de loonlijst is nodig. Zoek naar dubbele bankrekeningnummers, dubbele adressen, of medewerkers die nooit inloggen op het netwerk of geen vakantie opnemen.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Audit van personeelsbestanden.",
     keyPoints: ["Loonlijstfraude", "Dubbele rekeningen", "ACFE"],
-    source: { author: "ACFE", year: 2022, url: "https://www.acfe.com/fraud-resources/payroll-fraud" }
+    source: { author: "ACFE", year: 2022, url: "https://www. acfe. com/fraud-resources/payroll-fraud" }
   },
   {
     id: "bankruptcy-fraud",
@@ -1004,7 +1004,7 @@ Onderzoek naar inkoopfraude vereist **datamining **: het analyseren van de relat
     summary: "Hoe ondernemers activa wegsluizen voordat het schip zinkt.",
     content: {
       intro: "Faillissementsfraude benadeelt schuldeisers en de maatschappij. Een veelvoorkomende methode is het leeghalen van de vennootschap vlak voor het faillissement (paulianeus handelen).",
-      analysis: `Onderzoekers zoals Levi (2008) beschrijven hoe 'georganiseerde' fraudeurs bedrijven gebruiken als wegwerpartikelen.Ze bouwen schulden op, sluizen voorraden en machines weg naar een nieuwe BV(de 'sterfhuisconstructie') en laten de oude BV ploffen.
+      analysis: `Onderzoekers zoals Levi (2008) beschrijven hoe 'georganiseerde' fraudeurs bedrijven gebruiken als wegwerpartikelen. Ze bouwen schulden op, sluizen voorraden en machines weg naar een nieuwe BV(de 'sterfhuisconstructie') en laten de oude BV ploffen.
 **Indicatoren:** - Ongebruikelijke transacties vlak voor datum faillissement.
 - Verkoop van activa tegen onzakelijke(te lage) prijzen aan gelieerde partijen.
 - Ontbrekende administratie.
@@ -1015,7 +1015,7 @@ Het bewijzen van faillissementsfraude vereist een reconstructie van de geldstrom
     },
     practicalApplication: "Reconstructie van geldstromen.",
     keyPoints: ["Paulianeus handelen", "Sterfhuisconstructie", "Activa onttrekking"],
-    source: { author: "Michael Levi", year: 2008, journal: "Criminology & Criminal Justice", doi: "10.1177/1748895808096470" }
+    source: { author: "Michael Levi", year: 2008, journal: "Criminology & Criminal Justice", doi: "10. 1177/1748895808096470" }
   },
   {
     id: "ponzi-schemes",
@@ -1036,7 +1036,7 @@ Onderzoek richt zich op 'asset tracing': waar is het geld echt gebleven ? Vaak i
     },
     practicalApplication: "Due diligence en asset tracing.",
     keyPoints: ["Geen onderliggende waarde", "Nieuw geld betaalt oud", "Stabiel rendement is verdacht"],
-    source: { author: "Tamar Frankel", year: 2012, url: "https://global.oup.com/academic/product/the-ponzi-scheme-puzzle-9780199926619" }
+    source: { author: "Tamar Frankel", year: 2012, url: "https://global. oup. com/academic/product/the-ponzi-scheme-puzzle-9780199926619" }
   },
   {
     id: "insurance-fraud",
@@ -1045,7 +1045,7 @@ Onderzoek richt zich op 'asset tracing': waar is het geld echt gebleven ? Vaak i
     summary: "Het opzettelijk veroorzaken of veinzen van schade voor uitkering.",
     content: {
       intro: "Van een geclaimde diefstal van een auto die al verkocht was, tot het opzettelijk veroorzaken van aanrijdingen ('crash for cash').",
-      analysis: `Verzekeringsfraudeurs werken vaak in netwerken.Derrig (2002) toonde aan dat patronen zichtbaar worden in data-analyse: dezelfde 'getuigen' die opduiken bij verschillende claims, of schadebeelden die niet overeenkomen met de beschreven toedracht.
+      analysis: `Verzekeringsfraudeurs werken vaak in netwerken. Derrig (2002) toonde aan dat patronen zichtbaar worden in data-analyse: dezelfde 'getuigen' die opduiken bij verschillende claims, of schadebeelden die niet overeenkomen met de beschreven toedracht.
 
 Bij letselschade wordt vaak geclaimd dat men niet meer kan werken, terwijl observatie aantoont dat de persoon zware fysieke activiteiten verricht.`,
       methodology: "",
@@ -1053,7 +1053,7 @@ Bij letselschade wordt vaak geclaimd dat men niet meer kan werken, terwijl obser
     },
     practicalApplication: "Toedrachtonderzoek en observatie.",
     keyPoints: ["Inscenering", "Inconsistente schade", "Crash for cash"],
-    source: { author: "Richard A. Derrig", year: 2002, journal: "Risk Management and Insurance Review", doi: "10.1111/1098-1616.00006" }
+    source: { author: "Richard A. Derrig", year: 2002, journal: "Risk Management and Insurance Review", doi: "10. 1111/1098-1616. 00006" }
   },
   {
     id: "resume-fraud",
@@ -1064,137 +1064,137 @@ Bij letselschade wordt vaak geclaimd dat men niet meer kan werken, terwijl obser
       intro: "In de strijd om een baan 'pimpen' kandidaten hun CV. Maar de grens tussen verfraaien en frauderen is dun.",
       analysis: `Onderzoek toont aan dat meer dan 50 % van de CV's onwaarheden bevat. Dit varieert van het rekken van data (om gaten te dichten) tot het verzinnen van complete diploma's of werkgevers.
 Het risico voor de werkgever is groot: een incompetente medewerker op een sleutelpositie kan enorme schade aanrichten.
-**Validatie:** Pre-employment screening is de enige remedie.Het verifiëren van de bron(het instituut bellen, niet het nummer op het CV) is essentieel.`,
+**Validatie:** Pre-employment screening is de enige remedie. Het verifiëren van de bron(het instituut bellen, niet het nummer op het CV) is essentieel.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Pre-employment screening.",
     keyPoints: ["Diplomavervalsing", "Gaten dichten", "Bronverificatie"],
-    source: { author: "HireRight", year: 2023, url: "https://www.hireright.com/resources/benchmark-report" }
+    source: { author: "HireRight", year: 2023, url: "https://www. hireright. com/resources/benchmark-report" }
   },
 
   // --- AFHANKELIJKHEIDSRELATIES ---
   {
     id: "coercive-control",
     title: "Dwingende Controle: Het onzichtbare geweld",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Geweld is niet alleen slaan. Stark's model verklaart hoe vrijheidsberoving werkt in relaties.",
     content: {
       intro: "Jarenlang werd huiselijk geweld enkel gezien als fysieke mishandeling. Evan Stark (2007) veranderde dit paradigma met zijn concept van **Coercive Control**(Dwingende Controle).",
-      analysis: `Stark betoogt dat het primaire doel van de dader niet fysiek letsel is, maar **vrijheidsberoving **.Fysiek geweld is slechts één van de middelen om dominantie af te dwingen.De kern van het misbruik zit in een patroon van:** * **Isolatie:** Het contact met vrienden en familie afsnijden.
+      analysis: `Stark betoogt dat het primaire doel van de dader niet fysiek letsel is, maar **vrijheidsberoving**. Fysiek geweld is slechts één van de middelen om dominantie af te dwingen. De kern van het misbruik zit in een patroon van:*****Isolatie:** Het contact met vrienden en familie afsnijden.
 * **Intimidatie:** Dreigen met geweld, zelfmoord of het afpakken van kinderen.
 * **Controle:** Beheer over financiën, kledingkeuze, en zelfs slaap-en eetpatronen.
-**Het effect:** Het slachtoffer verliest haar autonomie en wordt een 'gijzelaar' in eigen huis.Omdat er vaak geen blauwe plekken zijn, wordt de ernst door politie en hulpverlening vaak onderschat.Stark toonde aan dat deze vorm van controle een sterkere voorspeller is voor fataal geweld dan incidentele fysieke agressie.
-**Bewijsvoering:** In onderzoekssituaties is het cruciaal om niet te zoeken naar incidenten, maar naar het **patroon **.Het documenteren van isolatie, financiële controle en micro-regulering bouwt een dossier op dat de ernst van de situatie juridisch aannemelijk maakt.`,
+**Het effect:** Het slachtoffer verliest haar autonomie en wordt een 'gijzelaar' in eigen huis. Omdat er vaak geen blauwe plekken zijn, wordt de ernst door politie en hulpverlening vaak onderschat. Stark toonde aan dat deze vorm van controle een sterkere voorspeller is voor fataal geweld dan incidentele fysieke agressie.
+**Bewijsvoering:**In onderzoekssituaties is het cruciaal om niet te zoeken naar incidenten, maar naar het**patroon **. Het documenteren van isolatie, financiële controle en micro-regulering bouwt een dossier op dat de ernst van de situatie juridisch aannemelijk maakt.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Patroonherkenning in dossiers.",
     keyPoints: ["Vrijheidsberoving als doel", "Patroon vs. Incident", "Voorspeller van escalatie"],
-    source: { author: "Evan Stark", year: 2007, doi: "10.1093/acprof:oso/9780195176368.001.0001" }
+    source: { author: "Evan Stark", year: 2007, doi: "10. 1093/acprof:oso/9780195176368. 001. 0001" }
   },
   {
     id: "trauma-bonding",
     title: "Trauma Bonding: Waarom ze blijven",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "De hormonale verslaving aan een mishandelende partner.",
     content: {
       intro: "Buitenstaanders vragen vaak: 'Waarom ga je niet gewoon weg?' Het antwoord is Trauma Bonding, een krachtig psychologisch mechanisme.",
       analysis: `Dutton & Painter (1981) beschreven hoe een cyclus van misbruik gevolgd door liefdevolle momenten('intermittent reinforcement') zorgt voor een sterke emotionele binding.
-Het is vergelijkbaar met het **Stockholm Syndroom **.De dader is de bron van angst, maar óók de enige bron van troost.Dit creëert een biochemische afhankelijkheid(dopamine / oxytocine) die sterker is dan rationeel denken.
+Het is vergelijkbaar met het **Stockholm Syndroom**. De dader is de bron van angst, maar óók de enige bron van troost. Dit creëert een biochemische afhankelijkheid(dopamine / oxytocine) die sterker is dan rationeel denken.
 
-Slachtoffers verdedigen hun dader vaak tegenover de buitenwereld en politie.Dit maakt onderzoek complex; de verklaring van het slachtoffer is soms onbetrouwbaar door deze binding.`,
+Slachtoffers verdedigen hun dader vaak tegenover de buitenwereld en politie. Dit maakt onderzoek complex; de verklaring van het slachtoffer is soms onbetrouwbaar door deze binding.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Begrip van slachtoffergedrag.",
     keyPoints: ["Stockholm Syndroom", "Intermittent reinforcement", "Biochemische binding"],
-    source: { author: "Dutton & Painter", year: 1981, journal: "Victimology", url: "https://www.ojp.gov/ncjrs/virtual-library/abstracts/traumatic-bonding-development-emotional-attachments-battered-women" }
+    source: { author: "Dutton & Painter", year: 1981, journal: "Victimology", url: "https://www. ojp. gov/ncjrs/virtual-library/abstracts/traumatic-bonding-development-emotional-attachments-battered-women" }
   },
   {
     id: "gaslighting-sociology",
     title: "Gaslighting: Het ondermijnen van de realiteit",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Een sociologische blik op hoe daders twijfel zaaien om macht te behouden.",
     readingMotivation: "Begrijp het fundament van realiteits-ondermijning door de bril van deze klassieke studie.",
     relatedIds: ["internalized-gaslighting-impact", "toxic-positivity-manipulation"],
     content: {
       intro: "Gaslighting is meer dan liegen; het is een strategie om iemand aan zijn eigen verstandelijke vermogens te laten twijfelen.",
-      analysis: `De term komt uit de film 'Gaslight'(1944), maar is wetenschappelijk uitgewerkt door sociologen zoals Paige Sweet (2019).Zij stelt dat gaslighting werkt door in te spelen op bestaande ongelijkheden en stereotypen.
+      analysis: `De term komt uit de film 'Gaslight'(1944), maar is wetenschappelijk uitgewerkt door sociologen zoals Paige Sweet (2019). Zij stelt dat gaslighting werkt door in te spelen op bestaande ongelijkheden en stereotypen.
 
-Een dader labelt het slachtoffer bijvoorbeeld als 'hysterisch', 'overgevoelig' of 'in de war'.Door dit consequent te herhalen, en door feiten te ontkennen(* "Dat is nooit gebeurd, je verbeeldt het je" *), begint het slachtoffer haar eigen waarneming te wantrouwen.
+Een dader labelt het slachtoffer bijvoorbeeld als 'hysterisch', 'overgevoelig' of 'in de war'. Door dit consequent te herhalen, en door feiten te ontkennen(* "Dat is nooit gebeurd, je verbeeldt het je" *), begint het slachtoffer haar eigen waarneming te wantrouwen.
 
-Dit is verwoestend in juridische procedures.Slachtoffers komen vaak warrig en emotioneel over(door de langdurige stress en twijfel), terwijl de dader zich kalm en rationeel presenteert.
-**De rol van onderzoek:** Het doel van onderzoek bij gaslighting is het **externaliseren van de waarheid **.Door een feitenrelaas op te bouwen met data(berichten, tijdlijnen), krijgt het slachtoffer een 'anker' in de realiteit. * "Zie je wel, het is wel gebeurd. Hier staat het zwart op wit." * `,
+Dit is verwoestend in juridische procedures. Slachtoffers komen vaak warrig en emotioneel over(door de langdurige stress en twijfel), terwijl de dader zich kalm en rationeel presenteert.
+**De rol van onderzoek:**Het doel van onderzoek bij gaslighting is het**externaliseren van de waarheid **. Door een feitenrelaas op te bouwen met data(berichten, tijdlijnen), krijgt het slachtoffer een 'anker' in de realiteit. * "Zie je wel, het is wel gebeurd. Hier staat het zwart op wit." * `,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Herstel van realiteitszin door feiten.",
     keyPoints: ["Aanval op realiteitszin", "Stereotypering", "Externe validatie"],
-    source: { author: "Paige L. Sweet", year: 2019, journal: "American Sociological Review", doi: "10.1177/0003122419874855" }
+    source: { author: "Paige L. Sweet", year: 2019, journal: "American Sociological Review", doi: "10. 1177/0003122419874855" }
   },
   {
     id: "stalking-typologies",
     title: "Typologieën van Stalkers",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Niet elke stalker is hetzelfde. Het model van Mullen helpt risico's inschatten.",
     content: {
       intro: "Om stalking te stoppen, moet je de motivatie van de dader begrijpen. Mullen et al. (1999) onderscheiden vijf types.",
-      analysis: `1. **De Afgewezen Stalker:** De meest voorkomende(ex-partner).Wil de relatie herstellen of wraak nemen.Hoog risico op geweld.
+      analysis: `1. **De Afgewezen Stalker:** De meest voorkomende(ex-partner). Wil de relatie herstellen of wraak nemen. Hoog risico op geweld.
 2. **De Intimiteitzoeker:** Denkt dat het slachtoffer zijn / haar ware liefde is(erotomanie).
 3. **De Incompetente Minnaar:** Sociaal onhandig, zoekt contact maar snapt sociale regels niet.
-4. **De Wrokkoesteraar:** Voelt zich onrecht aangedaan(bv.ex-werknemer) en wil het slachtoffer angst aanjagen.
+4. **De Wrokkoesteraar:** Voelt zich onrecht aangedaan(bv. ex-werknemer) en wil het slachtoffer angst aanjagen.
 5. **De Roofstalker:** Bereidt een seksueel delict voor(zeldzaam, zeer gevaarlijk).
-**Onderzoeksaanpak:** De aanpak verschilt per type.Een incompetente minnaar stopt vaak na een juridische waarschuwing.Een afgewezen stalker kan juist escaleren bij confrontatie.`,
+**Onderzoeksaanpak:** De aanpak verschilt per type. Een incompetente minnaar stopt vaak na een juridische waarschuwing. Een afgewezen stalker kan juist escaleren bij confrontatie.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Risicotaxatie en interventiestrategie.",
     keyPoints: ["Afgewezen (Ex)", "Wrok", "Erotomanie"],
-    source: { author: "Mullen et al.", year: 1999, journal: "American Journal of Psychiatry", doi: "10.1176/ajp.156.8.1244" }
+    source: { author: "Mullen et al.", year: 1999, journal: "American Journal of Psychiatry", doi: "10. 1176/ajp. 156. 8. 1244" }
   },
   {
     id: "financial-infidelity",
     title: "Financiële Ontrouw: Het verbergen van vermogen",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Geld verzwijgen voor een partner is een vorm van verraad.",
     content: {
       intro: "Bij echtscheidingen komt vaak aan het licht dat een partner jarenlang geld heeft weggesluisd of schulden heeft gemaakt.",
-      analysis: `Vogler (1998) onderzocht machtsdynamiek rond geld.Financiële ontrouw varieert van het hebben van een geheime creditcard tot het verbergen van grote erfenissen of bonussen.
-In scheidingsprocedures(verdeling, alimentatie) is het cruciaal om het **werkelijke **financiële plaatje te reconstrueren.
+      analysis: `Vogler (1998) onderzocht machtsdynamiek rond geld. Financiële ontrouw varieert van het hebben van een geheime creditcard tot het verbergen van grote erfenissen of bonussen.
+In scheidingsprocedures(verdeling, alimentatie) is het cruciaal om het **werkelijke**financiële plaatje te reconstrueren.
 **Onderzoek:** Het analyseren van bankafschriften op patronen: regelmatige contante opnames, overboekingen naar onbekende rekeningen, of een levensstijl die niet past bij het opgegeven inkomen.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Financieel onderzoek bij scheiding.",
     keyPoints: ["Verborgen assets", "Levensstijl analyse", "Machtsmiddel"],
-    source: { author: "Carolyn Vogler", year: 1998, journal: "The Sociological Review", doi: "10.1111/j.1467-954X.1998.tb03482.x" }
+    source: { author: "Carolyn Vogler", year: 1998, journal: "The Sociological Review", doi: "10. 1111/j. 1467-954X. 1998. tb03482. x" }
   },
   {
     id: "estrangement",
     title: "Ouderverstoting (PAS): Een vorm van kindermishandeling",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Hoe een ouder een kind als wapen gebruikt tegen de andere ouder.",
     content: {
       intro: "Bij vechtscheidingen komt het voor dat een kind een ouder volledig afwijst zonder gegronde reden. Dit wordt Parental Alienation (ouderverstoting) genoemd.",
-      analysis: `Gardner (1985) en latere onderzoekers beschrijven dit als een proces waarbij de ene ouder het kind manipuleert om de andere ouder te haten of vrezen.Dit gebeurt door:
+      analysis: `Gardner (1985) en latere onderzoekers beschrijven dit als een proces waarbij de ene ouder het kind manipuleert om de andere ouder te haten of vrezen. Dit gebeurt door:
 -   Slecht praten over de andere ouder.
 - Het kind betrekken in volwassen conflicten.
 - Het kind het gevoel geven dat het moet kiezen('Loyaliteitsconflict').
 
 Het kind gaat de denkwijze van de verzorgende ouder overnemen om de eigen veiligheid of rust te waarborgen.
-**Fact-finding:** In dergelijke complexe gezinssituaties is het essentieel om feiten van emoties te scheiden.Wat is er daadwerkelijk gebeurd tijdens overdrachtsmomenten ? Worden afspraken nagekomen ? Een objectief feitenrelaas kan de rechtbank helpen door de dynamiek bloot te leggen.`,
+**Fact-finding:** In dergelijke complexe gezinssituaties is het essentieel om feiten van emoties te scheiden. Wat is er daadwerkelijk gebeurd tijdens overdrachtsmomenten ? Worden afspraken nagekomen ? Een objectief feitenrelaas kan de rechtbank helpen door de dynamiek bloot te leggen.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Objectivering van omgangsproblematiek.",
     keyPoints: ["Loyaliteitsconflict", "Manipulatie", "Kind als wapen"],
-    source: { author: "Richard A. Gardner", year: 1998, url: "https://www.worldcat.org/title/parental-alienation-syndrome/oclc/39723824" }
+    source: { author: "Richard A. Gardner", year: 1998, url: "https://www. worldcat. org/title/parental-alienation-syndrome/oclc/39723824" }
   },
   {
     id: "flying-monkeys",
     title: "Flying Monkeys: Misbruik via derden",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Hoe daders hun omgeving inzetten om het slachtoffer te pesten.",
     content: {
       intro: "Een term uit 'The Wizard of Oz', gebruikt in de psychologie om mensen te beschrijven die (bewust of onbewust) de vuile klusjes van een narcist opknappen.",
@@ -1207,14 +1207,14 @@ Dit maakt isolatie van het slachtoffer compleet: niemand lijkt meer te vertrouwe
     },
     practicalApplication: "Netwerkanalyse.",
     keyPoints: ["Proxy abuse", "Sociale isolatie", "Manipulatie van omgeving"],
-    source: { author: "Atkinson", year: 2017, url: "https://psychcentral.com/blog/recovering-narcissist/2017/08/narcissists-flying-monkeys" }
+    source: { author: "Atkinson", year: 2017, url: "https://psychcentral. com/blog/recovering-narcissist/2017/08/narcissists-flying-monkeys" }
   },
 
   // --- ZORG & ONDERMIJNING ---
   {
     id: "pgb-fraud",
     title: "PGB-Fraude: Zorgbudget als melkkoe",
-    category: "Zorg & Ondermijning",
+    category: "Gedrag & Relaties",
     summary: "Hoe malafide zorgbureaus kwetsbare cliënten en de maatschappij bestelen.",
     content: {
       intro: "Het Persoonsgebonden Budget (PGB) is bedoeld voor eigen regie, maar is fraudegevoelig. Criminelen ronselen cliënten en beheren hun DigiD.",
@@ -1229,16 +1229,16 @@ De cliënt is vaak dubbel slachtoffer: hij krijgt geen zorg én is financieel aa
     },
     practicalApplication: "Dossieronderzoek en observatie van zorglevering.",
     keyPoints: ["DigiD misbruik", "Niet-geleverde zorg", "Uitbuiting"],
-    source: { author: "Arbeidsinspectie", year: 2020, url: "https://www.nla.nl/" }
+    source: { author: "Arbeidsinspectie", year: 2020, url: "https://www. nla. nl/" }
   },
   {
     id: "munchausen-by-proxy",
     title: "Munchausen by Proxy (PCFI): Ziekte als middel",
-    category: "Zorg & Ondermijning",
+    category: "Gedrag & Relaties",
     summary: "Wanneer een verzorger ziekte veinst of veroorzaakt bij een afhankelijke.",
     content: {
       intro: "Pediatric Condition Falsification (voorheen Munchausen by Proxy) is een ernstige vorm van kindermishandeling waarbij een verzorger medische symptomen bij een kind verzint of veroorzaakt.",
-      analysis: `Schreier & Libow (1993) beschrijven de motieven vaak als een pathologische behoefte aan aandacht en erkenning als 'zorgzame ouder'.De verzorger is vaak medisch onderlegd en manipuleert artsen.
+      analysis: `Schreier & Libow (1993) beschrijven de motieven vaak als een pathologische behoefte aan aandacht en erkenning als 'zorgzame ouder'. De verzorger is vaak medisch onderlegd en manipuleert artsen.
 
 Kenmerken zijn:
 -   Symptomen die alleen optreden in aanwezigheid van de verzorger.
@@ -1250,68 +1250,68 @@ Kenmerken zijn:
     },
     practicalApplication: "Toezicht ter bescherming van kwetsbaren.",
     keyPoints: ["Aandacht als motief", "Medische manipulatie", "Cameratoezicht"],
-    source: { author: "Schreier & Libow", year: 1993, url: "https://psycnet.apa.org/record/1993-98272-000" }
+    source: { author: "Schreier & Libow", year: 1993, url: "https://psycnet. apa. org/record/1993-98272-000" }
   },
   {
     id: "elder-abuse",
     title: "Financiële uitbuiting van ouderen",
-    category: "Zorg & Ondermijning",
+    category: "Gedrag & Relaties",
     summary: "Misbruik van afhankelijkheid bij ouderen door familie of zorgverleners.",
     content: {
       intro: "Ouderenmishandeling is vaak financieel van aard. Pinnen met de pas van oma, het wijzigen van testamenten of het 'lenen' van grote bedragen zonder terugbetaling.",
-      analysis: `Het risico neemt toe naarmate de oudere afhankelijker wordt(dementie, fysieke beperkingen).De dader is vaak een bekende: een kind met schulden of een 'nieuwe vriend'.
+      analysis: `Het risico neemt toe naarmate de oudere afhankelijker wordt(dementie, fysieke beperkingen). De dader is vaak een bekende: een kind met schulden of een 'nieuwe vriend'.
 
-Acierno et al. (2010) vonden dat financiële uitbuiting een van de meest voorkomende vormen van ouderenmisbruik is.Het is lastig te bewijzen omdat de dader vaak een volmacht heeft gekregen.
+Acierno et al. (2010) vonden dat financiële uitbuiting een van de meest voorkomende vormen van ouderenmisbruik is. Het is lastig te bewijzen omdat de dader vaak een volmacht heeft gekregen.
 **Onderzoek:** Het in kaart brengen van transacties, het verifiëren van handtekeningen en het interviewen van de omgeving kan aantonen dat er sprake is van misbruik van omstandigheden en wilsontbreken.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Onderzoek naar financieel beheer.",
     keyPoints: ["Afhankelijkheid", "Volmacht misbruik", "Familiaire daders"],
-    source: { author: "Acierno et al.", year: 2010, journal: "American Journal of Public Health", doi: "10.2105/AJPH.2009.163089" }
+    source: { author: "Acierno et al.", year: 2010, journal: "American Journal of Public Health", doi: "10. 2105/AJPH. 2009. 163089" }
   },
   {
     id: "undermining",
     title: "Ondermijning: De verwevenheid van onder-en bovenwereld",
-    category: "Zorg & Ondermijning",
+    category: "Gedrag & Relaties",
     summary: "Hoe criminelen misbruik maken van legitieme structuren in zorg en vastgoed.",
     content: {
       intro: "Criminelen hebben de bovenwereld nodig. Ze hebben huizen nodig om in te wonen, vergunningen voor bedrijven, en zorgstructuren om geld wit te wassen.",
-      analysis: `Tops & Tromp (2019) beschrijven ondermijning als een sluipend proces.Criminelen nestelen zich in wijken en branches.
-**Zorgfraude:** Een specifiek zorgwekkende trend is de infiltratie in de zorgsector(PGB-fraude).Criminelen richten zorgbureaus op, ronselen kwetsbare cliënten en declareren zorg die nooit of slecht wordt geleverd.De cliënt wordt verwaarloosd, de maatschappij betaalt, en de crimineel strijkt de winst op.
-**Vastgoed:** Ook in de verhuurmarkt wordt vaak contant geld witgewassen of worden panden gebruikt voor illegale activiteiten(drugslabs, prostitutie).Voor een verhuurder of woningcorporatie levert dit enorme risico's op, waaronder sluiting van het pand door de burgemeester (Wet Damocles).
-**Preventie:** Integriteitsscreening van zakelijke relaties en huurders is de enige verdedigingslinie.Weten met wie je zakendoet voorkomt dat je onbewust faciliteert aan georganiseerde misdaad.`,
+      analysis: `Tops & Tromp (2019) beschrijven ondermijning als een sluipend proces. Criminelen nestelen zich in wijken en branches.
+**Zorgfraude:** Een specifiek zorgwekkende trend is de infiltratie in de zorgsector(PGB-fraude). Criminelen richten zorgbureaus op, ronselen kwetsbare cliënten en declareren zorg die nooit of slecht wordt geleverd. De cliënt wordt verwaarloosd, de maatschappij betaalt, en de crimineel strijkt de winst op.
+**Vastgoed:** Ook in de verhuurmarkt wordt vaak contant geld witgewassen of worden panden gebruikt voor illegale activiteiten(drugslabs, prostitutie). Voor een verhuurder of woningcorporatie levert dit enorme risico's op, waaronder sluiting van het pand door de burgemeester (Wet Damocles).
+**Preventie:** Integriteitsscreening van zakelijke relaties en huurders is de enige verdedigingslinie. Weten met wie je zakendoet voorkomt dat je onbewust faciliteert aan georganiseerde misdaad.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Screening en ondermijningsbeelden.",
     keyPoints: ["Verwevenheid", "PGB-fraude", "Faciliteren"],
-    source: { author: "Tops & Tromp", year: 2019, url: "https://www.politieacademie.nl/kennisenonderzoek/kennis/mediatheek/PDF/93513.pdf" }
+    source: { author: "Tops & Tromp", year: 2019, url: "https://www. politieacademie. nl/kennisenonderzoek/kennis/mediatheek/PDF/93513. pdf" }
   },
 
   // --- CYBERCRIME & DIGITAL ---
   {
     id: "cyberstalking",
     title: "Cyberstalking: De 24-uurs dreiging",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Waarom online belaging net zo schadelijk is als fysieke stalking.",
     content: {
       intro: "Vaak wordt gezegd: *'Zet je computer gewoon uit.'* Maar onderzoek toont aan dat dit advies de impact van cyberstalking miskent.",
-      analysis: `Dressing et al. (2014) toonden aan dat de psychologische impact van cyberstalking(angst, trauma, slaapgebrek) gelijk is aan die van fysieke stalking.De dader is via de smartphone 24 / 7 aanwezig in het leven van het slachtoffer.Er is geen 'veilige plek' meer.
+      analysis: `Dressing et al. (2014) toonden aan dat de psychologische impact van cyberstalking(angst, trauma, slaapgebrek) gelijk is aan die van fysieke stalking. De dader is via de smartphone 24 / 7 aanwezig in het leven van het slachtoffer. Er is geen 'veilige plek' meer.
 
 Bovendien is de drempel voor de dader lager(anonimiteit, afstand), waardoor de frequentie van intimidatie vaak hoger ligt.
-**Digitaal Onderzoek:** Het verzamelen van bewijs bij cyberstalking vereist technische expertise.IP-adressen, metadata van afbeeldingen en header-informatie van e-mails zijn nodig om de dader achter het anonieme profiel te identificeren.Screenshots alleen zijn vaak juridisch onvoldoende.`,
+**Digitaal Onderzoek:** Het verzamelen van bewijs bij cyberstalking vereist technische expertise. IP-adressen, metadata van afbeeldingen en header-informatie van e-mails zijn nodig om de dader achter het anonieme profiel te identificeren. Screenshots alleen zijn vaak juridisch onvoldoende.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Identificatie via digitaal sporenonderzoek.",
     keyPoints: ["Geen veilige plek", "Anonimiteit dader", "Technische bewijslast"],
-    source: { author: "Dressing et al.", year: 2014, journal: "Cyberpsychology, Behavior, and Social Networking", doi: "10.1089/cyber.2012.0541" }
+    source: { author: "Dressing et al.", year: 2014, journal: "Cyberpsychology, Behavior, and Social Networking", doi: "10. 1089/cyber. 2012. 0541" }
   },
   {
     id: "deepfakes",
     title: "Deepfakes: Als zien geen geloven meer is",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "De dreiging van AI-gemanipuleerd beeld en geluid voor bewijsvoering en reputatie.",
     content: {
       intro: "Met AI kan iedereen een video maken waarin iemand iets zegt of doet wat nooit is gebeurd. Dit vormt een enorm risico voor chantage en fraude.",
@@ -1320,39 +1320,39 @@ Bovendien is de drempel voor de dader lager(anonimiteit, afstand), waardoor de f
 * **Wraakporno:** Het hoofd van een slachtoffer wordt op een pornofilm gemonteerd.
 * **Disinformatie:** Nepnieuws om reputaties te vernietigen.
 
-Het detecteren van deepfakes is een wapenwedloop.Forensische software kijkt naar onnatuurlijke pixels, knippergedrag van ogen of asynchrone audio.Voor een leek is het verschil nauwelijks meer te zien.`,
+Het detecteren van deepfakes is een wapenwedloop. Forensische software kijkt naar onnatuurlijke pixels, knippergedrag van ogen of asynchrone audio. Voor een leek is het verschil nauwelijks meer te zien.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Authenticiteitsverificatie van media.",
     keyPoints: ["AI-manipulatie", "Stemklonen", "Reputatieschade"],
-    source: { author: "Westerlund", year: 2019, journal: "Technology Innovation Management Review", doi: "10.22215/timreview/1282" }
+    source: { author: "Westerlund", year: 2019, journal: "Technology Innovation Management Review", doi: "10. 22215/timreview/1282" }
   },
   {
     id: "romance-scams",
     title: "Romance Scams: Liefde als wapen",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "De psychologische manipulatie achter datingfraude.",
     content: {
       intro: "Bij datingfraude wordt een emotionele band opgebouwd met als enig doel financieel gewin. Slachtoffers raken vaak niet alleen hun geld kwijt, maar ook hun vertrouwen in mensen.",
-      analysis: `Rege (2009) analyseerde de technieken van 'Romance Scammers'.Ze gebruiken scripts die inspelen op eenzaamheid en de behoefte aan connectie.Het proces verloopt in fasen:
+      analysis: `Rege (2009) analyseerde de technieken van 'Romance Scammers'. Ze gebruiken scripts die inspelen op eenzaamheid en de behoefte aan connectie. Het proces verloopt in fasen:
 1. **Profiling:** Het slachtoffer selecteren op basis van kwetsbaarheid(weduwe / weduwnaar, leeftijd).
 2. **Grooming:** Intensief contact, 'love bombing', en het creëren van een gezamenlijke toekomstfantasie.
 3. **De Crisis:** Er gebeurt iets ergs(ongeluk, vast in buitenland) waardoor er * nu * geld nodig is.
 
-Omdat het slachtoffer al emotioneel geïnvesteerd is, is de drempel om te betalen lager.Schaamte voorkomt vaak dat slachtoffers naar de politie stappen.
+Omdat het slachtoffer al emotioneel geïnvesteerd is, is de drempel om te betalen lager. Schaamte voorkomt vaak dat slachtoffers naar de politie stappen.
 **Onderzoek:** Reverse image search en taalanalyse van de berichten kunnen vaak snel aantonen dat de 'persoon' niet bestaat of foto's gebruikt van modellen/militairen.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Verificatie van online identiteiten.",
     keyPoints: ["Love bombing", "Urgentie creëren", "Identiteitsfraude"],
-    source: { author: "Aunshul Rege", year: 2009, journal: "Journal of Forensic Sciences", doi: "10.1111/j.1556-4029.2009.01018.x" }
+    source: { author: "Aunshul Rege", year: 2009, journal: "Journal of Forensic Sciences", doi: "10. 1111/j. 1556-4029. 2009. 01018. x" }
   },
   {
     id: "doxing",
     title: "Doxing: Privégegevens als wapen",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Het openbaar maken van adresgegevens om iemand te intimideren.",
     content: {
       intro: "Doxing is het verzamelen en publiceren van privégegevens (adres, telefoonnummer, werkgever) van een individu met kwaadaardige bedoelingen.",
@@ -1364,12 +1364,12 @@ Doxers gebruiken OSINT-technieken om informatie te vinden die mensen onbewust ze
     },
     practicalApplication: "Verwijderen van online NAW-gegevens.",
     keyPoints: ["Intimidatie", "Strafbaarstelling", "Digital Footprint"],
-    source: { author: "Rijksoverheid", year: 2024, url: "https://www.rijksoverheid.nl/onderwerpen/criminaliteit/aanpak-doxing" }
+    source: { author: "Rijksoverheid", year: 2024, url: "https://www. rijksoverheid. nl/onderwerpen/criminaliteit/aanpak-doxing" }
   },
   {
     id: "money-mules",
     title: "Geldezels: Criminelen ronselen uw kind",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Hoe jongeren worden misbruikt om crimineel geld wit te wassen.",
     content: {
       intro: "Jongeren worden vaak via social media (Snapchat, Instagram) benaderd om 'snel geld te verdienen'. Ze hoeven alleen hun bankpas en pincode uit te lenen.",
@@ -1381,32 +1381,32 @@ De crimineel blijft buiten beeld, maar de geldezel wordt gepakt.
     },
     practicalApplication: "Onderzoek naar herkomst van gelden.",
     keyPoints: ["Witwassen", "Ronselen via social media", "EVR-registratie"],
-    source: { author: "Europol", year: 2023, url: "https://www.europol.europa.eu/operations-services-and-innovation/public-awareness-and-prevention-guides/money-muling" }
+    source: { author: "Europol", year: 2023, url: "https://www. europol. europa. eu/operations-services-and-innovation/public-awareness-and-prevention-guides/money-muling" }
   },
 
   // --- ONDERZOEKSMETHODIEK & RECHT ---
   {
     id: "osint-ethics",
     title: "OSINT en Privacy: Wat mag er online?",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "De juridische grenzen van Open Source Intelligence (OSINT).",
     content: {
       intro: "Het internet staat vol informatie. Maar dat iets openbaar is, betekent niet dat je het zomaar mag gebruiken in een onderzoek.",
       analysis: `De Autoriteit Persoonsgegevens en de rechtspraak hebben strikte kaders gesteld aan online onderzoek. Het structureel monitoren van iemands sociale media gedurende een langere periode wordt gezien als een **stelselmatige inbreuk op de privacy**. Hiervoor is een gerechtvaardigd belang en een vergunning (POB) vereist.
 
 Een werkgever die zelf even de Facebook van een zieke werknemer in de gaten houdt, overtreedt vaak de wet. Het bewijs dat hiermee wordt verkregen, kan door de rechter als **onrechtmatig**worden terzijde geschoven.
-**Professionele aanpak:** Erkend rechercheurs werken volgens de **Privacygedragscode**. Dit betekent dat elk onderzoek getoetst moet worden aan proportionaliteit (staat het middel in verhouding tot het doel?) en subsidiariteit (kan het niet op een minder ingrijpende manier?). Alleen dan is het verkregen bewijs bruikbaar in een rechtszaak.`,
+**Professionele aanpak:**Erkend rechercheurs werken volgens de**Privacygedragscode**. Dit betekent dat elk onderzoek getoetst moet worden aan proportionaliteit (staat het middel in verhouding tot het doel?) en subsidiariteit (kan het niet op een minder ingrijpende manier?). Alleen dan is het verkregen bewijs bruikbaar in een rechtszaak.`,
       methodology: "",
       conclusion: ""
     },
     practicalApplication: "Rechtmatigheid van bewijs borgen.",
     keyPoints: ["Openbaar ≠ Vogelvrij", "Stelselmatigheid", "Privacygedragscode"],
-    source: { author: "Autoriteit Persoonsgegevens", year: 2021, url: "https://autoriteitpersoonsgegevens.nl/" }
+    source: { author: "Autoriteit Persoonsgegevens", year: 2021, url: "https://autoriteitpersoonsgegevens. nl/" }
   },
   {
     id: "hidden-cameras",
     title: "Verborgen Camera's: Mag dat zomaar?",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "De strenge voorwaarden voor heimelijk cameratoezicht op de werkvloer.",
     content: {
       intro: "Een greep uit de kas? Veel ondernemers willen direct een verborgen camera ophangen. Dit is echter een zwaar middel dat aan strikte eisen moet voldoen.",
@@ -1428,7 +1428,7 @@ Wordt hier niet aan voldaan? Dan riskeert de werkgever een hoge boete van de AP 
   {
     id: "gps-tracking",
     title: "GPS-Trackers: Volgen van personen",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "Wanneer mag je een auto volgen met een baken?",
     content: {
       intro: "Het plaatsen van een GPS-tracker onder een auto is technisch simpel, maar juridisch complex. Het is een inbreuk op de persoonlijke levenssfeer.",
@@ -1446,7 +1446,7 @@ Het lukraak volgen van een partner bij verdenking van overspel is voor een parti
   {
     id: "interview-techniques",
     title: "De PEACE-methode: Ethisch interviewen",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "De gouden standaard voor onderzoeksinterviews: informatie verzamelen zonder dwang.",
     content: {
       intro: "De tijd van 'bad cop' en dwingende verhoren is voorbij. De wetenschap toont aan dat druk leidt tot valse bekentenissen. De PEACE-methode is het alternatief.",
@@ -1464,12 +1464,12 @@ Deze methode, ontwikkeld in het VK, richt zich op het opbouwen van verstandhoudi
     },
     practicalApplication: "Waarheidsvinding door strategische vragen.",
     keyPoints: ["Geen dwang", "Informatie verzamelen", "Strategische confrontatie"],
-    source: { author: "Clarke & Milne", year: 2001, url: "https://researchportal.port.ac.uk/en/publications/national-evaluation-of-the-peace-investigative-interviewing-cours" }
+    source: { author: "Clarke & Milne", year: 2001, url: "https://researchportal. port. ac. uk/en/publications/national-evaluation-of-the-peace-investigative-interviewing-cours" }
   },
   {
     id: "digital-footprints",
     title: "Digitale Sporen: Metadata liegt niet",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "Hoe onzichtbare data in bestanden en foto's de waarheid onthult.",
     content: {
       intro: "Elk digitaal bestand bevat meer informatie dan je op het scherm ziet. Deze 'metadata' kan cruciaal zijn voor waarheidsvinding.",
@@ -1482,12 +1482,12 @@ Criminelen of fraudeurs proberen vaak de inhoud te manipuleren (bijvoorbeeld een
     },
     practicalApplication: "Forensische analyse van bestanden.",
     keyPoints: ["EXIF-data", "Bestandsanalyse", "Onweerlegbaar bewijs"],
-    source: { author: "Garfinkel & Shelat", year: 2005, url: "https://simson.net/clips/academic/2005.IEEE.Remembrance.pdf" }
+    source: { author: "Garfinkel & Shelat", year: 2005, url: "https://simson. net/clips/academic/2005. IEEE. Remembrance. pdf" }
   },
   {
     id: "right-to-silence",
     title: "Zwijgrecht in Arbeidszaken?",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "Mag een werknemer zwijgen tijdens een intern onderzoek?",
     content: {
       intro: "In het strafrecht mag een verdachte zwijgen ('nemo tenetur'). Maar geldt dit ook in de relatie werknemer-werkgever?",
@@ -1500,12 +1500,12 @@ Volledig zwijgen kan worden uitgelegd als werkweigering of het niet meewerken aa
     },
     practicalApplication: "Arbeidsrechtelijke interviewkaders.",
     keyPoints: ["Goed werknemerschap", "Openheid van zaken", "Geen strafrecht"],
-    source: { author: "Hoge Raad", year: 2001, url: "https://uitspraken.rechtspraak.nl/" }
+    source: { author: "Hoge Raad", year: 2001, url: "https://uitspraken. rechtspraak. nl/" }
   },
   {
     id: "darvo-dark-triad",
     title: "DARVO en de Dark Triad: Een Toxische Strategie",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Hoe daders met narcistische trekken DARVO gebruiken om verantwoordelijkheid af te wenden en slachtoffers te beschuldigen.",
     content: {
       intro: "DARVO (Deny, Attack, and Reverse Victim and Offender) is een manipulatietechniek die vaak wordt waargenomen bij daders met 'Dark Triad' persoonlijkheidstrekken.",
@@ -1520,12 +1520,12 @@ Dit zorgt voor extreme verwarring bij het slachtoffer en omstanders, waardoor de
     },
     practicalApplication: "Herkenning van verdedigingsmechanismen tijdens confrontaties in onderzoek.",
     keyPoints: ["DARVO-cyclus", "Narcisme", "Narratief-controle"],
-    source: { author: "Harsey, S.J., & Freyd, J.J.", year: 2020, doi: "10.1177/0011128720912154" }
+    source: { author: "Harsey, S. J., & Freyd, J. J.", year: 2020, doi: "10. 1177/0011128720912154" }
   },
   {
     id: "breadcrumbing-digital-manipulation",
     title: "Breadcrumbing: De Psychologie van Valse Hoop",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Het sturen van sporadische berichten om iemand 'aan het lijntje' te houden zonder intentie tot echte verbinding.",
     content: {
       intro: "Breadcrumbing is een moderne vorm van emotionele manipulatie waarbij digitale signalen worden gebruikt om macht uit te oefenen door onzekerheid.",
@@ -1540,12 +1540,12 @@ Dit zorgt voor extreme verwarring bij het slachtoffer en omstanders, waardoor de
     },
     practicalApplication: "Analyse van inconsistente communicatiepatronen in digitale stalking-zaken.",
     keyPoints: ["Inconsistentie", "Intermittent reinforcement", "Digitale isolatie"],
-    source: { author: "Navarro, R., et al.", year: 2020, doi: "10.3390/ijerph17176100" }
+    source: { author: "Navarro, R., et al.", year: 2020, doi: "10. 3390/ijerph17176100" }
   },
   {
     id: "gaslighting-coercive-control-study",
     title: "Gaslighting als Kern van Dwingende Controle",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Wetenschappelijke analyse van hoe de systemische ondermijning van de werkelijkheid de basis vormt voor huiselijk geweld.",
     content: {
       intro: "Gaslighting is niet slechts een leugen, maar een gerichte aanval op het vermogen van een slachtoffer om haar eigen zintuigen en geheugen te vertrouwen.",
@@ -1561,12 +1561,12 @@ Dit creëert een staat van mentale afhankelijkheid waarin de dader de enige bron
     },
     practicalApplication: "Documenteren van patronen van psychische ondermijning in aangiftedossiers.",
     keyPoints: ["Cognitieve erosie", "Psychische isolatie", "Machtsoverwicht"],
-    source: { author: "Sweet, P. L.", year: 2021, doi: "10.1080/08856249.2021.1925341" }
+    source: { author: "Sweet, P. L.", year: 2021, doi: "10. 1080/08856249. 2021. 1925341" }
   },
   {
     id: "love-bombing-attachment",
     title: "Love Bombing en Angstige Hechting",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Waarom overmatige affectie in de beginfase een voorspeller is voor latere controle en misbruik.",
     content: {
       intro: "Love bombing wordt vaak verward met 'ware liefde', maar is in feite een agressieve tactiek om de autonomie van de ander snel af te breken.",
@@ -1581,12 +1581,12 @@ Dit creëert een staat van mentale afhankelijkheid waarin de dader de enige bron
     },
     practicalApplication: "Herkennen van risicovolle relatiestarts in preventieve adviesgesprekken.",
     keyPoints: ["Snelle escalatie", "Hechtingsmanipulatie", "Autonomie-verlies"],
-    source: { author: "Strutzenberg, C. C.", year: 2021, doi: "10.1007/s40806-021-00287-2" }
+    source: { author: "Strutzenberg, C. C.", year: 2021, doi: "10. 1007/s40806-021-00287-2" }
   },
   {
     id: "ghosting-orbiting-exclusion",
     title: "Ghosting en Orbiting: Digitale Uitsluiting",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Het gebruik van digitale aanwezigheid om psychologische druk uit te oefenen na het verbreken van contact.",
     content: {
       intro: "Waar ghosting (volledig verdwijnen) pijnlijk is, voegt orbiting (zichtbaar blijven op sociale media zonder contact) een extra laag van manipulatie toe.",
@@ -1602,12 +1602,12 @@ Dit gedrag fungeert als een 'digitale herinnering' aan de macht van de dader ove
     },
     practicalApplication: "Analyse van passief-agressieve digitale interacties in stalking-onderzoek.",
     keyPoints: ["Digitale afwijzing", "Sociale uitsluiting", "Orbiting-dynamiek"],
-    source: { author: "Pancani, L., et al.", year: 2021, doi: "10.1080/0144929X.2021.1963212" }
+    source: { author: "Pancani, L., et al.", year: 2021, doi: "10. 1080/0144929X. 2021. 1963212" }
   },
   {
     id: "hoovering-post-separation",
     title: "Hoovering: De Cyclus van Terughalen",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Hoe daders proberen slachtoffers terug in een toxische dynamiek te 'zuigen' nadat deze de relatie hebben verbroken.",
     content: {
       intro: "Hoovering, vernoemd naar de stofzuiger, is een techniek waarbij de dader plotseling weer contact zoekt met een overdaad aan valse beloftes of gedramatiseerde crises.",
@@ -1624,12 +1624,12 @@ Herkenning van hoovering is essentieel om te voorkomen dat slachtoffers terugker
     },
     practicalApplication: "Risicotaxatie bij cliënten die te maken krijgen met onverwachte toenadering na een breuk.",
     keyPoints: ["Manipulatie-cyclus", "Emotionele chantage", "Herstel van controle"],
-    source: { author: "Karakurt, G., et al.", year: 2022, doi: "10.1016/j.avb.2022.101736" }
+    source: { author: "Karakurt, G., et al.", year: 2022, doi: "10. 1016/j. avb. 2022. 101736" }
   },
   {
     id: "flying-monkeys-social-network",
     title: "Flying Monkeys: Sociale Netwerk Manipulatie",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Het inzetten van derden door een dader om het slachtoffer te isoleren, te bespioneren of in diskrediet te brengen.",
     content: {
       intro: "Flying monkeys zijn personen die door de manipulator worden ingezet om 'het vuile werk' op te knappen, vaak zonder dat zij zich bewust zijn van hun rol.",
@@ -1646,12 +1646,12 @@ Dit mechanisme is extreem destructief omdat het het slachtoffer berooft van haar
     },
     practicalApplication: "Identificeren van secundaire daders in complexe stalking-netwerken.",
     keyPoints: ["Proxy-misbruik", "Sociale isolatie", "Laster-campagnes"],
-    source: { author: "Walker, J. L.", year: 2022, doi: "10.1177/10778012221114515" }
+    source: { author: "Walker, J. L.", year: 2022, doi: "10. 1177/10778012221114515" }
   },
   {
     id: "digital-grooming-social-eng",
     title: "Digitale Grooming en Social Engineering",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Hoe daders technieken uit de cyberwereld gebruiken om emotionele afhankelijkheid te creëren in kortstondige contacten.",
     content: {
       intro: "Social engineering is niet alleen voor hackers. Daders gebruiken dezelfde principes om psychologische grenzen te omzeilen en vertrouwen te winnen.",
@@ -1668,12 +1668,12 @@ Dit proces toont aan dat digitale veiligheid onlosmakelijk verbonden is met psyc
     },
     practicalApplication: "Educatie over de risico's van snelle digitale bindingsvorming.",
     keyPoints: ["Social engineering", "Emotionele hacking", "Digitale kwetsbaarheid"],
-    source: { author: "O'Malley, R. L., et al.", year: 2023, doi: "10.3390/socsci12030141" }
+    source: { author: "O'Malley, R. L., et al.", year: 2023, doi: "10. 3390/socsci12030141" }
   },
   {
     id: "weaponized-incompetence-domestic",
     title: "Weaponized Incompetence: Passieve Controle",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Het veinzen van onvermogen om verantwoordelijkheid te ontlopen en de partner te dwingen tot overmatige zorglast.",
     content: {
       intro: "Weaponized incompetence is een subtiele, maar zeer effectieve vorm van machtsuitoefening in het huishouden en de relatie.",
@@ -1690,12 +1690,12 @@ Dit creëert een kind-ouder dynamiek die de gelijkwaardigheid in de relatie stru
     },
     practicalApplication: "Herkennen van passieve agressie en ongelijke machtsverhoudingen in relatie-evaluatie.",
     keyPoints: ["Strategisch falen", "Emotionele uitputting", "Machtsonevenwicht"],
-    source: { author: "Gaskin, E. M., et al.", year: 2023, doi: "10.1177/02654075231154562" }
+    source: { author: "Gaskin, E. M., et al.", year: 2023, doi: "10. 1177/02654075231154562" }
   },
   {
     id: "internalized-gaslighting-impact",
     title: "Internalized Gaslighting: De Vijand Binnenin",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Wanneer het slachtoffer de stem van de dader overneemt en haar eigen perceptie autonoom begint te ondermijnen.",
     content: {
       intro: "De meest effectieve vorm van controle is wanneer de dader er niet meer bij hoeft te zijn om het slachtoffer te manipuleren.",
@@ -1712,12 +1712,12 @@ Het doorbreken van internalized gaslighting vereist een heropbouw van de relatie
     },
     practicalApplication: "Ondersteuning bij het herstellen van zelfvertrouwen na een langdurig controlerende relatie.",
     keyPoints: ["Zelf-ondermijning", "Cognitieve trauma-impact", "Intuïtie-herstel"],
-    source: { author: "Abramson, K.", year: 2023, doi: "10.1080/10926771.2023.2173151" }
+    source: { author: "Abramson, K.", year: 2023, doi: "10. 1080/10926771. 2023. 2173151" }
   },
   {
     id: "child-parent-violence-manipulation",
     title: "Manipulatie in Kind-tot-Ouder Geweld",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Onderzoek naar hoe minderjarigen emotionele chantage en machtsspelletjes gebruiken om controle over het gezin te krijgen.",
     content: {
       intro: "Geweld binnen het gezin is niet altijd top-down. Nieuw onderzoek richt zich op de manipulatieve dynamieken waarbij kinderen de regie overnemer via destructief gedrag.",
@@ -1732,12 +1732,12 @@ Het doorbreken van internalized gaslighting vereist een heropbouw van de relatie
     },
     practicalApplication: "Ondersteuning van gezinnen waar de machtsbalans tussen kind en ouder ernstig verstoord is.",
     keyPoints: ["Kind-tot-ouder geweld", "Emotionele gijzeling", "Gezinsdynamiek"],
-    source: { author: "Gonzalez, R., et al.", year: 2024, doi: "10.1080/10926771.2024.2309121" }
+    source: { author: "Gonzalez, R., et al.", year: 2024, doi: "10. 1080/10926771. 2024. 2309121" }
   },
   {
     id: "financial-infidelity-trust",
     title: "Financiële Ontrouw als Manipulatiemiddel",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Het geheimhouden van uitgaven, schulden of rekeningen als strategische keuze om de partner financieel afhankelijk te houden.",
     content: {
       intro: "Geld is een krachtig middel voor controle. Financiële ontrouw is vaak de voorbode van ernstiger economisch misbruik.",
@@ -1752,12 +1752,12 @@ Het doorbreken van internalized gaslighting vereist een heropbouw van de relatie
     },
     practicalApplication: "Financiële screening in cases waar sprake is van onverklaarbare schulden binnen een relatie.",
     keyPoints: ["Financiële ontrouw", "Economisch misbruik", "Geld-manipulatie"],
-    source: { author: "Jean, S., & Kim, J. H.", year: 2024, doi: "10.1111/jftr.12555" }
+    source: { author: "Jean, S., & Kim, J. H.", year: 2024, doi: "10. 1111/jftr. 12555" }
   },
   {
     id: "silent-treatment-ostracism",
     title: "The Silent Treatment: Psychologische Ostracisme",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Waarom het systematisch negeren van een partner een van de meest schadelijke vormen van emotioneel misbruik is.",
     content: {
       intro: "Zwijgen kan een wapen zijn. De 'silent treatment' wordt gebruikt om de ander te straffen en tot onderwerping te dwingen zonder een woord te zeggen.",
@@ -1772,12 +1772,12 @@ Het doorbreken van internalized gaslighting vereist een heropbouw van de relatie
     },
     practicalApplication: "Educatie over de impact van passief-agressief zwijgen op de mentale gezondheid.",
     keyPoints: ["Ostracisme", "Sociale uitsluiting", "Passieve agressie"],
-    source: { author: "Ren, D., et al.", year: 2023, doi: "10.1177/19485506231167451" }
+    source: { author: "Ren, D., et al.", year: 2023, doi: "10. 1177/19485506231167451" }
   },
   {
     id: "darvo-secondary-victimization",
     title: "DARVO en Secundaire Victimisatie",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "Hoe de juridische en sociale reactie op DARVO kan leiden tot extra schade voor de melder.",
     content: {
       intro: "Wanneer een dader DARVO toepast, ontstaat er vaak een 'truth gap' waarbij de omgeving of de rechter gaan twijfelen aan het slachtoffer.",
@@ -1793,12 +1793,12 @@ Bewustwording van deze daderstrategie is essentieel voor een eerlijke procesvoer
     },
     practicalApplication: "Ondersteuning van advocaten bij het benoemen van DARVO-strategieën in de rechtbank.",
     keyPoints: ["Secundaire victimisatie", "Daderstrategie", "Geloofwaardigheid"],
-    source: { author: "Slepian, M. L.", year: 2021, doi: "10.1177/08862605211025041" }
+    source: { author: "Slepian, M. L.", year: 2021, doi: "10. 1177/08862605211025041" }
   },
   {
     id: "digital-coercive-control-iot",
     title: "Techno-Regulation en Smart Abuse",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Het gebruik van 'smart home' apparatuur en IoT om de bewegingsvrijheid van partners onmerkbaar te beperken.",
     content: {
       intro: "Controle stopt niet bij de smartphone. Moderne daders gebruiken thermostaten, slimme lampen en deurbellen om de omgeving van het slachtoffer te manipuleren.",
@@ -1815,7 +1815,7 @@ Dit creëert een 'glazen gevangenis' waarbij de dader alomtegenwoordig lijkt zon
     },
     practicalApplication: "Digitale veiligheidsscan van de woning bij vermoedens van stalking via IoT.",
     keyPoints: ["Smart Abuse", "IoT-surveillance", "Digitale isolatie"],
-    source: { author: "Lansley, G.", year: 2023, doi: "10.1177/14614448231154562" }
+    source: { author: "Lansley, G.", year: 2023, doi: "10. 1177/14614448231154562" }
   },
   {
     id: "masculinity-manipulation-remote",
@@ -1835,12 +1835,12 @@ Dit creëert een 'glazen gevangenis' waarbij de dader alomtegenwoordig lijkt zon
     },
     practicalApplication: "Audit van teamcommunicatie en integriteit in gedistribueerde organisaties.",
     keyPoints: ["Remote manipulation", "Digitale integriteit", "Team-isolatie"],
-    source: { author: "Smith, A., & Jones, B.", year: 2022, doi: "10.1017/jmo.2022.45" }
+    source: { author: "Smith, A., & Jones, B.", year: 2022, doi: "10. 1017/jmo. 2022. 45" }
   },
   {
     id: "trauma-bonding-neurology",
     title: "Neurologie van Traumatische Hechting",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Wetenschappelijke verklaring voor waarom het brein misbruik integreert als een noodzakelijke overlevingsstrategie.",
     content: {
       intro: "Traumatische hechting (Trauma Bonding) is geen keuze, maar een neurologische reactie op herhaaldelijk interpersoonlijk trauma.",
@@ -1856,12 +1856,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Neurologische psycho-educatie voor slachtoffers om zelfverwijt te verminderen.",
     keyPoints: ["Trauma Bonding", "Dopamine-cyclus", "Neurologisch overleven"],
-    source: { author: "Fisher, H. E., et al.", year: 2022, doi: "10.1016/j.avb.2022.101736" }
+    source: { author: "Fisher, H. E., et al.", year: 2022, doi: "10. 1016/j. avb. 2022. 101736" }
   },
   {
     id: "covert-narcissism-digital",
     title: "Covert Narcisme in Digitale Interactie",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Hoe subtiele manipulatie en slachtofferrol-projectie worden gebruikt in online omgevingen.",
     readingMotivation: "Leer de 'stille' manipulator herkennen voordat de schade onherstelbaar is.",
     relatedIds: ["darvo-dark-triad", "gaslighting-coercive-control-study"],
@@ -1878,12 +1878,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Identificeren van daderstrategieën die gebaseerd zijn op een valse slachtofferrol.",
     keyPoints: ["Covert narcisme", "Passieve agressie", "Online manipulatie"],
-    source: { author: "Zajenkowski, M., et al.", year: 2021, doi: "10.1016/j.paid.2021.110769" }
+    source: { author: "Zajenkowski, M., et al.", year: 2021, doi: "10. 1016/j. paid. 2021. 110769" }
   },
   {
     id: "cyber-ostracism-impact",
     title: "Cyber-Ostracisme: De Pijn van Digitale Uitsluiting",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Wetenschappelijk onderzoek naar de neurologische impact van het bewust buitengesloten worden in digitale groepen.",
     readingMotivation: "Begrijp waarom 'negeren' een van de krachtigste digitale wapens is.",
     relatedIds: ["silent-treatment-ostracism", "ghosting-orbiting-exclusion"],
@@ -1900,12 +1900,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Vroegtijdige signalering van uitsluitingspatronen in teams of sociale kringen.",
     keyPoints: ["Digitale uitsluiting", "Sociale pijn", "Cyberpesten-dynamiek"],
-    source: { author: "Schneider, F. M., et al.", year: 2022, doi: "10.1016/j.chb.2022.107234" }
+    source: { author: "Schneider, F. M., et al.", year: 2022, doi: "10. 1016/j. chb. 2022. 107234" }
   },
   {
     id: "cyberbullying-anonymity-myth",
     title: "Anonimiteit en Cyber-Agressie",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "De rol van het 'online disinhibition effect' bij het escaleren van toxisch gedrag.",
     readingMotivation: "Ontdek waarom normale mensen online soms veranderen in manipulatieve pesters.",
     relatedIds: ["cyber-ostracism-impact", "digital-grooming-social-eng"],
@@ -1922,12 +1922,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Bewustwording creëren over hoe digitale kaders empathie kunnen ondermijnen.",
     keyPoints: ["Online disinhibition", "Anonimiteit", "Cyber-agressie"],
-    source: { author: "Wong, R. Y., et al.", year: 2023, doi: "10.1016/j.chb.2023.107781" }
+    source: { author: "Wong, R. Y., et al.", year: 2023, doi: "10. 1016/j. chb. 2023. 107781" }
   },
   {
     id: "toxic-positivity-manipulation",
     title: "Toxische Positiviteit als Gaslighting",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Hoe het dwingen tot 'positief denken' wordt gebruikt om legitieme pijn en misbruik te ontkennen.",
     readingMotivation: "Leer wanneer een glimlach een masker voor manipulatie wordt.",
     relatedIds: ["gaslighting-coercive-control-study", "internalized-gaslighting-impact"],
@@ -1944,7 +1944,7 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Herkennen van subtiele vormen van emotionele invalidatie in cliëntgesprekken.",
     keyPoints: ["Emotionele invalidatie", "Toxische positiviteit", "Subtiele gaslighting"],
-    source: { author: "Quintero, S., & Long, J.", year: 2022, doi: "10.1007/s10591-022-09641-z" }
+    source: { author: "Quintero, S., & Long, J.", year: 2022, doi: "10. 1007/s10591-022-09641-z" }
   },
   {
     id: "machiavellianism-remote-work",
@@ -1966,12 +1966,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Implementeren van transparante digitale workflows om manipulatief gedrag te minimaliseren.",
     keyPoints: ["Machiavellisme", "Remote governance", "Informatie-manipulatie"],
-    source: { author: "Belschak, F. D., et al.", year: 2022, doi: "10.1007/s10551-022-05123-x" }
+    source: { author: "Belschak, F. D., et al.", year: 2022, doi: "10. 1007/s10551-022-05123-x" }
   },
   {
     id: "sextortion-power-dynamics",
     title: "Sextortie: De Ultieme Vorm van Controle",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Het gebruik van intieme beelden als drukmiddel in (ex-)partnerrelaties.",
     readingMotivation: "Cruciale kennis voor professionals die te maken krijgen met digitale chantage.",
     relatedIds: ["cyber-flashing-power", "digital-coercive-control-iot"],
@@ -1988,12 +1988,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Vroegtijdige juridische en psychologische interventie bij digitale chantage.",
     keyPoints: ["Sextortie", "Digitale chantage", "Schaamte als wapen"],
-    source: { author: "Shorey, R. C., et al.", year: 2024, doi: "10.1177/08862605231215456" }
+    source: { author: "Shorey, R. C., et al.", year: 2024, doi: "10. 1177/08862605231215456" }
   },
   {
     id: "algorithm-manipulation-behavior",
     title: "Algoritmische Manipulatie en Gedrag",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Hoe AI en aanbevelingssystemen worden gebruikt om de wil van gebruikers onbewust te beïnvloeden.",
     readingMotivation: "Begrijp hoe techniek uw keuzes kan sturen zonder dat u het merkt.",
     relatedIds: ["digital-grooming-social-eng", "cyberbullying-anonymity-myth"],
@@ -2010,12 +2010,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Digitale geletterdheid vergroten over de invloed van AI op het wereldbeeld.",
     keyPoints: ["Micro-targeting", "AI-ethiek", "Gedragsbeïnvloeding"],
-    source: { author: "Lorenz-Spreen, P., et al.", year: 2022, doi: "10.1146/annurev-psych-032420-031415" }
+    source: { author: "Lorenz-Spreen, P., et al.", year: 2022, doi: "10. 1146/annurev-psych-032420-031415" }
   },
   {
     id: "cognitive-dissonance-abuse",
     title: "Cognitieve Dissonantie in Toxische Relaties",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "De strijd tussen wat je weet en wat je voelt in de nabijheid van een manipulator.",
     readingMotivation: "Ontdek waarom uw brein leugens accepteert om de pijn te verzachten.",
     relatedIds: ["intermittent-reinforcement-addiction", "trauma-bonding-neurology"],
@@ -2032,12 +2032,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Slachtoffers helpen de realiteit te erkennen door dissonantie-patronen te benoemen.",
     keyPoints: ["Cognitieve dissonantie", "Rationalisatie", "Mentaal overleven"],
-    source: { author: "Gou, Y., & Wu, J.", year: 2023, doi: "10.1177/02654075231167451" }
+    source: { author: "Gou, Y., & Wu, J.", year: 2023, doi: "10. 1177/02654075231167451" }
   },
   {
     id: "post-separation-legal-abuse",
     title: "Juridische Stalking na de Breuk",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "Het gebruik van gerechtelijke procedures als voortzetting van controle en misbruik.",
     readingMotivation: "Onmisbare informatie voor eenieder in een complexe scheiding met een manipulator.",
     relatedIds: ["right-to-silence", "darvo-secondary-victimization"],
@@ -2054,12 +2054,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Signaleren van procesmisbruik door rechters en juridisch professionals.",
     keyPoints: ["Legal abuse", "Procesmisbruik", "Controle-continuüm"],
-    source: { author: "Leigh, J., et al.", year: 2021, doi: "10.1177/08862605211025041" }
+    source: { author: "Leigh, J., et al.", year: 2021, doi: "10. 1177/08862605211025041" }
   },
   {
     id: "cyberaggression-mental-health",
     title: "Impact van Cyber-Agressie op de Mentale Gezondheid",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Longitudinaal onderzoek naar de blijvende psychische schade van online intimidatie.",
     readingMotivation: "Begrijp de lange-termijn effecten van wat 'slechts woorden op een scherm' lijken.",
     relatedIds: ["cyberbullying-anonymity-myth", "cyber-ostracism-impact"],
@@ -2076,12 +2076,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Trauma-geïnformeerde ondersteuning bij digitale victimisatie.",
     keyPoints: ["Psychisch trauma", "Digitale agressie", "Mentale weerbaarheid"],
-    source: { author: "Vyas, R., et al.", year: 2023, doi: "10.1016/j.chb.2023.107781" }
+    source: { author: "Vyas, R., et al.", year: 2023, doi: "10. 1016/j. chb. 2023. 107781" }
   },
   {
     id: "digital-gaslighting-betrayal",
     title: "Digitale Gaslighting en Institutioneel Verraad",
-    category: "Onderzoeksmethodiek & Recht",
+    category: "Onderzoek & Recht",
     summary: "Hoe organisaties onbedoeld daderstrategieën vergemakkelijken door digitale bewijslast te negeren.",
     readingMotivation: "Cruciaal inzicht voor slachtoffers die tegen muren oplopen bij officiële instanties.",
     relatedIds: ["gaslighting-coercive-control-study", "darvo-secondary-victimization"],
@@ -2098,12 +2098,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Advocacy voor betere training van professionals in het herkennen van digitale dwingende controle.",
     keyPoints: ["Institutioneel verraad", "Digitale bewijslast", "Secundaire victimisatie"],
-    source: { author: "Smith, C. P., & Freyd, J. J.", year: 2023, doi: "10.1080/10926771.2023.2173151" }
+    source: { author: "Smith, C. P., & Freyd, J. J.", year: 2023, doi: "10. 1080/10926771. 2023. 2173151" }
   },
   {
     id: "predictive-modeling-dv",
     title: "Voorspellende Modellen voor Escalatie",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Hoe data-analyse helpt bij het identificeren van momenten waarop manipulatie omslaat in fysiek geweld.",
     readingMotivation: "Wetenschap als schild: leer de signalen van de 'trigger' fase herkennen.",
     relatedIds: ["homicide-timeline-stalking", "hoovering-post-separation"],
@@ -2120,12 +2120,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Proactieve beveiliging opzetten tijdens bekende escalatie-momenten.",
     keyPoints: ["Risicotaxatie", "Escalatie-voorspelling", "Machine learning"],
-    source: { author: "Berk, R., et al.", year: 2023, doi: "10.1177/00111287231154562" }
+    source: { author: "Berk, R., et al.", year: 2023, doi: "10. 1177/00111287231154562" }
   },
   {
     id: "attachment-social-media-victimization",
     title: "Hechting en Sociale Media Kwetsbaarheid",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Waarom mensen met angstige hechting vaker prooi worden van online manipulatoren.",
     readingMotivation: "Kijk dieper in uzelf om uw digitale weerbaarheid te versterken.",
     relatedIds: ["love-bombing-attachment", "trauma-bonding-neurology"],
@@ -2142,12 +2142,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Zelfreflectie-instrumenten voor digitale grensbewaking.",
     keyPoints: ["Hechtingsstijlen", "Online validatie", "Digitale kwetsbaarheid"],
-    source: { author: "Kim, J., & Squires, C.", year: 2024, doi: "10.1080/0144929X.2024.2309121" }
+    source: { author: "Kim, J., & Squires, C.", year: 2024, doi: "10. 1080/0144929X. 2024. 2309121" }
   },
   {
     id: "financial-coercion-isolation",
     title: "Financiële Dwang en Sociale Isolatie",
-    category: "Afhankelijkheidsrelaties",
+    category: "Gedrag & Relaties",
     summary: "Het gebruik van gezamenlijke schulden als middel om het slachtoffer binnen de machtssfeer te houden.",
     readingMotivation: "Ontdek hoe 'geld' wordt gebruikt om uw vluchtwegen te blokkeren.",
     relatedIds: ["financial-infidelity-trust", "weaponized-incompetence-domestic"],
@@ -2164,12 +2164,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Financiële ontrafeling als onderdeel van een veiligheidsplan.",
     keyPoints: ["Financiële dwang", "Economische isolatie", "Debt-bombing"],
-    source: { author: "Sanders-McDonagh, E., et al.", year: 2021, doi: "10.1177/08862605211025041" }
+    source: { author: "Sanders-McDonagh, E., et al.", year: 2021, doi: "10. 1177/08862605211025041" }
   },
   {
     id: "covert-control-non-kin",
     title: "Subtiele Controle in Werk- en Vriendschapsrelaties",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Het herkennen van dwingende controle buiten de romantische sfeer.",
     readingMotivation: "Controle kent vele gezichten; leer ze herkennen in uw hele sociale kring.",
     relatedIds: ["machiavellianism-remote-work", "flying-monkeys-social-network"],
@@ -2186,12 +2186,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Conflict-analyse in teams en sociale verenigingen.",
     keyPoints: ["Dwingende controle", "Sociale macht", "Groepsdynamiek"],
-    source: { author: "Sharp-Jeffs, N.", year: 2022, doi: "10.31235/osf.io/7v9x2" }
+    source: { author: "Sharp-Jeffs, N.", year: 2022, doi: "10. 31235/osf. io/7v9x2" }
   },
   {
     id: "cyberaggression-adolescent-brain",
     title: "Cyber-Agressie en de Puberhersenen",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Waarom jongeren gevoeliger zijn voor de impact van online pesten door neurologische ontwikkeling.",
     readingMotivation: "Essentiële kennis voor ouders en opvoeders in het digitale tijdperk.",
     relatedIds: ["cyberaggression-mental-health", "child-parent-violence-manipulation"],
@@ -2208,12 +2208,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Preventieve digitale weerbaarheidstraining voor jongeren.",
     keyPoints: ["Breinontwikkeling", "Jongeren & Cyberpesten", "Neurologische impact"],
-    source: { author: "Peper, J. S., et al.", year: 2023, doi: "10.1016/j.cosbe.2023.101121" }
+    source: { author: "Peper, J. S., et al.", year: 2023, doi: "10. 1016/j. cosbe. 2023. 101121" }
   },
   {
     id: "algorithm-driven-trust-manipulation",
     title: "Algoritmische Manipulatie van Sociaal Vertrouwen",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Hoe gepersonaliseerde feeds het vertrouwen in de medemens en instituties kunnen ondermijnen.",
     readingMotivation: "Kijk door het algoritme heen en herwin uw kritische blik.",
     relatedIds: ["algorithm-manipulation-behavior", "digital-grooming-social-eng"],
@@ -2230,12 +2230,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Digitale detox en bewuste informatie-consumptie kaders.",
     keyPoints: ["Sociaal vertrouwen", "Algoritmische bias", "Informatie-hygiëne"],
-    source: { author: "Bak-Coleman, J. B., et al.", year: 2024, doi: "10.1073/pnas.2312154121" }
+    source: { author: "Bak-Coleman, J. B., et al.", year: 2024, doi: "10. 1073/pnas. 2312154121" }
   },
   {
     id: "darvo-neutralization-accountability",
     title: "DARVO en de Neutralisatie van Verantwoordelijkheid",
-    category: "Gedragsanalyse",
+    category: "Gedrag & Relaties",
     summary: "Hoe de DARVO-cyclus wordt gebruikt om morele verontwaardiging om te buigen naar medelijden met de dader.",
     readingMotivation: "Leer de omdraaiing doorzien: van dader naar 'onbegrepen slachtoffer'.",
     relatedIds: ["darvo-dark-triad", "darvo-secondary-victimization"],
@@ -2252,12 +2252,12 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Objectieve feitenanalyse in situaties waar DARVO wordt vermoed.",
     keyPoints: ["Verantwoordelijkheid", "Morele omdraaiing", "Accountability"],
-    source: { author: "Freyd, J. J.", year: 2021, doi: "10.1080/10926771.2021.1925341" }
+    source: { author: "Freyd, J. J.", year: 2021, doi: "10. 1080/10926771. 2021. 1925341" }
   },
   {
     id: "intermittent-reinforcement-gamification",
     title: "Gamificatie van Misbruik via Intermittent Reinforcement",
-    category: "Cybercrime & Digital",
+    category: "Cyber & Digital",
     summary: "Hoe digitale beloningssystemen (badges, streaks, notificaties) worden ingezet om emotionele afhankelijkheid te verdiepen.",
     readingMotivation: "Begrijp hoe apps de dader helpen u digitaal 'vast' te zetten.",
     relatedIds: ["intermittent-reinforcement-addiction", "trauma-bonding-neurology"],
@@ -2274,6 +2274,6 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     },
     practicalApplication: "Digitale hygiëne-plannen om de conditionering door daders te doorbreken.",
     keyPoints: ["Digitale conditionering", "Gamificatie", "Conditionerings-cyclus"],
-    source: { author: "Przybylski, A. K., et al.", year: 2022, doi: "10.1038/s41562-022-01311-y" }
+    source: { author: "Przybylski, A. K., et al.", year: 2022, doi: "10. 1038/s41562-022-01311-y" }
   }
 ];
