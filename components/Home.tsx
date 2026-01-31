@@ -168,13 +168,13 @@ const Home: React.FC<HomeProps> = ({
                     {/* Top: Component - Analysis Tool */}
                     <div className="bg-white rounded-[2.5rem] shadow-2xl border border-[#E5E7EB] overflow-hidden flex flex-col">
                         <div className="p-8 md:p-12 pb-2">
-                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                <div className="space-y-4">
-                                    <div className="w-fit px-4 py-1.5 bg-[#F2F9F6] rounded-full border border-[#58B895]/20 text-[#58B895] text-[10px] font-bold uppercase tracking-widest shadow-sm">
-                                        AI Ondersteund
-                                    </div>
-                                    <h3 className="text-3xl md:text-3xl font-bold text-[#13261f]">Casusanalyse</h3>
+                            <div className="mb-4">
+                                <div className="w-fit px-4 py-1.5 bg-[#F2F9F6] rounded-full border border-[#58B895]/20 text-[#58B895] text-[10px] font-bold uppercase tracking-widest shadow-sm">
+                                    AI Ondersteund
                                 </div>
+                            </div>
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                <h3 className="text-3xl md:text-3xl font-bold text-[#13261f]">Casusanalyse</h3>
                             </div>
                             <p className="text-[#6B7280] font-light text-lg md:text-xl italic max-w-3xl leading-relaxed">
                                 Beschrijf uw situatie voor een direct geautomatiseerde patroonherkenning en haalbaarheidsindicatie.

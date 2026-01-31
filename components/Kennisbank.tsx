@@ -243,12 +243,12 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                                 />
                                 <svg className="h-7 w-7 absolute left-5 top-1/2 -translate-y-1/2 text-[#58B895]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                             </div>
-                            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+                            <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide -mx-1 px-1">
                                 {categories.map(cat => (
                                     <button
                                         key={cat}
                                         onClick={() => setSelectedCategory(cat)}
-                                        className={`flex-shrink-0 px-6 py-2.5 rounded-full text-xs font-bold uppercase transition-all border ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-lg' : 'bg-white text-gray-500 border-gray-200 hover:border-[#58B895] hover:text-[#58B895]'}`}
+                                        className={`flex-shrink-0 px-5 py-2 rounded-full text-[11px] font-bold uppercase transition-all border whitespace-nowrap ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-md' : 'bg-white text-gray-500 border-gray-200 hover:border-[#58B895] hover:text-[#58B895]'}`}
                                     >
                                         {cat}
                                     </button>
