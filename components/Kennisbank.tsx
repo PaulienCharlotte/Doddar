@@ -210,11 +210,11 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
             <div className="max-w-7xl mx-auto px-4 space-y-12 mb-24 z-10 relative">
 
                 {/* Search & Filter Controls */}
-                <div className="bg-white rounded-[2.5rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative md:overflow-hidden mx-auto w-full">
+                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative overflow-hidden mx-auto w-full">
                     <div className="grid lg:grid-cols-[1.5fr_1fr] items-center">
-                        <div className="p-6 md:p-16 space-y-6 md:space-y-8">
-                            <div className="flex items-center justify-between gap-2">
-                                <h2 className="text-xl md:text-3xl font-bold text-[#13261f] leading-tight">Wetenschap & Praktijk</h2>
+                        <div className="p-4 md:p-16 space-y-5 md:space-y-8">
+                            <div className="flex items-center justify-between gap-2 px-1">
+                                <h2 className="text-lg md:text-3xl font-bold text-[#13261f] leading-tight">Wetenschap & Praktijk</h2>
                                 <Tooltip
                                     placement="bottom-end"
                                     content={
@@ -233,23 +233,23 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                                 </Tooltip>
                             </div>
 
-                            <div className="relative">
+                            <div className="relative px-1">
                                 <input
                                     type="text"
                                     placeholder="Zoek op trefwoord..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="w-full pl-11 md:pl-14 pr-4 py-4 md:py-5 rounded-xl md:rounded-2xl bg-gray-50 border border-[#E5E7EB] md:border-transparent focus:bg-white focus:border-[#58B895] focus:ring-4 focus:ring-[#58B895]/5 outline-none transition-all text-base md:text-lg shadow-inner"
+                                    className="w-full pl-10 md:pl-14 pr-4 py-3.5 md:py-5 rounded-xl md:rounded-2xl bg-gray-50 border border-[#E5E7EB] md:border-transparent focus:bg-white focus:border-[#58B895] focus:ring-4 focus:ring-[#58B895]/5 outline-none transition-all text-sm md:text-lg shadow-inner"
                                 />
-                                <svg className="h-5 w-5 md:h-7 md:w-7 absolute left-4 md:left-5 top-1/2 -translate-y-1/2 text-[#58B895]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                                <svg className="h-4 w-4 md:h-7 md:w-7 absolute left-4 md:left-5 top-1/2 -translate-y-1/2 text-[#58B895]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                             </div>
 
-                            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide -mx-1 px-1">
+                            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1">
                                 {categories.map(cat => (
                                     <button
                                         key={cat}
                                         onClick={() => setSelectedCategory(cat)}
-                                        className={`flex-shrink-0 px-4 py-2 rounded-full text-[10px] font-bold uppercase transition-all border whitespace-nowrap ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-md' : 'bg-white text-gray-500 border-gray-200 hover:border-[#58B895] hover:text-[#58B895]'}`}
+                                        className={`flex-shrink-0 px-3.5 py-1.5 rounded-full text-[9px] font-bold uppercase transition-all border whitespace-nowrap ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-md' : 'bg-white text-gray-400 border-gray-100 hover:border-[#58B895] hover:text-[#58B895]'}`}
                                     >
                                         {cat}
                                     </button>
