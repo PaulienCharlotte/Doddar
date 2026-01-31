@@ -210,27 +210,31 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
             <div className="max-w-7xl mx-auto px-4 md:px-6 space-y-12 mb-24 z-10 relative">
 
                 {/* Search & Filter Controls */}
-                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative md:overflow-hidden mx-auto w-full">
+                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative overflow-visible md:overflow-hidden mx-auto w-full">
                     <div className="grid lg:grid-cols-[1.5fr_1fr] items-center">
                         <div className="p-5 md:p-16 space-y-6 md:space-y-8">
-                            <div className="flex items-center gap-3">
-                                <h2 className="text-xl md:text-3xl font-bold text-[#13261f] flex-1 leading-tight min-w-0 break-words">Wetenschap & Praktijk</h2>
-                                <Tooltip
-                                    placement="bottom-end"
-                                    content={
-                                        <div className="space-y-2 p-1">
-                                            <p className="font-bold border-b border-white/20 pb-1 mb-2 text-sm">Wetenschappelijk Fundament</p>
-                                            <p className="leading-relaxed text-xs">
-                                                De informatie in deze kennisbank is uitsluitend gebaseerd op onafhankelijke wetenschappelijke studies en juridische kaders.
-                                                De inhoud representeert feitelijke bevindingen uit de psychologie en rechtswetenschap en betreft <strong>geen persoonlijke mening</strong> of advies van Doddar.
-                                            </p>
+                            <div className="flex justify-between items-start gap-4">
+                                <h2 className="text-xl md:text-3xl font-bold text-[#13261f] leading-tight max-w-[85%]">
+                                    Wetenschap & Praktijk
+                                </h2>
+                                <div className="relative z-50">
+                                    <Tooltip
+                                        placement="bottom-end"
+                                        content={
+                                            <div className="space-y-2 p-1">
+                                                <p className="font-bold border-b border-white/20 pb-1 mb-2 text-sm">Wetenschappelijk Fundament</p>
+                                                <p className="leading-relaxed text-xs">
+                                                    De informatie in deze kennisbank is uitsluitend gebaseerd op onafhankelijke wetenschappelijke studies en juridische kaders.
+                                                    De inhoud representeert feitelijke bevindingen uit de psychologie en rechtswetenschap en betreft <strong>geen persoonlijke mening</strong> of advies van Doddar.
+                                                </p>
+                                            </div>
+                                        }
+                                    >
+                                        <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-8 md:h-8 rounded-full bg-[#E8F5EF] text-[#58B895] hover:bg-[#58B895] hover:text-white transition-all cursor-help shadow-sm active:scale-95">
+                                            <InfoIcon className="w-5 h-5" />
                                         </div>
-                                    }
-                                >
-                                    <div className="flex-shrink-0 flex items-center justify-center w-9 h-9 md:w-8 md:h-8 rounded-full bg-[#E8F5EF] text-[#58B895] hover:bg-[#58B895] hover:text-white transition-all cursor-help shadow-sm">
-                                        <InfoIcon className="w-5 h-5" />
-                                    </div>
-                                </Tooltip>
+                                    </Tooltip>
+                                </div>
                             </div>
 
                             <div className="relative">
@@ -244,13 +248,13 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                                 <svg className="h-5 w-5 md:h-7 md:w-7 absolute left-4 md:left-5 top-1/2 -translate-y-1/2 text-[#58B895]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                             </div>
 
-                            <div className="overflow-x-auto pb-3 -mx-1">
-                                <div className="flex gap-2 px-1 min-w-min">
+                            <div className="overflow-x-auto pb-4 pt-1 -mx-2 px-2 scrollbar-hide">
+                                <div className="flex gap-2 min-w-min">
                                     {categories.map(cat => (
                                         <button
                                             key={cat}
                                             onClick={() => setSelectedCategory(cat)}
-                                            className={`flex-shrink-0 px-4 md:px-5 py-2 md:py-2.5 rounded-full text-[10px] md:text-[11px] font-bold uppercase transition-all border whitespace-nowrap ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-md' : 'bg-white text-gray-500 border-gray-200 hover:border-[#58B895] hover:text-[#58B895]'}`}
+                                            className={`flex-shrink-0 px-5 py-2.5 rounded-full text-[11px] font-bold uppercase transition-all border whitespace-nowrap ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-md' : 'bg-white text-gray-400 border-gray-200 hover:border-[#58B895] hover:text-[#58B895]'}`}
                                         >
                                             {cat}
                                         </button>
