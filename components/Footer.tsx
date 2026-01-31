@@ -44,7 +44,7 @@ const Footer: React.FC<FooterProps> = ({
 
           {/* Over Doddar */}
           <div>
-            <h4 className="font-bold text-sm uppercase tracking-wider mb-6 text-[#13261f]/50">Over Doddar</h4>
+            <h4 className="font-bold text-sm uppercase tracking-wider mb-6 text-[#58B895]">Over Doddar</h4>
             <ul className="space-y-3 text-sm font-medium">
               <li><button onClick={() => onNavigate('about')} className="hover:text-[#58B895] transition-colors text-left">Over Ons</button></li>
               <li><button onClick={() => onNavigate('services')} className="hover:text-[#58B895] transition-colors text-left">Onze Diensten</button></li>
@@ -54,7 +54,7 @@ const Footer: React.FC<FooterProps> = ({
 
           {/* Expertise */}
           <div>
-            <h4 className="font-bold text-sm uppercase tracking-wider mb-6 text-[#13261f]/50">Expertise</h4>
+            <h4 className="font-bold text-sm uppercase tracking-wider mb-6 text-[#58B895]">Expertise</h4>
             <ul className="space-y-3 text-sm font-medium">
               <li><button onClick={() => onNavigate('services', 'osint')} className="hover:text-[#58B895] transition-colors text-left">Open Source Intelligence</button></li>
               <li><button onClick={() => onNavigate('services', 'observatie')} className="hover:text-[#58B895] transition-colors text-left">Observatieonderzoek</button></li>
@@ -65,7 +65,7 @@ const Footer: React.FC<FooterProps> = ({
 
           {/* Kennisbank */}
           <div>
-            <h4 className="font-bold text-sm uppercase tracking-wider mb-6 text-[#13261f]/50">Kennisbank</h4>
+            <h4 className="font-bold text-sm uppercase tracking-wider mb-6 text-[#58B895]">Kennisbank</h4>
             <ul className="space-y-3 text-sm font-medium">
               <li><button onClick={() => onOpenKnowledge('Afhankelijkheidsrelaties')} className="hover:text-[#58B895] transition-colors text-left">Dwingende Controle</button></li>
               <li><button onClick={() => onOpenKnowledge('Fraude & Integriteit')} className="hover:text-[#58B895] transition-colors text-left">Bedrijfsrecherche</button></li>
@@ -76,7 +76,7 @@ const Footer: React.FC<FooterProps> = ({
 
           {/* Juridisch */}
           <div>
-            <h4 className="font-bold text-sm uppercase tracking-wider mb-6 text-[#13261f]/50">Juridisch</h4>
+            <h4 className="font-bold text-sm uppercase tracking-wider mb-6 text-[#58B895]">Juridisch</h4>
             <ul className="space-y-3 text-sm font-medium">
               <li><button onClick={onOpenPrivacy} className="hover:text-[#58B895] transition-colors text-left">Privacyverklaring</button></li>
               <li><button onClick={onOpenTerms} className="hover:text-[#58B895] transition-colors text-left">Algemene Voorwaarden</button></li>
@@ -89,7 +89,7 @@ const Footer: React.FC<FooterProps> = ({
         {/* Accreditation Section */}
         <div className="border-t border-[#E5E7EB] pt-10 pb-6">
           <p className="text-xs text-[#6B7280] text-center max-w-4xl mx-auto mb-10 font-medium leading-relaxed">
-            Doddar is een door het <strong className="text-[#13261f]">Ministerie van Justitie en Veiligheid</strong> erkend particulier onderzoeksbureau (POB-nummer 8766). Wij werken conform de Privacygedragscode voor Particulier Onderzoekers.
+            Doddar is een door het <strong className="text-[#13261f]">Ministerie van Justitie en Veiligheid</strong> erkend particulier onderzoeksbureau (POB-nummer 8766). Wij werken conform de Privacygedragscode voor Particulier Onderzoekers en zijn volwaardig lid van de <strong className="text-[#13261f]">Branchevereniging voor Particulier Onderzoekers (BPOB)</strong>.
           </p>
           <div className="flex flex-wrap gap-8 md:gap-16 items-center justify-center max-w-4xl mx-auto opacity-90">
             <img src={`${baseUrl}justisPOB.svg`} alt="Ministerie van Justitie en Veiligheid" className="h-16 w-auto object-contain" />
