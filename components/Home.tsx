@@ -130,16 +130,11 @@ const Home: React.FC<HomeProps> = ({
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white via-[#F2F9F6] to-[#F9FCFA] -z-10"></div>
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-center">
-                        <div className="order-1 lg:order-1 flex flex-col items-start text-left space-y-10 animate-fade-in max-w-xl mx-0">
+                        <div className="order-1 lg:order-1 flex flex-col items-start text-left space-y-6 md:space-y-8 animate-fade-in max-w-xl mx-0">
 
                             {/* Logo Area */}
-                            <div className="flex flex-col items-start w-full max-w-[280px] md:max-w-[340px]">
-                                <img src={`${baseUrl}logododdar.svg`} alt="Doddar" className="w-full h-auto mb-3 drop-shadow-sm" />
-                                <div className="w-full flex justify-between px-1 text-[13px] md:text-[15px] font-bold text-[#13261f] uppercase select-none leading-none tracking-widest opacity-90">
-                                    {"RECHERCHEBUREAU".split("").map((char, i) => (
-                                        <span key={i}>{char}</span>
-                                    ))}
-                                </div>
+                            <div className="flex flex-col items-start w-full max-w-[220px] md:max-w-[300px]">
+                                <img src={`${baseUrl}logododdar.svg`} alt="Doddar" className="w-full h-auto drop-shadow-sm" />
                             </div>
 
                             <div className="space-y-4 md:space-y-6">
@@ -148,7 +143,7 @@ const Home: React.FC<HomeProps> = ({
                                     <span className="text-[#58B895]">Veiligheid in relaties.</span>
                                 </h1>
                                 <p className="text-lg md:text-xl text-[#6B7280] font-light leading-relaxed max-w-xl">
-                                    Doddar is een erkend particulier recherchebureau gespecialiseerd in waarheidsvinding bij complexe dynamieken en gedragspatronen.
+                                    Erkend particulier recherchebureau gespecialiseerd in waarheidsvinding bij complexe dynamieken en gedragspatronen.
                                 </p>
                             </div>
                         </div>
