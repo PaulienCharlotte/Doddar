@@ -154,7 +154,17 @@ const InputSection: React.FC<InputSectionProps> = ({
             )}
 
             <div className="flex flex-col p-6 md:p-12 lg:pr-8 bg-[#E8F5EF] border-b lg:border-b-0 lg:border-r border-[#58B895]/10 rounded-t-[2rem] lg:rounded-l-[2rem] lg:rounded-tr-none">
-                <div className="hidden lg:block mt-8">
+                <div className="mb-6">
+                    <div className="w-fit px-4 py-1.5 bg-white/50 backdrop-blur-sm rounded-full border border-[#58B895]/20 text-[#58B895] text-[10px] font-bold uppercase tracking-widest shadow-sm mb-4">
+                        AI Ondersteund
+                    </div>
+                    <h3 className="text-3xl md:text-3xl font-bold text-[#13261f] mb-4">Casusanalyse</h3>
+                    <p className="text-[#6B7280] font-light text-base md:text-lg italic leading-relaxed">
+                        Beschrijf uw situatie voor een direct geautomatiseerde patroonherkenning en haalbaarheidsindicatie.
+                    </p>
+                </div>
+
+                <div className="hidden lg:block mt-6">
                     <ul className="space-y-4 text-[#13261f] text-sm font-medium mb-10">
                         <li className="flex items-center gap-4">
                             <div className="w-1.5 h-1.5 bg-[#58B895] rounded-full flex-shrink-0"></div>

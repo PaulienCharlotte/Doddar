@@ -210,7 +210,7 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
             <div className="max-w-7xl mx-auto px-4 space-y-12 mb-24 z-10 relative">
 
                 {/* Search & Filter Controls */}
-                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative">
+                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative overflow-hidden">
                     <div className="grid lg:grid-cols-[1.5fr_1fr] items-center">
                         <div className="p-6 md:p-16 space-y-6 md:space-y-8">
                             <div className="flex items-center gap-4">
@@ -263,7 +263,7 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
             </div>
 
             {/* Grid */}
-            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative z-10">
                 {paginatedArticles.length > 0 ? paginatedArticles.map((article) => (
                     <div key={article.id} onClick={() => setSelectedArticle(article)} className="hover-lift group bg-white rounded-[2rem] border border-[#E5E7EB] p-6 md:p-10 flex flex-col cursor-pointer h-full">
                         <span className="inline-block px-4 py-1.5 rounded-full bg-[#F2F9F6] text-[#13261f] text-[10px] font-bold uppercase tracking-wider mb-8 w-fit">{article.category}</span>
