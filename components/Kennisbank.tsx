@@ -200,8 +200,8 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
             {/* Dynamic Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white via-[#F2F9F6] to-[#F9FCFA] -z-10"></div>
 
-            {/* Decorative Images Area */}
-            <div className="absolute top-20 right-0 w-1/2 h-full opacity-5 pointer-events-none -z-0">
+            {/* Decorative Images Area - Hidden on mobile to prevent scroll jank */}
+            <div className="hidden md:block absolute top-20 right-0 w-1/2 h-full opacity-5 pointer-events-none -z-0">
                 <img src={`${baseUrl}earth.svg`} alt="" className="absolute top-10 right-10 w-64 h-64 animate-slow-float" />
                 <img src={`${baseUrl}DNA.svg`} alt="" className="absolute bottom-40 right-40 w-48 h-48 rotate-12" />
             </div>
@@ -223,7 +223,7 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
             <div className="max-w-7xl mx-auto px-4 md:px-6 space-y-12 mb-24 z-10 relative w-full">
 
                 {/* Search & Filter Controls */}
-                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative overflow-hidden mx-auto w-full" style={{ maxWidth: 'calc(100vw - 2rem)' }}>
+                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative overflow-hidden mx-auto w-full md:max-w-full">
                     <div className="lg:grid lg:grid-cols-[1.5fr_1fr] items-center">
                         <div className="p-5 md:p-16 space-y-6 md:space-y-8">
                             <div className="flex justify-between items-start gap-3">
