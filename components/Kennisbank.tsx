@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { kennisArticles, KennisArticle } from '../data/kennisArticles';
 import { BookIcon } from './icons/BookIcon';
 import { ChevronDownIcon } from './icons/ChevronDownIcon';
@@ -60,27 +60,36 @@ const renderFormattedText = (text: string) => {
 };
 
 const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void; onArticleSelect: (article: KennisArticle) => void }> = ({ article, onClose, onArticleSelect }) => {
+    const scrollRef = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
         document.body.style.overflow = 'hidden';
         return () => { document.body.style.overflow = ''; };
     }, []);
 
+    // Reset scroll position when article changes (for internal navigation)
+    useEffect(() => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollTop = 0;
+        }
+    }, [article.id]);
+
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#13261f]/80 backdrop-blur-sm animate-fade-in" onClick={onClose}>
-            <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2rem] shadow-2xl overflow-hidden flex flex-col relative" onClick={e => e.stopPropagation()}>
-                <div className="p-8 md:p-10 border-b border-[#E5E7EB] bg-[#F9FCFA] flex justify-between items-start gap-6 sticky top-0 z-10">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4 bg-[#13261f]/80 backdrop-blur-sm animate-fade-in" onClick={onClose}>
+            <div className="bg-white w-full h-full md:h-auto md:max-h-[90vh] md:max-w-4xl rounded-none md:rounded-[2rem] shadow-2xl overflow-hidden flex flex-col relative" onClick={e => e.stopPropagation()}>
+                <div className="p-6 md:p-10 border-b border-[#E5E7EB] bg-[#F9FCFA] flex justify-between items-start gap-6 flex-shrink-0 relative z-20">
                     <div className="pr-12">
                         <div className="flex flex-wrap items-center gap-3 mb-4">
                             <span className="inline-block px-3 py-1 rounded-full bg-[#E8F5EF] text-[#13261f] text-xs font-bold tracking-wider border border-[#58B895]/20">{article.category}</span>
                             <span className="text-xs font-medium italic text-[#6B7280]">{article.source.year}</span>
                         </div>
-                        <h2 className="text-2xl md:text-4xl font-bold text-[#13261f] leading-tight">{article.title}</h2>
+                        <h2 className="text-xl md:text-4xl font-bold text-[#13261f] leading-tight">{article.title}</h2>
                     </div>
-                    <button onClick={onClose} className="absolute right-6 top-6 p-2 bg-white hover:bg-[#F2F9F6] rounded-full transition-colors border border-[#E5E7EB] shadow-sm group">
+                    <button onClick={onClose} className="absolute right-4 top-4 md:right-6 md:top-6 p-2 bg-white hover:bg-[#F2F9F6] rounded-full transition-colors border border-[#E5E7EB] shadow-sm group z-30">
                         <XIcon className="w-6 h-6 text-[#9CA3AF] group-hover:text-[#58B895]" />
                     </button>
                 </div>
-                <div className="overflow-y-auto p-8 md:p-12 space-y-12 bg-white">
+                <div ref={scrollRef} className="overflow-y-auto p-6 md:p-12 space-y-12 bg-white flex-grow overscroll-contain">
                     <div className="max-w-3xl mx-auto space-y-12">
                         {article.readingMotivation && (
                             <div className="bg-gradient-to-r from-[#58B895]/5 to-transparent border-l-4 border-[#58B895] p-6 rounded-r-2xl">
@@ -129,7 +138,7 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void; onAr
                         )}
                     </div>
                 </div>
-                <div className="p-6 md:p-8 border-t border-[#E5E7EB] bg-[#F9FCFA] text-xs text-[#6B7280]">
+                <div className="p-6 md:p-8 border-t border-[#E5E7EB] bg-[#F9FCFA] text-xs text-[#6B7280] flex-shrink-0">
                     <div className="max-w-3xl mx-auto flex flex-col gap-3">
                         <span className="font-bold text-[#13261f] tracking-widest text-[10px] block">WETENSCHAPPELIJKE BRON</span>
                         <div className="text-sm leading-relaxed text-[#4B5563]">
