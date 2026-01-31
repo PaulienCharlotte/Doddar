@@ -377,7 +377,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-page-bg flex flex-col font-sans">
-      <nav className="sticky top-4 z-50 mx-4 max-w-7xl xl:mx-auto w-[calc(100%-2rem)] bg-black/95 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl">
+      <nav className="sticky top-0 md:top-4 z-50 mx-0 md:mx-4 max-w-7xl xl:mx-auto w-full md:w-[calc(100%-2rem)] bg-black/95 backdrop-blur-md rounded-none md:rounded-2xl border-b md:border border-white/10 shadow-2xl transition-all duration-300">
         <div className="px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <div className="flex-shrink-0 cursor-pointer" onClick={() => handleNavClick('start')}>
