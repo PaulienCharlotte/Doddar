@@ -80,7 +80,7 @@ Dit creëert een gevoel van alomtegenwoordigheid van de dader en verbreekt het v
     content: {
       intro: "Slachtoffers vragen zich vaak af waarom ze niet kunnen loslaten. De wetenschap wijst op 'intermittent reinforcement': een conditioneringstechniek die de dader (vaak onbewust) gebruikt om een verslavende binding te creëren.",
       analysis: `Dutton (2011) vertaalt de conditioneringsprincipes van Skinner naar menselijke relaties. Wanneer een dader afwisselend wreed en overdreven liefdevol ('love bombing') is, reageren de dopamine-receptoren in het brein van het slachtoffer op dezelfde manier als bij gokken.
-**Het mechanisme:** **Onvoorspelbaarheid:** Omdat de liefdevolle momenten schaars en onvoorspelbaar zijn, worden ze extreem waardevol.
+**Het mechanisme:**\n* **Onvoorspelbaarheid:** Omdat de liefdevolle momenten schaars en onvoorspelbaar zijn, worden ze extreem waardevol.
 * **Hoop:** Het slachtoffer blijft investeren in de relatie in de hoop op die ene 'piek' van affectie.
 * **Biochemische binding:** Oxytocine (hechting) en Cortisol (stress) wisselen elkaar af, wat leidt tot een traumatische band die fysiek pijnlijk is om te verbreken.
 
@@ -360,7 +360,7 @@ Het kernverschil met normale romantiek is het negeren van de grenzen van de ande
     content: {
       intro: "Op de moderne werkvloer wordt de strijd niet meer persoonlijk gestreden, maar via e-mail en chat. 'Cyber-incivility' is het nieuwe wapen voor de kantoormachiavellist.",
       analysis: `Lim & Teo (2019) definieerden cyber-incivility als 'onbeleefd gedrag via digitale kanalen dat de sociale normen van de werkvloer schendt'.
-**Tactieken:** **Passive-aggressive CCing:** Bewust managers toevoegen in kopie bij kleine foutjes om iemand in diskrediet te brengen.
+**Tactieken:**\n* **Passive-aggressive CCing:** Bewust managers toevoegen in kopie bij kleine foutjes om iemand in diskrediet te brengen.
 * **Emoji-gaslighting:** Het gebruik van cynische emoji's om de impact van een belediging te minimaliseren (*"Het was maar een grapje 😉"*).
 * **Digitale stilte:** Iemand negeren in groepschats terwijl anderen wel reactie krijgen, wat leidt tot een gevoel van uitsluiting.
 
@@ -380,7 +380,7 @@ Dit zorgt voor een onveilig werkklimaat waarin medewerkers constant op hun hoede
     content: {
       intro: "Nederland volgt internationale trends (zoals de Istanbul-conventie) door dwingende controle meer centraal te stellen in de opsporing. De focus verschuift van slaan naar beheersen.",
       analysis: `Douglas (2018) en recente Nederlandse wetsvoorstellen benadrukken dat 'Coercive Control' strafbaar moet zijn als een voordurend delict. 
-**Juridische ankers:** **Stelselmatigheid:** Het bewijzen dat gedragingen elkaar in een logische, destructieve reeks opvolgen.
+**Juridische ankers:**\n* **Stelselmatigheid:** Het bewijzen dat gedragingen elkaar in een logische, destructieve reeks opvolgen.
 * **Impact op autonomie:** Aantonen dat het slachtoffer feitelijk haar vrijheid is verloren in alledaagse keuzes.
 * **Belaging(art. 285b Sr):** Wordt steeds vaker gebruikt om niet alleen het volgen van personen, maar ook de constante psychische controle te vervolgen.
 
@@ -485,7 +485,7 @@ Het doel van de dader is niet schade, maar **totale gehoorzaamheid**. Het slacht
     content: {
       intro: "De smartphone is het ultieme wapen voor de moderne stalker geworden. 'Stalkerware' en tracking-devices zoals AirTags maken 24/7 surveillance mogelijk zonder dat de dader fysiek aanwezig hoeft te zijn.",
       analysis: `Onderzoek naar 'Technology-Facilitated Abuse' wijst op een explosieve stijging van digitale belaging. 
-**Vormen van surveillance:** **Stalkerware:** Apps die onzichtbaar op een telefoon worden geïnstalleerd en alle chats, locaties en camera-activiteit doorsturen.
+**Vormen van surveillance:**\n* **Stalkerware:** Apps die onzichtbaar op een telefoon worden geïnstalleerd en alle chats, locaties en camera-activiteit doorsturen.
 * **Tracking devices:** Het verbergen van AirTags of GPS-trackers in tassen, jassen of auto's.
 * **Account-hijacking:** Toegang via gedeelde wachtwoorden of 'Find My' functies om locaties live te volgen.
 
@@ -569,7 +569,7 @@ Het onderzoek toont aan dat toeschouwers die niet bekend zijn met DARVO, vaak ga
     content: {
       intro: "Gaslighting vindt niet alleen plaats in relaties, maar ook op de werkvloer. Klokkenluiders worden vaak niet bedankt, maar pathologisch verklaard.",
       analysis: `Kenny (2019) onderzocht de ervaringen van klokkenluiders in de bancaire sector en gezondheidszorg. Ze beschrijft 'Institutional Gaslighting' als een proces waarbij de organisatie de realiteit van de melder systematisch ondermijnt.
-**Strategieën:** **Normalisatie van afwijking:** De gemelde fraude wordt afgedaan als 'standaard procedure'.
+**Strategieën:**\n* **Normalisatie van afwijking:** De gemelde fraude wordt afgedaan als 'standaard procedure'.
 * **Isolatie:** Collega's wordt opgedragen de melder te negeren.
 * **Karaktermoord:** De focus verschuift van de * inhoud * van de melding naar de * persoonlijkheid * van de melder("Hij ligt moeilijk in de groep", "Ze is labiel").
 
@@ -631,7 +631,7 @@ De onderzoekers onderscheiden drie fasen in deze manipulatiecyclus:**1.**Idealis
     content: {
       intro: "Met de verschuiving naar thuiswerken is intimidatie niet verdwenen, maar van vorm veranderd. 'Cyber-incivility' is subtieler en lastiger te bewijzen.",
       analysis: `Onderzoek van Vranjes et al. (2021) toont aan dat digitale communicatie de drempel voor manipulatie verlaagt.
-**Nieuwe vormen van manipulatie:** **De 'Silence Treatment':** Iemand negeren in groepschats of bewust 'vergeten' uit te nodigen voor Teams-vergaderingen(sociale isolatie).
+**Nieuwe vormen van manipulatie:**\n* **De 'Silence Treatment':** Iemand negeren in groepschats of bewust 'vergeten' uit te nodigen voor Teams-vergaderingen(sociale isolatie).
 * **Micro-management via status:** Het monitoren van 'groene bolletjes'(online status) en direct bellen als iemand 5 minuten 'afwezig' is.
 * **Publieke vernedering:** Kritische feedback geven in een kanaal waar alle collega's meelezen (CC-cultuur), in plaats van 1-op-1.
 
@@ -1081,7 +1081,7 @@ Het risico voor de werkgever is groot: een incompetente medewerker op een sleute
     summary: "Geweld is niet alleen slaan. Stark's model verklaart hoe vrijheidsberoving werkt in relaties.",
     content: {
       intro: "Jarenlang werd huiselijk geweld enkel gezien als fysieke mishandeling. Evan Stark (2007) veranderde dit paradigma met zijn concept van **Coercive Control**(Dwingende Controle).",
-      analysis: `Stark betoogt dat het primaire doel van de dader niet fysiek letsel is, maar **vrijheidsberoving**. Fysiek geweld is slechts één van de middelen om dominantie af te dwingen. De kern van het misbruik zit in een patroon van:** **Isolatie:** Het contact met vrienden en familie afsnijden.
+      analysis: `Stark betoogt dat het primaire doel van de dader niet fysiek letsel is, maar **vrijheidsberoving**. Fysiek geweld is slechts één van de middelen om dominantie af te dwingen. De kern van het misbruik zit in een patroon van:\n* **Isolatie:** Het contact met vrienden en familie afsnijden.
 * **Intimidatie:** Dreigen met geweld, zelfmoord of het afpakken van kinderen.
 * **Controle:** Beheer over financiën, kledingkeuze, en zelfs slaap-en eetpatronen.
 **Het effect:** Het slachtoffer verliest haar autonomie en wordt een 'gijzelaar' in eigen huis. Omdat er vaak geen blauwe plekken zijn, wordt de ernst door politie en hulpverlening vaak onderschat. Stark toonde aan dat deze vorm van controle een sterkere voorspeller is voor fataal geweld dan incidentele fysieke agressie.
