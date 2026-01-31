@@ -210,11 +210,11 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
             <div className="max-w-7xl mx-auto px-4 md:px-6 space-y-12 mb-24 z-10 relative">
 
                 {/* Search & Filter Controls */}
-                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative md:overflow-hidden mx-auto w-full">
+                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative overflow-hidden mx-auto w-full">
                     <div className="grid lg:grid-cols-[1.5fr_1fr] items-center">
-                        <div className="p-6 md:p-16 space-y-7 md:space-y-8">
-                            <div className="flex items-start justify-between gap-4">
-                                <h2 className="text-2xl md:text-3xl font-bold text-[#13261f] leading-tight max-w-[80%]">Wetenschap & Praktijk</h2>
+                        <div className="p-5 md:p-16 space-y-6 md:space-y-8">
+                            <div className="flex items-center gap-3">
+                                <h2 className="text-xl md:text-3xl font-bold text-[#13261f] flex-1 leading-tight">Wetenschap & Praktijk</h2>
                                 <Tooltip
                                     placement="bottom-end"
                                     content={
@@ -227,33 +227,35 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                                         </div>
                                     }
                                 >
-                                    <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-[#E8F5EF] text-[#58B895] hover:bg-[#58B895] hover:text-white transition-all cursor-help shadow-sm">
+                                    <div className="flex-shrink-0 flex items-center justify-center w-9 h-9 md:w-8 md:h-8 rounded-full bg-[#E8F5EF] text-[#58B895] hover:bg-[#58B895] hover:text-white transition-all cursor-help shadow-sm">
                                         <InfoIcon className="w-5 h-5" />
                                     </div>
                                 </Tooltip>
                             </div>
 
-                            <div className="relative w-full">
+                            <div className="relative">
                                 <input
                                     type="text"
                                     placeholder="Zoek op trefwoord..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="w-full pl-12 md:pl-14 pr-4 py-4 md:py-5 rounded-2xl bg-gray-50 border border-transparent focus:bg-white focus:border-[#58B895] focus:ring-4 focus:ring-[#58B895]/5 outline-none transition-all text-base md:text-lg shadow-inner"
+                                    className="w-full pl-11 md:pl-14 pr-4 py-3.5 md:py-5 rounded-xl md:rounded-2xl bg-gray-50 border border-transparent focus:bg-white focus:border-[#58B895] focus:ring-4 focus:ring-[#58B895]/5 outline-none transition-all text-sm md:text-lg shadow-inner"
                                 />
-                                <svg className="h-6 w-6 md:h-7 md:w-7 absolute left-4 md:left-5 top-1/2 -translate-y-1/2 text-[#58B895]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                                <svg className="h-5 w-5 md:h-7 md:w-7 absolute left-3.5 md:left-5 top-1/2 -translate-y-1/2 text-[#58B895]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                             </div>
 
-                            <div className="flex gap-2.5 overflow-x-auto pb-4 scrollbar-hide -mx-1 px-1">
-                                {categories.map(cat => (
-                                    <button
-                                        key={cat}
-                                        onClick={() => setSelectedCategory(cat)}
-                                        className={`flex-shrink-0 px-5 py-2.5 rounded-full text-[11px] font-bold uppercase transition-all border whitespace-nowrap ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-md' : 'bg-white text-gray-400 border-gray-200 hover:border-[#58B895] hover:text-[#58B895]'}`}
-                                    >
-                                        {cat}
-                                    </button>
-                                ))}
+                            <div className="overflow-x-auto pb-3 -mx-1">
+                                <div className="flex gap-2 px-1 min-w-min">
+                                    {categories.map(cat => (
+                                        <button
+                                            key={cat}
+                                            onClick={() => setSelectedCategory(cat)}
+                                            className={`flex-shrink-0 px-4 md:px-5 py-2 md:py-2.5 rounded-full text-[10px] md:text-[11px] font-bold uppercase transition-all border whitespace-nowrap ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-md' : 'bg-white text-gray-500 border-gray-200 hover:border-[#58B895] hover:text-[#58B895]'}`}
+                                        >
+                                            {cat}
+                                        </button>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                         <div className="hidden lg:flex justify-center items-center bg-[#F2F9F6] h-full p-12 rounded-r-[3rem] overflow-hidden">
