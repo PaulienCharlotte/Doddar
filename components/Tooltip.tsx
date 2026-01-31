@@ -24,15 +24,21 @@ const Tooltip: React.FC<TooltipProps> = ({ content, children, className = '', pl
       setIsOpen(false);
     };
 
+    let scrollTimer: NodeJS.Timeout;
+
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       document.addEventListener('touchstart', handleClickOutside);
-      window.addEventListener('scroll', handleScroll, true);
+      // Delay scroll listener to prevent immediate close on open
+      scrollTimer = setTimeout(() => {
+        window.addEventListener('scroll', handleScroll, true);
+      }, 100);
     }
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
       window.removeEventListener('scroll', handleScroll, true);
+      clearTimeout(scrollTimer);
     };
   }, [isOpen]);
 
