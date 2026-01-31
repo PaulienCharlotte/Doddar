@@ -169,9 +169,11 @@ const Home: React.FC<HomeProps> = ({
                     <div className="bg-white rounded-[2.5rem] shadow-2xl border border-[#E5E7EB] overflow-hidden flex flex-col">
                         <div className="p-8 md:p-12 pb-2">
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                <h3 className="text-3xl md:text-3xl font-bold text-[#13261f]">Casusanalyse</h3>
-                                <div className="w-fit px-4 py-1.5 bg-[#F2F9F6] rounded-full border border-[#58B895]/20 text-[#58B895] text-[10px] font-bold uppercase tracking-widest shadow-sm">
-                                    AI Ondersteund
+                                <div className="space-y-4">
+                                    <div className="w-fit px-4 py-1.5 bg-[#F2F9F6] rounded-full border border-[#58B895]/20 text-[#58B895] text-[10px] font-bold uppercase tracking-widest shadow-sm">
+                                        AI Ondersteund
+                                    </div>
+                                    <h3 className="text-3xl md:text-3xl font-bold text-[#13261f]">Casusanalyse</h3>
                                 </div>
                             </div>
                             <p className="text-[#6B7280] font-light text-lg md:text-xl italic max-w-3xl leading-relaxed">
@@ -326,7 +328,7 @@ const Home: React.FC<HomeProps> = ({
             {/* Expertise Section */}
             <section ref={expertiseSectionRef} className="relative z-10 max-w-7xl mx-auto px-4 py-16 md:py-24">
                 <FadeInSection><div className="text-center mb-16 md:mb-20"><h2 className="text-4xl md:text-5xl font-bold text-[#13261f]">Onze Expertise</h2></div></FadeInSection>
-                <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
                     {expertiseItems.map((item, index) => (
                         <FadeInSection key={item.id} delay={index * 100} className="h-full">
                             <div className="bg-white p-10 rounded-[2.5rem] border border-[#E5E7EB] shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col hover:-translate-y-2">

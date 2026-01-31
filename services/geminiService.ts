@@ -120,7 +120,7 @@ const DETAILED_ANALYSIS_SYSTEM_INSTRUCTION = `Je bent Doddar’s senior onderzoe
 4. GEEN klinische diagnoses stellen. Wees een forensisch analist, geen psycholoog.
 5. In de bevoegdheidscheck toets je uitsluitend aan de Wpbr en het 'gerechtvaardigd belang' voor particulier onderzoek.
 6. Schrijf wetenschappelijke bronnen volluit in APA-stijl in het bronveld.
-7. Wees ZEER SELECTIEF met onderzoeksmethoden (max 2-3). Prioriteer laag-drempelige methoden zoals 'Advies' en 'OSINT' voor particuliere/gevoelige casussen (zoals pesten).`;
+7. Wees SELECTIEF met onderzoeksmethoden (max 2-3). Prioriteer laag-drempelige methoden zoals 'Advies' en 'OSINT' voor algemene casussen, maar zet 'Observatie' ALTIJD in als relevante optie bij casussen die fysiek gedrag, buitensluiting in de fysieke ruimte of pestgedrag betreffen waarbij bewijslast noodzakelijk is.`;
 
 const DETAILED_ANALYSIS_SCHEMA = {
   type: Type.OBJECT,

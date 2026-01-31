@@ -402,7 +402,8 @@ const App: React.FC = () => {
         </div>
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full mt-2 bg-black border border-white/10 rounded-2xl shadow-xl animate-fade-in overflow-hidden">
-            <div className="px-4 pt-2 pb-4 space-y-1">
+            <div className="px-4 pt-4 pb-4 space-y-1">
+              <button onClick={() => { setStep('start'); setAutoScrollToInput(true); setIsMobileMenuOpen(false); }} className="block w-full text-left px-4 py-3 rounded-xl text-base font-bold text-black bg-white hover:bg-gray-200 mb-2">Nieuwe Analyse</button>
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -412,7 +413,6 @@ const App: React.FC = () => {
                   {item.label}
                 </button>
               ))}
-              <button onClick={() => { setStep('start'); setAutoScrollToInput(true); setIsMobileMenuOpen(false); }} className="block w-full text-left px-4 py-3 rounded-xl text-base font-bold text-black bg-white hover:bg-gray-200 mt-2">Nieuwe Analyse</button>
             </div>
           </div>
         )}

@@ -71,7 +71,7 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void }> = 
                 <div className="p-8 md:p-10 border-b border-[#E5E7EB] bg-[#F9FCFA] flex justify-between items-start gap-6 sticky top-0 z-10">
                     <div className="pr-12">
                         <div className="flex flex-wrap items-center gap-3 mb-4">
-                            <span className="inline-block px-3 py-1 rounded-full bg-[#E8F5EF] text-[#13261f] text-xs font-bold uppercase tracking-wider border border-[#58B895]/20">{article.category}</span>
+                            <span className="inline-block px-3 py-1 rounded-full bg-[#E8F5EF] text-[#13261f] text-xs font-bold tracking-wider border border-[#58B895]/20">{article.category}</span>
                             <span className="text-xs font-medium italic text-[#6B7280]">{article.source.year}</span>
                         </div>
                         <h2 className="text-2xl md:text-4xl font-bold text-[#13261f] leading-tight">{article.title}</h2>
@@ -119,7 +119,7 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void }> = 
                                             key={rel.id}
                                             className="text-left p-4 rounded-xl border border-[#E5E7EB] bg-[#F9FCFA] transition-all"
                                         >
-                                            <span className="text-[10px] font-bold text-[#58B895] uppercase tracking-wider mb-1 block">{rel.category}</span>
+                                            <span className="text-[#58B895] font-bold text-[10px] tracking-wider mb-2 block">{rel.category}</span>
                                             <p className="text-sm font-bold text-[#13261f] line-clamp-2">{rel.title}</p>
                                         </div>
                                     ))}
@@ -129,13 +129,24 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void }> = 
                     </div>
                 </div>
                 <div className="p-6 md:p-8 border-t border-[#E5E7EB] bg-[#F9FCFA] text-xs text-[#6B7280]">
-                    <div className="max-w-3xl mx-auto flex flex-col gap-2">
-                        <span className="font-bold text-[#13261f] uppercase tracking-widest text-[10px] block mb-1">Wetenschappelijke Bron</span>
-                        <p className="leading-relaxed">
-                            <span className="text-[#374151] font-bold">{article.source.author}</span>,
-                            <span className="italic mx-1">{article.title}</span>,
-                            {article.source.doi && <span className="font-mono bg-white/50 px-1.5 py-0.5 rounded border border-[#E5E7EB]/50 ml-1">DOI: {article.source.doi}</span>}
-                        </p>
+                    <div className="max-w-3xl mx-auto flex flex-col gap-3">
+                        <span className="font-bold text-[#13261f] tracking-widest text-[10px] block">WETENSCHAPPELIJKE BRON</span>
+                        <div className="text-sm leading-relaxed text-[#4B5563]">
+                            <span className="text-[#13261f] font-bold">{article.source.author}</span>
+                            <span className="mx-1">({article.source.year}).</span>
+                            <span className="italic">{article.title}.</span>
+                            {article.source.journal && <span className="ml-1">{article.source.journal}.</span>}
+                            {article.source.doi && (
+                                <a
+                                    href={`https://doi-org.proxy.bu.edu/${article.source.doi}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="ml-2 inline-flex items-center text-[#58B895] hover:text-[#13261f] transition-colors font-mono text-[11px] bg-[#E8F5EF] px-2 py-0.5 rounded-md border border-[#58B895]/20"
+                                >
+                                    DOI:{article.source.doi}
+                                </a>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,7 +156,7 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void }> = 
 
 const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory }) => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('Alles');
+    const [selectedCategory, setSelectedCategory] = useState('Alle');
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedArticle, setSelectedArticle] = useState<KennisArticle | null>(null);
 
@@ -154,8 +165,8 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
     useEffect(() => { if (initialCategory) setSelectedCategory(initialCategory); }, [initialCategory]);
 
     const categories = useMemo(() => {
-        const cats = new Set(kennisArticles.map(a => a.category));
-        return ['Alles', ...Array.from(cats).sort()];
+        const categories = ['Alle', ...Array.from(new Set(kennisArticles.map(a => a.category))).sort()];
+        return categories;
     }, []);
 
     const filteredArticles = useMemo(() => {
@@ -184,13 +195,12 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
 
             <section className="relative pt-16 pb-12 max-w-5xl mx-auto px-6 text-center z-10">
                 <div className="flex flex-col items-center">
-                    <span className="inline-block py-1 px-4 rounded-full bg-[#E8F5EF] border border-[#58B895]/20 text-[#58B895] text-xs font-bold uppercase tracking-widest mb-12">Kenniscentrum</span>
-
-                    <div className="relative max-w-4xl mx-auto">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl text-[#13261f] font-bold tracking-tight leading-[1.1]">
-                            <span className="text-[#58B895] block text-6xl md:text-8xl absolute -top-8 -left-4 md:-left-12 opacity-20 font-serif">“</span>
+                    <span className="inline-block py-1 px-4 rounded-full bg-[#E8F5EF] border border-[#58B895]/20 text-[#58B895] text-xs font-bold uppercase tracking-widest mb-8 md:mb-12">Kenniscentrum</span>
+                    <div className="relative max-w-4xl mx-auto px-4 md:px-0">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl text-[#13261f] font-bold tracking-tight leading-[1.1]">
+                            <span className="text-[#58B895] block text-6xl md:text-8xl absolute -top-10 -left-2 md:-left-12 opacity-10 md:opacity-20 font-serif whitespace-nowrap">“</span>
                             Onderbouwing is de brug tussen vermoeden en zekerheid.
-                            <span className="text-[#58B895] block text-6xl md:text-8xl absolute -bottom-12 -right-4 md:-right-12 opacity-20 font-serif transform rotate-180">“</span>
+                            <span className="text-[#58B895] block text-6xl md:text-8xl absolute -bottom-14 -right-2 md:-right-12 opacity-10 md:opacity-20 font-serif transform rotate-180 whitespace-nowrap">“</span>
                         </h1>
                     </div>
                 </div>
@@ -202,7 +212,7 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                 {/* Search & Filter Controls */}
                 <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative">
                     <div className="grid lg:grid-cols-[1.5fr_1fr] items-center">
-                        <div className="p-8 md:p-16 space-y-8">
+                        <div className="p-6 md:p-16 space-y-6 md:space-y-8">
                             <div className="flex items-center gap-4">
                                 <h2 className="text-3xl font-bold text-[#13261f]">Wetenschap & Praktijk</h2>
                                 <Tooltip
@@ -255,7 +265,7 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
             {/* Grid */}
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
                 {paginatedArticles.length > 0 ? paginatedArticles.map((article) => (
-                    <div key={article.id} onClick={() => setSelectedArticle(article)} className="hover-lift group bg-white rounded-[2rem] border border-[#E5E7EB] p-10 flex flex-col cursor-pointer h-full">
+                    <div key={article.id} onClick={() => setSelectedArticle(article)} className="hover-lift group bg-white rounded-[2rem] border border-[#E5E7EB] p-6 md:p-10 flex flex-col cursor-pointer h-full">
                         <span className="inline-block px-4 py-1.5 rounded-full bg-[#F2F9F6] text-[#13261f] text-[10px] font-bold uppercase tracking-wider mb-8 w-fit">{article.category}</span>
                         <h3 className="font-bold text-xl md:text-2xl text-[#13261f] mb-6 leading-tight group-hover:text-[#58B895] transition-colors line-clamp-2 flex-shrink-0">{article.title}</h3>
                         <p className="text-brand-subtle text-base leading-loose mb-10 line-clamp-4 flex-grow font-light">{article.summary}</p>
