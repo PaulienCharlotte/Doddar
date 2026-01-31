@@ -173,7 +173,7 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
         return kennisArticles.filter(article => {
             const s = searchTerm.toLowerCase();
             const c = selectedCategory.toLowerCase();
-            return (article.title.toLowerCase().includes(s) || article.summary.toLowerCase().includes(s)) && (selectedCategory === 'Alles' || article.category.toLowerCase() === c);
+            return (article.title.toLowerCase().includes(s) || article.summary.toLowerCase().includes(s)) && (selectedCategory === 'Alle' || article.category.toLowerCase() === c);
         });
     }, [searchTerm, selectedCategory]);
 
@@ -193,14 +193,14 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                 <img src={`${baseUrl}DNA.svg`} alt="" className="absolute bottom-40 right-40 w-48 h-48 rotate-12" />
             </div>
 
-            <section className="relative pt-16 pb-12 max-w-5xl mx-auto px-6 text-center z-10">
+            <section className="relative pt-12 md:pt-16 pb-8 md:pb-12 max-w-5xl mx-auto px-6 text-center z-10">
                 <div className="flex flex-col items-center">
-                    <span className="inline-block py-1 px-4 rounded-full bg-[#E8F5EF] border border-[#58B895]/20 text-[#58B895] text-xs font-bold uppercase tracking-widest mb-8 md:mb-12">Kenniscentrum</span>
-                    <div className="relative max-w-4xl mx-auto px-4 md:px-0">
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl text-[#13261f] font-bold tracking-tight leading-[1.1]">
-                            <span className="text-[#58B895] block text-6xl md:text-8xl absolute -top-10 -left-2 md:-left-12 opacity-10 md:opacity-20 font-serif whitespace-nowrap">“</span>
+                    <span className="inline-block py-1 px-4 rounded-full bg-[#E8F5EF] border border-[#58B895]/20 text-[#58B895] text-[10px] md:text-xs font-bold uppercase tracking-widest mb-6 md:mb-12">Kenniscentrum</span>
+                    <div className="relative max-w-4xl mx-auto px-2 md:px-0">
+                        <h1 className="text-2xl md:text-5xl lg:text-6xl text-[#13261f] font-bold tracking-tight leading-[1.2] md:leading-[1.1]">
+                            <span className="text-[#58B895] block text-5xl md:text-8xl absolute -top-8 -left-2 md:-left-12 opacity-10 md:opacity-20 font-serif whitespace-nowrap">“</span>
                             Onderbouwing is de brug tussen vermoeden en zekerheid.
-                            <span className="text-[#58B895] block text-6xl md:text-8xl absolute -bottom-14 -right-2 md:-right-12 opacity-10 md:opacity-20 font-serif transform rotate-180 whitespace-nowrap">“</span>
+                            <span className="text-[#58B895] block text-5xl md:text-8xl absolute -bottom-10 -right-2 md:-right-12 opacity-10 md:opacity-20 font-serif transform rotate-180 whitespace-nowrap">“</span>
                         </h1>
                     </div>
                 </div>
@@ -210,11 +210,11 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
             <div className="max-w-7xl mx-auto px-4 space-y-12 mb-24 z-10 relative">
 
                 {/* Search & Filter Controls */}
-                <div className="bg-white rounded-[2rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative overflow-hidden">
+                <div className="bg-white rounded-[2.5rem] md:rounded-[3rem] border border-[#E5E7EB] shadow-xl relative overflow-hidden mx-auto w-full">
                     <div className="grid lg:grid-cols-[1.5fr_1fr] items-center">
-                        <div className="p-6 md:p-16 space-y-6 md:space-y-8">
-                            <div className="flex items-center gap-4">
-                                <h2 className="text-3xl font-bold text-[#13261f]">Wetenschap & Praktijk</h2>
+                        <div className="p-5 md:p-16 space-y-6 md:space-y-8">
+                            <div className="flex items-center justify-between gap-4">
+                                <h2 className="text-xl md:text-3xl font-bold text-[#13261f]">Wetenschap & Praktijk</h2>
                                 <Tooltip
                                     placement="bottom-end"
                                     content={
@@ -227,8 +227,8 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                                         </div>
                                     }
                                 >
-                                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#E8F5EF] text-[#58B895] hover:bg-[#58B895] hover:text-white transition-all cursor-help shadow-sm">
-                                        <InfoIcon className="w-5 h-5" />
+                                    <div className="flex items-center justify-center w-7 h-7 md:w-8 md:h-8 rounded-full bg-[#E8F5EF] text-[#58B895] hover:bg-[#58B895] hover:text-white transition-all cursor-help shadow-sm">
+                                        <InfoIcon className="w-4 h-4 md:w-5 md:h-5" />
                                     </div>
                                 </Tooltip>
                             </div>
@@ -239,16 +239,17 @@ const Kennisbank: React.FC<{ initialCategory?: string }> = ({ initialCategory })
                                     placeholder="Zoek op trefwoord..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="w-full pl-14 pr-4 py-5 rounded-2xl bg-gray-50 border border-transparent focus:bg-white focus:border-[#58B895] focus:ring-4 focus:ring-[#58B895]/5 outline-none transition-all text-lg shadow-inner"
+                                    className="w-full pl-12 md:pl-14 pr-4 py-4 md:py-5 rounded-xl md:rounded-2xl bg-gray-50 border border-transparent focus:bg-white focus:border-[#58B895] focus:ring-4 focus:ring-[#58B895]/5 outline-none transition-all text-base md:text-lg shadow-inner"
                                 />
-                                <svg className="h-7 w-7 absolute left-5 top-1/2 -translate-y-1/2 text-[#58B895]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                                <svg className="h-5 w-5 md:h-7 md:w-7 absolute left-4 md:left-5 top-1/2 -translate-y-1/2 text-[#58B895]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                             </div>
-                            <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide -mx-1 px-1">
+
+                            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide -mx-1 px-1">
                                 {categories.map(cat => (
                                     <button
                                         key={cat}
                                         onClick={() => setSelectedCategory(cat)}
-                                        className={`flex-shrink-0 px-5 py-2 rounded-full text-[11px] font-bold uppercase transition-all border whitespace-nowrap ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-md' : 'bg-white text-gray-500 border-gray-200 hover:border-[#58B895] hover:text-[#58B895]'}`}
+                                        className={`flex-shrink-0 px-4 py-2 rounded-full text-[10px] font-bold uppercase transition-all border whitespace-nowrap ${selectedCategory === cat ? 'bg-[#13261f] text-white border-[#13261f] shadow-md' : 'bg-white text-gray-500 border-gray-200 hover:border-[#58B895] hover:text-[#58B895]'}`}
                                     >
                                         {cat}
                                     </button>
