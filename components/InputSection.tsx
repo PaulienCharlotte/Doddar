@@ -271,7 +271,7 @@ const InputSection: React.FC<InputSectionProps> = ({
                                 className="w-5 h-5 md:w-4 md:h-4 rounded border-gray-300 text-[#58B895] focus:ring-[#58B895] transition-all cursor-pointer mt-0.5 flex-shrink-0"
                             />
                             <span className="text-sm md:text-base text-[#4B5563] group-hover:text-[#13261f] transition-colors leading-relaxed">
-                                Ik ga akkoord met de <button type="button" onClick={(e) => { e.stopPropagation(); onOpenTerms(); }} className="text-[#6A9489] hover:text-[#58B895] hover:underline font-medium">Algemene voorwaarden</button> en <button type="button" onClick={(e) => { e.stopPropagation(); onOpenDisclaimer(); }} className="text-[#6A9489] hover:text-[#58B895] hover:underline font-medium">Disclaimer</button>. Ik begrijp dat dit een AI-indicatie is.
+                                Ik ga akkoord met de <button type="button" onClick={(e) => { e.stopPropagation(); onOpenTerms(); }} className="text-[#6A9489] hover:text-[#58B895] hover:underline font-medium">Algemene voorwaarden</button> en <button type="button" onClick={(e) => { e.stopPropagation(); onOpenDisclaimer(); }} className="text-[#6A9489] hover:text-[#58B895] hover:underline font-medium">Disclaimer</button>. Ik begrijp dat dit een <strong>structurerings-hulpmiddel</strong> is en geen juridisch advies.
                             </span>
                         </label>
                     </div>

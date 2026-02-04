@@ -67,9 +67,9 @@ const Footer: React.FC<FooterProps> = ({
           <div>
             <h4 className="font-bold text-sm uppercase tracking-wider mb-6 text-[#58B895]">Kennisbank</h4>
             <ul className="space-y-3 text-sm font-medium">
-              <li><button onClick={() => onOpenKnowledge('Afhankelijkheidsrelaties')} className="hover:text-[#58B895] transition-colors text-left">Dwingende Controle</button></li>
-              <li><button onClick={() => onOpenKnowledge('Fraude & Integriteit')} className="hover:text-[#58B895] transition-colors text-left">Bedrijfsrecherche</button></li>
-              <li><button onClick={() => onOpenKnowledge('Gedragsanalyse')} className="hover:text-[#58B895] transition-colors text-left">Gedragsanalyse</button></li>
+              <li><button onClick={() => onOpenKnowledge('Gedrag & Relaties')} className="hover:text-[#58B895] transition-colors text-left">Gedrag & Relaties</button></li>
+              <li><button onClick={() => onOpenKnowledge('Fraude & Integriteit')} className="hover:text-[#58B895] transition-colors text-left">Fraude & Integriteit</button></li>
+              <li><button onClick={() => onOpenKnowledge('Cyber & Digital')} className="hover:text-[#58B895] transition-colors text-left">Cyber & Digital</button></li>
               <li><button onClick={() => onOpenKnowledge()} className="hover:text-[#58B895] transition-colors text-left">Alle Artikelen</button></li>
             </ul>
           </div>

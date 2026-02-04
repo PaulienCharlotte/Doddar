@@ -148,14 +148,9 @@ const ArticleModal: React.FC<{ article: KennisArticle; onClose: () => void; onAr
                                 <span className="italic">{article.title}.</span>
                                 {article.source.journal && <span className="ml-1">{article.source.journal}.</span>}
                                 {article.source.doi && (
-                                    <a
-                                        href={`https://doi-org.proxy.bu.edu/${article.source.doi}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="ml-2 inline-flex items-center text-[#58B895] hover:text-[#13261f] transition-colors font-mono text-[11px] bg-[#E8F5EF] px-2 py-0.5 rounded-md border border-[#58B895]/20"
-                                    >
-                                        DOI:{article.source.doi}
-                                    </a>
+                                    <span className="ml-2 inline-flex items-center text-[#6B7280] font-mono text-[11px] bg-[#F3F4F6] px-2 py-0.5 rounded-md border border-[#E5E7EB]">
+                                        DOI: {article.source.doi}
+                                    </span>
                                 )}
                             </div>
                         </div>

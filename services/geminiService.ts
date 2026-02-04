@@ -27,15 +27,26 @@ BELANGRIJK:
 2. Focus op objectiveerbare gedragspatronen die relevant zijn voor feitenonderzoek.
 3. Gebruik termen zoals 'indicatoren', 'gedragskenmerken' en 'risicofactoren'.
 4. Adereer STRIKT aan de opgegeven onderzoekskaders (zakelijk of privé) zoals gespecificeerd in de prompt.
+5. GEEF NOOIT PERCENTAGES OF SCORES. Dit is verboden.
+6. Als er kinderen of minderjarigen (<18) genoemd worden of betrokken lijken: ZET 'minor_involved' op TRUE en geef een waarschuwing over de zorgplicht (Wpbr).
 
 REGEER ALLEEN MET JSON. GEEN INLEIDING OF UITLEG BUITEN DE JSON.`;
 
 const INITIAL_ANALYSIS_SCHEMA = {
   type: Type.OBJECT,
   properties: {
-    veiligheidsscore: {
-      type: Type.NUMBER,
-      description: "Een algehele indicatie van 0-100 van de complexiteit/risico van de casus."
+    relevance_label: {
+      type: Type.STRING,
+      enum: ["Hoog prioriteit", "Gemiddeld", "Laag", "Nader onderzoek nodig"],
+      description: "Een kwalitatieve indicatie van de urgentie/complexiteit."
+    },
+    minor_involved: {
+      type: Type.BOOLEAN,
+      description: "Zet op true als er kinderen of minderjarigen betrokken zijn."
+    },
+    minor_risk_assessment: {
+      type: Type.STRING,
+      description: "Korte toelichting op de risico's voor de minderjarige (indien van toepassing)."
     },
     gedragspatronen: {
       type: Type.ARRAY,
@@ -43,10 +54,10 @@ const INITIAL_ANALYSIS_SCHEMA = {
         type: Type.OBJECT,
         properties: {
           label: { type: Type.STRING, description: "Naam van het patroon (bijv. Gaslighting, Love Bombing)." },
-          score: { type: Type.NUMBER, description: "Match-percentage als float tussen 0.0 en 1.0." },
+          relevance_label: { type: Type.STRING, enum: ["Aanwezig", "Nader te onderzoeken", "Indicatief"] },
           why_short: { type: Type.STRING, description: "Korte duiding waarom dit patroon herkend wordt." }
         },
-        required: ["label", "score", "why_short"],
+        required: ["label", "relevance_label", "why_short"],
       }
     },
     verduidelijkingsvragen: {
@@ -74,7 +85,7 @@ const INITIAL_ANALYSIS_SCHEMA = {
       required: ["is_bevoegd", "reden", "advies"]
     }
   },
-  required: ["veiligheidsscore", "gedragspatronen", "verduidelijkingsvragen", "bevoegdheid"],
+  required: ["relevance_label", "minor_involved", "minor_risk_assessment", "gedragspatronen", "verduidelijkingsvragen", "bevoegdheid"],
 };
 
 export async function* getInitialAnalysisStream(description: string, persona: 'business' | 'private') {

@@ -25,6 +25,72 @@ export interface KennisArticle {
 }
 
 export const kennisArticles: KennisArticle[] = [
+  // --- NIEUW: PESTEN & GROEPSDYNAMIEK (PEER-TO-PEER) ---
+  {
+    id: "peer-group-bullying-roles",
+    title: "Pesten als Groepsproces: De Rol van Omstanders",
+    category: "Gedrag & Relaties",
+    summary: "Waarom pesten geen conflict is tussen twee personen, maar een groepsproces waarin elke omstander een rol speelt.",
+    relatedIds: ["cyberaggression-adolescent-brain", "trauma-bonding-neurology"],
+    content: {
+      intro: "Lange tijd werd pesten gezien als een interactie tussen 'dader' en 'slachtoffer'. Dit perspectief is achterhaald. Pesten is een strategisch spel om sociale status, waarbij de groep de brandstof levert.",
+      analysis: `Salmivalli (2010) beargumenteert dat de meeste kinderen aanwezig zijn bij pestincidenten, maar niet ingrijpen. Zij identificeert specifieke 'Participant Roles':
+1. **Assistants:** Helpen de pester actief mee.
+2. **Reinforcers:** Lachen of moedigen de pester aan, waardoor het gedrag wordt beloond.
+3. **Outsiders:** Houden zich afzijdig ('ik bemoei me er niet mee'), wat door de dader wordt geïnterpreteerd als stilzwijgende goedkeuring.
+4. **Defenders:** Nemen het op voor het slachtoffer of halen hulp.
+
+**Conclusie:** Interventies die zich alleen richten op de pester falen vaak. De sleutel tot verandering ligt bij het activeren van de 'zwijgende meerderheid' (de outsiders) om defenders te worden.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Het inzetten van 'peer-support' groepen in klassen en teams om de sociale norm te kantelen.",
+    keyPoints: ["Participant Roles", "Zwijgende meerderheid", "Sociale status"],
+    source: { author: "Christina Salmivalli", year: 2010, journal: "Aggression and Violent Behavior", doi: "10.1016/j.avb.2009.08.007" }
+  },
+  {
+    id: "psychosomatic-bullying-impact",
+    title: "Psychosomatische Gevolgen van Pesten",
+    category: "Gedrag & Relaties",
+    summary: "Meta-analyse (2009) toont aan hoe pesten zich letterlijk in het lichaam vastzet: van hoofdpijn tot slaapproblemen.",
+    relatedIds: ["stalking-impact-trauma", "intermittent-reinforcement-addiction"],
+    content: {
+      intro: "Kinderen die gepest worden melden zich vaak ziek met 'vage' klachten. Dit is geen aanstellerij, maar een biologische realiteit van chronische stress.",
+      analysis: `Gini & Pozzoli (2009) analyseerden studies met in totaal tienduizenden kinderen. Zij vonden een sterke, consistente link tussen gepest worden en psychosomatische klachten.
+**De symptomen:**
+* **Fysiek:** Terugkerende buikpijn, hoofdpijn en duizeligheid zonder medische oorzaak.
+* **Slaap:** Nachtmerries, bedplassen of niet in slaap kunnen vallen (hyper-vigilantie).
+* **Immuniteit:** Een verzwakt immuunsysteem door constant verhoogde cortisolspiegels.
+
+Opvallend is dat ook de 'pester' vaker psychosomatische klachten heeft dan kinderen die niet betrokken zijn, wat wijst op de stressvolle aard van de dader-rol (statusbehoud).`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Screening op pestgedrag bij kinderen met frequent onverklaard schoolverzuim.",
+    keyPoints: ["Psychosomatische klachten", "Chronische stress", "Cortisol-impact"],
+    source: { author: "Gini, G. & Pozzoli, T.", year: 2009, journal: "Pediatrics", doi: "10.1542/peds.2008-1215" }
+  },
+  {
+    id: "cyberbullying-meta-analysis-2014",
+    title: "Cyberpesten: Een Digitale Verlenging?",
+    category: "Cyber & Digital",
+    summary: "Is cyberpesten 'erger' dan traditioneel pesten? Een overzicht van de unieke risicofactoren van digitale agressie.",
+    relatedIds: ["cyberaggression-adolescent-brain", "cyberbullying-anonymity-myth"],
+    content: {
+      intro: "Met de opkomst van sociale media ontstond de vraag: is dit 'oude wijn in nieuwe zakken' of een compleet nieuw fenomeen?",
+      analysis: `Kowalski et al. (2014) voerden een meta-analyse uit om de overlappingen te onderzoeken. Hoewel er veel samenhang is (pesters op school zijn vaak ook pesters online), zijn er unieke gevaren:
+1. **Toegankelijkheid:** Het slachtoffer is 24/7 bereikbaar, zelfs in de eigen slaapkamer.
+2. **Permanenties:** Wat online wordt gezet, blijft mogelijk voor altijd bestaan (digitale voetafdruk).
+3. **Viraliteit:** Het publiek bij cyberpesten is potentieel oneindig groot, wat de schaamte vergroot.
+
+De studie toont aan dat de correlatie tussen cyberpesten en depressie sterker is dan bij traditioneel pesten, juist vanwege deze onontkoombaarheid.`,
+      methodology: "",
+      conclusion: ""
+    },
+    practicalApplication: "Integratie van 'digitale burgerschap' in anti-pestprotocollen.",
+    keyPoints: ["24/7 Bereikbaarheid", "Permanenties van data", "Viraliteit"],
+    source: { author: "Kowalski, R. M. et al.", year: 2014, journal: "Psychological Bulletin", doi: "10.1037/a0035618" }
+  },
   {
     id: "homicide-timeline-stalking",
     title: "De Stalking-Homicide Timeline: Acht Fasen van Gevaar",
@@ -2362,5 +2428,6 @@ Dit verklaart waarom 'begrijpen dat het fout is' vaak niet genoeg is om de relat
     practicalApplication: "Digitale hygiëne-plannen om de conditionering door daders te doorbreken.",
     keyPoints: ["Digitale conditionering", "Gamificatie", "Conditionerings-cyclus"],
     source: { author: "Przybylski, A. K., et al.", year: 2022, doi: "10. 1038/s41562-022-01311-y" }
-  }
+  },
+
 ];

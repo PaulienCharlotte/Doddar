@@ -24,15 +24,23 @@ interface ResultDisplayProps {
 
 const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onRequestIntake }) => {
     const [shareAnalysis, setShareAnalysis] = useState(true);
+    const [humanInterpretation, setHumanInterpretation] = useState('');
 
     // Safe data access
     const isBevoegd = result?.bevoegdheidscheck?.is_bevoegd ?? false;
-    const isMinderjarig = result?.advies?.minderjarig ?? false;
+    // Use optional chaining carefully as types might have strictly changed
+    const isMinderjarig = (result as any)?.minor_involved ?? false;
+    const minorRisk = (result as any)?.minor_risk_assessment || "";
     const samenvatting = result?.samenvatting || "Geen samenvatting beschikbaar.";
     const samengevoegdAdvies = (result?.advies?.veiligheidsadvies || "") + "\n\n" + (result?.advies?.professioneel_advies || "");
     const juridischeOpmerking = result?.advies?.juridische_opmerking || "Geen juridische opmerking beschikbaar.";
 
     const handleIntakeClick = () => {
+        if (!humanInterpretation.trim()) {
+            alert("Voer a.u.b. eerst uw eigen interpretatie in om het rapport te valideren.");
+            return;
+        }
+
         if (shareAnalysis) {
             const context: AnalysisContext = {
                 summary: samenvatting,
@@ -40,7 +48,9 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onReques
                 patterns: result.gedragskenmerken || [],
                 legal_factors: (result.mogelijke_wettelijke_overtredingen || []).map(w => `${w.wetboek} Art. ${w.artikel}: ${w.omschrijving}`),
                 scientific_context: (result.impact_onderbouwing || []).map(i => `${i.titel}: ${i.onderbouwing}`),
-                methods: (result.mogelijke_onderzoeksmethoden || []).map(m => m.id)
+                methods: (result.mogelijke_onderzoeksmethoden || []).map(m => m.id),
+                // We add this to context via a temporary cast or purely passing it if the type allows
+                ...({ human_validation: humanInterpretation } as any)
             };
             onRequestIntake(context);
         } else {
@@ -58,8 +68,8 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onReques
                         <DossierIcon className="w-6 h-6" />
                     </div>
                     <div>
-                        <h2 className="text-xl font-bold text-[#13261f]">Voorlopig Analyserapport</h2>
-                        <p className="text-xs text-brand-subtle font-mono uppercase tracking-widest">Status: Indicatieve AI-Toetsing</p>
+                        <h2 className="text-xl font-bold text-[#13261f]">Structureringsrapport</h2>
+                        <p className="text-xs text-brand-subtle font-mono uppercase tracking-widest">Status: Menselijke Validatie Vereist</p>
                     </div>
                 </div>
                 <div className="text-right hidden md:block">
@@ -84,7 +94,7 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onReques
                 </div>
             </section>
 
-            {/* II. Onderzoeksstrategie Section (Moved Up as requested) */}
+            {/* II. Onderzoeksstrategie Section */}
             <section className="pt-8">
                 <div className="flex items-center gap-4 mb-12">
                     <div className="h-px bg-brand-accent flex-grow"></div>
@@ -110,12 +120,26 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onReques
                 </div>
 
                 {isMinderjarig && (
-                    <div className="bg-status-danger/5 border-l-4 border-status-danger text-status-danger p-6 rounded-r-xl" role="alert">
+                    <div className="bg-red-50 border-l-4 border-red-500 text-red-900 p-6 rounded-r-xl shadow-sm" role="alert">
                         <div className="flex gap-4">
-                            <div className="py-1"><WarningIcon className="h-7 w-7" /></div>
+                            <div className="py-1"><WarningIcon className="h-8 w-8 text-red-600" /></div>
                             <div>
-                                <p className="font-bold text-lg mb-1">Let op: Minderjarige Betrokken</p>
-                                <p className="text-base leading-relaxed">Er is mogelijk een minderjarige bij deze situatie betrokken. Dit vereist extra zorgvuldigheid en kan meldplichten met zich meebrengen.</p>
+                                <p className="font-bold text-lg mb-2 text-red-700">Wettelijke Zorgplicht (Wpbr) - Minderjarige Betrokken</p>
+                                <p className="text-base leading-relaxed font-medium">
+                                    De AI heeft indicatoren van betrokkenheid van een minderjarige gedetecteerd.
+                                </p>
+                                <p className="text-sm mt-2 text-red-800/80">
+                                    Conform de Wet particuliere beveiligingsorganisaties en recherchebureaus (Wpbr) en de Privacygedragscode dient u:
+                                    <ul className="list-disc ml-5 mt-1 space-y-1">
+                                        <li>Het belang van het kind voorop te stellen in elk onderzoek (proportionaliteit).</li>
+                                        <li>Terughoudend te zijn met observatie of middelen die de privacy van de minderjarige schenden.</li>
+                                    </ul>
+                                </p>
+                                {minorRisk && (
+                                    <div className="mt-3 p-3 bg-white/60 rounded-lg border border-red-100 text-sm italic">
+                                        "AI Risico-inschatting: {minorRisk}"
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -147,7 +171,7 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onReques
                 </div>
             </section>
 
-            {/* Expert Gate */}
+            {/* Expert Gate (Modified for Human-in-the-loop) */}
             <section className="bg-[#F2F9F6] border-2 border-[#58B895]/20 p-8 md:p-12 rounded-[2.5rem] shadow-lg relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#58B895]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
                 <div className="relative z-10 grid md:grid-cols-[1fr_200px] gap-8 items-center">
@@ -156,11 +180,11 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onReques
                             <div className="bg-white p-1.5 rounded-lg shadow-sm">
                                 <UserCheckIcon className="w-5 h-5 text-[#58B895]" />
                             </div>
-                            <h3 className="text-[#58B895] font-bold uppercase tracking-[0.2em] text-xs">Systeemanalyse Onderbroken</h3>
+                            <h3 className="text-[#58B895] font-bold uppercase tracking-[0.2em] text-xs">Human-in-the-loop</h3>
                         </div>
-                        <h4 className="text-2xl md:text-3xl font-bold text-[#13261f] leading-tight">Expert-validatie vereist voor diepgaande conclusies.</h4>
+                        <h4 className="text-2xl md:text-3xl font-bold text-[#13261f] leading-tight">Verplichte Menselijke Validatie</h4>
                         <p className="text-[#4B5563] leading-relaxed text-base md:text-lg font-light">
-                            De AI heeft patronen gedetecteerd die wijzen op complexe machtsdynamieken en mogelijke bewijslast. Om misinterpretatie van deze gevoelige informatie te voorkomen, worden de meest gedetailleerde kruisverbanden pas ontsloten na een <span className="font-bold text-[#13261f]">menselijke validatie</span> door een erkend onderzoeker.
+                            De AI fungeert als structurerings-assistent. Conform de EU AI Act dient u als menselijke professional de context te duiden voordat resultaten definitief zijn.
                         </p>
                     </div>
                     <div className="hidden md:flex justify-center">
@@ -171,11 +195,36 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onReques
                 </div>
             </section>
 
+            {/* VI. Human Validation Input (New) */}
+            <section className="space-y-8 section-human-validation">
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="h-px bg-brand-accent flex-grow"></div>
+                    <span className="text-[10px] font-bold text-brand-subtle uppercase tracking-[0.3em]">VI. Uw Interpretatie</span>
+                    <div className="h-px bg-brand-accent flex-grow"></div>
+                </div>
+
+                <div className="bg-white p-8 rounded-[2rem] border-2 border-[#58B895] shadow-lg relative">
+                    <div className="absolute -top-3 left-8 bg-[#58B895] text-white px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider">
+                        Verplicht Veld
+                    </div>
+                    <h4 className="text-lg font-bold text-[#13261f] mb-2">Rechercheur / Gebruiker Interpretatie</h4>
+                    <p className="text-sm text-gray-500 mb-4">
+                        Formuleer hier uw eigen conclusie op basis van de aangereikte structuur. Ziet u de patronen ook? Mist u nuance? Dit wordt onderdeel van het dossier.
+                    </p>
+                    <textarea
+                        className="w-full min-h-[150px] p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#58B895] focus:border-transparent outline-none bg-gray-50 text-[#13261f]"
+                        placeholder="Ik constateer dat..."
+                        value={humanInterpretation}
+                        onChange={(e) => setHumanInterpretation(e.target.value)}
+                    ></textarea>
+                </div>
+            </section>
+
             {/* V. Advies & Reflectie Section */}
             <section className="space-y-8">
                 <div className="flex items-center gap-4 mb-4">
                     <div className="h-px bg-brand-accent flex-grow"></div>
-                    <span className="text-[10px] font-bold text-brand-subtle uppercase tracking-[0.3em]">V. Advies & Reflectie</span>
+                    <span className="text-[10px] font-bold text-brand-subtle uppercase tracking-[0.3em]">VII. Advies & Reflectie</span>
                     <div className="h-px bg-brand-accent flex-grow"></div>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8">
@@ -200,18 +249,24 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onReques
             {/* Action Area: Intake vs Reset */}
             <div className="grid md:grid-cols-2 gap-6 pt-12 border-t border-brand-accent">
                 {/* Option 1: Intake with conscious choice */}
-                <div className="bg-[#E8F5EF] p-8 rounded-3xl border border-[#58B895]/20 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div className={`p-8 rounded-3xl border transition-all hover:shadow-md flex flex-col justify-between ${humanInterpretation ? 'bg-[#E8F5EF] border-[#58B895]/20' : 'bg-gray-50 border-gray-200 opacity-80'}`}>
                     <div>
                         <h4 className="font-bold text-[#13261f] text-xl mb-3 flex items-center gap-2">
-                            <MessageCircleIcon className="w-6 h-6 text-[#58B895]" />
+                            <MessageCircleIcon className={`w-6 h-6 ${humanInterpretation ? 'text-[#58B895]' : 'text-gray-400'}`} />
                             Bespreken met een Expert
                         </h4>
                         <p className="text-[#4B5563] text-base leading-relaxed mb-8">
-                            Zet dit indicatieve rapport om in een definitieve analyse. Een adviseur helpt u de juridische haalbaarheid en bewijslast te duiden in een <strong>gratis intakegesprek</strong>.
+                            Zet dit gevalideerde rapport om in een definitieve analyse. Een adviseur helpt u de juridische haalbaarheid te duiden.
                         </p>
 
+                        {!humanInterpretation && (
+                            <p className="mb-4 text-xs font-bold text-red-500 uppercase tracking-wide">
+                                * Vul eerst uw interpretatie in
+                            </p>
+                        )}
+
                         {/* Keuzekaarten */}
-                        <div className="grid grid-cols-1 gap-3 mb-8">
+                        <div className={`grid grid-cols-1 gap-3 mb-8 transition-opacity ${!humanInterpretation ? 'pointer-events-none opacity-50' : ''}`}>
                             <div
                                 onClick={() => setShareAnalysis(true)}
                                 className={`cursor-pointer p-4 rounded-xl border-2 transition-all relative group ${shareAnalysis ? 'bg-white border-[#58B895] shadow-sm' : 'bg-white/40 border-transparent hover:bg-white/60'}`}
@@ -245,7 +300,8 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onReques
                     </div>
                     <button
                         onClick={handleIntakeClick}
-                        className="w-full py-4 bg-[#13261f] hover:bg-[#58B895] text-white font-bold rounded-2xl shadow-lg transition-all text-lg flex flex-col items-center justify-center"
+                        disabled={!humanInterpretation}
+                        className={`w-full py-4 font-bold rounded-2xl shadow-lg transition-all text-lg flex flex-col items-center justify-center ${humanInterpretation ? 'bg-[#13261f] hover:bg-[#58B895] text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed shadow-none'}`}
                     >
                         <span className="flex items-center gap-2">Plan Gratis Intakegesprek <span className="text-xl">→</span></span>
                         <span className="text-[10px] uppercase tracking-widest opacity-70">Altijd vrijblijvend & vertrouwelijk</span>
@@ -271,5 +327,4 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onReques
         </div>
     );
 };
-
 export default ResultDisplay;

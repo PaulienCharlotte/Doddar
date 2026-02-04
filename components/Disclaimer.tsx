@@ -35,9 +35,14 @@ const Disclaimer: React.FC<DisclaimerProps> = ({ onBack }) => {
               <h1 className="text-2xl md:text-3xl font-bold text-[#13261f]">Disclaimer Analyse Tool</h1>
             </div>
             <div className="space-y-6 text-[#4B5563] font-normal leading-relaxed text-lg">
-              <p>De resultaten vormen uitdrukkelijk <u>geen</u> juridisch, medisch, psychologisch of financieel advies.</p>
+              <p><strong>Let op:</strong> Deze applicatie fungeert uitsluitend als een <em>structurerings-hulpmiddel</em> voor tekstbestanden. De AI ordent informatie op basis van taalkundige patronen.</p>
+              <ul className="list-disc ml-5 space-y-2">
+                <li>De resultaten vormen een <strong>indicatieve tekstordening</strong> en geen feitelijk bewijs.</li>
+                <li>Dit is <u>geen</u> psychologische diagnose of juridisch oordeel.</li>
+                <li>Menselijke tussenkomst en validatie zijn vereist voor elk gebruik (Human-in-the-loop).</li>
+              </ul>
               <p>
-                Doddar streeft naar accurate gedragsindicaties, maar de getoonde uitkomsten zijn gebaseerd op AI-modellen en dienen uitsluitend ter informatie en reflectie. Aan deze tool kunnen geen rechten worden ontleend.
+                Doddar aanvaardt geen aansprakelijkheid voor conclusies die direct aan deze automatische ordening worden verbonden zonder tussenkomst van een erkend specialist.
               </p>
             </div>
           </div>

@@ -101,7 +101,7 @@ export interface Verduidelijkingsvraag {
 
 export interface Gedragspatroon {
   label: string;
-  score: number; // Renamed from 'sterkte'
+  relevance_label: "Aanwezig" | "Nader te onderzoeken" | "Indicatief";
   why_short: string;
 }
 
@@ -112,10 +112,12 @@ export interface Bevoegdheid {
 }
 
 export interface InitialAnalysisResponse {
-  veiligheidsscore: number;
+  relevance_label: "Hoog prioriteit" | "Gemiddeld" | "Laag" | "Nader onderzoek nodig"; // Replaces veiligheidsscore
   gedragspatronen: Gedragspatroon[];
   verduidelijkingsvragen: Verduidelijkingsvraag[];
   bevoegdheid: Bevoegdheid;
+  minor_involved: boolean;
+  minor_risk_assessment: string;
 }
 
 export interface AnalysisContext {
