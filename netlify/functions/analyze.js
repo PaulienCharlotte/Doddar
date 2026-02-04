@@ -1,4 +1,3 @@
-import { GoogleGenAI, Type } from '@google/genai';
 import { getStore } from '@netlify/blobs';
 
 // --- CONSTANTS FROM FRONTEND ---
@@ -16,54 +15,54 @@ BELANGRIJK:
 REGEER ALLEEN MET JSON. GEEN INLEIDING OF UITLEG BUITEN DE JSON.`;
 
 const INITIAL_ANALYSIS_SCHEMA = {
-    type: Type.OBJECT,
+    type: "OBJECT",
     properties: {
         relevance_label: {
-            type: Type.STRING,
+            type: "STRING",
             enum: ["Hoog prioriteit", "Gemiddeld", "Laag", "Nader onderzoek nodig"],
             description: "Een kwalitatieve indicatie van de urgentie/complexiteit."
         },
         minor_involved: {
-            type: Type.BOOLEAN,
+            type: "BOOLEAN",
             description: "Zet op true als er kinderen of minderjarigen betrokken zijn."
         },
         minor_risk_assessment: {
-            type: Type.STRING,
+            type: "STRING",
             description: "Korte toelichting op de risico's voor de minderjarige (indien van toepassing)."
         },
         gedragspatronen: {
-            type: Type.ARRAY,
+            type: "ARRAY",
             items: {
-                type: Type.OBJECT,
+                type: "OBJECT",
                 properties: {
-                    label: { type: Type.STRING, description: "Naam van het patroon (bijv. Gaslighting, Love Bombing)." },
-                    relevance_label: { type: Type.STRING, enum: ["Aanwezig", "Nader te onderzoeken", "Indicatief"] },
-                    why_short: { type: Type.STRING, description: "Korte duiding waarom dit patroon herkend wordt." }
+                    label: { type: "STRING", description: "Naam van het patroon (bijv. Gaslighting, Love Bombing)." },
+                    relevance_label: { type: "STRING", enum: ["Aanwezig", "Nader te onderzoeken", "Indicatief"] },
+                    why_short: { type: "STRING", description: "Korte duiding waarom dit patroon herkend wordt." }
                 },
                 required: ["label", "relevance_label", "why_short"],
             }
         },
         verduidelijkingsvragen: {
-            type: Type.ARRAY,
+            type: "ARRAY",
             items: {
-                type: Type.OBJECT,
+                type: "OBJECT",
                 properties: {
-                    question_id: { type: Type.STRING },
-                    vraag: { type: Type.STRING },
-                    waarom_relevant: { type: Type.STRING },
-                    input_type: { type: Type.STRING, enum: ['YES_NO', 'MULTIPLE_CHOICE', 'SCALE_0_4', 'FREE_TEXT'] },
-                    options: { type: Type.ARRAY, items: { type: Type.STRING }, nullable: true },
-                    priority: { type: Type.NUMBER }
+                    question_id: { type: "STRING" },
+                    vraag: { type: "STRING" },
+                    waarom_relevant: { type: "STRING" },
+                    input_type: { type: "STRING", enum: ['YES_NO', 'MULTIPLE_CHOICE', 'SCALE_0_4', 'FREE_TEXT'] },
+                    options: { type: "ARRAY", items: { type: "STRING" }, nullable: true },
+                    priority: { type: "NUMBER" }
                 },
                 required: ["question_id", "vraag", "waarom_relevant", "input_type", "priority"],
             }
         },
         bevoegdheid: {
-            type: Type.OBJECT,
+            type: "OBJECT",
             properties: {
-                is_bevoegd: { type: Type.BOOLEAN },
-                reden: { type: Type.STRING },
-                advies: { type: Type.STRING }
+                is_bevoegd: { type: "BOOLEAN" },
+                reden: { type: "STRING" },
+                advies: { type: "STRING" }
             },
             required: ["is_bevoegd", "reden", "advies"]
         }
@@ -81,35 +80,38 @@ const DETAILED_ANALYSIS_SYSTEM_INSTRUCTION = `Je bent Doddar’s senior onderzoe
 7. Wees SELECTIEF met onderzoeksmethoden (max 2-3). Prioriteer laag-drempelige methoden zoals 'Advies' en 'OSINT' voor algemene casussen, maar zet 'Observatie' ALTIJD in als relevante optie bij casussen die fysiek gedrag, buitensluiting in de fysieke ruimte of pestgedrag betreffen waarbij bewijslast noodzakelijk is.`;
 
 const DETAILED_ANALYSIS_SCHEMA = {
-    type: Type.OBJECT,
+    type: "OBJECT",
     properties: {
-        samenvatting: { type: Type.STRING },
-        gedragskenmerken: { type: Type.ARRAY, items: { type: Type.STRING } },
+        samenvatting: { type: "STRING" },
+        gedragskenmerken: { type: "ARRAY", items: { type: "STRING" } },
         mogelijke_wettelijke_overtredingen: {
-            type: Type.OBJECT,
-            properties: {
-                wetboek: { type: Type.STRING },
-                artikel: { type: Type.STRING },
-                omschrijving: { type: Type.STRING },
-                bron: { type: Type.STRING },
+            type: "ARRAY",
+            items: {
+                type: "OBJECT",
+                properties: {
+                    wetboek: { type: "STRING" },
+                    artikel: { type: "STRING" },
+                    omschrijving: { type: "STRING" },
+                    bron: { type: "STRING" },
+                },
+                required: ["wetboek", "artikel", "omschrijving", "bron"],
             },
-            required: ["wetboek", "artikel", "omschrijving", "bron"],
         },
         impact_onderbouwing: {
-            type: Type.ARRAY,
+            type: "ARRAY",
             items: {
-                type: Type.OBJECT,
+                type: "OBJECT",
                 properties: {
-                    titel: { type: Type.STRING },
-                    onderbouwing: { type: Type.STRING },
+                    titel: { type: "STRING" },
+                    onderbouwing: { type: "STRING" },
                     referenties: {
-                        type: Type.ARRAY,
+                        type: "ARRAY",
                         items: {
-                            type: Type.OBJECT,
+                            type: "OBJECT",
                             properties: {
-                                titel: { type: Type.STRING },
-                                jaar: { type: Type.NUMBER },
-                                doi: { type: Type.STRING },
+                                titel: { type: "STRING" },
+                                jaar: { type: "NUMBER" },
+                                doi: { type: "STRING" },
                             },
                             required: ["titel", "jaar", "doi"],
                         }
@@ -119,33 +121,33 @@ const DETAILED_ANALYSIS_SCHEMA = {
             },
         },
         bevoegdheidscheck: {
-            type: Type.OBJECT,
+            type: "OBJECT",
             properties: {
-                is_bevoegd: { type: Type.BOOLEAN },
-                motivering: { type: Type.STRING },
-                kaders: { type: Type.ARRAY, items: { type: Type.STRING } },
+                is_bevoegd: { type: "BOOLEAN" },
+                motivering: { type: "STRING" },
+                kaders: { type: "ARRAY", items: { type: "STRING" } },
             },
             required: ["is_bevoegd", "motivering", "kaders"],
         },
-        aanvullende_vragen: { type: Type.ARRAY, items: { type: Type.STRING } },
+        aanvullende_vragen: { type: "ARRAY", items: { type: "STRING" } },
         mogelijke_onderzoeksmethoden: {
-            type: Type.ARRAY,
+            type: "ARRAY",
             items: {
-                type: Type.OBJECT,
+                type: "OBJECT",
                 properties: {
-                    id: { type: Type.STRING, enum: ["OSINT", "Observatie", "Interview", "Advies", "Screening", "Recherche"] },
-                    omschrijving: { type: Type.STRING },
+                    id: { type: "STRING", enum: ["OSINT", "Observatie", "Interview", "Advies", "Screening", "Recherche"] },
+                    omschrijving: { type: "STRING" },
                 },
                 required: ["id", "omschrijving"],
             },
         },
         advies: {
-            type: Type.OBJECT,
+            type: "OBJECT",
             properties: {
-                minderjarig: { type: Type.BOOLEAN },
-                veiligheidsadvies: { type: Type.STRING },
-                professioneel_advies: { type: Type.STRING },
-                juridische_opmerking: { type: Type.STRING },
+                minderjarig: { type: "BOOLEAN" },
+                veiligheidsadvies: { type: "STRING" },
+                professioneel_advies: { type: "STRING" },
+                juridische_opmerking: { type: "STRING" },
             },
             required: ["minderjarig", "veiligheidsadvies", "professioneel_advies", "juridische_opmerking"],
         },
@@ -216,72 +218,118 @@ export const handler = async (event, context) => {
         } catch (e) { console.error("Admin logging error", e); }
     }
 
-    // GEMINI LOGIC
+    // GEMINI LOGIC VIA NATIVE FETCH (No SDK)
     try {
         const body = JSON.parse(event.body);
         const { type, content } = body; // type: 'initial' | 'detailed' | 'rewrite'
 
-        // Decode API Key
+        // Decode API Key Robustly
+        let apiKey = process.env.API_KEY || '';
         const encodedKey = process.env.GEMINI_API_KEY_B64;
-        const apiKey = encodedKey ? atob(encodedKey) : (process.env.API_KEY || '');
-        if (!apiKey) throw new Error("API Key missing on server");
+        if (encodedKey) {
+            try {
+                apiKey = Buffer.from(encodedKey, 'base64').toString('utf-8').trim();
+            } catch (e) {
+                console.error("API Key decoding failed", e);
+            }
+        }
 
-        const ai = new GoogleGenAI({ apiKey });
+        if (!apiKey) {
+            console.error("API Key is missing via environment variables.");
+            return {
+                statusCode: 500,
+                body: JSON.stringify({ error: "Server configuratie fout: API Key ontbreekt." })
+            };
+        }
 
-        // Define standard reliable model
+        // Configure Request
         const STANDARD_MODEL = "gemini-1.5-flash";
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${STANDARD_MODEL}:generateContent?key=${apiKey}`;
 
-        // Config setup
-        let config = { temperature: 0.1, responseMimeType: "application/json" };
         let prompt = "";
-
-        let systemInstruction = "";
+        let systemInstructionContent = "";
         let responseSchema = null;
+        let responseMimeType = "application/json";
+        let temperature = 0.1;
 
         if (type === 'initial') {
             const { description, persona } = content;
             prompt = `Casus: "${description}". Persona: ${persona}. Analyseer op onderzoekbare gedragskenmerken en lever direct JSON.`;
-            systemInstruction = INITIAL_ANALYSIS_SYSTEM_INSTRUCTION;
+            systemInstructionContent = INITIAL_ANALYSIS_SYSTEM_INSTRUCTION;
             responseSchema = INITIAL_ANALYSIS_SCHEMA;
         } else if (type === 'detailed') {
             const { description, answers } = content;
             prompt = `Casus: ${description}. Antwoorden op vragen: ${JSON.stringify(answers)}`;
-            systemInstruction = DETAILED_ANALYSIS_SYSTEM_INSTRUCTION;
+            systemInstructionContent = DETAILED_ANALYSIS_SYSTEM_INSTRUCTION;
             responseSchema = DETAILED_ANALYSIS_SCHEMA;
-            config.tools = [{ googleSearch: {} }];
-            // config.thinkingConfig = { thinkingBudget: 2000 };
+            // Note: Google Search Tool is tricky via REST without proper configuration, omitting for simplicity in fallback
+            // To restore: "tools": [ { "google_search": {} } ]
         } else if (type === 'rewrite') {
             const { description } = content;
             prompt = `Herschrijf deze tekst kort en zakelijk vanuit een persoonlijk perspectief voor recherche-analyse. Tekst: "${description}"`;
-            systemInstruction = "Herschrijf de tekst feitelijk. Alleen de herschreven tekst teruggeven.";
-            // Note: For text/plain, usually no schema needed.
-            config = { temperature: 0.7 };
+            systemInstructionContent = "Herschrijf de tekst feitelijk. Alleen de herschreven tekst teruggeven.";
+            responseMimeType = "text/plain";
+            responseSchema = null;
+            temperature = 0.7;
         }
 
-        // RE-CREATING REQUEST
-        const generateConfig = {
-            systemInstruction: systemInstruction,
-            responseSchema: responseSchema,
-            responseMimeType: config.responseMimeType,
-            temperature: config.temperature,
+        // Build Payload
+        const payload = {
+            contents: [{ parts: [{ text: prompt }] }],
+            generationConfig: {
+                temperature: temperature,
+                responseMimeType: responseMimeType,
+            }
         };
 
-        if (config.tools) generateConfig.tools = config.tools;
+        if (systemInstructionContent) {
+            payload.systemInstruction = { parts: [{ text: systemInstructionContent }] };
+        }
+        if (responseSchema) {
+            payload.generationConfig.responseSchema = responseSchema;
+        }
 
-        // Use new SDK pattern: ai.models.generateContent
-        const result = await ai.models.generateContent({
-            model: STANDARD_MODEL,
-            contents: [{ role: 'user', parts: [{ text: prompt }] }],
-            config: generateConfig
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
         });
+
+        if (!response.ok) {
+            const errText = await response.text();
+            console.error("Gemini API Error:", response.status, errText);
+
+            // Check for Invalid API Key specifically
+            if (response.status === 400 && errText.includes("API_KEY_INVALID")) {
+                return {
+                    statusCode: 500,
+                    body: JSON.stringify({ error: "API Key configuratie incorrect (ongeldig)." })
+                };
+            }
+
+            return {
+                statusCode: response.status,
+                body: JSON.stringify({ error: "AI Service fout", details: errText })
+            };
+        }
+
+        const data = await response.json();
+
+        // Extract text result
+        let outputText = "";
+        if (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts) {
+            outputText = data.candidates[0].content.parts.map(p => p.text).join('');
+        }
 
         return {
             statusCode: 200,
-            body: result.response.text()
+            body: outputText
         };
 
     } catch (error) {
-        console.error("Analysis failed:", error);
+        console.error("Analysis handler failed:", error);
         return {
             statusCode: 500,
             body: JSON.stringify({ error: "Interne analysefout", details: error.message })
