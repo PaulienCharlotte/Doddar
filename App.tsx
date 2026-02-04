@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import type { AnalysisResponse, InitialAnalysisResponse, AnalysisContext } from './types';
-import { getInitialAnalysis, getDetailedAnalysis, getRewriteSuggestion, getInitialAnalysisStream, getDetailedAnalysisStream, logAuditTrail } from './services/geminiService';
+import { getInitialAnalysis, getDetailedAnalysis, getRewriteSuggestion, getInitialAnalysisStream, getDetailedAnalysisStream } from './services/geminiService';
 import { detectPersona } from './utils/persona';
 import { PROFILE_DEFAULT_MINOR } from './data/ageProfiles';
 import type { AgeProfile } from './data/ageProfiles';
@@ -153,19 +153,10 @@ const App: React.FC = () => {
   const [analysisContext, setAnalysisContext] = useState<AnalysisContext | null>(null);
   const [autoScrollToInput, setAutoScrollToInput] = useState<boolean>(false);
   const [serviceScrollId, setServiceScrollId] = useState<string | undefined>(undefined);
-  const [adminKey, setAdminKey] = useState<string | undefined>(undefined);
 
-  // Admin Key Detection
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const key = params.get('admin');
-    if (key) {
-      setAdminKey(key);
-      console.log('Admin modus geactiveerd');
-      // Optional: remove query param from URL to clean up
-      window.history.replaceState({}, document.title, window.location.pathname);
-    }
-  }, []);
+    window.scrollTo(0, 0);
+  }, [step]);
 
   const startAnalysis = useCallback(async (description: string, persona: 'business' | 'private') => {
     setIsLoading(true);
@@ -175,8 +166,7 @@ const App: React.FC = () => {
     setStep('questions');
     try {
       let fullJson = '';
-      // Pass adminKey
-      const stream = getInitialAnalysisStream(description, persona, adminKey);
+      const stream = getInitialAnalysisStream(description, persona);
       for await (const chunkText of stream) {
         if (chunkText) {
           fullJson += chunkText;
@@ -189,29 +179,18 @@ const App: React.FC = () => {
       const result = JSON.parse(fullJson) as InitialAnalysisResponse;
       setQuickResult(result);
       setQuestionAnswers({});
-
-      // Audit Log - Initial Analysis
-      logAuditTrail({
-        timestamp: Date.now(),
-        modelVersion: 'gemini-3-flash-preview',
-        pseudonymConfirmed: true, // Gebruiker bevestigt voorwaardes
-        analysisType: 'initial',
-        minorInvolved: result.minor_involved
-      });
     } catch (e: any) {
       console.error("Analysis Error:", e);
       if (e.message && (e.message.includes("GEMINI_API_KEY") || e.message.includes("API_KEY"))) {
         setError("Systeemfout: GEMINI_API_KEY ontbreekt in implementatie. Voeg deze toe in Netlify.");
-      } else if (e.message && e.message.includes("429")) {
-        setError("U heeft de dagelijkse limiet bereikt. Probeer het morgen opnieuw of neem contact op.");
       } else {
-        setError(e.message || "Er is een fout opgetreden bij de eerste analyse. Probeer het opnieuw.");
+        setError("Er is een fout opgetreden bij de eerste analyse. Probeer het opnieuw.");
       }
       setStep('start');
     } finally {
       setIsLoading(false);
     }
-  }, [adminKey]);
+  }, []);
 
   const handleInitialSubmit = useCallback(async (description: string) => {
     setError(null);
@@ -251,14 +230,14 @@ const App: React.FC = () => {
     setIsRewriting(true);
     setError(null);
     try {
-      const suggestion = await getRewriteSuggestion(description, adminKey);
+      const suggestion = await getRewriteSuggestion(description);
       setRewriteSuggestion(suggestion);
     } catch (e) {
       setError("Kon de tekst niet herschrijven.");
     } finally {
       setIsRewriting(false);
     }
-  }, [caseForAnalysis, caseText, adminKey]);
+  }, [caseForAnalysis, caseText]);
 
   const handleAuthStayPrivate = useCallback(() => {
     const description = caseForAnalysis?.description || caseText;
@@ -270,7 +249,6 @@ const App: React.FC = () => {
     }
   }, [caseForAnalysis, caseText, startAnalysis]);
 
-  // handleQuestionSubmit update
   const handleQuestionSubmit = useCallback(async (answers: Record<string, string>) => {
     setIsLoading(true);
     setError(null);
@@ -279,8 +257,7 @@ const App: React.FC = () => {
 
     try {
       let fullJson = '';
-      // Pass adminKey
-      const stream = getDetailedAnalysisStream(caseText, answers, adminKey);
+      const stream = getDetailedAnalysisStream(caseText, answers);
       for await (const chunkText of stream) {
         if (chunkText) {
           fullJson += chunkText;
@@ -292,29 +269,18 @@ const App: React.FC = () => {
       const result = JSON.parse(fullJson) as AnalysisResponse;
       setFinalResult(result);
       setStep('result');
-
-      // Audit Log - Detailed Analysis
-      logAuditTrail({
-        timestamp: Date.now(),
-        modelVersion: 'gemini-3-flash-preview',
-        pseudonymConfirmed: true,
-        analysisType: 'detailed',
-        minorInvolved: result.advies?.minderjarig
-      });
     } catch (e: any) {
       console.error("Detailed Analysis Error:", e);
       if (e.message && (e.message.includes("GEMINI_API_KEY") || e.message.includes("API_KEY"))) {
         setError("Systeemfout: GEMINI_API_KEY ontbreekt. Kan diepere analyse niet uitvoeren.");
-      } else if (e.message && e.message.includes("429")) {
-        setError("U heeft de dagelijkse limiet bereikt.");
       } else {
-        setError(`De analyse kon niet worden voltooid: ${e.message}`);
+        setError(`De analyse kon niet worden voltooid.`);
       }
       setStep('questions');
     } finally {
       setIsLoading(false);
     }
-  }, [caseText, adminKey]);
+  }, [caseText]);
 
   // handleNavClick is used throughout the app for navigation and state resets.
   const handleNavClick = useCallback((targetStep: AppStep, extraParam?: string) => {
