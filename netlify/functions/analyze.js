@@ -165,11 +165,19 @@ export const handler = async (event, context) => {
     const clientAdminKey = event.headers['x-admin-key'];
     const isAdmin = adminKey && clientAdminKey && adminKey === clientAdminKey;
 
-    const rateLimitStore = getStore('rate-limits');
-    const auditLogStore = getStore('audit-logs'); // Reuse for admin logging
+    // SAFE BLOBS INIT
+    let rateLimitStore = null;
+    let auditLogStore = null;
+    try {
+        rateLimitStore = getStore('rate-limits');
+        auditLogStore = getStore('audit-logs');
+    } catch (e) {
+        console.warn("Netlify Blobs not configured or accessible:", e);
+        // Continue without rate limiting (Fail Open)
+    }
 
     // RATE LIMITING LOGIC
-    if (!isAdmin) {
+    if (!isAdmin && rateLimitStore) {
         try {
             const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
             const key = `rate:${clientIp}:${today}`;
@@ -180,8 +188,7 @@ export const handler = async (event, context) => {
                 const data = await rateLimitStore.get(key, { type: 'json' });
                 if (data && data.count) count = data.count;
             } catch (e) {
-                // Key might not exist, verify if get returns null or throws on miss
-                // Netlify blobs usually return null if not found, assume 0
+                // Key might not exist, assume 0
             }
 
             if (count >= 3) {
@@ -195,10 +202,9 @@ export const handler = async (event, context) => {
             await rateLimitStore.set(key, JSON.stringify({ count: count + 1 }));
         } catch (error) {
             console.error("Rate limit error:", error);
-            // On failure, fail open or closed? Here open to avoid blocking valid users on system error, 
-            // but for strictness maybe closed. Let's log and proceed.
+            // safe to proceed
         }
-    } else {
+    } else if (isAdmin && auditLogStore) {
         // Log Admin Access
         try {
             const logKey = `ADMIN_ACCESS:${new Date().toISOString()}:${Math.random().toString(36).substring(7)}`;
@@ -248,30 +254,23 @@ export const handler = async (event, context) => {
             const { description } = content;
             prompt = `Herschrijf deze tekst kort en zakelijk vanuit een persoonlijk perspectief voor recherche-analyse. Tekst: "${description}"`;
             systemInstruction = "Herschrijf de tekst feitelijk. Alleen de herschreven tekst teruggeven.";
-            // Note: GoogleGenAI usually expects explicit mime type or null for default.
-            // Let's safe-guard:
-            config = { temperature: 0.7 }; // Reset config for rewrite
+            // Note: For text/plain, usually no schema needed.
+            config = { temperature: 0.7 };
         }
 
-        const genModel = ai.getGenerativeModel({
-            model: STANDARD_MODEL,
-        });
-
         // RE-CREATING REQUEST
-        // Note: The google-genai package syntax in node might differ slightly from web.
-        // Assuming the same package version.
-
         const generateConfig = {
             systemInstruction: systemInstruction,
             responseSchema: responseSchema,
-            responseMimeType: config.responseMimeType || "text/plain",
+            responseMimeType: config.responseMimeType,
             temperature: config.temperature,
-            // Tools might need different handling in node SDK depending on version
         };
 
         if (config.tools) generateConfig.tools = config.tools;
 
-        const result = await genModel.generateContent({
+        // Use new SDK pattern: ai.models.generateContent
+        const result = await ai.models.generateContent({
+            model: STANDARD_MODEL,
             contents: [{ role: 'user', parts: [{ text: prompt }] }],
             config: generateConfig
         });
