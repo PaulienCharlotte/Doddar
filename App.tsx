@@ -201,7 +201,7 @@ const App: React.FC = () => {
     } catch (e: any) {
       console.error("Analysis Error:", e);
       if (e.message && (e.message.includes("GEMINI_API_KEY") || e.message.includes("API_KEY"))) {
-        setError("Systeemfout: GEMINI_API_KEY ontbreekt in implementatie. Voeg deze toe in Netlify.");
+        setError("Systeemfout: API Key incorrect of ontbreekt. Controleer VITE_GOOGLE_API_KEY in Netlify.");
       } else if (e.message && e.message.includes("429")) {
         setError("U heeft de dagelijkse limiet bereikt. Probeer het morgen opnieuw of neem contact op.");
       } else {
@@ -304,7 +304,7 @@ const App: React.FC = () => {
     } catch (e: any) {
       console.error("Detailed Analysis Error:", e);
       if (e.message && (e.message.includes("GEMINI_API_KEY") || e.message.includes("API_KEY"))) {
-        setError("Systeemfout: GEMINI_API_KEY ontbreekt. Kan diepere analyse niet uitvoeren.");
+        setError("Systeemfout: API Key issue. Controleer VITE_GOOGLE_API_KEY.");
       } else if (e.message && e.message.includes("429")) {
         setError("U heeft de dagelijkse limiet bereikt.");
       } else {

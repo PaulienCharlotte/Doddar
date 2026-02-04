@@ -202,6 +202,24 @@ REGEER ALLEEN MET JSON. GEEN INLEIDING OF UITLEG BUITEN DE JSON.`;
   yield text;
 }
 
+export async function getInitialAnalysis(description: string, persona: 'business' | 'private', adminKey?: string): Promise<InitialAnalysisResponse> {
+  const prompt = `Casus: "${description}". Persona: ${persona}. Analyseer op onderzoekbare gedragskenmerken en lever direct JSON.`;
+  const systemInstruction = `Jij bent een gedragsanalyse-assistent voor recherchebureau Doddar. Jouw taak is om een voorlopige analyse uit te voeren naar onrechtmatig gedrag en risicofactoren.
+BELANGRIJK: 
+1. Je bent GEEN psycholoog en trekt GEEN klinische conclusies. 
+2. Focus op objectiveerbare gedragspatronen die relevant zijn voor feitenonderzoek.
+3. Gebruik termen zoals 'indicatoren', 'gedragskenmerken' en 'risicofactoren'.
+4. Adereer STRIKT aan de opgegeven onderzoekskaders (zakelijk of privé) zoals gespecificeerd in de prompt.
+5. GEEF NOOIT PERCENTAGES OF SCORES. Dit is verboden.
+6. Als er kinderen of minderjarigen (<18) genoemd worden of betrokken lijken: ZET 'minor_involved' op TRUE en geef een waarschuwing over de zorgplicht (Wpbr).
+
+REGEER ALLEEN MET JSON. GEEN INLEIDING OF UITLEG BUITEN DE JSON.`;
+
+  const data = await fetchGemini(prompt, INITIAL_ANALYSIS_SCHEMA, systemInstruction);
+  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "{}";
+  return JSON.parse(text) as InitialAnalysisResponse;
+}
+
 export async function getDetailedAnalysis(description: string, answers: Record<string, string>, adminKey?: string): Promise<AnalysisResponse> {
   const prompt = `Casus: ${description}. Antwoorden op vragen: ${JSON.stringify(answers)}`;
   const systemInstruction = `Je bent Doddar’s senior onderzoeksassistent (Expert in feitenonderzoek). 
