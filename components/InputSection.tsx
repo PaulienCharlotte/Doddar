@@ -160,7 +160,7 @@ const InputSection: React.FC<InputSectionProps> = ({
                     </div>
                     <h3 className="text-3xl md:text-3xl font-bold text-[#13261f] mb-4">Casusanalyse</h3>
                     <p className="text-[#6B7280] font-light text-base md:text-lg italic leading-relaxed">
-                        Beschrijf uw situatie voor een direct geautomatiseerde patroonherkenning en haalbaarheidsindicatie.
+                        Beschrijf uw situatie voor een eerste structurering van de feiten en een indicatieve haalbaarheidsscan.
                     </p>
                 </div>
 
