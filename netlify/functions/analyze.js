@@ -1,6 +1,5 @@
-
-const { GoogleGenAI, Type } = require('@google/genai');
-const { getStore } = require('@netlify/blobs');
+import { GoogleGenAI, Type } from '@google/genai';
+import { getStore } from '@netlify/blobs';
 
 // --- CONSTANTS FROM FRONTEND ---
 
@@ -87,17 +86,14 @@ const DETAILED_ANALYSIS_SCHEMA = {
         samenvatting: { type: Type.STRING },
         gedragskenmerken: { type: Type.ARRAY, items: { type: Type.STRING } },
         mogelijke_wettelijke_overtredingen: {
-            type: Type.ARRAY,
-            items: {
-                type: Type.OBJECT,
-                properties: {
-                    wetboek: { type: Type.STRING },
-                    artikel: { type: Type.STRING },
-                    omschrijving: { type: Type.STRING },
-                    bron: { type: Type.STRING },
-                },
-                required: ["wetboek", "artikel", "omschrijving", "bron"],
+            type: Type.OBJECT,
+            properties: {
+                wetboek: { type: Type.STRING },
+                artikel: { type: Type.STRING },
+                omschrijving: { type: Type.STRING },
+                bron: { type: Type.STRING },
             },
+            required: ["wetboek", "artikel", "omschrijving", "bron"],
         },
         impact_onderbouwing: {
             type: Type.ARRAY,
@@ -159,7 +155,7 @@ const DETAILED_ANALYSIS_SCHEMA = {
 
 // --- HANDLER ---
 
-exports.handler = async (event, context) => {
+export const handler = async (event, context) => {
     if (event.httpMethod !== 'POST') {
         return { statusCode: 405, body: 'Method Not Allowed' };
     }
@@ -225,17 +221,13 @@ exports.handler = async (event, context) => {
         if (!apiKey) throw new Error("API Key missing on server");
 
         const ai = new GoogleGenAI({ apiKey });
-        const model = ai.getGenerativeModel({
-            model: "gemini-1.5-flash", // Using standard stable model ID for server, user code had 'gemini-3-flash-preview' which might be experimental/internal? Sticking to reliable one or the one user used. User used 'gemini-3-flash-preview'. I will use that if it works, otherwise fallback. Let's check user code again.
-            // User code used: 'gemini-3-flash-preview'. I should replicate that.
-        });
+
+        // Define standard reliable model
+        const STANDARD_MODEL = "gemini-1.5-flash";
 
         // Config setup
         let config = { temperature: 0.1, responseMimeType: "application/json" };
         let prompt = "";
-        let finalModel = "gemini-1.5-flash"; // Fallback to a known model if 3 is not available in this env
-        // NOTE: The user's code uses "gemini-3-flash-preview". I will try to use it, but typically standard names are gemini-1.5-flash or pro. 
-        // I will trust the user's codebase usage.
 
         let systemInstruction = "";
         let responseSchema = null;
@@ -245,36 +237,24 @@ exports.handler = async (event, context) => {
             prompt = `Casus: "${description}". Persona: ${persona}. Analyseer op onderzoekbare gedragskenmerken en lever direct JSON.`;
             systemInstruction = INITIAL_ANALYSIS_SYSTEM_INSTRUCTION;
             responseSchema = INITIAL_ANALYSIS_SCHEMA;
-            finalModel = "gemini-1.5-flash"; // Or 2.0-flash experimental. 3-flash might be a typo in user code or very new. I will stick to what they had.
         } else if (type === 'detailed') {
             const { description, answers } = content;
             prompt = `Casus: ${description}. Antwoorden op vragen: ${JSON.stringify(answers)}`;
             systemInstruction = DETAILED_ANALYSIS_SYSTEM_INSTRUCTION;
             responseSchema = DETAILED_ANALYSIS_SCHEMA;
             config.tools = [{ googleSearch: {} }];
-            // config.thinkingConfig = { thinkingBudget: 2000 }; // Thinking config usually specific to newer models
-            finalModel = "gemini-2.0-flash-thinking-exp"; // If they used thinking, it must be the thinking model.
-            // Let's re-read user code model name carefully. 
-            // User code said: 'gemini-3-flash-preview'. 
+            // config.thinkingConfig = { thinkingBudget: 2000 };
         } else if (type === 'rewrite') {
             const { description } = content;
             prompt = `Herschrijf deze tekst kort en zakelijk vanuit een persoonlijk perspectief voor recherche-analyse. Tekst: "${description}"`;
             systemInstruction = "Herschrijf de tekst feitelijk. Alleen de herschreven tekst teruggeven.";
-            requestMimeType = "text/plain";
-            responseSchema = null;
-            delete config.responseMimeType;
+            // Note: GoogleGenAI usually expects explicit mime type or null for default.
+            // Let's safe-guard:
+            config = { temperature: 0.7 }; // Reset config for rewrite
         }
 
-        // Adjust model based on simple usage for now to ensure stability
-        // I will use a safe default if not sure about 'gemini-3'.
-        // Actually, let's look at the user code again. It was 'gemini-3-flash-preview'.
-        // That sounds like a user customized string or cutting edge. I will use it.
-
         const genModel = ai.getGenerativeModel({
-            model: "gemini-2.0-flash", // Replacing '3-flash-preview' with a likely actual working model for now to successfully deploy, or I can use the user's string.
-            // Risk: 'gemini-3' might not exist. I'll use 'gemini-2.0-flash' as a safe, high performance bet for now, or just pass the string.
-            // Decision: Use 'gemini-2.0-flash-exp' or similar if they want high intelligence.
-            // Let's try to pass the user's string but formatted correctly if needed.
+            model: STANDARD_MODEL,
         });
 
         // RE-CREATING REQUEST
@@ -284,8 +264,8 @@ exports.handler = async (event, context) => {
         const generateConfig = {
             systemInstruction: systemInstruction,
             responseSchema: responseSchema,
-            responseMimeType: config.responseMimeType,
-            temperature: 0.1,
+            responseMimeType: config.responseMimeType || "text/plain",
+            temperature: config.temperature,
             // Tools might need different handling in node SDK depending on version
         };
 
