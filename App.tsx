@@ -153,10 +153,19 @@ const App: React.FC = () => {
   const [analysisContext, setAnalysisContext] = useState<AnalysisContext | null>(null);
   const [autoScrollToInput, setAutoScrollToInput] = useState<boolean>(false);
   const [serviceScrollId, setServiceScrollId] = useState<string | undefined>(undefined);
+  const [adminKey, setAdminKey] = useState<string | undefined>(undefined);
 
+  // Admin Key Detection
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [step]);
+    const params = new URLSearchParams(window.location.search);
+    const key = params.get('admin');
+    if (key) {
+      setAdminKey(key);
+      console.log('Admin modus geactiveerd');
+      // Optional: remove query param from URL to clean up
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }, []);
 
   const startAnalysis = useCallback(async (description: string, persona: 'business' | 'private') => {
     setIsLoading(true);
@@ -166,7 +175,8 @@ const App: React.FC = () => {
     setStep('questions');
     try {
       let fullJson = '';
-      const stream = getInitialAnalysisStream(description, persona);
+      // Pass adminKey
+      const stream = getInitialAnalysisStream(description, persona, adminKey);
       for await (const chunkText of stream) {
         if (chunkText) {
           fullJson += chunkText;
@@ -192,14 +202,16 @@ const App: React.FC = () => {
       console.error("Analysis Error:", e);
       if (e.message && (e.message.includes("GEMINI_API_KEY") || e.message.includes("API_KEY"))) {
         setError("Systeemfout: GEMINI_API_KEY ontbreekt in implementatie. Voeg deze toe in Netlify.");
+      } else if (e.message && e.message.includes("429")) {
+        setError("U heeft de dagelijkse limiet bereikt. Probeer het morgen opnieuw of neem contact op.");
       } else {
-        setError("Er is een fout opgetreden bij de eerste analyse. Probeer het opnieuw.");
+        setError(e.message || "Er is een fout opgetreden bij de eerste analyse. Probeer het opnieuw.");
       }
       setStep('start');
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [adminKey]);
 
   const handleInitialSubmit = useCallback(async (description: string) => {
     setError(null);
@@ -239,14 +251,14 @@ const App: React.FC = () => {
     setIsRewriting(true);
     setError(null);
     try {
-      const suggestion = await getRewriteSuggestion(description);
+      const suggestion = await getRewriteSuggestion(description, adminKey);
       setRewriteSuggestion(suggestion);
     } catch (e) {
       setError("Kon de tekst niet herschrijven.");
     } finally {
       setIsRewriting(false);
     }
-  }, [caseForAnalysis, caseText]);
+  }, [caseForAnalysis, caseText, adminKey]);
 
   const handleAuthStayPrivate = useCallback(() => {
     const description = caseForAnalysis?.description || caseText;
@@ -258,6 +270,7 @@ const App: React.FC = () => {
     }
   }, [caseForAnalysis, caseText, startAnalysis]);
 
+  // handleQuestionSubmit update
   const handleQuestionSubmit = useCallback(async (answers: Record<string, string>) => {
     setIsLoading(true);
     setError(null);
@@ -266,7 +279,8 @@ const App: React.FC = () => {
 
     try {
       let fullJson = '';
-      const stream = getDetailedAnalysisStream(caseText, answers);
+      // Pass adminKey
+      const stream = getDetailedAnalysisStream(caseText, answers, adminKey);
       for await (const chunkText of stream) {
         if (chunkText) {
           fullJson += chunkText;
@@ -291,14 +305,16 @@ const App: React.FC = () => {
       console.error("Detailed Analysis Error:", e);
       if (e.message && (e.message.includes("GEMINI_API_KEY") || e.message.includes("API_KEY"))) {
         setError("Systeemfout: GEMINI_API_KEY ontbreekt. Kan diepere analyse niet uitvoeren.");
+      } else if (e.message && e.message.includes("429")) {
+        setError("U heeft de dagelijkse limiet bereikt.");
       } else {
-        setError(`De analyse kon niet worden voltooid.`);
+        setError(`De analyse kon niet worden voltooid: ${e.message}`);
       }
       setStep('questions');
     } finally {
       setIsLoading(false);
     }
-  }, [caseText]);
+  }, [caseText, adminKey]);
 
   // handleNavClick is used throughout the app for navigation and state resets.
   const handleNavClick = useCallback((targetStep: AppStep, extraParam?: string) => {

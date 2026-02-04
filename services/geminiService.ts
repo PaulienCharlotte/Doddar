@@ -1,263 +1,91 @@
-import { GoogleGenAI, Type, GenerateContentResponse } from "@google/genai";
+import { Type } from "@google/genai"; // Only types needed if any, or just remove if unused
 import type { AnalysisResponse, InitialAnalysisResponse } from "../types";
 
-// Lazy init wrapper
-let aiInstance: GoogleGenAI | null = null;
-const getAI = () => {
-  if (!aiInstance) {
-    // Decode the Base64 key to bypass Netlify secret scanner
-    const encodedKey = process.env.GEMINI_API_KEY_B64;
-    const apiKey = encodedKey ? atob(encodedKey) : (process.env.API_KEY || '');
-
-    if (!apiKey) {
-      console.error("GEMINI_API_KEY is missing!");
-      throw new Error("GEMINI_API_KEY is not set.");
-    }
-    aiInstance = new GoogleGenAI({ apiKey });
+// Helper for backend calls
+async function callAnalyzeEndpoint(type: 'initial' | 'detailed' | 'rewrite', content: any, adminKey?: string) {
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (adminKey) {
+    headers['x-admin-key'] = adminKey;
   }
-  return aiInstance;
-};
 
-// --- Initial Analysis (Streaming Ready) ---
-
-const INITIAL_ANALYSIS_SYSTEM_INSTRUCTION = `Jij bent een gedragsanalyse-assistent voor recherchebureau Doddar. Jouw taak is om een voorlopige analyse uit te voeren naar onrechtmatig gedrag en risicofactoren.
-
-BELANGRIJK: 
-1. Je bent GEEN psycholoog en trekt GEEN klinische conclusies. 
-2. Focus op objectiveerbare gedragspatronen die relevant zijn voor feitenonderzoek.
-3. Gebruik termen zoals 'indicatoren', 'gedragskenmerken' en 'risicofactoren'.
-4. Adereer STRIKT aan de opgegeven onderzoekskaders (zakelijk of privé) zoals gespecificeerd in de prompt.
-5. GEEF NOOIT PERCENTAGES OF SCORES. Dit is verboden.
-6. Als er kinderen of minderjarigen (<18) genoemd worden of betrokken lijken: ZET 'minor_involved' op TRUE en geef een waarschuwing over de zorgplicht (Wpbr).
-
-REGEER ALLEEN MET JSON. GEEN INLEIDING OF UITLEG BUITEN DE JSON.`;
-
-const INITIAL_ANALYSIS_SCHEMA = {
-  type: Type.OBJECT,
-  properties: {
-    relevance_label: {
-      type: Type.STRING,
-      enum: ["Hoog prioriteit", "Gemiddeld", "Laag", "Nader onderzoek nodig"],
-      description: "Een kwalitatieve indicatie van de urgentie/complexiteit."
-    },
-    minor_involved: {
-      type: Type.BOOLEAN,
-      description: "Zet op true als er kinderen of minderjarigen betrokken zijn."
-    },
-    minor_risk_assessment: {
-      type: Type.STRING,
-      description: "Korte toelichting op de risico's voor de minderjarige (indien van toepassing)."
-    },
-    gedragspatronen: {
-      type: Type.ARRAY,
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          label: { type: Type.STRING, description: "Naam van het patroon (bijv. Gaslighting, Love Bombing)." },
-          relevance_label: { type: Type.STRING, enum: ["Aanwezig", "Nader te onderzoeken", "Indicatief"] },
-          why_short: { type: Type.STRING, description: "Korte duiding waarom dit patroon herkend wordt." }
-        },
-        required: ["label", "relevance_label", "why_short"],
-      }
-    },
-    verduidelijkingsvragen: {
-      type: Type.ARRAY,
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          question_id: { type: Type.STRING },
-          vraag: { type: Type.STRING },
-          waarom_relevant: { type: Type.STRING },
-          input_type: { type: Type.STRING, enum: ['YES_NO', 'MULTIPLE_CHOICE', 'SCALE_0_4', 'FREE_TEXT'] },
-          options: { type: Type.ARRAY, items: { type: Type.STRING }, nullable: true },
-          priority: { type: Type.NUMBER }
-        },
-        required: ["question_id", "vraag", "waarom_relevant", "input_type", "priority"],
-      }
-    },
-    bevoegdheid: {
-      type: Type.OBJECT,
-      properties: {
-        is_bevoegd: { type: Type.BOOLEAN },
-        reden: { type: Type.STRING },
-        advies: { type: Type.STRING }
-      },
-      required: ["is_bevoegd", "reden", "advies"]
-    }
-  },
-  required: ["relevance_label", "minor_involved", "minor_risk_assessment", "gedragspatronen", "verduidelijkingsvragen", "bevoegdheid"],
-};
-
-export async function* getInitialAnalysisStream(description: string, persona: 'business' | 'private') {
-  const prompt = `Casus: "${description}". Persona: ${persona}. Analyseer op onderzoekbare gedragskenmerken en lever direct JSON.`;
-
-  const stream = await getAI().models.generateContentStream({
-    model: 'gemini-3-flash-preview',
-    contents: prompt,
-    config: {
-      systemInstruction: INITIAL_ANALYSIS_SYSTEM_INSTRUCTION,
-      responseSchema: INITIAL_ANALYSIS_SCHEMA,
-      responseMimeType: "application/json",
-      temperature: 0.1,
-    },
+  const response = await fetch('/.netlify/functions/analyze', {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({ type, content })
   });
 
-  for await (const chunk of stream) {
-    if (chunk.text) yield chunk.text;
+  if (!response.ok) {
+    const errText = await response.text();
+    let errMsg = `Server error: ${response.status}`;
+    try {
+      const json = JSON.parse(errText);
+      if (json.error) errMsg = json.error;
+    } catch (e) { }
+    throw new Error(errMsg);
   }
+
+  const data = await response.json();
+  // extracting text from expected Gemini response structure depending on how analyze.js returns it
+  // analyze.js returns result.response.text(), which is a string. But wait, analyze.js body is result.response.text().
+  // So data IS the string (if JSON response was text).
+  // Actually analyze.js returns { statusCode: 200, body: text }. Netlify usually passes body as string.
+  // If response content-type is json, await response.json() works. 
+  // Wait, analyze.js returned `body: result.response.text()`. If that text is a JSON string (which it is for initial/detailed), then `response.json()` will parse it?
+  // No, `fetch` reads the body. If the body sent by netlify is the raw JSON string derived from `result.response.text()`, then `response.json()` parses that.
+  return data;
 }
 
-export async function getInitialAnalysis(description: string, persona: 'business' | 'private'): Promise<InitialAnalysisResponse> {
-  const prompt = `Casus: "${description}". Persona: ${persona}.`;
-  const response = await getAI().models.generateContent({
-    model: 'gemini-3-flash-preview',
-    contents: prompt,
-    config: {
-      systemInstruction: INITIAL_ANALYSIS_SYSTEM_INSTRUCTION,
-      responseSchema: INITIAL_ANALYSIS_SCHEMA,
-      responseMimeType: "application/json",
-      temperature: 0.1,
-    },
-  });
-  return JSON.parse(response.text || '{}') as InitialAnalysisResponse;
+// --- Initial Analysis ---
+
+export async function* getInitialAnalysisStream(description: string, persona: 'business' | 'private', adminKey?: string) {
+  // Simulate stream for UI compatibility, but fetch once
+  const result = await callAnalyzeEndpoint('initial', { description, persona }, adminKey);
+  // Result should be the object structure. Verify if analyze.js returns the object or the wrapper.
+  // analyze.js returns `result.response.text()`. The prompt requested JSON. So text is a JSON string.
+  // So `response.json()` in helper returns the Object.
+  // We yield the stringified object or parts? The UI expects chunks of text to build strict JSON?
+  // The UI code: `fullJson += chunkText; const result = JSON.parse(fullJson)`.
+  // So we should yield the string representation.
+  yield JSON.stringify(result);
 }
 
-// --- Detailed Analysis (Deep Reasoning & Grounding) ---
+export async function getInitialAnalysis(description: string, persona: 'business' | 'private', adminKey?: string): Promise<InitialAnalysisResponse> {
+  return await callAnalyzeEndpoint('initial', { description, persona }, adminKey) as InitialAnalysisResponse;
+}
 
-const DETAILED_ANALYSIS_SYSTEM_INSTRUCTION = `Je bent Doddar’s senior onderzoeksassistent (Expert in feitenonderzoek). 
-1. Gebruik 'googleSearch' voor wetgeving. 
-2. Wetboeken VOLUIT schrijven.
-3. GEEN URL-links.
-4. GEEN klinische diagnoses stellen. Wees een forensisch analist, geen psycholoog.
-5. In de bevoegdheidscheck toets je uitsluitend aan de Wpbr en het 'gerechtvaardigd belang' voor particulier onderzoek.
-6. Schrijf wetenschappelijke bronnen volluit in APA-stijl in het bronveld.
-7. Wees SELECTIEF met onderzoeksmethoden (max 2-3). Prioriteer laag-drempelige methoden zoals 'Advies' en 'OSINT' voor algemene casussen, maar zet 'Observatie' ALTIJD in als relevante optie bij casussen die fysiek gedrag, buitensluiting in de fysieke ruimte of pestgedrag betreffen waarbij bewijslast noodzakelijk is.`;
+// --- Detailed Analysis ---
 
-const DETAILED_ANALYSIS_SCHEMA = {
-  type: Type.OBJECT,
-  properties: {
-    samenvatting: { type: Type.STRING },
-    gedragskenmerken: { type: Type.ARRAY, items: { type: Type.STRING } },
-    mogelijke_wettelijke_overtredingen: {
-      type: Type.ARRAY,
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          wetboek: { type: Type.STRING },
-          artikel: { type: Type.STRING },
-          omschrijving: { type: Type.STRING },
-          bron: { type: Type.STRING },
-        },
-        required: ["wetboek", "artikel", "omschrijving", "bron"],
-      },
-    },
-    impact_onderbouwing: {
-      type: Type.ARRAY,
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          titel: { type: Type.STRING },
-          onderbouwing: { type: Type.STRING },
-          referenties: {
-            type: Type.ARRAY,
-            items: {
-              type: Type.OBJECT,
-              properties: {
-                titel: { type: Type.STRING },
-                jaar: { type: Type.NUMBER },
-                doi: { type: Type.STRING },
-              },
-              required: ["titel", "jaar", "doi"],
-            }
-          }
-        },
-        required: ["titel", "onderbouwing", "referenties"],
-      },
-    },
-    bevoegdheidscheck: {
-      type: Type.OBJECT,
-      properties: {
-        is_bevoegd: { type: Type.BOOLEAN },
-        motivering: { type: Type.STRING },
-        kaders: { type: Type.ARRAY, items: { type: Type.STRING } },
-      },
-      required: ["is_bevoegd", "motivering", "kaders"],
-    },
-    aanvullende_vragen: { type: Type.ARRAY, items: { type: Type.STRING } },
-    mogelijke_onderzoeksmethoden: {
-      type: Type.ARRAY,
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          id: { type: Type.STRING, enum: ["OSINT", "Observatie", "Interview", "Advies", "Screening", "Recherche"] },
-          omschrijving: { type: Type.STRING },
-        },
-        required: ["id", "omschrijving"],
-      },
-    },
-    advies: {
-      type: Type.OBJECT,
-      properties: {
-        minderjarig: { type: Type.BOOLEAN },
-        veiligheidsadvies: { type: Type.STRING },
-        professioneel_advies: { type: Type.STRING },
-        juridische_opmerking: { type: Type.STRING },
-      },
-      required: ["minderjarig", "veiligheidsadvies", "professioneel_advies", "juridische_opmerking"],
-    },
-  },
-  required: ["samenvatting", "gedragskenmerken", "mogelijke_wettelijke_overtredingen", "impact_onderbouwing", "bevoegdheidscheck", "aanvullende_vragen", "mogelijke_onderzoeksmethoden", "advies"],
-};
+export async function* getDetailedAnalysisStream(description: string, answers: Record<string, string>, adminKey?: string) {
+  const result = await callAnalyzeEndpoint('detailed', { description, answers }, adminKey);
+  yield JSON.stringify(result);
+}
 
-export async function* getDetailedAnalysisStream(description: string, answers: Record<string, string>) {
-  const context = `Casus: ${description}. Antwoorden op vragen: ${JSON.stringify(answers)}`;
+export async function getDetailedAnalysis(description: string, answers: Record<string, string>, adminKey?: string): Promise<AnalysisResponse> {
+  return await callAnalyzeEndpoint('detailed', { description, answers }, adminKey) as AnalysisResponse;
+}
 
-  const stream = await getAI().models.generateContentStream({
-    model: 'gemini-3-flash-preview',
-    contents: context,
-    config: {
-      systemInstruction: DETAILED_ANALYSIS_SYSTEM_INSTRUCTION,
-      responseSchema: DETAILED_ANALYSIS_SCHEMA,
-      responseMimeType: "application/json",
-      temperature: 0.1,
-      tools: [{ googleSearch: {} }],
-      thinkingConfig: { thinkingBudget: 2000 }
-    },
+// --- Rewrite ---
+
+export async function getRewriteSuggestion(description: string, adminKey?: string): Promise<string> {
+  // Rewrite returns text/plain usually, but let's see analyze.js .
+  // analyze.js code for rewrite: systemInstruction = ... text only.
+  // So result.response.text() is plain text.
+  // `response.json()` might fail if it's plain text.
+  // I should check content-type in helper or handle rewrite differently.
+
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (adminKey) headers['x-admin-key'] = adminKey;
+
+  const response = await fetch('/.netlify/functions/analyze', {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({ type: 'rewrite', content: { description } })
   });
 
-  for await (const chunk of stream) {
-    if (chunk.text) yield chunk.text;
-  }
+  if (!response.ok) throw new Error(await response.text());
+  return await response.text();
 }
 
-export async function getDetailedAnalysis(description: string, answers: Record<string, string>): Promise<AnalysisResponse> {
-  const context = `Casus: ${description}. Antwoorden op vragen: ${JSON.stringify(answers)}`;
-  const response = await getAI().models.generateContent({
-    model: 'gemini-3-flash-preview',
-    contents: context,
-    config: {
-      systemInstruction: DETAILED_ANALYSIS_SYSTEM_INSTRUCTION,
-      responseSchema: DETAILED_ANALYSIS_SCHEMA,
-      responseMimeType: "application/json",
-      temperature: 0.1,
-      tools: [{ googleSearch: {} }],
-      thinkingConfig: { thinkingBudget: 2000 }
-    },
-  });
-  return JSON.parse(response.text || '{}') as AnalysisResponse;
-}
-
-export async function getRewriteSuggestion(description: string): Promise<string> {
-  const response = await getAI().models.generateContent({
-    model: 'gemini-3-flash-preview',
-    contents: `Herschrijf deze tekst kort en zakelijk vanuit een persoonlijk perspectief voor recherche-analyse. Tekst: "${description}"`,
-    config: {
-      systemInstruction: "Herschrijf de tekst feitelijk. Alleen de herschreven tekst teruggeven.",
-      temperature: 0.7,
-    },
-  });
-  return response.text.trim();
-}
 
 export const logAuditTrail = async (metadata: {
   timestamp: number;
