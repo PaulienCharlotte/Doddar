@@ -258,3 +258,27 @@ export async function getRewriteSuggestion(description: string): Promise<string>
   });
   return response.text.trim();
 }
+
+export const logAuditTrail = async (metadata: {
+  timestamp: number;
+  modelVersion: string;
+  pseudonymConfirmed: boolean;
+  analysisType: 'initial' | 'detailed';
+  minorInvolved?: boolean;
+}) => {
+  try {
+    const response = await fetch('/.netlify/functions/audit-log', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(metadata),
+    });
+
+    if (!response.ok) {
+      console.warn('Audit log failed:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Audit log error:', error);
+  }
+};

@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import type { AnalysisResponse, InitialAnalysisResponse, AnalysisContext } from './types';
-import { getInitialAnalysis, getDetailedAnalysis, getRewriteSuggestion, getInitialAnalysisStream, getDetailedAnalysisStream } from './services/geminiService';
+import { getInitialAnalysis, getDetailedAnalysis, getRewriteSuggestion, getInitialAnalysisStream, getDetailedAnalysisStream, logAuditTrail } from './services/geminiService';
 import { detectPersona } from './utils/persona';
 import { PROFILE_DEFAULT_MINOR } from './data/ageProfiles';
 import type { AgeProfile } from './data/ageProfiles';
@@ -179,6 +179,15 @@ const App: React.FC = () => {
       const result = JSON.parse(fullJson) as InitialAnalysisResponse;
       setQuickResult(result);
       setQuestionAnswers({});
+
+      // Audit Log - Initial Analysis
+      logAuditTrail({
+        timestamp: Date.now(),
+        modelVersion: 'gemini-3-flash-preview',
+        pseudonymConfirmed: true, // Gebruiker bevestigt voorwaardes
+        analysisType: 'initial',
+        minorInvolved: result.minor_involved
+      });
     } catch (e: any) {
       console.error("Analysis Error:", e);
       if (e.message && (e.message.includes("GEMINI_API_KEY") || e.message.includes("API_KEY"))) {
@@ -269,6 +278,15 @@ const App: React.FC = () => {
       const result = JSON.parse(fullJson) as AnalysisResponse;
       setFinalResult(result);
       setStep('result');
+
+      // Audit Log - Detailed Analysis
+      logAuditTrail({
+        timestamp: Date.now(),
+        modelVersion: 'gemini-3-flash-preview',
+        pseudonymConfirmed: true,
+        analysisType: 'detailed',
+        minorInvolved: result.advies?.minderjarig
+      });
     } catch (e: any) {
       console.error("Detailed Analysis Error:", e);
       if (e.message && (e.message.includes("GEMINI_API_KEY") || e.message.includes("API_KEY"))) {
