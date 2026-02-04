@@ -193,12 +193,12 @@ const Diensten: React.FC<DienstenProps> = ({ onStartAnalysis, onContact, scrollT
         <ServiceSection id="screening" title="Pre-employment Screening" icon={<ShieldIcon className="w-6 h-6" />} isOpen={!!openSections['screening']} onToggle={() => toggleSection('screening')}>
           <div className="space-y-6">
             <p className="text-[#4B5563] text-lg leading-relaxed">
-              Voorkomen is beter dan genezen. Wij toetsen de integriteit en achtergrond van potentiële kandidaten binnen de wettelijke kaders.
+              Voorkomen is beter dan genezen. Wij controleren de integriteit en achtergrond van potentiële kandidaten binnen de wettelijke kaders.
             </p>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-brand-text"><CheckIcon className="w-5 h-5 text-brand-primary" /> Verificatie van diploma's en werkverleden</li>
               <li className="flex items-center gap-3 text-brand-text"><CheckIcon className="w-5 h-5 text-brand-primary" /> Onderzoek naar integriteitsrisico's en nevenactiviteiten</li>
-              <li className="flex items-center gap-3 text-brand-text"><CheckIcon className="w-5 h-5 text-brand-primary" /> Toetsing conform AVG en sectorale richtlijnen</li>
+              <li className="flex items-center gap-3 text-brand-text"><CheckIcon className="w-5 h-5 text-brand-primary" /> Verificatie conform AVG en sectorale richtlijnen</li>
             </ul>
             <PricingTable tiers={[
               { label: "Basis screening", price: "€350 – €700" },

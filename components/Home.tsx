@@ -252,7 +252,7 @@ const Home: React.FC<HomeProps> = ({
                     <div className="grid md:grid-cols-3 gap-12 md:gap-8 lg:gap-16">
                         {[
                             { step: "01", icon: <MessageCircleIcon className="w-12 h-12" />, title: "Uw Verhaal", desc: "In een beveiligde omgeving deelt u de feiten en uw zorgen. Wij luisteren zonder oordeel." },
-                            { step: "02", icon: <CalendarIcon className="w-12 h-12" />, title: "Toetsing", desc: "Wij toetsen direct aan de wet (Wpbr/AVG) en bepalen welke onderzoeksmethode het meest effectief is." },
+                            { step: "02", icon: <CalendarIcon className="w-12 h-12" />, title: "Inventarisatie", desc: "Wij inventariseren de juridische kaders (Wpbr/AVG) en bepalen welke onderzoeksmethode het meest effectief is." },
                             { step: "03", icon: <InvestigationIcon className="w-12 h-12" />, title: "Plan van Aanpak", desc: "U ontvangt een voorstel met doorlooptijd, budget en de verwachte waarde van het bewijs." }
                         ].map((item, idx) => (
                             <div key={idx} className="relative flex flex-col items-center text-center group">

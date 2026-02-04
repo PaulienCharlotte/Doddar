@@ -160,7 +160,7 @@ const OverOns: React.FC<OverOnsProps> = ({ onStartAnalysis }) => {
                                 {[
                                     { title: "Objectiveren", desc: "Het vaststellen van feiten, los van interpretaties, zodat enkel verifieerbare waarnemingen overblijven.", color: "bg-[#58B895]" },
                                     { title: "Contextualiseren", desc: "Een feit staat nooit op zichzelf. Wij plaatsen gedragingen in de juiste tijdlijn en omgevingsfactoren om patronen bloot te leggen.", color: "bg-[#6A9489]" },
-                                    { title: "Valideren", desc: "Onze bevindingen worden getoetst aan juridische kaders, wetenschappelijke literatuur en forensische standaarden.", color: "bg-[#13261f]" }
+                                    { title: "Valideren", desc: "Onze bevindingen worden gerelateerd aan juridische kaders, wetenschappelijke literatuur en forensische standaarden.", color: "bg-[#13261f]" }
                                 ].map((step, idx) => (
                                     <div key={idx} className="flex gap-6">
                                         <div className="flex flex-col items-center">

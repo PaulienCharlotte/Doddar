@@ -313,7 +313,7 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset, onReques
                     <div>
                         <h4 className="font-bold text-[#13261f] text-xl mb-3">Nieuwe Analyse</h4>
                         <p className="text-[#4B5563] text-base leading-relaxed mb-8">
-                            Wilt u een andere situatie toetsen of een variatie op uw beschrijving invoeren? Alle huidige data wordt permanent gewist.
+                            Wilt u een andere situatie analyseren of een variatie op uw beschrijving invoeren? Alle huidige data wordt permanent gewist.
                         </p>
                     </div>
                     <button

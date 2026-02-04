@@ -28,7 +28,7 @@ const services = [
     id: "Interview",
     icon: <InterviewIcon className="w-10 h-10 text-[#58B895]" />,
     name: "Forensische Interviewtechnieken",
-    defaultDesc: "Gestructureerde gespreksvoering met getuigen of tegenpartijen om feiten verifiëren en verklaringen te toetsen.",
+    defaultDesc: "Gestructureerde gespreksvoering met getuigen of tegenpartijen om feiten te verifiëren en verklaringen te analyseren.",
     price: "Vanaf €250",
   },
   {
@@ -42,7 +42,7 @@ const services = [
     id: "Screening",
     icon: <ShieldIcon className="w-10 h-10 text-[#58B895]" />,
     name: "Pre-employment Screening",
-    defaultDesc: "Toetsing van integriteit en achtergrond van kandidaten binnen de wettelijke kaders van de Wpbr en AVG.",
+    defaultDesc: "Inventarisatie van integriteit en achtergrond van kandidaten binnen de wettelijke kaders van de Wpbr en AVG.",
     price: "Vanaf €250",
   },
   {

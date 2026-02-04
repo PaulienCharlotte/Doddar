@@ -69,7 +69,7 @@ const BevoegdheidscheckModal: React.FC<{
           </div>
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#13261f] leading-tight">Beveiligde Context</h2>
-            <p className="text-[#58B895] font-bold text-xs uppercase tracking-widest mt-2 bg-white inline-block px-2 py-0.5 rounded border border-[#58B895]/20">Mandaat & Juridische Toetsing</p>
+            <p className="text-[#58B895] font-bold text-xs uppercase tracking-widest mt-2 bg-white inline-block px-2 py-0.5 rounded border border-[#58B895]/20">Mandaat & Juridische Inventarisatie</p>
           </div>
         </div>
 
@@ -312,7 +312,7 @@ const App: React.FC = () => {
         <div className="flex flex-col items-center justify-center p-12 bg-white rounded-3xl shadow-xl border border-brand-accent min-h-[60vh] flex-grow mt-8 mx-4 animate-pulse">
           <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-brand-primary mb-8"></div>
           <p className="text-xl font-bold text-brand-secondary typing-cursor">{streamedText || 'Data verwerken'}</p>
-          <p className="mt-4 text-brand-subtle text-center max-w-md">Onze AI gebruikt op dit moment deep reasoning om patronen te toetsen aan wetgeving en wetenschap.</p>
+          <p className="mt-4 text-brand-subtle text-center max-w-md">Onze AI gebruikt op dit moment deep reasoning om patronen te <strong>structureren</strong> binnen wettelijke en wetenschappelijke kaders.</p>
         </div>
       );
     }
