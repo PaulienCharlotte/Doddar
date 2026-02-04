@@ -1,112 +1,250 @@
-import { Type } from "@google/genai"; // Only types needed if any, or just remove if unused
 import type { AnalysisResponse, InitialAnalysisResponse } from "../types";
 
-// Helper for backend calls
-async function callAnalyzeEndpoint(type: 'initial' | 'detailed' | 'rewrite', content: any, adminKey?: string) {
-  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-  if (adminKey) {
-    headers['x-admin-key'] = adminKey;
-  }
+const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
-  const response = await fetch('/.netlify/functions/analyze', {
+if (!API_KEY) {
+  console.error("CRITICAL: VITE_GOOGLE_API_KEY is missing in client-side env.");
+}
+
+const MODEL_ID = "gemini-1.5-flash";
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_ID}:generateContent?key=${API_KEY}`;
+const STREAM_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_ID}:streamGenerateContent?key=${API_KEY}`;
+
+// --- JSON SCHEMAS (Simplified for fetch) ---
+
+const INITIAL_ANALYSIS_SCHEMA = {
+  type: "OBJECT",
+  properties: {
+    relevance_label: {
+      type: "STRING",
+      enum: ["Hoog prioriteit", "Gemiddeld", "Laag", "Nader onderzoek nodig"],
+      description: "Een kwalitatieve indicatie van de urgentie/complexiteit."
+    },
+    minor_involved: {
+      type: "BOOLEAN",
+      description: "Zet op true als er kinderen of minderjarigen betrokken zijn."
+    },
+    minor_risk_assessment: {
+      type: "STRING",
+      description: "Korte toelichting op de risico's voor de minderjarige (indien van toepassing)."
+    },
+    gedragspatronen: {
+      type: "ARRAY",
+      items: {
+        type: "OBJECT",
+        properties: {
+          label: { type: "STRING", description: "Naam van het patroon (bijv. Gaslighting, Love Bombing)." },
+          relevance_label: { type: "STRING", enum: ["Aanwezig", "Nader te onderzoeken", "Indicatief"] },
+          why_short: { type: "STRING", description: "Korte duiding waarom dit patroon herkend wordt." }
+        },
+        required: ["label", "relevance_label", "why_short"],
+      }
+    },
+    verduidelijkingsvragen: {
+      type: "ARRAY",
+      items: {
+        type: "OBJECT",
+        properties: {
+          question_id: { type: "STRING" },
+          vraag: { type: "STRING" },
+          waarom_relevant: { type: "STRING" },
+          input_type: { type: "STRING", enum: ['YES_NO', 'MULTIPLE_CHOICE', 'SCALE_0_4', 'FREE_TEXT'] },
+          options: { type: "ARRAY", items: { type: "STRING" }, nullable: true },
+          priority: { type: "NUMBER" }
+        },
+        required: ["question_id", "vraag", "waarom_relevant", "input_type", "priority"],
+      }
+    },
+    bevoegdheid: {
+      type: "OBJECT",
+      properties: {
+        is_bevoegd: { type: "BOOLEAN" },
+        reden: { type: "STRING" },
+        advies: { type: "STRING" }
+      },
+      required: ["is_bevoegd", "reden", "advies"]
+    }
+  },
+  required: ["relevance_label", "minor_involved", "minor_risk_assessment", "gedragspatronen", "verduidelijkingsvragen", "bevoegdheid"],
+};
+
+const DETAILED_ANALYSIS_SCHEMA = {
+  type: "OBJECT",
+  properties: {
+    samenvatting: { type: "STRING" },
+    gedragskenmerken: { type: "ARRAY", items: { type: "STRING" } },
+    mogelijke_wettelijke_overtredingen: {
+      type: "ARRAY",
+      items: {
+        type: "OBJECT",
+        properties: {
+          wetboek: { type: "STRING" },
+          artikel: { type: "STRING" },
+          omschrijving: { type: "STRING" },
+          bron: { type: "STRING" },
+        },
+        required: ["wetboek", "artikel", "omschrijving", "bron"],
+      },
+    },
+    impact_onderbouwing: {
+      type: "ARRAY",
+      items: {
+        type: "OBJECT",
+        properties: {
+          titel: { type: "STRING" },
+          onderbouwing: { type: "STRING" },
+          referenties: {
+            type: "ARRAY",
+            items: {
+              type: "OBJECT",
+              properties: {
+                titel: { type: "STRING" },
+                jaar: { type: "NUMBER" },
+                doi: { type: "STRING" },
+              },
+              required: ["titel", "jaar", "doi"],
+            }
+          }
+        },
+        required: ["titel", "onderbouwing", "referenties"],
+      },
+    },
+    bevoegdheidscheck: {
+      type: "OBJECT",
+      properties: {
+        is_bevoegd: { type: "BOOLEAN" },
+        motivering: { type: "STRING" },
+        kaders: { type: "ARRAY", items: { type: "STRING" } },
+      },
+      required: ["is_bevoegd", "motivering", "kaders"],
+    },
+    aanvullende_vragen: { type: "ARRAY", items: { type: "STRING" } },
+    mogelijke_onderzoeksmethoden: {
+      type: "ARRAY",
+      items: {
+        type: "OBJECT",
+        properties: {
+          id: { type: "STRING", enum: ["OSINT", "Observatie", "Interview", "Advies", "Screening", "Recherche"] },
+          omschrijving: { type: "STRING" },
+        },
+        required: ["id", "omschrijving"],
+      },
+    },
+    advies: {
+      type: "OBJECT",
+      properties: {
+        minderjarig: { type: "BOOLEAN" },
+        veiligheidsadvies: { type: "STRING" },
+        professioneel_advies: { type: "STRING" },
+        juridische_opmerking: { type: "STRING" },
+      },
+      required: ["minderjarig", "veiligheidsadvies", "professioneel_advies", "juridische_opmerking"],
+    },
+  },
+  required: ["samenvatting", "gedragskenmerken", "mogelijke_wettelijke_overtredingen", "impact_onderbouwing", "bevoegdheidscheck", "aanvullende_vragen", "mogelijke_onderzoeksmethoden", "advies"],
+};
+
+
+// --- HELPERS ---
+
+async function fetchGemini(prompt: string, schema: any, systemInstruction: string, temp = 0.1, isStream = false) {
+  const payload = {
+    contents: [{ parts: [{ text: prompt }] }],
+    systemInstruction: { parts: [{ text: systemInstruction }] },
+    generationConfig: {
+      responseMimeType: "application/json",
+      responseSchema: schema,
+      temperature: temp,
+    }
+  };
+
+  const url = isStream ? STREAM_URL : API_URL;
+  const response = await fetch(url, {
     method: 'POST',
-    headers,
-    body: JSON.stringify({ type, content })
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
   });
 
   if (!response.ok) {
-    const errText = await response.text();
-    let errMsg = `Server error: ${response.status}`;
-    try {
-      const json = JSON.parse(errText);
-      if (json.error) errMsg = json.error;
-    } catch (e) { }
-    throw new Error(errMsg);
+    throw new Error(`Gemini API Error: ${response.status} ${await response.text()}`);
   }
 
+  // For stream, simplified handling: just read whole JSON for now if UI supports it, 
+  // OR actually implement SSE reading. 
+  // To match previous behavior "Simulating stream but fetch once" logic:
   const data = await response.json();
-  // extracting text from expected Gemini response structure depending on how analyze.js returns it
-  // analyze.js returns result.response.text(), which is a string. But wait, analyze.js body is result.response.text().
-  // So data IS the string (if JSON response was text).
-  // Actually analyze.js returns { statusCode: 200, body: text }. Netlify usually passes body as string.
-  // If response content-type is json, await response.json() works. 
-  // Wait, analyze.js returned `body: result.response.text()`. If that text is a JSON string (which it is for initial/detailed), then `response.json()` will parse it?
-  // No, `fetch` reads the body. If the body sent by netlify is the raw JSON string derived from `result.response.text()`, then `response.json()` parses that.
   return data;
 }
 
-// --- Initial Analysis ---
+
+// --- EXPORTS ---
 
 export async function* getInitialAnalysisStream(description: string, persona: 'business' | 'private', adminKey?: string) {
-  // Simulate stream for UI compatibility, but fetch once
-  const result = await callAnalyzeEndpoint('initial', { description, persona }, adminKey);
-  // Result should be the object structure. Verify if analyze.js returns the object or the wrapper.
-  // analyze.js returns `result.response.text()`. The prompt requested JSON. So text is a JSON string.
-  // So `response.json()` in helper returns the Object.
-  // We yield the stringified object or parts? The UI expects chunks of text to build strict JSON?
-  // The UI code: `fullJson += chunkText; const result = JSON.parse(fullJson)`.
-  // So we should yield the string representation.
-  yield JSON.stringify(result);
-}
+  const prompt = `Casus: "${description}". Persona: ${persona}. Analyseer op onderzoekbare gedragskenmerken en lever direct JSON.`;
+  const systemInstruction = `Jij bent een gedragsanalyse-assistent voor recherchebureau Doddar. Jouw taak is om een voorlopige analyse uit te voeren naar onrechtmatig gedrag en risicofactoren.
+BELANGRIJK: 
+1. Je bent GEEN psycholoog en trekt GEEN klinische conclusies. 
+2. Focus op objectiveerbare gedragspatronen die relevant zijn voor feitenonderzoek.
+3. Gebruik termen zoals 'indicatoren', 'gedragskenmerken' en 'risicofactoren'.
+4. Adereer STRIKT aan de opgegeven onderzoekskaders (zakelijk of privé) zoals gespecificeerd in de prompt.
+5. GEEF NOOIT PERCENTAGES OF SCORES. Dit is verboden.
+6. Als er kinderen of minderjarigen (<18) genoemd worden of betrokken lijken: ZET 'minor_involved' op TRUE en geef een waarschuwing over de zorgplicht (Wpbr).
 
-export async function getInitialAnalysis(description: string, persona: 'business' | 'private', adminKey?: string): Promise<InitialAnalysisResponse> {
-  return await callAnalyzeEndpoint('initial', { description, persona }, adminKey) as InitialAnalysisResponse;
-}
+REGEER ALLEEN MET JSON. GEEN INLEIDING OF UITLEG BUITEN DE JSON.`;
 
-// --- Detailed Analysis ---
+  const data = await fetchGemini(prompt, INITIAL_ANALYSIS_SCHEMA, systemInstruction);
 
-export async function* getDetailedAnalysisStream(description: string, answers: Record<string, string>, adminKey?: string) {
-  const result = await callAnalyzeEndpoint('detailed', { description, answers }, adminKey);
-  yield JSON.stringify(result);
+  // Extract text from REST format
+  // Structure: candidates[0].content.parts[0].text
+  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "{}";
+  yield text;
 }
 
 export async function getDetailedAnalysis(description: string, answers: Record<string, string>, adminKey?: string): Promise<AnalysisResponse> {
-  return await callAnalyzeEndpoint('detailed', { description, answers }, adminKey) as AnalysisResponse;
+  const prompt = `Casus: ${description}. Antwoorden op vragen: ${JSON.stringify(answers)}`;
+  const systemInstruction = `Je bent Doddar’s senior onderzoeksassistent (Expert in feitenonderzoek). 
+1. Gebruik 'googleSearch' voor wetgeving. 
+2. Wetboeken VOLUIT schrijven.
+3. GEEN URL-links.
+4. GEEN klinische diagnoses stellen. Wees een forensisch analist, geen psycholoog.
+5. In de bevoegdheidscheck toets je uitsluitend aan de Wpbr en het 'gerechtvaardigd belang' voor particulier onderzoek.
+6. Schrijf wetenschappelijke bronnen volluit in APA-stijl in het bronveld.
+7. Wees SELECTIEF met onderzoeksmethoden (max 2-3). Prioriteer laag-drempelige methoden zoals 'Advies' en 'OSINT' voor algemene casussen, maar zet 'Observatie' ALTIJD in als relevante optie bij casussen die fysiek gedrag, buitensluiting in de fysieke ruimte of pestgedrag betreffen waarbij bewijslast noodzakelijk is.`;
+
+  const data = await fetchGemini(prompt, DETAILED_ANALYSIS_SCHEMA, systemInstruction);
+  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "{}";
+  return JSON.parse(text) as AnalysisResponse;
 }
 
-// --- Rewrite ---
-
 export async function getRewriteSuggestion(description: string, adminKey?: string): Promise<string> {
-  // Rewrite returns text/plain usually, but let's see analyze.js .
-  // analyze.js code for rewrite: systemInstruction = ... text only.
-  // So result.response.text() is plain text.
-  // `response.json()` might fail if it's plain text.
-  // I should check content-type in helper or handle rewrite differently.
+  const prompt = `Herschrijf deze tekst kort en zakelijk vanuit een persoonlijk perspectief voor recherche-analyse. Tekst: "${description}"`;
+  const payload = {
+    contents: [{ parts: [{ text: prompt }] }],
+    systemInstruction: { parts: [{ text: "Herschrijf de tekst feitelijk. Alleen de herschreven tekst teruggeven." }] },
+    generationConfig: {
+      temperature: 0.7,
+      responseMimeType: "text/plain"
+    }
+  };
 
-  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-  if (adminKey) headers['x-admin-key'] = adminKey;
-
-  const response = await fetch('/.netlify/functions/analyze', {
+  const response = await fetch(API_URL, {
     method: 'POST',
-    headers,
-    body: JSON.stringify({ type: 'rewrite', content: { description } })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
   });
 
   if (!response.ok) throw new Error(await response.text());
-  return await response.text();
+  const data = await response.json();
+  return data.candidates?.[0]?.content?.parts?.[0]?.text || "";
 }
 
+export async function* getDetailedAnalysisStream(description: string, answers: Record<string, string>, adminKey?: string) {
+  const data = await getDetailedAnalysis(description, answers, adminKey);
+  yield JSON.stringify(data);
+}
 
-export const logAuditTrail = async (metadata: {
-  timestamp: number;
-  modelVersion: string;
-  pseudonymConfirmed: boolean;
-  analysisType: 'initial' | 'detailed';
-  minorInvolved?: boolean;
-}) => {
-  try {
-    const response = await fetch('/.netlify/functions/audit-log', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(metadata),
-    });
-
-    if (!response.ok) {
-      console.warn('Audit log failed:', response.statusText);
-    }
-  } catch (error) {
-    console.error('Audit log error:', error);
-  }
+export const logAuditTrail = async (metadata: any) => {
+  console.log("Client-side audit trail (no-op):", metadata);
 };
