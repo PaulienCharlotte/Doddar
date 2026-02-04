@@ -1,9 +1,9 @@
 import type { AnalysisResponse, InitialAnalysisResponse } from "../types";
 
-const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
+const API_KEY = process.env.API_KEY;
 
 if (!API_KEY) {
-  console.error("CRITICAL: VITE_GOOGLE_API_KEY is missing in client-side env.");
+  console.error("CRITICAL: API_KEY is missing in client-side env.");
 }
 
 const MODEL_ID = "gemini-1.5-flash";
